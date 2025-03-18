@@ -1,11 +1,10 @@
-
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden bg-gradient-to-b from-evoya-navy to-evoya-blue">
+    <section className="relative min-h-[85vh] flex items-center pt-20 pb-12 overflow-hidden bg-gradient-to-b from-evoya-navy to-evoya-blue">
       <div className="absolute inset-0 opacity-10">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
           <defs>
@@ -38,7 +37,7 @@ const Hero: React.FC = () => {
                 Kostenlose Demo
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
-              <a href="#features" className="border-2 border-white text-white hover:bg-white/10 hover:border-evoya-orange hover:text-white transition-colors duration-300 font-medium py-3 px-6 rounded-md inline-flex items-center">
+              <a href="#features" className="border-2 border-white text-white hover:bg-white/10 hover:border-evoya-orange transition-colors duration-300 font-medium py-3 px-6 rounded-md inline-flex items-center">
                 Mehr erfahren
               </a>
             </div>
@@ -47,7 +46,6 @@ const Hero: React.FC = () => {
           <AnimatedSection animation="fade-in" delay={300} className="relative">
             <div className="relative z-10 rounded-2xl shadow-2xl overflow-hidden border border-white/20 bg-white/10 backdrop-blur-sm">
               <div className="aspect-[4/3] relative">
-                {/* Abstract workspace illustration */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <svg className="w-full h-full" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="200" cy="150" r="100" fill="white" fillOpacity="0.2" />
@@ -56,7 +54,6 @@ const Hero: React.FC = () => {
                   </svg>
                 </div>
                 
-                {/* UI Windows */}
                 <div className="absolute top-1/4 left-1/4 w-32 h-24 bg-white rounded-lg shadow-lg transform -rotate-6 animate-float" style={{ animationDelay: '0s' }}>
                   <div className="h-4 bg-evoya-orange rounded-t-lg"></div>
                   <div className="p-2">
@@ -83,7 +80,6 @@ const Hero: React.FC = () => {
               </div>
             </div>
 
-            {/* Decorative elements */}
             <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-white/5 rounded-full"></div>
             <div className="absolute -top-10 -left-10 w-24 h-24 bg-white/10 rounded-full blur-xl"></div>
           </AnimatedSection>
