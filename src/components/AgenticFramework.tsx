@@ -105,7 +105,6 @@ const AgenticFramework: React.FC = () => {
             <div className="relative rounded-xl overflow-hidden shadow-xl bg-white p-2 max-w-4xl mx-auto">
               <div className="aspect-[16/9] rounded-lg overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center p-8">
                 <div className="grid grid-cols-3 gap-8 w-full max-w-3xl">
-                  {/* Top row: core components */}
                   <div className="col-span-3 flex justify-between items-center">
                     <div className="w-20 h-20 rounded-full bg-evoya-blue flex items-center justify-center shadow-lg">
                       <Brain className="w-10 h-10 text-white" />
@@ -120,7 +119,6 @@ const AgenticFramework: React.FC = () => {
                     </div>
                   </div>
                   
-                  {/* Connectors */}
                   <div className="col-span-3 flex justify-between">
                     <div className="w-1/3 flex justify-center">
                       <div className="h-16 w-1 bg-gray-700"></div>
@@ -133,7 +131,6 @@ const AgenticFramework: React.FC = () => {
                     </div>
                   </div>
                   
-                  {/* Bottom row: supporting components */}
                   <div className="flex justify-center">
                     <div className="w-16 h-16 rounded-full bg-evoya-orange flex items-center justify-center shadow-lg">
                       <Workflow className="w-8 h-8 text-white" />

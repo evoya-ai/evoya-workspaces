@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic, Shield, Lock, Database, ArrowRight, User, Globe2, RefreshCcw, Book, Layers, Network, Brain, Search } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -233,7 +232,6 @@ const DetailedFeatures: React.FC = () => {
           ))}
         </div>
 
-        {/* Semantische Wissensbasis Section */}
         <AnimatedSection className="mt-24 mb-24" animation="fade-up">
           <div className="mb-16 text-center">
             <div className="inline-block mb-4 px-3 py-1 rounded-full bg-evoya-lightBlue/10 text-evoya-lightBlue text-sm font-medium">
@@ -247,11 +245,9 @@ const DetailedFeatures: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            {/* Left column - Illustration */}
             <div className="relative h-[400px] overflow-hidden rounded-xl shadow-lg">
               <div className="absolute inset-0 bg-gradient-to-r from-evoya-lightBlue/5 to-evoya-navy/10 z-0"></div>
               
-              {/* Central node */}
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-white rounded-full shadow-xl border-4 border-evoya-lightBlue/30 flex items-center justify-center z-20">
                 <div className="text-center p-2">
                   <Brain className="w-12 h-12 text-evoya-navy mx-auto mb-2" />
@@ -259,7 +255,6 @@ const DetailedFeatures: React.FC = () => {
                 </div>
               </div>
               
-              {/* Connection lines */}
               <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
                 <g stroke="#5B6CAD" strokeWidth="1.5" strokeDasharray="5,3" opacity="0.6">
                   <line x1="200" y1="200" x2="80" y2="100" />
@@ -271,45 +266,37 @@ const DetailedFeatures: React.FC = () => {
                 </g>
               </svg>
               
-              {/* Surrounding nodes - Repositioned to match screenshot exactly */}
-              {/* Top left - Documents */}
               <div className="absolute top-[15%] left-[20%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '0s' }}>
                 <Book className="w-8 h-8 text-evoya-orange mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Dokumente</span>
               </div>
               
-              {/* Top right - Web content */}
               <div className="absolute top-[15%] right-[20%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '1.5s' }}>
                 <Globe className="w-8 h-8 text-evoya-green mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Webinhalte</span>
               </div>
               
-              {/* Middle left - Structured data - Moved higher up */}
               <div className="absolute left-[15%] top-[35%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '3s' }}>
                 <Layers className="w-8 h-8 text-evoya-purple mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Strukturierte Daten</span>
               </div>
               
-              {/* Middle right - Analysis - Moved higher up */}
               <div className="absolute right-[15%] top-[35%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '4.5s' }}>
                 <FileSearch className="w-8 h-8 text-evoya-yellow mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Analyse</span>
               </div>
               
-              {/* Bottom left - Precise search */}
               <div className="absolute bottom-[15%] left-[20%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '6s' }}>
                 <Search className="w-8 h-8 text-evoya-navy mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Präzise Suche</span>
               </div>
               
-              {/* Bottom right - Knowledge Graph */}
               <div className="absolute bottom-[15%] right-[20%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '7.5s' }}>
                 <Network className="w-8 h-8 text-evoya-lightBlue mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Knowledge Graph</span>
               </div>
             </div>
             
-            {/* Right column - Details */}
             <div className="max-w-xl">
               <h4 className="text-xl font-semibold mb-6 text-evoya-navy">Intelligente Verarbeitung von Unternehmenswissen</h4>
               <p className="text-gray-600 mb-8">
@@ -415,7 +402,6 @@ const DetailedFeatures: React.FC = () => {
           </div>
         </AnimatedSection>
 
-        {/* Privacy Shield Process Visualization - Updated to match the new design */}
         <AnimatedSection className="mt-24" animation="fade-up">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12 text-center">
@@ -427,26 +413,21 @@ const DetailedFeatures: React.FC = () => {
             </div>
 
             <div className="relative w-full mx-auto" style={{ height: "700px", maxWidth: "800px" }}>
-              {/* Main Circle with gradient border */}
               <div className="absolute w-[600px] h-[600px] rounded-full border-[25px] border-t-evoya-navy border-r-evoya-navy border-b-evoya-lightBlue border-l-evoya-lightBlue left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"></div>
               
-              {/* Central Privacy Shield Circle */}
-              <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-white rounded-full shadow-xl flex items-center justify-center z-30">
+              <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-white rounded-full shadow-xl flex flex-col items-center justify-center z-30">
                 <div className="text-center">
-                  <h4 className="font-bold text-xl text-evoya-navy">Evoya</h4>
                   <h4 className="font-bold text-xl text-evoya-navy">Privacy</h4>
                   <h4 className="font-bold text-xl text-evoya-navy">Shield</h4>
                 </div>
               </div>
 
-              {/* Dots at North, East, South, West positions */}
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-evoya-navy rounded-full z-20"></div>
               <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-6 h-6 bg-evoya-navy rounded-full z-20"></div>
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gray-700 rounded-full z-20"></div>
               <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-6 h-6 bg-evoya-lightBlue rounded-full z-20"></div>
 
-              {/* Step 1: Vertrauliche Daten werden anonymisiert (Schweiz) */}
-              <div className="absolute top-[80px] right-[120px] z-40 w-80">
+              <div className="absolute top-[20px] right-[20px] z-40 w-80">
                 <div className="bg-white p-5 rounded-lg shadow-lg border border-gray-200">
                   <div className="bg-evoya-navy text-white font-semibold py-1 px-3 rounded-full text-sm inline-flex items-center mb-3">
                     <div className="bg-white text-evoya-navy rounded-full w-5 h-5 flex items-center justify-center mr-1 font-bold">1</div>
@@ -470,8 +451,7 @@ const DetailedFeatures: React.FC = () => {
                 </div>
               </div>
 
-              {/* Step 3: Anonymisierte Daten werden entanonymisiert (Schweiz) */}
-              <div className="absolute top-[80px] left-[120px] z-40 w-80">
+              <div className="absolute top-[20px] left-[20px] z-40 w-80">
                 <div className="bg-white p-5 rounded-lg shadow-lg border border-gray-200">
                   <div className="bg-evoya-lightBlue text-white font-semibold py-1 px-3 rounded-full text-sm inline-flex items-center mb-3">
                     <div className="bg-white text-evoya-lightBlue rounded-full w-5 h-5 flex items-center justify-center mr-1 font-bold">3</div>
@@ -495,8 +475,7 @@ const DetailedFeatures: React.FC = () => {
                 </div>
               </div>
 
-              {/* Step 2: Sprachmodell generiert Antwort mit anonymisierten Daten */}
-              <div className="absolute bottom-[80px] left-1/2 transform -translate-x-1/2 z-40 w-80">
+              <div className="absolute bottom-[20px] left-1/2 transform -translate-x-1/2 z-40 w-80">
                 <div className="bg-white p-5 rounded-lg shadow-lg border border-gray-200">
                   <div className="bg-gray-700 text-white font-semibold py-1 px-3 rounded-full text-sm inline-flex items-center mb-3">
                     <div className="bg-white text-gray-700 rounded-full w-5 h-5 flex items-center justify-center mr-1 font-bold">2</div>
