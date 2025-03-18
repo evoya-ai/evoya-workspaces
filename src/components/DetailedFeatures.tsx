@@ -270,39 +270,39 @@ const DetailedFeatures: React.FC = () => {
                 </g>
               </svg>
               
-              {/* Surrounding nodes - Repositioned based on screenshot */}
+              {/* Surrounding nodes - Repositioned to match screenshot exactly */}
               {/* Top left - Documents */}
-              <div className="absolute top-[12%] left-[20%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '0s' }}>
+              <div className="absolute top-[15%] left-[20%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '0s' }}>
                 <Book className="w-8 h-8 text-evoya-orange mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Dokumente</span>
               </div>
               
               {/* Top right - Web content */}
-              <div className="absolute top-[12%] right-[20%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '1.5s' }}>
+              <div className="absolute top-[15%] right-[20%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '1.5s' }}>
                 <Globe className="w-8 h-8 text-evoya-green mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Webinhalte</span>
               </div>
               
-              {/* Middle left - Structured data */}
-              <div className="absolute left-[10%] top-[45%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '3s' }}>
+              {/* Middle left - Structured data - Moved higher up */}
+              <div className="absolute left-[15%] top-[35%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '3s' }}>
                 <Layers className="w-8 h-8 text-evoya-purple mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Strukturierte Daten</span>
               </div>
               
-              {/* Middle right - Analysis */}
-              <div className="absolute right-[10%] top-[45%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '4.5s' }}>
+              {/* Middle right - Analysis - Moved higher up */}
+              <div className="absolute right-[15%] top-[35%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '4.5s' }}>
                 <FileSearch className="w-8 h-8 text-evoya-yellow mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Analyse</span>
               </div>
               
               {/* Bottom left - Precise search */}
-              <div className="absolute bottom-[12%] left-[20%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '6s' }}>
+              <div className="absolute bottom-[15%] left-[20%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '6s' }}>
                 <Search className="w-8 h-8 text-evoya-navy mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Präzise Suche</span>
               </div>
               
               {/* Bottom right - Knowledge Graph */}
-              <div className="absolute bottom-[12%] right-[20%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '7.5s' }}>
+              <div className="absolute bottom-[15%] right-[20%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '7.5s' }}>
                 <Network className="w-8 h-8 text-evoya-lightBlue mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Knowledge Graph</span>
               </div>
