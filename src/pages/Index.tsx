@@ -11,6 +11,7 @@ import Comparison from '../components/Comparison';
 import CallToAction from '../components/CallToAction';
 import Footer from '../components/Footer';
 import BlurBackground from '../components/BlurBackground';
+import AgenticFramework from '../components/AgenticFramework';
 
 const Index = () => {
   useEffect(() => {
@@ -50,6 +51,7 @@ const Index = () => {
         <Features />
         <DetailedFeatures />
         <LanguageModels />
+        <AgenticFramework />
         <Benefits />
         <Services />
         <Comparison />
