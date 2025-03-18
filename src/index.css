@@ -191,6 +191,11 @@ footer a:not(.btn-primary):not(.btn-secondary) {
   @apply text-white transition-colors duration-300 hover:text-evoya-orange;
 }
 
+/* Exception for header navigation links */
+header nav a:not(.btn-primary):not(.btn-secondary):not([class*="bg-white"]) {
+  @apply text-white !important transition-colors duration-300 hover:text-evoya-orange;
+}
+
 /* Custom card styles */
 .custom-card {
   @apply rounded-xl overflow-hidden border border-gray-100 shadow-md transition-all duration-300 hover:shadow-lg bg-white;
