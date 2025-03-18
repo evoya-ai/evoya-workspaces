@@ -306,7 +306,7 @@ const DetailedFeatures: React.FC = () => {
               </p>
             </div>
 
-            <div className="relative mt-16 mb-20">
+            <div className="relative mt-16 mb-20 flex justify-center items-center h-[500px]">
               {/* Central Privacy Shield Circle */}
               <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-white rounded-full shadow-lg border-4 border-gray-100 flex items-center justify-center z-10">
                 <div className="text-center">
@@ -317,20 +317,20 @@ const DetailedFeatures: React.FC = () => {
               </div>
 
               {/* Circular Process Flow */}
-              <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full border-[30px] border-t-evoya-navy border-r-evoya-navy border-b-evoya-lightBlue border-l-evoya-lightBlue opacity-75 z-0"></div>
+              <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border-[30px] border-t-evoya-navy border-r-evoya-navy border-b-evoya-lightBlue border-l-evoya-lightBlue opacity-75 z-0"></div>
 
               {/* Step 1: Top Right */}
-              <div className="absolute top-0 right-1/4 bg-white p-4 rounded-lg shadow-lg border border-evoya-navy max-w-xs z-20">
+              <div className="absolute top-0 right-1/4 transform translate-x-1/4 bg-white p-4 rounded-lg shadow-lg border border-evoya-navy max-w-xs z-20">
                 <div className="bg-evoya-navy text-white font-semibold py-1 px-3 rounded-full text-xs inline-flex items-center mb-2">
                   <div className="bg-white text-evoya-navy rounded-full w-4 h-4 flex items-center justify-center mr-1">1</div>
                   SCHRITT 1
                 </div>
                 <h5 className="font-semibold mb-1">Vertrauliche Daten werden anonymisiert (Schweiz)</h5>
-                <div className="flex items-center mt-2 justify-center space-y-2">
+                <div className="flex flex-col items-center mt-2 space-y-2">
                   <div className="bg-evoya-navy text-white p-2 rounded text-sm w-full text-center">
                     Max Mustermann
                   </div>
-                  <ArrowRight className="text-red-500 mx-2 transform rotate-90" />
+                  <ArrowRight className="text-red-500 transform rotate-90" />
                   <div className="bg-evoya-navy text-white p-2 rounded text-sm w-full text-center">
                     [Vorname 1] [Nachname 1]
                   </div>
@@ -338,7 +338,7 @@ const DetailedFeatures: React.FC = () => {
               </div>
 
               {/* Step 2: Bottom */}
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-lg shadow-lg border border-gray-200 max-w-xs z-20">
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/4 bg-white p-4 rounded-lg shadow-lg border border-gray-200 max-w-xs z-20">
                 <div className="bg-gray-700 text-white font-semibold py-1 px-3 rounded-full text-xs inline-flex items-center mb-2">
                   <div className="bg-white text-gray-700 rounded-full w-4 h-4 flex items-center justify-center mr-1">2</div>
                   SCHRITT 2
@@ -350,17 +350,17 @@ const DetailedFeatures: React.FC = () => {
               </div>
 
               {/* Step 3: Top Left */}
-              <div className="absolute top-0 left-1/4 bg-white p-4 rounded-lg shadow-lg border border-evoya-lightBlue max-w-xs z-20">
+              <div className="absolute top-0 left-1/4 transform -translate-x-1/4 bg-white p-4 rounded-lg shadow-lg border border-evoya-lightBlue max-w-xs z-20">
                 <div className="bg-evoya-lightBlue text-white font-semibold py-1 px-3 rounded-full text-xs inline-flex items-center mb-2">
                   <div className="bg-white text-evoya-lightBlue rounded-full w-4 h-4 flex items-center justify-center mr-1">3</div>
                   SCHRITT 3
                 </div>
                 <h5 className="font-semibold mb-1">Anonymisierte Daten werden entanonymisiert (Schweiz)</h5>
-                <div className="flex items-center mt-2 justify-center space-y-2">
+                <div className="flex flex-col items-center mt-2 space-y-2">
                   <div className="bg-evoya-lightBlue text-white p-2 rounded text-sm w-full text-center">
                     [Vorname 1] [Nachname 1]
                   </div>
-                  <ArrowRight className="text-red-500 mx-2 transform rotate-90" />
+                  <ArrowRight className="text-green-500 transform rotate-90" />
                   <div className="bg-evoya-lightBlue text-white p-2 rounded text-sm w-full text-center">
                     Max Mustermann
                   </div>
@@ -398,3 +398,4 @@ const DetailedFeatures: React.FC = () => {
 };
 
 export default DetailedFeatures;
+
