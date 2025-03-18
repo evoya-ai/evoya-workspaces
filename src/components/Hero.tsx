@@ -5,63 +5,60 @@ import AnimatedSection from './AnimatedSection';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden bg-gradient-to-b from-evoya-navy to-evoya-blue">
+      <div className="absolute inset-0 opacity-10">
+        <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <defs>
+            <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+              <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" strokeWidth="0.5" />
+            </pattern>
+          </defs>
+          <rect width="100" height="100" fill="url(#grid)" />
+        </svg>
+      </div>
+      
       <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <AnimatedSection animation="fade-up" className="text-center lg:text-left">
-            <div className="inline-block mb-4 px-3 py-1 rounded-full bg-evoya-navy/10 text-evoya-navy text-sm font-medium">
+            <div className="inline-block mb-4 px-3 py-1 rounded-full bg-white/20 text-white text-sm font-medium">
               Innovativ. Kollaborativ. Sicher.
             </div>
-            <h1 className="mb-6">
+            <h1 className="mb-6 text-white">
               <span className="block mb-3">Optimieren Sie Ihre Geschäftsprozesse</span>
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-evoya-navy to-evoya-teal">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-evoya-teal">
                 mit KI-Technologie
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">
+            <p className="text-lg md:text-xl text-white/90 mb-8 max-w-xl mx-auto lg:mx-0">
               Evoya KI-Workspaces bietet eine moderne, kollaborative und sichere Plattform, 
               die sich nahtlos an Ihre bestehenden Geschäftsprozesse anpasst.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a href="#contact" className="btn-primary group">
+              <a href="#contact" className="bg-white text-evoya-navy hover:bg-evoya-orange hover:text-white transition-colors duration-300 font-medium py-3 px-6 rounded-md inline-flex items-center group">
                 Kostenlose Demo
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
-              <a href="#features" className="btn-secondary">
+              <a href="#features" className="border-2 border-white text-white hover:bg-white/10 transition-colors duration-300 font-medium py-3 px-6 rounded-md inline-flex items-center">
                 Mehr erfahren
               </a>
             </div>
           </AnimatedSection>
           
           <AnimatedSection animation="fade-in" delay={300} className="relative">
-            <div className="relative z-10 rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
-              <div className="aspect-[4/3] relative bg-gradient-to-br from-gray-50 to-gray-100">
+            <div className="relative z-10 rounded-2xl shadow-2xl overflow-hidden border border-white/20 bg-white/10 backdrop-blur-sm">
+              <div className="aspect-[4/3] relative">
                 {/* Abstract workspace illustration */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <svg className="w-full h-full" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="200" cy="150" r="100" fill="url(#gradient1)" fillOpacity="0.2" />
-                    <circle cx="200" cy="150" r="70" fill="url(#gradient2)" fillOpacity="0.3" />
-                    <circle cx="200" cy="150" r="40" fill="url(#gradient3)" fillOpacity="0.4" />
-                    <defs>
-                      <linearGradient id="gradient1" x1="100" y1="50" x2="300" y2="250" gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#003161" />
-                        <stop offset="1" stopColor="#5BC9BF" />
-                      </linearGradient>
-                      <linearGradient id="gradient2" x1="130" y1="80" x2="270" y2="220" gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#003161" />
-                        <stop offset="1" stopColor="#5BC9BF" />
-                      </linearGradient>
-                      <linearGradient id="gradient3" x1="160" y1="110" x2="240" y2="190" gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#003161" />
-                        <stop offset="1" stopColor="#5BC9BF" />
-                      </linearGradient>
-                    </defs>
+                    <circle cx="200" cy="150" r="100" fill="white" fillOpacity="0.2" />
+                    <circle cx="200" cy="150" r="70" fill="white" fillOpacity="0.3" />
+                    <circle cx="200" cy="150" r="40" fill="white" fillOpacity="0.4" />
                   </svg>
                 </div>
                 
                 {/* UI Windows */}
                 <div className="absolute top-1/4 left-1/4 w-32 h-24 bg-white rounded-lg shadow-lg transform -rotate-6 animate-float" style={{ animationDelay: '0s' }}>
-                  <div className="h-4 bg-evoya-navy rounded-t-lg"></div>
+                  <div className="h-4 bg-evoya-orange rounded-t-lg"></div>
                   <div className="p-2">
                     <div className="h-2 bg-gray-200 rounded-full mb-2"></div>
                     <div className="h-2 bg-gray-200 rounded-full w-3/4"></div>
@@ -87,8 +84,8 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Decorative elements */}
-            <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-gray-50 rounded-full opacity-50"></div>
-            <div className="absolute -top-10 -left-10 w-24 h-24 bg-evoya-navy/10 rounded-full blur-xl"></div>
+            <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-white/5 rounded-full"></div>
+            <div className="absolute -top-10 -left-10 w-24 h-24 bg-white/10 rounded-full blur-xl"></div>
           </AnimatedSection>
         </div>
       </div>
