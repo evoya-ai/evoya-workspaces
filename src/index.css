@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
@@ -197,6 +198,11 @@ header nav a:not(.btn-primary):not(.btn-secondary):not([class*="bg-white"]) {
 
 /* Fix for orange button text visibility */
 a.bg-white.hover\:bg-evoya-orange:hover {
+  @apply text-white;
+}
+
+/* Ensure "Mehr erfahren" button text is visible */
+.border-white.text-white {
   @apply text-white;
 }
 
