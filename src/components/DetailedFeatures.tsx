@@ -415,101 +415,137 @@ const DetailedFeatures: React.FC = () => {
 
             {/* Horizontal Process Flow */}
             <div className="w-full mx-auto mt-12 pb-16">
-              <div className="flex flex-col lg:flex-row items-center justify-between gap-8 relative">
-                {/* Connecting Line */}
-                <div className="absolute top-1/2 left-0 right-0 h-2 bg-gradient-to-r from-evoya-navy via-gray-300 to-evoya-lightBlue hidden lg:block"></div>
+              <div className="flex flex-col lg:flex-row items-stretch justify-between gap-8 relative">
+                {/* Connecting Lines */}
+                <div className="hidden lg:block absolute top-1/2 left-0 w-full h-2 z-0">
+                  <div className="w-full h-full flex items-center">
+                    <div className="h-2 bg-gray-300 w-full"></div>
+                  </div>
+                </div>
+                
+                {/* Left connector arrow (visible only on desktop) */}
+                <div className="hidden lg:flex absolute left-[calc(33%-30px)] top-1/2 transform -translate-y-1/2 z-10">
+                  <div className="bg-gray-300 w-14 h-14 rounded-full flex items-center justify-center">
+                    <ArrowRight className="w-8 h-8 text-gray-600" />
+                  </div>
+                </div>
+                
+                {/* Right connector arrow (visible only on desktop) */}
+                <div className="hidden lg:flex absolute right-[calc(33%-30px)] top-1/2 transform -translate-y-1/2 z-10">
+                  <div className="bg-gray-300 w-14 h-14 rounded-full flex items-center justify-center">
+                    <ArrowRight className="w-8 h-8 text-gray-600" />
+                  </div>
+                </div>
                 
                 {/* Step 1 */}
-                <div className="w-full max-w-sm z-10">
-                  <div className="bg-white p-6 rounded-xl shadow-lg border border-evoya-navy/20">
-                    <div className="bg-evoya-navy text-white font-semibold py-1 px-3 rounded-full text-sm inline-flex items-center mb-3">
-                      <div className="bg-white text-evoya-navy rounded-full w-5 h-5 flex items-center justify-center mr-1 font-bold">1</div>
-                      SCHRITT 1
-                    </div>
-                    <h5 className="font-semibold mb-4 text-gray-800">Vertrauliche Daten werden anonymisiert (Schweiz)</h5>
-                    
-                    <div className="bg-evoya-navy text-white p-3 rounded text-center mb-3">
-                      Max Mustermann
+                <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6 lg:p-8 flex-1 z-20">
+                  <div className="flex flex-col h-full">
+                    <div className="mb-4">
+                      <div className="inline-flex items-center justify-center bg-evoya-navy text-white rounded-full py-1 px-3 text-sm font-medium">
+                        <div className="bg-white text-evoya-navy rounded-full w-6 h-6 flex items-center justify-center mr-2 font-bold">1</div>
+                        SCHRITT 1
+                      </div>
+                      <h5 className="text-lg font-semibold mt-3 mb-4">Vertrauliche Daten werden anonymisiert (Schweiz)</h5>
                     </div>
                     
-                    <div className="flex justify-center mb-3">
-                      <ArrowRight className="w-5 h-5 text-red-500 transform rotate-90" />
-                    </div>
-                    
-                    <div className="bg-evoya-navy text-white p-3 rounded text-center">
-                      [Name 1]
-                    </div>
-                  </div>
-
-                  <div className="mt-4 flex justify-center lg:justify-end">
-                    <div className="w-10 h-10 rounded-full bg-evoya-navy flex items-center justify-center shadow-md">
-                      <Shield className="w-5 h-5 text-white" />
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Arrow - Only visible on mobile */}
-                <div className="lg:hidden">
-                  <ArrowRight className="w-8 h-8 text-gray-400 transform rotate-90" />
-                </div>
-                
-                {/* Step 2 */}
-                <div className="w-full max-w-sm z-10">
-                  <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
-                    <div className="bg-gray-700 text-white font-semibold py-1 px-3 rounded-full text-sm inline-flex items-center mb-3">
-                      <div className="bg-white text-gray-700 rounded-full w-5 h-5 flex items-center justify-center mr-1 font-bold">2</div>
-                      SCHRITT 2
-                    </div>
-                    <h5 className="font-semibold mb-4 text-gray-800">Sprachmodell generiert Antwort mit anonymisierten Daten</h5>
-                    
-                    <div className="p-4 flex justify-center items-center">
-                      <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center">
-                        <Globe2 className="w-10 h-10 text-gray-700" />
+                    <div className="space-y-4 flex-grow">
+                      <div className="bg-evoya-navy text-white p-4 rounded text-center font-medium">
+                        Max Mustermann
+                      </div>
+                      
+                      <div className="flex justify-center">
+                        <div className="p-1 rounded-full bg-red-100">
+                          <ArrowRight className="w-6 h-6 text-red-500 transform rotate-90" />
+                        </div>
+                      </div>
+                      
+                      <div className="bg-evoya-navy text-white p-4 rounded text-center font-medium">
+                        [Name 1]
                       </div>
                     </div>
                     
-                    <p className="text-center text-gray-600 mt-2">
-                      Verarbeitung anonymisierter Daten durch externe KI
-                    </p>
-                  </div>
-
-                  <div className="mt-4 flex justify-center">
-                    <div className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center shadow-md">
-                      <Globe2 className="w-5 h-5 text-white" />
+                    <div className="mt-6 flex justify-center">
+                      <div className="w-12 h-12 rounded-full bg-evoya-navy flex items-center justify-center shadow-md">
+                        <Shield className="w-6 h-6 text-white" />
+                      </div>
                     </div>
                   </div>
                 </div>
                 
                 {/* Arrow - Only visible on mobile */}
-                <div className="lg:hidden">
-                  <ArrowRight className="w-8 h-8 text-gray-400 transform rotate-90" />
+                <div className="flex lg:hidden justify-center">
+                  <div className="bg-gray-200 w-12 h-12 rounded-full flex items-center justify-center">
+                    <ArrowRight className="w-6 h-6 text-gray-600 transform rotate-90 lg:rotate-0" />
+                  </div>
+                </div>
+                
+                {/* Step 2 */}
+                <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6 lg:p-8 flex-1 z-20">
+                  <div className="flex flex-col h-full">
+                    <div className="mb-4">
+                      <div className="inline-flex items-center justify-center bg-gray-700 text-white rounded-full py-1 px-3 text-sm font-medium">
+                        <div className="bg-white text-gray-700 rounded-full w-6 h-6 flex items-center justify-center mr-2 font-bold">2</div>
+                        SCHRITT 2
+                      </div>
+                      <h5 className="text-lg font-semibold mt-3 mb-4">Sprachmodell generiert Antwort mit anonymisierten Daten</h5>
+                    </div>
+                    
+                    <div className="flex flex-col items-center justify-center flex-grow">
+                      <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mb-4">
+                        <Globe2 className="w-16 h-16 text-gray-700" />
+                      </div>
+                      
+                      <p className="text-center text-gray-600">
+                        Verarbeitung anonymisierter Daten<br />durch externe KI
+                      </p>
+                    </div>
+                    
+                    <div className="mt-6 flex justify-center">
+                      <div className="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center shadow-md">
+                        <Globe2 className="w-6 h-6 text-white" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Arrow - Only visible on mobile */}
+                <div className="flex lg:hidden justify-center">
+                  <div className="bg-gray-200 w-12 h-12 rounded-full flex items-center justify-center">
+                    <ArrowRight className="w-6 h-6 text-gray-600 transform rotate-90 lg:rotate-0" />
+                  </div>
                 </div>
                 
                 {/* Step 3 */}
-                <div className="w-full max-w-sm z-10">
-                  <div className="bg-white p-6 rounded-xl shadow-lg border border-evoya-lightBlue/20">
-                    <div className="bg-evoya-lightBlue text-white font-semibold py-1 px-3 rounded-full text-sm inline-flex items-center mb-3">
-                      <div className="bg-white text-evoya-lightBlue rounded-full w-5 h-5 flex items-center justify-center mr-1 font-bold">3</div>
-                      SCHRITT 3
-                    </div>
-                    <h5 className="font-semibold mb-4 text-gray-800">Anonymisierte Daten werden entanonymisiert (Schweiz)</h5>
-                    
-                    <div className="bg-evoya-lightBlue text-white p-3 rounded text-center mb-3">
-                      [Name 1]
+                <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6 lg:p-8 flex-1 z-20">
+                  <div className="flex flex-col h-full">
+                    <div className="mb-4">
+                      <div className="inline-flex items-center justify-center bg-evoya-lightBlue text-white rounded-full py-1 px-3 text-sm font-medium">
+                        <div className="bg-white text-evoya-lightBlue rounded-full w-6 h-6 flex items-center justify-center mr-2 font-bold">3</div>
+                        SCHRITT 3
+                      </div>
+                      <h5 className="text-lg font-semibold mt-3 mb-4">Anonymisierte Daten werden entanonymisiert (Schweiz)</h5>
                     </div>
                     
-                    <div className="flex justify-center mb-3">
-                      <ArrowRight className="w-5 h-5 text-green-500 transform rotate-90" />
+                    <div className="space-y-4 flex-grow">
+                      <div className="bg-evoya-lightBlue text-white p-4 rounded text-center font-medium">
+                        [Name 1]
+                      </div>
+                      
+                      <div className="flex justify-center">
+                        <div className="p-1 rounded-full bg-green-100">
+                          <ArrowRight className="w-6 h-6 text-green-500 transform rotate-90" />
+                        </div>
+                      </div>
+                      
+                      <div className="bg-evoya-lightBlue text-white p-4 rounded text-center font-medium">
+                        Max Mustermann
+                      </div>
                     </div>
                     
-                    <div className="bg-evoya-lightBlue text-white p-3 rounded text-center">
-                      Max Mustermann
-                    </div>
-                  </div>
-
-                  <div className="mt-4 flex justify-center lg:justify-start">
-                    <div className="w-10 h-10 rounded-full bg-evoya-lightBlue flex items-center justify-center shadow-md">
-                      <RefreshCcw className="w-5 h-5 text-white" />
+                    <div className="mt-6 flex justify-center">
+                      <div className="w-12 h-12 rounded-full bg-evoya-lightBlue flex items-center justify-center shadow-md">
+                        <RefreshCcw className="w-6 h-6 text-white" />
+                      </div>
                     </div>
                   </div>
                 </div>
