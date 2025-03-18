@@ -17,14 +17,14 @@ const Features: React.FC = () => {
       title: 'Bildgenerierung',
       description: 'Entwickeln Sie visuelle Inhalte für Marketingkampagnen und Präsentationen mit wenigen Klicks.',
       icon: Image,
-      iconColor: 'text-evoya-green',
+      iconColor: 'text-evoya-blue',
       delay: 100
     },
     {
       title: 'Bilderkennung und Analyse',
       description: 'Automatisieren Sie die Verarbeitung und Analyse visueller Daten für mehr Effizienz.',
       icon: Eye,
-      iconColor: 'text-evoya-darkBlue',
+      iconColor: 'text-evoya-blue',
       delay: 200
     },
     {
@@ -38,20 +38,20 @@ const Features: React.FC = () => {
       title: 'Live-Informationsabruf',
       description: 'Greifen Sie in Echtzeit auf aktuelle Marktdaten und Trends zu für fundierte Entscheidungen.',
       icon: Globe,
-      iconColor: 'text-evoya-lightBlue',
+      iconColor: 'text-evoya-orange',
       delay: 400
     },
     {
       title: 'Diagramme & Visuelle Darstellungen',
       description: 'Erstellen Sie automatisiert Diagramme zur Visualisierung von Geschäftsprozessen und Datenanalysen.',
       icon: BarChart,
-      iconColor: 'text-evoya-yellow',
+      iconColor: 'text-evoya-orange',
       delay: 500
     }
   ];
 
   return (
-    <section id="features" className="py-24 bg-gradient-to-b from-white to-gray-50">
+    <section id="features" className="py-24 bg-gradient-to-b from-white via-gray-50 to-gray-100">
       <div className="section-container">
         <AnimatedSection className="text-center mb-16">
           <div className="inline-block mb-4 px-3 py-1 rounded-full bg-evoya-blue/10 text-evoya-blue text-sm font-medium">
@@ -73,7 +73,7 @@ const Features: React.FC = () => {
                 description={feature.description}
                 icon={feature.icon}
                 iconColor={feature.iconColor}
-                className="h-full glass"
+                className="h-full bg-white border border-gray-100 shadow-sm"
               />
             </AnimatedSection>
           ))}

@@ -22,11 +22,11 @@ const ModelCard: React.FC<ModelCardProps> = ({
   isSwissHosted = false,
 }) => {
   return (
-    <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg group border-0">
+    <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg group border border-gray-100">
       <div className={`h-2 w-full ${accentColor}`} />
       <CardContent className="p-5">
         <div className="flex items-start gap-4">
-          <div className={`p-3 rounded-full ${accentColor} transition-all duration-300`}>
+          <div className={`p-3 rounded-full ${accentColor} transition-all duration-300 shadow-sm`}>
             {icon}
           </div>
           <div className="flex-1">
@@ -60,7 +60,7 @@ const LanguageModels: React.FC = () => {
       name: "Claude 3 Opus",
       description: "Anthropics fortschrittlichstes Modell mit aussergewöhnlicher Genauigkeit",
       icon: <Bot className="w-5 h-5 text-white" />,
-      accentColor: "bg-evoya-teal text-white",
+      accentColor: "bg-evoya-blue text-white",
       isSwissHosted: false
     },
     {
@@ -81,21 +81,21 @@ const LanguageModels: React.FC = () => {
       name: "Perplexity Pro",
       description: "Spezialisiert auf Faktenrecherche mit Echtzeitdaten",
       icon: <Bot className="w-5 h-5 text-white" />,
-      accentColor: "bg-evoya-lightBlue text-white",
+      accentColor: "bg-evoya-blue text-white",
       isSwissHosted: false
     },
     {
       name: "Llama 3",
       description: "Open-Source-Modell von Meta mit umfangreichen Anpassungsmöglichkeiten",
       icon: <Bot className="w-5 h-5 text-white" />,
-      accentColor: "bg-evoya-yellow text-gray-800",
+      accentColor: "bg-evoya-orange text-white",
       isSwissHosted: false
     },
   ];
 
   return (
     <section id="language-models" className="py-16 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-white -z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-gray-100 -z-10"></div>
       <div className="section-container">
         <AnimatedSection className="text-center mb-12" animation="fade-up">
           <div className="inline-block mb-4 px-3 py-1 rounded-full bg-evoya-blue/10 text-evoya-blue text-sm font-medium">
