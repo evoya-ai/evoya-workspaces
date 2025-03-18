@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -170,7 +169,7 @@ const DetailedFeatures: React.FC = () => {
       accentColor: "text-evoya-yellow bg-evoya-yellow/10",
     },
     {
-      title: "Evoya Creator",
+      title: "Creator",
       description: "Erweitern Sie die klassische Chat-Interaktion um eine dynamische Bearbeitungsansicht für strukturierte Inhalte.",
       details: [
         "Direkte Bearbeitung und Strukturierung von KI-generierten Inhalten",
@@ -185,7 +184,7 @@ const DetailedFeatures: React.FC = () => {
       accentColor: "text-evoya-purple bg-evoya-purple/10",
     },
     {
-      title: "Evoya Voice",
+      title: "Voice",
       description: "Verwandeln Sie gesprochene Inhalte direkt in Text für barrierefreie und schnelle Kommunikation.",
       details: [
         "Präzise Echtzeit-Transkription von Sprache zu Text",
