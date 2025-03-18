@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart } from 'lucide-react';
+import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { cn } from '../lib/utils';
 
@@ -168,6 +168,36 @@ const DetailedFeatures: React.FC = () => {
       alt: "Datenvusualisierung auf einem Laptop",
       isReversed: true,
       accentColor: "text-evoya-yellow bg-evoya-yellow/10",
+    },
+    {
+      title: "Evoya Creator",
+      description: "Erweitern Sie die klassische Chat-Interaktion um eine dynamische Bearbeitungsansicht für strukturierte Inhalte.",
+      details: [
+        "Direkte Bearbeitung und Strukturierung von KI-generierten Inhalten",
+        "Interaktive Echtzeit-Zusammenarbeit mit der KI für optimale Ergebnisse",
+        "Nahtlose Integration in bestehende Workflows und Dokumentenformate",
+        "Flexible Formattierungsoptionen für professionelle Ausgaben",
+      ],
+      icon: <PenTool className="w-6 h-6 text-white" />,
+      image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f",
+      alt: "Kreative Bearbeitung von Inhalten",
+      isReversed: false,
+      accentColor: "text-evoya-purple bg-evoya-purple/10",
+    },
+    {
+      title: "Evoya Voice",
+      description: "Verwandeln Sie gesprochene Inhalte direkt in Text für barrierefreie und schnelle Kommunikation.",
+      details: [
+        "Präzise Echtzeit-Transkription von Sprache zu Text",
+        "Unterstützung mehrerer Sprachen für internationale Teams",
+        "Automatische Formatierung und Strukturierung von transkribierten Inhalten",
+        "Nahtlose Integration mit anderen Evoya-Funktionen für Weiterverarbeitung",
+      ],
+      icon: <Mic className="w-6 h-6 text-white" />,
+      image: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc",
+      alt: "Spracherkennung und Transkription",
+      isReversed: true,
+      accentColor: "text-evoya-red bg-evoya-red/10",
     },
   ];
 
