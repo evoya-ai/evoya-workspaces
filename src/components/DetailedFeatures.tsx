@@ -271,33 +271,33 @@ const DetailedFeatures: React.FC = () => {
                 </g>
               </svg>
               
-              {/* Surrounding nodes */}
-              <div className="absolute top-[25%] left-[20%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '0s' }}>
+              {/* Surrounding nodes - Improved positioning to prevent overlap */}
+              <div className="absolute top-[15%] left-[15%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '0s' }}>
                 <Book className="w-8 h-8 text-evoya-orange mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Dokumente</span>
               </div>
               
-              <div className="absolute top-[25%] right-[20%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '1.5s' }}>
+              <div className="absolute top-[15%] right-[15%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '1.5s' }}>
                 <Globe className="w-8 h-8 text-evoya-green mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Webinhalte</span>
               </div>
               
-              <div className="absolute bottom-[25%] right-[20%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '3s' }}>
+              <div className="absolute bottom-[15%] right-[15%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '3s' }}>
                 <Network className="w-8 h-8 text-evoya-lightBlue mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Knowledge Graph</span>
               </div>
               
-              <div className="absolute bottom-[25%] left-[20%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '4.5s' }}>
+              <div className="absolute bottom-[15%] left-[15%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '4.5s' }}>
                 <Search className="w-8 h-8 text-evoya-navy mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Präzise Suche</span>
               </div>
               
-              <div className="absolute left-[15%] top-[50%] transform -translate-y-1/2 w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '6s' }}>
+              <div className="absolute left-[5%] top-[50%] transform -translate-y-1/2 w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '6s' }}>
                 <Layers className="w-8 h-8 text-evoya-purple mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Strukturierte Daten</span>
               </div>
               
-              <div className="absolute right-[15%] top-[50%] transform -translate-y-1/2 w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '7.5s' }}>
+              <div className="absolute right-[5%] top-[50%] transform -translate-y-1/2 w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '7.5s' }}>
                 <FileSearch className="w-8 h-8 text-evoya-yellow mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Analyse</span>
               </div>
