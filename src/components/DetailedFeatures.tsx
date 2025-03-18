@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic, Shield, Lock, Database, ArrowRight, User, Globe2, RefreshCcw, Book, Layers, Network, Brain, Search } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -413,8 +414,10 @@ const DetailedFeatures: React.FC = () => {
             </div>
 
             <div className="relative w-full mx-auto" style={{ height: "700px", maxWidth: "800px" }}>
+              {/* Main circular border */}
               <div className="absolute w-[600px] h-[600px] rounded-full border-[25px] border-t-evoya-navy border-r-evoya-navy border-b-evoya-lightBlue border-l-evoya-lightBlue left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"></div>
               
+              {/* Center Shield Logo */}
               <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-white rounded-full shadow-xl flex flex-col items-center justify-center z-30">
                 <div className="text-center">
                   <h4 className="font-bold text-xl text-evoya-navy">Privacy</h4>
@@ -422,12 +425,14 @@ const DetailedFeatures: React.FC = () => {
                 </div>
               </div>
 
+              {/* Position markers on the circle */}
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-evoya-navy rounded-full z-20"></div>
               <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-6 h-6 bg-evoya-navy rounded-full z-20"></div>
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gray-700 rounded-full z-20"></div>
               <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-6 h-6 bg-evoya-lightBlue rounded-full z-20"></div>
 
-              <div className="absolute top-[20px] right-[20px] z-40 w-80">
+              {/* Step 1 - Centered at Top */}
+              <div className="absolute top-[-80px] left-1/2 transform -translate-x-1/2 z-40 w-80">
                 <div className="bg-white p-5 rounded-lg shadow-lg border border-gray-200">
                   <div className="bg-evoya-navy text-white font-semibold py-1 px-3 rounded-full text-sm inline-flex items-center mb-3">
                     <div className="bg-white text-evoya-navy rounded-full w-5 h-5 flex items-center justify-center mr-1 font-bold">1</div>
@@ -451,40 +456,45 @@ const DetailedFeatures: React.FC = () => {
                 </div>
               </div>
 
-              <div className="absolute top-[20px] left-[20px] z-40 w-80">
-                <div className="bg-white p-5 rounded-lg shadow-lg border border-gray-200">
-                  <div className="bg-evoya-lightBlue text-white font-semibold py-1 px-3 rounded-full text-sm inline-flex items-center mb-3">
-                    <div className="bg-white text-evoya-lightBlue rounded-full w-5 h-5 flex items-center justify-center mr-1 font-bold">3</div>
-                    SCHRITT 3
-                  </div>
-                  <h5 className="font-semibold mb-3 text-gray-800">Anonymisierte Daten werden entanonymisiert (Schweiz)</h5>
-                  
-                  <div className="bg-evoya-lightBlue text-white p-2 rounded text-center mb-2">
-                    [Vorname 1] [Nachname 1]
-                  </div>
-                  
-                  <div className="flex justify-center mb-2">
-                    <div className="w-6 h-6 flex items-center justify-center">
-                      <ArrowRight className="w-5 h-5 text-green-500 transform rotate-90" />
+              {/* Steps 2 and 3 at bottom, side by side */}
+              <div className="absolute bottom-[-140px] left-1/2 transform -translate-x-1/2 z-40 w-full flex justify-center gap-8">
+                {/* Step 2 - Bottom Left */}
+                <div className="w-80">
+                  <div className="bg-white p-5 rounded-lg shadow-lg border border-gray-200">
+                    <div className="bg-gray-700 text-white font-semibold py-1 px-3 rounded-full text-sm inline-flex items-center mb-3">
+                      <div className="bg-white text-gray-700 rounded-full w-5 h-5 flex items-center justify-center mr-1 font-bold">2</div>
+                      SCHRITT 2
+                    </div>
+                    <h5 className="font-semibold mb-3 text-gray-800">Sprachmodell generiert Antwort mit anonymisierten Daten</h5>
+                    
+                    <div className="flex justify-center">
+                      <Globe2 className="w-10 h-10 text-gray-700" />
                     </div>
                   </div>
-                  
-                  <div className="bg-evoya-lightBlue text-white p-2 rounded text-center">
-                    Max Mustermann
-                  </div>
                 </div>
-              </div>
-
-              <div className="absolute bottom-[20px] left-1/2 transform -translate-x-1/2 z-40 w-80">
-                <div className="bg-white p-5 rounded-lg shadow-lg border border-gray-200">
-                  <div className="bg-gray-700 text-white font-semibold py-1 px-3 rounded-full text-sm inline-flex items-center mb-3">
-                    <div className="bg-white text-gray-700 rounded-full w-5 h-5 flex items-center justify-center mr-1 font-bold">2</div>
-                    SCHRITT 2
-                  </div>
-                  <h5 className="font-semibold mb-3 text-gray-800">Sprachmodell generiert Antwort mit anonymisierten Daten</h5>
-                  
-                  <div className="flex justify-center">
-                    <Globe2 className="w-10 h-10 text-gray-700" />
+                
+                {/* Step 3 - Bottom Right */}
+                <div className="w-80">
+                  <div className="bg-white p-5 rounded-lg shadow-lg border border-gray-200">
+                    <div className="bg-evoya-lightBlue text-white font-semibold py-1 px-3 rounded-full text-sm inline-flex items-center mb-3">
+                      <div className="bg-white text-evoya-lightBlue rounded-full w-5 h-5 flex items-center justify-center mr-1 font-bold">3</div>
+                      SCHRITT 3
+                    </div>
+                    <h5 className="font-semibold mb-3 text-gray-800">Anonymisierte Daten werden entanonymisiert (Schweiz)</h5>
+                    
+                    <div className="bg-evoya-lightBlue text-white p-2 rounded text-center mb-2">
+                      [Vorname 1] [Nachname 1]
+                    </div>
+                    
+                    <div className="flex justify-center mb-2">
+                      <div className="w-6 h-6 flex items-center justify-center">
+                        <ArrowRight className="w-5 h-5 text-green-500 transform rotate-90" />
+                      </div>
+                    </div>
+                    
+                    <div className="bg-evoya-lightBlue text-white p-2 rounded text-center">
+                      Max Mustermann
+                    </div>
                   </div>
                 </div>
               </div>
