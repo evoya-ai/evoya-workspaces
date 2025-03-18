@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
@@ -193,7 +192,7 @@ footer a:not(.btn-primary):not(.btn-secondary) {
 
 /* Exception for header navigation links */
 header nav a:not(.btn-primary):not(.btn-secondary):not([class*="bg-white"]) {
-  @apply text-white !important transition-colors duration-300 hover:text-evoya-orange;
+  @apply text-white transition-colors duration-300 hover:text-evoya-orange;
 }
 
 /* Custom card styles */
