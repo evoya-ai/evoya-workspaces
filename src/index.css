@@ -203,7 +203,7 @@ a.bg-white.hover\:bg-evoya-orange:hover {
 
 /* Ensure "Mehr erfahren" button text is visible */
 .border-white.text-white {
-  @apply text-white;
+  color: white; /* Using direct CSS instead of @apply to avoid circular dependency */
 }
 
 /* Custom card styles */
