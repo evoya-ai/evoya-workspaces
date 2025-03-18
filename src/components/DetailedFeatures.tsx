@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic } from 'lucide-react';
+import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic, Shield, Lock, Database } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { cn } from '../lib/utils';
 
@@ -198,6 +198,21 @@ const DetailedFeatures: React.FC = () => {
       isReversed: true,
       accentColor: "text-evoya-red bg-evoya-red/10",
     },
+    {
+      title: "Datensicherheit",
+      description: "Wir garantieren höchste Standards beim Schutz Ihrer Daten mit modernsten Sicherheitsmaßnahmen.",
+      details: [
+        "DSGVO-konforme Verarbeitung aller Daten",
+        "Sichere Datenspeicherung ausschließlich in der Schweiz",
+        "End-to-End-Verschlüsselung für maximalen Schutz",
+        "Umfassende Zugriffskontrollen und Audit-Trails",
+      ],
+      icon: <Lock className="w-6 h-6 text-white" />,
+      image: "https://images.unsplash.com/photo-1563237023-b1e970526dcb",
+      alt: "Datensicherheit und Verschlüsselung",
+      isReversed: false,
+      accentColor: "text-evoya-navy bg-evoya-navy/10",
+    },
   ];
 
   return (
@@ -231,6 +246,53 @@ const DetailedFeatures: React.FC = () => {
             />
           ))}
         </div>
+
+        <AnimatedSection className="mt-24 text-center" animation="fade-up">
+          <div className="inline-block mb-4 px-3 py-1 rounded-full bg-evoya-navy/10 text-evoya-navy text-sm font-medium">
+            Privacy Shield
+          </div>
+          <h3 className="text-2xl lg:text-3xl font-semibold mb-6">Unser Engagement für den Datenschutz</h3>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-10">
+            Das Evoya Privacy Shield gewährleistet umfassenden Schutz Ihrer Daten durch mehrschichtige Sicherheitsmaßnahmen
+            und strenge Compliance-Standards.
+          </p>
+          
+          <div className="max-w-3xl mx-auto relative">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                <div className="w-12 h-12 rounded-full bg-evoya-navy/10 flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-6 h-6 text-evoya-navy" />
+                </div>
+                <h4 className="text-lg font-semibold mb-2 text-center">Schweizer Datenspeicherung</h4>
+                <p className="text-gray-600 text-center">
+                  Alle Daten werden ausschließlich in sicheren Rechenzentren in der Schweiz gespeichert und verarbeitet.
+                </p>
+              </div>
+              
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                <div className="w-12 h-12 rounded-full bg-evoya-navy/10 flex items-center justify-center mx-auto mb-4">
+                  <Database className="w-6 h-6 text-evoya-navy" />
+                </div>
+                <h4 className="text-lg font-semibold mb-2 text-center">DSGVO-Konformität</h4>
+                <p className="text-gray-600 text-center">
+                  Vollständige Einhaltung der europäischen Datenschutz-Grundverordnung und schweizerischer Datenschutzgesetze.
+                </p>
+              </div>
+              
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                <div className="w-12 h-12 rounded-full bg-evoya-navy/10 flex items-center justify-center mx-auto mb-4">
+                  <Lock className="w-6 h-6 text-evoya-navy" />
+                </div>
+                <h4 className="text-lg font-semibold mb-2 text-center">Verschlüsselung</h4>
+                <p className="text-gray-600 text-center">
+                  Modernste End-to-End-Verschlüsselung für alle Daten während der Übertragung und Speicherung.
+                </p>
+              </div>
+            </div>
+            
+            <div className="absolute -z-10 inset-0 blur-3xl bg-evoya-navy/5 rounded-full transform -translate-y-1/4 scale-150"></div>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );
