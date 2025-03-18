@@ -98,8 +98,8 @@ const DetailedFeatures: React.FC = () => {
       title: "Bildgenerierung",
       description: "Entwickeln Sie visuelle Inhalte für Marketingkampagnen und Präsentationen mit wenigen Klicks.",
       details: [
-        "Erstellung von maßgeschneiderten Produktvisualisierungen",
-        "Generierung von Konzeptillustrationen für Marketingmaterialien",
+        "Erstellung von maßgeschneiderten Produktvisualisierungen mit DALL-E",
+        "Generierung von Konzeptillustrationen mit FLUX für Marketingmaterialien",
         "Anpassung bestehender Bilder an Ihre Markenidentität",
         "Automatische Größenanpassung für verschiedene Medienkanäle",
       ],
