@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ShieldCheck, BadgeDollarSign, Key } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -9,14 +8,14 @@ const Benefits: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-gray-100 via-white to-gray-50 -z-10"></div>
       <div className="section-container">
         <AnimatedSection className="text-center mb-16">
-          <div className="inline-block mb-4 px-3 py-1 rounded-full bg-evoya-green/10 text-evoya-green text-sm font-medium">
+          <div className="inline-block mb-4 px-3 py-1 rounded-full bg-evoya-blue/10 text-evoya-blue text-sm font-medium">
             Vorteile
           </div>
           <h2 className="mb-6 max-w-3xl mx-auto">
-            Warum Unternehmen auf <span className="text-evoya-green">Evoya</span> setzen
+            Warum Unternehmen auf <span className="text-evoya-blue">Evoya</span> setzen
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Unsere KI-Workspaces bieten entscheidende Vorteile für KMUs, die Innovation und Sicherheit gleichermaßen schätzen.
+            Unsere KI-Workspaces bieten entscheidende Vorteile für KMUs, die Innovation und Sicherheit gleichermassen schätzen.
           </p>
         </AnimatedSection>
 
@@ -111,7 +110,7 @@ const Benefits: React.FC = () => {
                   <div className="w-5 h-5 rounded-full bg-evoya-blue/10 flex items-center justify-center mr-3">
                     <div className="w-2 h-2 rounded-full bg-evoya-blue"></div>
                   </div>
-                  <span className="text-gray-700">Regelmäßige Updates</span>
+                  <span className="text-gray-700">Regelmässige Updates</span>
                 </li>
               </ul>
             </div>

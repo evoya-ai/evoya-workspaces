@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Brain, Network, Target, Workflow, Component, GitBranch } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -50,14 +49,14 @@ const AgenticFramework: React.FC = () => {
       title: "Interaktion",
       description: "Nahtlose Kommunikation zwischen mehreren Agenten, die zusammenarbeiten, um übergeordnete Ziele zu erreichen und Aufgaben zu koordinieren.",
       icon: <Network className="w-5 h-5 text-white" />,
-      accentColor: "bg-evoya-teal text-white",
+      accentColor: "bg-evoya-lightBlue text-white",
       delay: 100
     },
     {
       title: "Zielorientierung",
       description: "Agenten verfolgen definierte Ziele und passen ihre Strategien kontinuierlich an, um optimale Ergebnisse zu erzielen.",
       icon: <Target className="w-5 h-5 text-white" />,
-      accentColor: "bg-evoya-green text-white",
+      accentColor: "bg-evoya-blue text-white",
       delay: 200
     },
     {
@@ -77,7 +76,7 @@ const AgenticFramework: React.FC = () => {
     {
       title: "Adaptivität",
       description: "Kontinuierliches Lernen und Anpassung an neue Anforderungen, Daten und Feedback, um die Leistung stetig zu verbessern.",
-      icon: <GitBranch className="w-5 h-5 text-white" />,
+      icon: <GitBranch className="w-5 h-5 text-gray-800" />,
       accentColor: "bg-evoya-yellow text-gray-800",
       delay: 500
     },

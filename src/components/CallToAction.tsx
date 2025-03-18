@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { MessageSquare, Mail, Phone, ArrowRight } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -9,11 +8,11 @@ const CallToAction: React.FC = () => {
       <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <AnimatedSection animation="fade-up" className="lg:pr-12">
-            <div className="inline-block mb-4 px-3 py-1 rounded-full bg-evoya-green/10 text-evoya-green text-sm font-medium">
+            <div className="inline-block mb-4 px-3 py-1 rounded-full bg-evoya-blue/10 text-evoya-blue text-sm font-medium">
               Kontakt
             </div>
             <h2 className="mb-6">
-              Starten Sie Ihren Weg zur <span className="text-evoya-green">KI-Innovation</span>
+              Starten Sie Ihren Weg zur <span className="text-evoya-blue">KI-Innovation</span>
             </h2>
             <p className="text-lg text-gray-600 mb-8">
               Vereinbaren Sie eine kostenlose Demo oder ein Beratungsgespräch. Unser Team hilft Ihnen dabei, 
@@ -32,8 +31,8 @@ const CallToAction: React.FC = () => {
               </div>
               
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-evoya-green/10 flex items-center justify-center mr-5 flex-shrink-0">
-                  <Mail className="w-5 h-5 text-evoya-green" />
+                <div className="w-12 h-12 rounded-full bg-evoya-orange/10 flex items-center justify-center mr-5 flex-shrink-0">
+                  <Mail className="w-5 h-5 text-evoya-orange" />
                 </div>
                 <div>
                   <h3 className="font-medium text-gray-900 mb-1">Email</h3>

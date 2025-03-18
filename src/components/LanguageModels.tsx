@@ -33,7 +33,7 @@ const ModelCard: React.FC<ModelCardProps> = ({
             <div className="flex items-center justify-between gap-2 mb-2">
               <h3 className="text-xl font-semibold">{name}</h3>
               {isSwissHosted && (
-                <span className="inline-flex items-center rounded-full bg-evoya-green/10 px-2.5 py-1 text-xs font-medium text-evoya-green">
+                <span className="inline-flex items-center rounded-full bg-evoya-blue/10 px-2.5 py-1 text-xs font-medium text-evoya-blue">
                   <Shield className="w-3 h-3 mr-1" />
                   Swiss Hosted
                 </span>
@@ -67,7 +67,7 @@ const LanguageModels: React.FC = () => {
       name: "SwissLama 3.3",
       description: "In der Schweiz gehostetes leistungsstarkes Open-Source-Modell",
       icon: <Bot className="w-5 h-5 text-white" />,
-      accentColor: "bg-evoya-green text-white",
+      accentColor: "bg-evoya-blue text-white",
       isSwissHosted: true
     },
     {
