@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,24 +8,24 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 220 16% 22%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 16% 22%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 16% 22%;
 
-    --primary: 212 100% 19%;
+    --primary: 228 45% 31%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 174 37% 57%;
+    --secondary: 35 85% 52%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 33 100% 50%;
+    --accent: 35 85% 52%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -33,35 +33,35 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 228 45% 31%;
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 220 16% 22%;
+    --foreground: 0 0% 98%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 16% 22%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 16% 22%;
+    --popover-foreground: 0 0% 98%;
 
     --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary-foreground: 220 16% 22%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 35 85% 52%;
+    --secondary-foreground: 220 16% 22%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
     --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
@@ -80,7 +80,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-medium tracking-tight;
+    @apply font-manrope font-semibold tracking-tight text-custom-darkBlue;
   }
 
   h1 {
@@ -96,7 +96,7 @@
   }
 
   p {
-    @apply font-sans text-base leading-relaxed text-gray-700;
+    @apply font-sans text-base leading-relaxed text-custom-gray;
   }
 }
 
@@ -118,12 +118,12 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-medium text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl;
-    background: linear-gradient(135deg, theme('colors.evoya.blue'), theme('colors.evoya.teal'));
+    @apply inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-manrope font-medium text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl;
+    background: linear-gradient(135deg, theme('colors.custom.darkBlue'), theme('colors.evoya.lightBlue'));
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-medium bg-transparent border-2 border-evoya-blue text-evoya-blue shadow-sm transition-all duration-300 hover:border-evoya-teal hover:text-evoya-teal;
+    @apply inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-manrope font-medium bg-transparent border-2 border-custom-darkBlue text-custom-darkBlue shadow-sm transition-all duration-300 hover:border-custom-orange hover:text-custom-orange;
   }
 
   .feature-icon-container {
@@ -145,12 +145,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(156, 163, 175, 0.5);
+  background: rgba(68, 68, 68, 0.5);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(156, 163, 175, 0.7);
+  background: rgba(68, 68, 68, 0.7);
 }
 
 /* Custom animations */
@@ -169,4 +169,24 @@
 html {
   visibility: visible;
   opacity: 1;
+}
+
+/* Custom button styles */
+button, .button {
+  @apply font-manrope;
+}
+
+/* Custom highlight colors */
+::selection {
+  @apply bg-custom-orange/20 text-custom-darkBlue;
+}
+
+/* Link hover effects */
+a:not(.btn-primary):not(.btn-secondary) {
+  @apply text-custom-darkBlue transition-colors duration-300 hover:text-custom-orange;
+}
+
+/* Custom card styles */
+.custom-card {
+  @apply rounded-xl overflow-hidden border border-gray-100 shadow-md transition-all duration-300 hover:shadow-lg bg-white;
 }

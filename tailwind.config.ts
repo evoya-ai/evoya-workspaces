@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,18 +53,25 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				custom: {
+					darkBlue: '#2B3972',   // Dunkelblau
+					orange: '#EC961E',     // Orange
+					darkGray: '#444444',   // Dunkelgrau
+					white: '#ffffff',      // Weiß
+					gray: '#666666',       // Grau
+				},
 				evoya: {
-					blue: '#003161',
-					navy: '#042359',
-					lightBlue: '#0F9AFA',
+					blue: '#2B3972',       // Ersetzt durch Dunkelblau
+					navy: '#2B3972',       // Angepasst an Dunkelblau
+					lightBlue: '#5B6CAD',  // Hellere Version von Dunkelblau
 					teal: '#5BC9BF',
 					green: '#228B22',
 					lightGreen: '#48D45F',
-					orange: '#FF8C00',
+					orange: '#EC961E',     // Ersetzt durch Orange
 					yellow: '#FBBF24',
-					gray: '#9CA3AF',
+					gray: '#666666',       // Ersetzt durch Grau
 					lightGray: '#F3F4F6',
-					darkGray: '#333333'
+					darkGray: '#444444'    // Ersetzt durch Dunkelgrau
 				}
 			},
 			borderRadius: {
@@ -174,8 +182,9 @@ export default {
 				'scale': 'scale 0.3s ease-out forwards',
 			},
 			fontFamily: {
-				sans: ['Poppins', 'sans-serif'],
+				sans: ['DM Sans', 'sans-serif'],      // Geändert zu DM Sans
 				serif: ['Merriweather', 'serif'],
+				manrope: ['Manrope', 'sans-serif'],   // Neu für Buttons und Überschriften
 			},
 			backdropBlur: {
 				xs: '2px',
