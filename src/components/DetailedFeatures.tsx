@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic, Shield, Lock, Database } from 'lucide-react';
+import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic, Shield, Lock, Database, ArrowRight, User, Globe2, RefreshCcw } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { cn } from '../lib/utils';
 
@@ -291,6 +292,104 @@ const DetailedFeatures: React.FC = () => {
             </div>
             
             <div className="absolute -z-10 inset-0 blur-3xl bg-evoya-navy/5 rounded-full transform -translate-y-1/4 scale-150"></div>
+          </div>
+        </AnimatedSection>
+
+        {/* Privacy Shield Process Visualization */}
+        <AnimatedSection className="mt-24" animation="fade-up">
+          <div className="max-w-5xl mx-auto">
+            <div className="mb-12 text-center">
+              <h3 className="text-2xl lg:text-3xl font-semibold mb-6">Wie das Privacy Shield funktioniert</h3>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Das Evoya Privacy Shield schützt Ihre sensiblen Daten durch einen mehrstufigen Anonymisierungsprozess, 
+                der ausschließlich in sicheren Schweizer Rechenzentren stattfindet.
+              </p>
+            </div>
+
+            <div className="relative mt-16 mb-20">
+              {/* Central Privacy Shield Circle */}
+              <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-white rounded-full shadow-lg border-4 border-gray-100 flex items-center justify-center z-10">
+                <div className="text-center">
+                  <h4 className="font-bold text-xl text-evoya-navy">Evoya</h4>
+                  <h4 className="font-bold text-xl text-evoya-navy">Privacy</h4>
+                  <h4 className="font-bold text-xl text-evoya-navy">Shield</h4>
+                </div>
+              </div>
+
+              {/* Circular Process Flow */}
+              <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full border-[30px] border-t-evoya-navy border-r-evoya-navy border-b-evoya-lightBlue border-l-evoya-lightBlue opacity-75 z-0"></div>
+
+              {/* Step 1: Top Right */}
+              <div className="absolute top-0 right-1/4 bg-white p-4 rounded-lg shadow-lg border border-evoya-navy max-w-xs z-20">
+                <div className="bg-evoya-navy text-white font-semibold py-1 px-3 rounded-full text-xs inline-flex items-center mb-2">
+                  <div className="bg-white text-evoya-navy rounded-full w-4 h-4 flex items-center justify-center mr-1">1</div>
+                  SCHRITT 1
+                </div>
+                <h5 className="font-semibold mb-1">Vertrauliche Daten werden anonymisiert (Schweiz)</h5>
+                <div className="flex items-center mt-2 justify-center space-y-2">
+                  <div className="bg-evoya-navy text-white p-2 rounded text-sm w-full text-center">
+                    Max Mustermann
+                  </div>
+                  <ArrowRight className="text-red-500 mx-2 transform rotate-90" />
+                  <div className="bg-evoya-navy text-white p-2 rounded text-sm w-full text-center">
+                    [Vorname 1] [Nachname 1]
+                  </div>
+                </div>
+              </div>
+
+              {/* Step 2: Bottom */}
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-lg shadow-lg border border-gray-200 max-w-xs z-20">
+                <div className="bg-gray-700 text-white font-semibold py-1 px-3 rounded-full text-xs inline-flex items-center mb-2">
+                  <div className="bg-white text-gray-700 rounded-full w-4 h-4 flex items-center justify-center mr-1">2</div>
+                  SCHRITT 2
+                </div>
+                <h5 className="font-semibold mb-1">Sprachmodell generiert Antwort mit anonymisierten Daten</h5>
+                <div className="flex items-center justify-center mt-2">
+                  <Globe2 className="text-gray-700 w-8 h-8" />
+                </div>
+              </div>
+
+              {/* Step 3: Top Left */}
+              <div className="absolute top-0 left-1/4 bg-white p-4 rounded-lg shadow-lg border border-evoya-lightBlue max-w-xs z-20">
+                <div className="bg-evoya-lightBlue text-white font-semibold py-1 px-3 rounded-full text-xs inline-flex items-center mb-2">
+                  <div className="bg-white text-evoya-lightBlue rounded-full w-4 h-4 flex items-center justify-center mr-1">3</div>
+                  SCHRITT 3
+                </div>
+                <h5 className="font-semibold mb-1">Anonymisierte Daten werden entanonymisiert (Schweiz)</h5>
+                <div className="flex items-center mt-2 justify-center space-y-2">
+                  <div className="bg-evoya-lightBlue text-white p-2 rounded text-sm w-full text-center">
+                    [Vorname 1] [Nachname 1]
+                  </div>
+                  <ArrowRight className="text-red-500 mx-2 transform rotate-90" />
+                  <div className="bg-evoya-lightBlue text-white p-2 rounded text-sm w-full text-center">
+                    Max Mustermann
+                  </div>
+                </div>
+              </div>
+
+              {/* Process Arrows */}
+              <div className="absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-evoya-navy rounded-full z-30"></div>
+              <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-evoya-navy rounded-full z-30"></div>
+              <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-1/2 w-6 h-6 bg-gray-700 rounded-full z-30"></div>
+              <div className="absolute left-0 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-evoya-lightBlue rounded-full z-30"></div>
+            </div>
+
+            <div className="bg-gray-50 p-6 rounded-xl mt-12 shadow-sm">
+              <h4 className="text-xl font-semibold mb-4">Ihre Daten in sicheren Händen</h4>
+              <p className="text-gray-600 mb-4">
+                Das Privacy Shield von Evoya stellt sicher, dass sensitive Informationen niemals ungeschützt an externe Systeme übermittelt werden. 
+                Stattdessen werden sie vor der Verarbeitung durch Sprachmodelle anonymisiert und erst nach der Verarbeitung wieder deanonymisiert. 
+                Dieser gesamte Prozess findet ausschließlich in der Schweiz statt, unter Einhaltung strengster Datenschutzrichtlinien.
+              </p>
+              <div className="flex items-center mt-4">
+                <div className="rounded-full bg-green-100 p-2 mr-3">
+                  <Shield className="w-6 h-6 text-green-600" />
+                </div>
+                <p className="text-green-600 font-medium">
+                  Datenschutz auf höchstem Niveau, ohne Kompromisse bei der Leistungsfähigkeit
+                </p>
+              </div>
+            </div>
           </div>
         </AnimatedSection>
       </div>
