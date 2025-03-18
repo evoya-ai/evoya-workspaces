@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -53,26 +52,18 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				},
 				evoya: {
-					blue: '#0EA5E9',
-					lightBlue: '#38BDF8',
-					darkBlue: '#0369A1',
-					green: '#10B981',
-					lightGreen: '#34D399',
-					orange: '#F97316',
+					blue: '#003161',
+					navy: '#042359',
+					lightBlue: '#0F9AFA',
+					teal: '#5BC9BF',
+					green: '#228B22',
+					lightGreen: '#48D45F',
+					orange: '#FF8C00',
 					yellow: '#FBBF24',
 					gray: '#9CA3AF',
 					lightGray: '#F3F4F6',
+					darkGray: '#333333'
 				}
 			},
 			borderRadius: {
@@ -183,8 +174,8 @@ export default {
 				'scale': 'scale 0.3s ease-out forwards',
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-				serif: ['Playfair Display', 'serif'],
+				sans: ['Poppins', 'sans-serif'],
+				serif: ['Merriweather', 'serif'],
 			},
 			backdropBlur: {
 				xs: '2px',

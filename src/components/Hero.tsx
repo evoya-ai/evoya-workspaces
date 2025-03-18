@@ -9,12 +9,12 @@ const Hero: React.FC = () => {
       <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <AnimatedSection animation="fade-up" className="text-center lg:text-left">
-            <div className="inline-block mb-4 px-3 py-1 rounded-full bg-evoya-blue/10 text-evoya-blue text-sm font-medium">
+            <div className="inline-block mb-4 px-3 py-1 rounded-full bg-evoya-navy/10 text-evoya-navy text-sm font-medium">
               Innovativ. Kollaborativ. Sicher.
             </div>
             <h1 className="mb-6">
               <span className="block mb-3">Optimieren Sie Ihre Geschäftsprozesse</span>
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-evoya-blue to-evoya-green">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-evoya-navy to-evoya-teal">
                 mit KI-Technologie
               </span>
             </h1>
@@ -44,16 +44,16 @@ const Hero: React.FC = () => {
                     <circle cx="200" cy="150" r="40" fill="url(#gradient3)" fillOpacity="0.4" />
                     <defs>
                       <linearGradient id="gradient1" x1="100" y1="50" x2="300" y2="250" gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#0EA5E9" />
-                        <stop offset="1" stopColor="#10B981" />
+                        <stop stopColor="#003161" />
+                        <stop offset="1" stopColor="#5BC9BF" />
                       </linearGradient>
                       <linearGradient id="gradient2" x1="130" y1="80" x2="270" y2="220" gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#0EA5E9" />
-                        <stop offset="1" stopColor="#10B981" />
+                        <stop stopColor="#003161" />
+                        <stop offset="1" stopColor="#5BC9BF" />
                       </linearGradient>
                       <linearGradient id="gradient3" x1="160" y1="110" x2="240" y2="190" gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#0EA5E9" />
-                        <stop offset="1" stopColor="#10B981" />
+                        <stop stopColor="#003161" />
+                        <stop offset="1" stopColor="#5BC9BF" />
                       </linearGradient>
                     </defs>
                   </svg>
@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
                 
                 {/* UI Windows */}
                 <div className="absolute top-1/4 left-1/4 w-32 h-24 bg-white rounded-lg shadow-lg transform -rotate-6 animate-float" style={{ animationDelay: '0s' }}>
-                  <div className="h-4 bg-evoya-blue rounded-t-lg"></div>
+                  <div className="h-4 bg-evoya-navy rounded-t-lg"></div>
                   <div className="p-2">
                     <div className="h-2 bg-gray-200 rounded-full mb-2"></div>
                     <div className="h-2 bg-gray-200 rounded-full w-3/4"></div>
@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
                 </div>
                 
                 <div className="absolute top-1/3 right-1/4 w-32 h-24 bg-white rounded-lg shadow-lg transform rotate-6 animate-float" style={{ animationDelay: '1s' }}>
-                  <div className="h-4 bg-evoya-green rounded-t-lg"></div>
+                  <div className="h-4 bg-evoya-teal rounded-t-lg"></div>
                   <div className="p-2">
                     <div className="h-2 bg-gray-200 rounded-full mb-2"></div>
                     <div className="h-2 bg-gray-200 rounded-full w-1/2"></div>
@@ -88,7 +88,7 @@ const Hero: React.FC = () => {
 
             {/* Decorative elements */}
             <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-gray-50 rounded-full opacity-50"></div>
-            <div className="absolute -top-10 -left-10 w-24 h-24 bg-evoya-blue/10 rounded-full blur-xl"></div>
+            <div className="absolute -top-10 -left-10 w-24 h-24 bg-evoya-navy/10 rounded-full blur-xl"></div>
           </AnimatedSection>
         </div>
       </div>

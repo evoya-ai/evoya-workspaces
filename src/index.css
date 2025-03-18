@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -16,16 +16,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 199 89% 48%;
+    --primary: 212 100% 19%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 152 69% 39%;
+    --secondary: 174 37% 57%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 33 95% 53%;
+    --accent: 33 100% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -119,11 +119,11 @@
 
   .btn-primary {
     @apply inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-medium text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl;
-    background: linear-gradient(135deg, theme('colors.evoya.blue'), theme('colors.evoya.green'));
+    background: linear-gradient(135deg, theme('colors.evoya.blue'), theme('colors.evoya.teal'));
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-medium bg-transparent border-2 border-evoya-blue text-evoya-blue shadow-sm transition-all duration-300 hover:border-evoya-green hover:text-evoya-green;
+    @apply inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-medium bg-transparent border-2 border-evoya-blue text-evoya-blue shadow-sm transition-all duration-300 hover:border-evoya-teal hover:text-evoya-teal;
   }
 
   .feature-icon-container {
