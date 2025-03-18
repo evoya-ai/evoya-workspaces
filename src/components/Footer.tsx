@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-evoya-blue text-white">
+    <footer className="bg-evoya-navy text-white">
       <div className="section-container py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
@@ -45,33 +45,33 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="font-medium text-white mb-4">Funktionen</h3>
             <ul className="space-y-3 text-sm">
-              <li><a href="#features" className="text-gray-300 hover:text-white transition-colors">Textgenerierung</a></li>
-              <li><a href="#features" className="text-gray-300 hover:text-white transition-colors">Bildgenerierung</a></li>
-              <li><a href="#features" className="text-gray-300 hover:text-white transition-colors">Bilderkennung</a></li>
-              <li><a href="#features" className="text-gray-300 hover:text-white transition-colors">Dokumentenanalyse</a></li>
-              <li><a href="#features" className="text-gray-300 hover:text-white transition-colors">Live-Informationsabruf</a></li>
+              <li><a href="#features" className="text-white hover:text-evoya-orange transition-colors">Textgenerierung</a></li>
+              <li><a href="#features" className="text-white hover:text-evoya-orange transition-colors">Bildgenerierung</a></li>
+              <li><a href="#features" className="text-white hover:text-evoya-orange transition-colors">Bilderkennung</a></li>
+              <li><a href="#features" className="text-white hover:text-evoya-orange transition-colors">Dokumentenanalyse</a></li>
+              <li><a href="#features" className="text-white hover:text-evoya-orange transition-colors">Live-Informationsabruf</a></li>
             </ul>
           </div>
           
           <div>
             <h3 className="font-medium text-white mb-4">Ressourcen</h3>
             <ul className="space-y-3 text-sm">
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Dokumentation</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Case Studies</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Ressourcen-Bibliothek</a></li>
+              <li><a href="#" className="text-white hover:text-evoya-orange transition-colors">Dokumentation</a></li>
+              <li><a href="#" className="text-white hover:text-evoya-orange transition-colors">Blog</a></li>
+              <li><a href="#" className="text-white hover:text-evoya-orange transition-colors">Case Studies</a></li>
+              <li><a href="#" className="text-white hover:text-evoya-orange transition-colors">FAQ</a></li>
+              <li><a href="#" className="text-white hover:text-evoya-orange transition-colors">Ressourcen-Bibliothek</a></li>
             </ul>
           </div>
           
           <div>
             <h3 className="font-medium text-white mb-4">Unternehmen</h3>
             <ul className="space-y-3 text-sm">
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Über uns</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Team</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Karriere</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Kontakt</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Datenschutz</a></li>
+              <li><a href="#" className="text-white hover:text-evoya-orange transition-colors">Über uns</a></li>
+              <li><a href="#" className="text-white hover:text-evoya-orange transition-colors">Team</a></li>
+              <li><a href="#" className="text-white hover:text-evoya-orange transition-colors">Karriere</a></li>
+              <li><a href="#" className="text-white hover:text-evoya-orange transition-colors">Kontakt</a></li>
+              <li><a href="#" className="text-white hover:text-evoya-orange transition-colors">Datenschutz</a></li>
             </ul>
           </div>
         </div>
@@ -79,9 +79,9 @@ const Footer: React.FC = () => {
         <div className="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-300 text-sm">© 2023 Evoya AG. Alle Rechte vorbehalten.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-300 hover:text-white text-sm">Datenschutz</a>
-            <a href="#" className="text-gray-300 hover:text-white text-sm">AGB</a>
-            <a href="#" className="text-gray-300 hover:text-white text-sm">Impressum</a>
+            <a href="#" className="text-white hover:text-evoya-orange transition-colors text-sm">Datenschutz</a>
+            <a href="#" className="text-white hover:text-evoya-orange transition-colors text-sm">AGB</a>
+            <a href="#" className="text-white hover:text-evoya-orange transition-colors text-sm">Impressum</a>
           </div>
         </div>
       </div>
