@@ -98,10 +98,10 @@ const DetailedFeatures: React.FC = () => {
       title: "Bildgenerierung",
       description: "Entwickeln Sie visuelle Inhalte für Marketingkampagnen und Präsentationen mit wenigen Klicks.",
       details: [
-        "Erstellung von maßgeschneiderten Produktvisualisierungen mit DALL-E",
+        "Erstellung von massgeschneiderten Produktvisualisierungen mit DALL-E",
         "Generierung von Konzeptillustrationen mit FLUX für Marketingmaterialien",
         "Anpassung bestehender Bilder an Ihre Markenidentität",
-        "Automatische Größenanpassung für verschiedene Medienkanäle",
+        "Automatische Grössenanpassung für verschiedene Medienkanäle",
       ],
       icon: <ImageIcon className="w-6 h-6 text-white" />,
       image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
@@ -201,10 +201,10 @@ const DetailedFeatures: React.FC = () => {
     },
     {
       title: "Datensicherheit",
-      description: "Wir garantieren höchste Standards beim Schutz Ihrer Daten mit modernsten Sicherheitsmaßnahmen.",
+      description: "Wir garantieren höchste Standards beim Schutz Ihrer Daten mit modernsten Sicherheitsmassnahmen.",
       details: [
         "DSGVO-konforme Verarbeitung aller Daten",
-        "Sichere Datenspeicherung ausschließlich in der Schweiz",
+        "Sichere Datenspeicherung ausschliesslich in der Schweiz",
         "End-to-End-Verschlüsselung für maximalen Schutz",
         "Umfassende Zugriffskontrollen und Audit-Trails",
       ],
@@ -254,7 +254,7 @@ const DetailedFeatures: React.FC = () => {
           </div>
           <h3 className="text-2xl lg:text-3xl font-semibold mb-6">Unser Engagement für den Datenschutz</h3>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-10">
-            Das Evoya Privacy Shield gewährleistet umfassenden Schutz Ihrer Daten durch mehrschichtige Sicherheitsmaßnahmen
+            Das Evoya Privacy Shield gewährleistet umfassenden Schutz Ihrer Daten durch mehrschichtige Sicherheitsmassnahmen
             und strenge Compliance-Standards.
           </p>
           
@@ -266,7 +266,7 @@ const DetailedFeatures: React.FC = () => {
                 </div>
                 <h4 className="text-lg font-semibold mb-2 text-center">Schweizer Datenspeicherung</h4>
                 <p className="text-gray-600 text-center">
-                  Alle Daten werden ausschließlich in sicheren Rechenzentren in der Schweiz gespeichert und verarbeitet.
+                  Alle Daten werden ausschliesslich in sicheren Rechenzentren in der Schweiz gespeichert und verarbeitet.
                 </p>
               </div>
               
@@ -302,7 +302,7 @@ const DetailedFeatures: React.FC = () => {
               <h3 className="text-2xl lg:text-3xl font-semibold mb-6">Wie das Privacy Shield funktioniert</h3>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Das Evoya Privacy Shield schützt Ihre sensiblen Daten durch einen mehrstufigen Anonymisierungsprozess, 
-                der ausschließlich in sicheren Schweizer Rechenzentren stattfindet.
+                der ausschliesslich in sicheren Schweizer Rechenzentren stattfindet.
               </p>
             </div>
 
@@ -393,7 +393,7 @@ const DetailedFeatures: React.FC = () => {
               <p className="text-gray-600 mb-4">
                 Das Privacy Shield von Evoya stellt sicher, dass sensitive Informationen niemals ungeschützt an externe Systeme übermittelt werden. 
                 Stattdessen werden sie vor der Verarbeitung durch Sprachmodelle anonymisiert und erst nach der Verarbeitung wieder deanonymisiert. 
-                Dieser gesamte Prozess findet ausschließlich in der Schweiz statt, unter Einhaltung strengster Datenschutzrichtlinien.
+                Dieser gesamte Prozess findet ausschliesslich in der Schweiz statt, unter Einhaltung strengster Datenschutzrichtlinien.
               </p>
               <div className="flex items-center mt-4">
                 <div className="rounded-full bg-green-100 p-2 mr-3">

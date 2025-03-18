@@ -12,7 +12,7 @@ const Comparison: React.FC = () => {
     'Über 20 KI-Modelle',
     'Lokale Modell-Hosting-Option',
     'Nutzungsbasierte Abrechnung',
-    'Maßgeschneiderte KI-Lösungen',
+    'Massgeschneiderte KI-Lösungen',
     'Persönliche Betreuung',
   ];
 

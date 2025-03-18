@@ -58,7 +58,7 @@ const LanguageModels: React.FC = () => {
     },
     {
       name: "Claude 3 Opus",
-      description: "Anthropics fortschrittlichstes Modell mit außergewöhnlicher Genauigkeit",
+      description: "Anthropics fortschrittlichstes Modell mit aussergewöhnlicher Genauigkeit",
       icon: <Bot className="w-5 h-5 text-white" />,
       accentColor: "bg-evoya-teal text-white",
       isSwissHosted: false
