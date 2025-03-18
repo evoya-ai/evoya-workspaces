@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic, Shield, Lock, Database, ArrowRight, User, Globe2, RefreshCcw } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -198,21 +197,6 @@ const DetailedFeatures: React.FC = () => {
       alt: "Spracherkennung und Transkription",
       isReversed: true,
       accentColor: "text-evoya-red bg-evoya-red/10",
-    },
-    {
-      title: "Datensicherheit",
-      description: "Wir garantieren höchste Standards beim Schutz Ihrer Daten mit modernsten Sicherheitsmassnahmen.",
-      details: [
-        "DSGVO-konforme Verarbeitung aller Daten",
-        "Sichere Datenspeicherung ausschliesslich in der Schweiz",
-        "End-to-End-Verschlüsselung für maximalen Schutz",
-        "Umfassende Zugriffskontrollen und Audit-Trails",
-      ],
-      icon: <Lock className="w-6 h-6 text-white" />,
-      image: "https://images.unsplash.com/photo-1563237023-b1e970526dcb",
-      alt: "Datensicherheit und Verschlüsselung",
-      isReversed: false,
-      accentColor: "text-evoya-navy bg-evoya-navy/10",
     },
   ];
 
