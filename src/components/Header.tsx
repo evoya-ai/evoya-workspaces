@@ -39,16 +39,16 @@ const Header: React.FC = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#features" className={`${isScrolled ? 'text-gray-700' : 'text-white'} hover:text-evoya-orange transition-colors font-medium`}>Funktionen</a>
-          <a href="#benefits" className={`${isScrolled ? 'text-gray-700' : 'text-white'} hover:text-evoya-orange transition-colors font-medium`}>Vorteile</a>
-          <a href="#services" className={`${isScrolled ? 'text-gray-700' : 'text-white'} hover:text-evoya-orange transition-colors font-medium`}>Dienstleistungen</a>
-          <a href="#comparison" className={`${isScrolled ? 'text-gray-700' : 'text-white'} hover:text-evoya-orange transition-colors font-medium`}>Vergleich</a>
+          <a href="#features" className="text-white hover:text-evoya-orange transition-colors font-medium">Funktionen</a>
+          <a href="#benefits" className="text-white hover:text-evoya-orange transition-colors font-medium">Vorteile</a>
+          <a href="#services" className="text-white hover:text-evoya-orange transition-colors font-medium">Dienstleistungen</a>
+          <a href="#comparison" className="text-white hover:text-evoya-orange transition-colors font-medium">Vergleich</a>
           <a href="#contact" className="bg-white text-evoya-navy hover:bg-evoya-orange hover:text-white transition-colors duration-300 font-medium py-2 px-4 rounded-md">Kontakt</a>
         </nav>
 
         {/* Mobile Menu Button */}
         <button className="md:hidden" onClick={toggleMobileMenu}>
-          <Menu className={`h-6 w-6 ${isScrolled ? 'text-gray-700' : 'text-white'}`} />
+          <Menu className="h-6 w-6 text-white" />
         </button>
       </div>
 
