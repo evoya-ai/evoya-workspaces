@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Features from '../components/Features';
 import DetailedFeatures from '../components/DetailedFeatures';
+import LanguageModels from '../components/LanguageModels';
 import Benefits from '../components/Benefits';
 import Services from '../components/Services';
 import Comparison from '../components/Comparison';
@@ -48,6 +49,7 @@ const Index = () => {
         <Hero />
         <Features />
         <DetailedFeatures />
+        <LanguageModels />
         <Benefits />
         <Services />
         <Comparison />
