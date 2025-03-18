@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
@@ -200,7 +201,6 @@ a.bg-white.hover\:bg-evoya-orange:hover {
   @apply text-white;
 }
 
-/* Remove the problematic rule and let the direct class in Hero.tsx handle it */
 /* Custom card styles */
 .custom-card {
   @apply rounded-xl overflow-hidden border border-gray-100 shadow-md transition-all duration-300 hover:shadow-lg bg-white;

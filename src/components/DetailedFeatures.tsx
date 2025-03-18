@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic, Shield, Lock, Database, ArrowRight, User, Globe2, RefreshCcw } from 'lucide-react';
+import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic, Shield, Lock, Database, ArrowRight, User, Globe2, RefreshCcw, Book, Layers, Network, Brain, Search } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { cn } from '../lib/utils';
 
@@ -232,15 +233,144 @@ const DetailedFeatures: React.FC = () => {
           ))}
         </div>
 
+        {/* Semantische Wissensbasis Section */}
+        <AnimatedSection className="mt-24 mb-24" animation="fade-up">
+          <div className="mb-16 text-center">
+            <div className="inline-block mb-4 px-3 py-1 rounded-full bg-evoya-lightBlue/10 text-evoya-lightBlue text-sm font-medium">
+              Intelligente Informationsverarbeitung
+            </div>
+            <h3 className="text-2xl lg:text-3xl font-semibold mb-6">Semantische Wissensbasis</h3>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-10">
+              Semantische Verarbeitung verschiedener Dokumentformate und Webinhalte für präzise, 
+              kontextbasierte Informationsextraktion und -verknüpfung.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            {/* Left column - Illustration */}
+            <div className="relative h-[400px] overflow-hidden rounded-xl shadow-lg">
+              <div className="absolute inset-0 bg-gradient-to-r from-evoya-lightBlue/5 to-evoya-navy/10 z-0"></div>
+              
+              {/* Central node */}
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-white rounded-full shadow-xl border-4 border-evoya-lightBlue/30 flex items-center justify-center z-20">
+                <div className="text-center p-2">
+                  <Brain className="w-12 h-12 text-evoya-navy mx-auto mb-2" />
+                  <span className="block text-sm font-semibold text-evoya-navy">Semantische Analyse</span>
+                </div>
+              </div>
+              
+              {/* Connection lines */}
+              <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <g stroke="#5B6CAD" strokeWidth="1.5" strokeDasharray="5,3" opacity="0.6">
+                  <line x1="200" y1="200" x2="80" y2="100" />
+                  <line x1="200" y1="200" x2="320" y2="100" />
+                  <line x1="200" y1="200" x2="320" y2="300" />
+                  <line x1="200" y1="200" x2="80" y2="300" />
+                  <line x1="200" y1="200" x2="60" y2="200" />
+                  <line x1="200" y1="200" x2="340" y2="200" />
+                </g>
+              </svg>
+              
+              {/* Surrounding nodes */}
+              <div className="absolute top-[25%] left-[20%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '0s' }}>
+                <Book className="w-8 h-8 text-evoya-orange mx-auto mb-1" />
+                <span className="block text-xs font-medium text-center">Dokumente</span>
+              </div>
+              
+              <div className="absolute top-[25%] right-[20%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '1.5s' }}>
+                <Globe className="w-8 h-8 text-evoya-green mx-auto mb-1" />
+                <span className="block text-xs font-medium text-center">Webinhalte</span>
+              </div>
+              
+              <div className="absolute bottom-[25%] right-[20%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '3s' }}>
+                <Network className="w-8 h-8 text-evoya-lightBlue mx-auto mb-1" />
+                <span className="block text-xs font-medium text-center">Knowledge Graph</span>
+              </div>
+              
+              <div className="absolute bottom-[25%] left-[20%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '4.5s' }}>
+                <Search className="w-8 h-8 text-evoya-navy mx-auto mb-1" />
+                <span className="block text-xs font-medium text-center">Präzise Suche</span>
+              </div>
+              
+              <div className="absolute left-[15%] top-[50%] transform -translate-y-1/2 w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '6s' }}>
+                <Layers className="w-8 h-8 text-evoya-purple mx-auto mb-1" />
+                <span className="block text-xs font-medium text-center">Strukturierte Daten</span>
+              </div>
+              
+              <div className="absolute right-[15%] top-[50%] transform -translate-y-1/2 w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '7.5s' }}>
+                <FileSearch className="w-8 h-8 text-evoya-yellow mx-auto mb-1" />
+                <span className="block text-xs font-medium text-center">Analyse</span>
+              </div>
+            </div>
+            
+            {/* Right column - Details */}
+            <div className="max-w-xl">
+              <h4 className="text-xl font-semibold mb-6 text-evoya-navy">Intelligente Verarbeitung von Unternehmenswissen</h4>
+              <p className="text-gray-600 mb-8">
+                Unsere semantische Wissensbasis transformiert unstrukturierte Daten in vernetzte, 
+                kontextreiche Informationen - die Grundlage für präzise KI-Anwendungen und 
+                datengesteuerte Entscheidungen in Ihrem Unternehmen.
+              </p>
+              
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-evoya-lightBlue/10 flex items-center justify-center mt-1 mr-4">
+                    <Book className="w-5 h-5 text-evoya-lightBlue" />
+                  </div>
+                  <div>
+                    <h5 className="text-lg font-medium mb-2 text-evoya-navy">Multiformat-Verarbeitung</h5>
+                    <p className="text-gray-600">
+                      Automatische Extraktion von Wissen aus PDFs, Word-Dokumenten, 
+                      Präsentationen, E-Mails und Webseiten in eine einheitliche Wissensbasis.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-evoya-green/10 flex items-center justify-center mt-1 mr-4">
+                    <Network className="w-5 h-5 text-evoya-green" />
+                  </div>
+                  <div>
+                    <h5 className="text-lg font-medium mb-2 text-evoya-navy">Kontextbasierte Verknüpfung</h5>
+                    <p className="text-gray-600">
+                      Automatische Erkennung von Beziehungen zwischen Konzepten, Personen und 
+                      Ereignissen für ein tiefgreifendes Verständnis Ihrer Geschäftsdaten.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-evoya-orange/10 flex items-center justify-center mt-1 mr-4">
+                    <Search className="w-5 h-5 text-evoya-orange" />
+                  </div>
+                  <div>
+                    <h5 className="text-lg font-medium mb-2 text-evoya-navy">Präzise Informationsgewinnung</h5>
+                    <p className="text-gray-600">
+                      Natürlichsprachliche Abfragen liefern kontextrelevante Antworten statt 
+                      einfacher Keyword-Suchen, basierend auf dem tatsächlichen Bedeutungsgehalt.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-10 p-4 bg-gradient-to-r from-evoya-lightBlue/5 to-transparent rounded-lg border border-evoya-lightBlue/20">
+                <div className="flex items-center">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-evoya-lightBlue/20 flex items-center justify-center mr-4">
+                    <Brain className="w-6 h-6 text-evoya-navy" />
+                  </div>
+                  <p className="text-evoya-navy font-medium">
+                    Steigern Sie die Effizienz Ihrer Teams um bis zu 30% durch präzise Informationsextraktion.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+
         <AnimatedSection className="mt-24 text-center" animation="fade-up">
           <div className="inline-block mb-4 px-3 py-1 rounded-full bg-evoya-navy/10 text-evoya-navy text-sm font-medium">
             Privacy Shield
           </div>
-          <h3 className="text-2xl lg:text-3xl font-semibold mb-6">Unser Engagement für den Datenschutz</h3>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-10">
-            Das Evoya Privacy Shield gewährleistet umfassenden Schutz Ihrer Daten durch mehrschichtige Sicherheitsmassnahmen
-            und strenge Compliance-Standards.
-          </p>
           
           <div className="max-w-3xl mx-auto relative">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

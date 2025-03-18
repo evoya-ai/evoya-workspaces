@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
                 Kostenlose Demo
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
-              <a href="#features" className="border-2 border-white bg-transparent text-white hover:bg-white/10 hover:border-evoya-orange transition-colors duration-300 font-medium py-3 px-6 rounded-md inline-flex items-center">
+              <a href="#features" className="border-2 border-white text-white bg-transparent hover:bg-white/10 hover:border-evoya-orange transition-colors duration-300 font-medium py-3 px-6 rounded-md inline-flex items-center">
                 Mehr erfahren
               </a>
             </div>
