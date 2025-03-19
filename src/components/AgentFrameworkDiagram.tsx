@@ -4,6 +4,9 @@ import { BookText, User, Wrench, Brain, Computer, Database, Plus } from 'lucide-
 import AgentComponent from './AgentComponent';
 
 const AgentFrameworkDiagram: React.FC = () => {
+  // Connection line length (adjust this single value to control all connections)
+  const connectionLength = "40px";
+  
   return (
     <div className="max-w-4xl mx-auto py-6">
       {/* Top row: Instruktionen + Persona */}
@@ -26,7 +29,7 @@ const AgentFrameworkDiagram: React.FC = () => {
         </div>
         
         {/* Vertical line connecting top row to Sprachmodell */}
-        <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 flex flex-col items-center" style={{height: '40px'}}>
+        <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 flex flex-col items-center" style={{height: connectionLength}}>
           <div className="w-0.5 h-full bg-evoya-blue/70"></div>
           <div className="absolute top-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
           <div className="absolute bottom-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
@@ -57,21 +60,21 @@ const AgentFrameworkDiagram: React.FC = () => {
         />
         
         {/* Left horizontal connecting line (Tools to Sprachmodell) */}
-        <div className="absolute top-1/2 left-[calc(33.333%-2px)] w-[calc(16.6667%+2px)] transform -translate-y-1/2">
+        <div className="absolute top-1/2 left-[33.333%] transform -translate-x-full -translate-y-1/2" style={{width: connectionLength}}>
           <div className="w-full h-0.5 bg-evoya-blue/70"></div>
           <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
           <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
         </div>
         
         {/* Right horizontal connecting line (Sprachmodell to Interface) */}
-        <div className="absolute top-1/2 right-[calc(33.333%-2px)] w-[calc(16.6667%+2px)] transform -translate-y-1/2">
+        <div className="absolute top-1/2 right-[33.333%] transform translate-x-full -translate-y-1/2" style={{width: connectionLength}}>
           <div className="w-full h-0.5 bg-evoya-blue/70"></div>
           <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
           <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
         </div>
         
         {/* Vertical line connecting Sprachmodell to Wissen */}
-        <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 flex flex-col items-center" style={{height: '40px'}}>
+        <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 flex flex-col items-center" style={{height: connectionLength}}>
           <div className="w-0.5 h-full bg-evoya-blue/70"></div>
           <div className="absolute top-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
           <div className="absolute bottom-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
