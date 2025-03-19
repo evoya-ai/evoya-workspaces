@@ -60,8 +60,8 @@ const Index = () => {
         <BlurBackground />
         <Header />
         
-        {/* SEO-friendly breadcrumb for navigation */}
-        <div className="container mx-auto px-4 pt-24 pb-4">
+        {/* Hidden breadcrumb - only for SEO, not visible to users */}
+        <div className="sr-only">
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem>

@@ -1,8 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
-import { X, Menu, Globe } from 'lucide-react';
+import { X, Menu, Globe, Home } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translate } from '../utils/translations';
+import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,13 +40,15 @@ const Header: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center">
-          <div className="bg-white rounded-lg px-3 py-3 shadow-sm">
-            <img 
-              src="/lovable-uploads/4024a740-8b36-4293-82d7-02b4a0f8ef8c.png" 
-              alt="Evoya AI Logo" 
-              className="h-8" 
-            />
-          </div>
+          <Link to="/" aria-label="Home">
+            <div className="bg-white rounded-lg px-3 py-3 shadow-sm">
+              <img 
+                src="/lovable-uploads/4024a740-8b36-4293-82d7-02b4a0f8ef8c.png" 
+                alt="Evoya AI Logo" 
+                className="h-8" 
+              />
+            </div>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
@@ -105,13 +108,15 @@ const Header: React.FC = () => {
       >
         <div className="p-6">
           <div className="flex justify-between items-center mb-8">
-            <div className="bg-white rounded-lg px-3 py-1 shadow-sm">
-              <img 
-                src="/lovable-uploads/4024a740-8b36-4293-82d7-02b4a0f8ef8c.png" 
-                alt="Evoya AI Logo" 
-                className="h-8" 
-              />
-            </div>
+            <Link to="/" onClick={toggleMobileMenu} aria-label="Home">
+              <div className="bg-white rounded-lg px-3 py-1 shadow-sm">
+                <img 
+                  src="/lovable-uploads/4024a740-8b36-4293-82d7-02b4a0f8ef8c.png" 
+                  alt="Evoya AI Logo" 
+                  className="h-8" 
+                />
+              </div>
+            </Link>
             <div className="flex items-center space-x-4">
               <button 
                 onClick={toggleLanguage} 
