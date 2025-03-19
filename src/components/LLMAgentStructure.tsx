@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { BookText, User, Wrench, Brain, Computer, Database, Workflow, Package } from 'lucide-react';
+import { BookText, User, Wrench, Brain, Computer, Database, Workflow, Package, Plus } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { Card, CardContent } from './ui/card';
 
@@ -38,29 +38,29 @@ const FrameworkExplanation: React.FC = () => {
       <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100">
         <h3 className="text-xl font-bold text-evoya-blue mb-4">Das Agentic Framework</h3>
         <p className="text-gray-700 mb-4">
-          Unser Agentic Framework ist eine strukturierte Architektur für moderne KI-Agenten. Es besteht aus sechs 
-          Kernkomponenten, die zusammenarbeiten, um komplexe Aufgaben intelligent und effizient zu lösen.
+          Unser Agentic Framework bildet die Grundlage aller Evoya-Agenten. Es kombiniert sechs Kernkomponenten, 
+          die zusammen einen leistungsfähigen KI-Agenten bilden, der komplexe Aufgaben intelligent bearbeiten kann.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
           <div className="bg-evoya-blue/5 p-4 rounded-lg">
             <h4 className="font-semibold text-evoya-blue mb-2">Instruktionen & Persona</h4>
             <p className="text-sm text-gray-600">
-              Definieren die Aufgabe und den Charakter des Agenten. Die Instruktionen legen fest, was der Agent tun soll, 
-              während die Persona bestimmt, wie er kommuniziert und interagiert.
+              Diese Komponenten bilden den "Charakter" des Agenten. Die Instruktionen definieren die Aufgabe und das Ziel,
+              während die Persona bestimmt, wie der Agent kommuniziert und interagiert.
             </p>
           </div>
           <div className="bg-evoya-blue/5 p-4 rounded-lg">
             <h4 className="font-semibold text-evoya-blue mb-2">Sprachmodell & Wissen</h4>
             <p className="text-sm text-gray-600">
-              Das LLM bildet das "Gehirn" des Agenten und wird durch spezialisiertes Wissen ergänzt. 
-              Diese Kombination ermöglicht präzise und kontextbezogene Antworten bei komplexen Aufgaben.
+              Das Sprachmodell (LLM) ist das "Gehirn" des Agenten und nutzt spezialisiertes Wissen, um präzise 
+              und kontextbezogene Lösungen für komplexe Aufgaben zu generieren.
             </p>
           </div>
           <div className="bg-evoya-blue/5 p-4 rounded-lg">
             <h4 className="font-semibold text-evoya-blue mb-2">Tools & Interface</h4>
             <p className="text-sm text-gray-600">
-              Tools erweitern die Fähigkeiten des Agenten, während das Interface die Kommunikation mit Nutzern, 
-              anderen Systemen oder APIs ermöglicht. Diese Komponenten sind entscheidend für die Handlungsfähigkeit des Agenten.
+              Tools erweitern die Handlungsfähigkeit des Agenten, während das Interface die Kommunikation mit Menschen, 
+              anderen Systemen oder APIs ermöglicht und so die praktische Anwendung sicherstellt.
             </p>
           </div>
         </div>
@@ -87,11 +87,23 @@ const UseCasesExplanation: React.FC = () => {
             <p className="text-gray-700 mb-3">
               Diese Agenten sind direkt einsatzbereit und für spezifische Aufgaben optimiert:
             </p>
-            <ul className="list-disc list-inside text-gray-600 space-y-2 ml-2">
-              <li>Sofort nutzbar ohne komplexe Konfiguration</li>
-              <li>Ideal für Texterstellung, Übersetzungen oder Analysen</li>
-              <li>Standardisierte Funktionen mit intuitiver Bedienung</li>
-              <li>Perfekt für tägliche Arbeitsabläufe und wiederkehrende Aufgaben</li>
+            <ul className="space-y-2 ml-2">
+              <li className="flex">
+                <span className="text-evoya-blue mr-2">•</span>
+                <span className="text-gray-600">Sofort nutzbar ohne komplexe Konfiguration</span>
+              </li>
+              <li className="flex">
+                <span className="text-evoya-blue mr-2">•</span>
+                <span className="text-gray-600">Ideal für Texterstellung, Übersetzungen oder Analysen</span>
+              </li>
+              <li className="flex">
+                <span className="text-evoya-blue mr-2">•</span>
+                <span className="text-gray-600">Standardisierte Funktionen mit intuitiver Bedienung</span>
+              </li>
+              <li className="flex">
+                <span className="text-evoya-blue mr-2">•</span>
+                <span className="text-gray-600">Perfekt für tägliche Arbeitsabläufe und wiederkehrende Aufgaben</span>
+              </li>
             </ul>
           </div>
           
@@ -103,11 +115,23 @@ const UseCasesExplanation: React.FC = () => {
             <p className="text-gray-700 mb-3">
               Diese fortschrittlichen Lösungen automatisieren komplexe Workflows:
             </p>
-            <ul className="list-disc list-inside text-gray-600 space-y-2 ml-2">
-              <li>Individuell anpassbar an spezifische Geschäftsprozesse</li>
-              <li>Automatisieren mehrstufige Arbeitsabläufe end-to-end</li>
-              <li>Skalierbar je nach Anforderung und Komplexität</li>
-              <li>Integrierbar in bestehende Systeme und Infrastrukturen</li>
+            <ul className="space-y-2 ml-2">
+              <li className="flex">
+                <span className="text-evoya-orange mr-2">•</span>
+                <span className="text-gray-600">Individuell anpassbar an spezifische Geschäftsprozesse</span>
+              </li>
+              <li className="flex">
+                <span className="text-evoya-orange mr-2">•</span>
+                <span className="text-gray-600">Automatisieren mehrstufige Arbeitsabläufe end-to-end</span>
+              </li>
+              <li className="flex">
+                <span className="text-evoya-orange mr-2">•</span>
+                <span className="text-gray-600">Skalierbar je nach Anforderung und Komplexität</span>
+              </li>
+              <li className="flex">
+                <span className="text-evoya-orange mr-2">•</span>
+                <span className="text-gray-600">Integrierbar in bestehende Systeme und Infrastrukturen</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -126,11 +150,11 @@ const LLMAgentStructure: React.FC = () => {
             Agentic Framework
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold mb-6 max-w-3xl mx-auto">
-            Die <span className="text-evoya-blue">Struktur</span> hinter modernen KI-Agenten
+            Was sind <span className="text-evoya-blue">KI-Agenten</span> und wie funktionieren sie?
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Unsere KI-Agenten basieren auf einer klaren Architektur, die es ihnen ermöglicht, komplexe Aufgaben 
-            effizient zu lösen und mit ihrer Umgebung zu interagieren.
+            Evoya-Agenten basieren auf einem durchdachten Framework, das es ihnen ermöglicht, 
+            komplexe Aufgaben effizient zu lösen und nahtlos mit Menschen und anderen Systemen zu interagieren.
           </p>
         </AnimatedSection>
 
@@ -138,21 +162,26 @@ const LLMAgentStructure: React.FC = () => {
 
         <AnimatedSection animation="fade-up" delay={300}>
           <div className="p-6 rounded-xl bg-white shadow-lg border border-gray-100">
-            <div className="text-2xl font-bold text-evoya-blue mb-8 text-center">Agentic Framework Struktur</div>
+            <div className="text-2xl font-bold text-evoya-blue mb-8 text-center">Aufbau des Agentic Frameworks</div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               {/* Top row - Prompt Recipe */}
               <div className="md:col-span-3">
                 <Card className="border border-evoya-blue/10 bg-evoya-blue/5 p-4 rounded-xl">
                   <CardContent className="p-2">
-                    <div className="text-center mb-4 font-medium text-evoya-blue text-lg">Prompt Recipe</div>
+                    <div className="text-center mb-4 font-medium text-evoya-blue text-lg">Prompt-Rezept</div>
                     <div className="grid grid-cols-2 gap-4">
-                      <AgentComponent
-                        title="Instruktionen"
-                        icon={<BookText className="w-6 h-6" />}
-                        color="bg-evoya-blue"
-                        textColor="text-white"
-                      />
+                      <div className="relative">
+                        <AgentComponent
+                          title="Instruktionen"
+                          icon={<BookText className="w-6 h-6" />}
+                          color="bg-evoya-blue"
+                          textColor="text-white"
+                        />
+                        <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-1 shadow-sm">
+                          <Plus className="w-4 h-4 text-evoya-blue" />
+                        </div>
+                      </div>
                       <AgentComponent
                         title="Persona"
                         icon={<User className="w-6 h-6" />}
@@ -181,11 +210,11 @@ const LLMAgentStructure: React.FC = () => {
                 />
               </div>
 
-              {/* Connector from Tools to LLM */}
+              {/* Connector from Tools to LLM - horizontal line with dots */}
               <div className="hidden md:flex items-center justify-center">
                 <div className="w-full h-0.5 bg-evoya-blue/70 relative">
-                  <div className="absolute right-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
-                  <div className="absolute left-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
+                  <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
+                  <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
                 </div>
               </div>
 
@@ -200,11 +229,11 @@ const LLMAgentStructure: React.FC = () => {
                 />
               </div>
 
-              {/* Connector from LLM to Interface */}
+              {/* Connector from LLM to Interface - horizontal line with dots */}
               <div className="hidden md:flex items-center justify-center">
                 <div className="w-full h-0.5 bg-evoya-blue/70 relative">
-                  <div className="absolute right-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
-                  <div className="absolute left-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
+                  <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
+                  <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
                 </div>
               </div>
 
@@ -220,7 +249,7 @@ const LLMAgentStructure: React.FC = () => {
               </div>
             </div>
 
-            {/* Connector from LLM to Knowledge */}
+            {/* Connector from LLM to Knowledge - vertical line with dots */}
             <div className="relative h-10 mb-4">
               <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-evoya-blue/70"></div>
               <div className="absolute left-1/2 transform -translate-x-1/2 bottom-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
