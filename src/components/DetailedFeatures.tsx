@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic, Shield, Lock, Database, ArrowRight, User, Globe2, RefreshCcw, Book, Layers, Network, Brain, Search } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -113,8 +112,8 @@ const DetailedFeatures: React.FC = () => {
     <div className="relative w-full h-[450px] overflow-hidden rounded-xl shadow-xl bg-[#1A1E35]">
       <div className="absolute inset-0 w-full h-full overflow-hidden flex items-center justify-center">
         <img 
-          src="/lovable-uploads/3b4099ed-2b01-42eb-9923-3b3eee681c7a.png"
-          alt="Text editor interface showing article creation"
+          src="/lovable-uploads/9834cbed-652a-4820-a09f-10971c1b25de.png"
+          alt="Text editor interface showing AI chat conversation about generative AI"
           className="w-full h-auto object-contain"
         />
       </div>
@@ -619,3 +618,4 @@ const DetailedFeatures: React.FC = () => {
 };
 
 export default DetailedFeatures;
+
