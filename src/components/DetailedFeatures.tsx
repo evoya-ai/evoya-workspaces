@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic, Shield, Lock, Database, ArrowRight, User, Globe2, RefreshCcw, Book, Layers, Network, Brain, Search } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -420,13 +419,13 @@ const DetailedFeatures: React.FC = () => {
                 
                 <div className="hidden lg:flex absolute left-[calc(33%-30px)] top-1/2 transform -translate-y-1/2 z-10">
                   <div className="bg-gray-300 w-14 h-14 rounded-full flex items-center justify-center">
-                    <ArrowRight className="w-8 h-8 text-gray-600" />
+                    <ArrowRight className="w-6 h-6 text-gray-600" />
                   </div>
                 </div>
                 
                 <div className="hidden lg:flex absolute right-[calc(33%-30px)] top-1/2 transform -translate-y-1/2 z-10">
                   <div className="bg-gray-300 w-14 h-14 rounded-full flex items-center justify-center">
-                    <ArrowRight className="w-8 h-8 text-gray-600" />
+                    <ArrowRight className="w-6 h-6 text-gray-600" />
                   </div>
                 </div>
                 
@@ -442,17 +441,17 @@ const DetailedFeatures: React.FC = () => {
                     
                     <div className="space-y-4 flex-grow">
                       <div className="bg-evoya-navy text-white p-4 rounded text-center font-medium">
-                        [Name 1]
+                        Max Mustermann
                       </div>
                       
                       <div className="flex justify-center">
                         <div className="p-1 rounded-full bg-red-100">
-                          <ArrowRight className="w-6 h-6 text-red-500 transform -rotate-90" />
+                          <ArrowRight className="w-6 h-6 text-red-500 transform rotate-90" />
                         </div>
                       </div>
                       
                       <div className="bg-evoya-navy text-white p-4 rounded text-center font-medium">
-                        Max Mustermann
+                        [Name 1]
                       </div>
                     </div>
                     
@@ -521,7 +520,7 @@ const DetailedFeatures: React.FC = () => {
                       
                       <div className="flex justify-center">
                         <div className="p-1 rounded-full bg-green-100">
-                          <ArrowRight className="w-6 h-6 text-green-500 transform rotate-90" />
+                          <ArrowRight className="w-6 h-6 text-green-500 transform -rotate-90" />
                         </div>
                       </div>
                       
