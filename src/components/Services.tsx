@@ -12,7 +12,7 @@ const Services: React.FC = () => {
             Dienstleistungen
           </div>
           <h2 className="mb-6 max-w-3xl mx-auto">
-            Maßgeschneiderte Lösungen für <span className="text-evoya-orange">Ihre Anforderungen</span>
+            Massgeschneiderte Lösungen für <span className="text-evoya-orange">Ihre Anforderungen</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Wir bieten umfassende Dienstleistungen, um Ihr Unternehmen bei der Integration und Nutzung von KI-Technologien zu unterstützen.
@@ -77,7 +77,7 @@ const Services: React.FC = () => {
             <UserCog className="w-12 h-12 text-evoya-blue mb-6" />
             <h3 className="text-2xl font-semibold mb-4">Individuelle KI-Agenten</h3>
             <p className="text-gray-600 mb-6">
-              Maßgeschneiderte Lösungen zur Automatisierung von Routineaufgaben und zur Unterstützung spezifischer Geschäftsanforderungen.
+              Massgeschneiderte Lösungen zur Automatisierung von Routineaufgaben und zur Unterstützung spezifischer Geschäftsanforderungen.
             </p>
             
             <div className="space-y-4">
@@ -96,7 +96,7 @@ const Services: React.FC = () => {
                   <div className="w-2 h-2 rounded-full bg-evoya-blue"></div>
                 </div>
                 <div>
-                  <h4 className="font-medium mb-1">Maßgeschneiderte Entwicklung</h4>
+                  <h4 className="font-medium mb-1">Massgeschneiderte Entwicklung</h4>
                   <p className="text-gray-600 text-sm">Entwicklung personalisierter KI-Agenten für Ihre spezifischen Geschäftsprozesse.</p>
                 </div>
               </div>

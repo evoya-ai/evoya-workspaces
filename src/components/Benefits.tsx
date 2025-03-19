@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { ShieldCheck, BadgeDollarSign, Key } from 'lucide-react';
+import { ShieldCheck, BadgeDollarSign, Key, MapPin } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 
 const Benefits: React.FC = () => {
@@ -12,14 +13,14 @@ const Benefits: React.FC = () => {
             Vorteile
           </div>
           <h2 className="mb-6 max-w-3xl mx-auto">
-            Warum Unternehmen auf <span className="text-evoya-blue">Evoya</span> setzen
+            Warum Unternehmen auf <span className="text-evoya-blue">Evoya AI</span> setzen
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Unsere KI-Workspaces bieten entscheidende Vorteile für KMUs, die Innovation und Sicherheit gleichermassen schätzen.
           </p>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
           <AnimatedSection className="rounded-xl overflow-hidden bg-white shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-xl">
             <div className="p-8">
               <div className="w-16 h-16 rounded-full bg-evoya-blue/10 flex items-center justify-center mb-6">
@@ -116,6 +117,53 @@ const Benefits: React.FC = () => {
             </div>
           </AnimatedSection>
         </div>
+        
+        {/* New fourth card that spans the entire width */}
+        <AnimatedSection delay={450} className="rounded-xl overflow-hidden bg-white shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-xl">
+          <div className="p-8">
+            <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6">
+              <div className="w-16 h-16 rounded-full bg-evoya-blue/10 flex items-center justify-center flex-shrink-0">
+                <MapPin className="w-8 h-8 text-evoya-blue" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold mb-3 text-custom-darkGray">Lokaler Partner mit Schweizer Expertise</h3>
+                <p className="text-gray-600 mb-4">
+                  Als Schweizer Unternehmen kennen wir die lokalen Marktanforderungen und regulatorischen Besonderheiten. Wir verstehen die spezifischen Bedürfnisse von Schweizer KMUs und bieten massgeschneiderte KI-Lösungen, die regionalen Gegebenheiten optimal Rechnung tragen.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <ul className="space-y-3">
+                    <li className="flex items-center">
+                      <div className="w-5 h-5 rounded-full bg-evoya-blue/10 flex items-center justify-center mr-3">
+                        <div className="w-2 h-2 rounded-full bg-evoya-blue"></div>
+                      </div>
+                      <span className="text-gray-700">Umfassende Marktkenntnis</span>
+                    </li>
+                    <li className="flex items-center">
+                      <div className="w-5 h-5 rounded-full bg-evoya-blue/10 flex items-center justify-center mr-3">
+                        <div className="w-2 h-2 rounded-full bg-evoya-blue"></div>
+                      </div>
+                      <span className="text-gray-700">Mehrsprachiger Support</span>
+                    </li>
+                  </ul>
+                  <ul className="space-y-3">
+                    <li className="flex items-center">
+                      <div className="w-5 h-5 rounded-full bg-evoya-blue/10 flex items-center justify-center mr-3">
+                        <div className="w-2 h-2 rounded-full bg-evoya-blue"></div>
+                      </div>
+                      <span className="text-gray-700">Verständnis lokaler Anforderungen</span>
+                    </li>
+                    <li className="flex items-center">
+                      <div className="w-5 h-5 rounded-full bg-evoya-blue/10 flex items-center justify-center mr-3">
+                        <div className="w-2 h-2 rounded-full bg-evoya-blue"></div>
+                      </div>
+                      <span className="text-gray-700">Persönliche Betreuung</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );
