@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
@@ -204,6 +203,13 @@ header.scrolled nav a:not(.btn-primary):not(.btn-secondary):not([class*="bg-whit
 /* Fix for orange button text visibility */
 a.bg-white.hover\:bg-evoya-orange:hover {
   color: white;
+}
+
+/* Custom styles to ensure button text visibility on hover */
+.bg-evoya-orange:hover, 
+.hover\:bg-evoya-orange:hover,
+.hover\:bg-evoya-orange\/90:hover {
+  color: white !important;
 }
 
 /* Custom card styles */

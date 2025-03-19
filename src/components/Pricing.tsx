@@ -75,8 +75,7 @@ const Pricing: React.FC = () => {
             <CardFooter className="flex flex-col pt-2 pb-8">
               <Button 
                 asChild
-                variant="default"
-                className="w-full h-auto py-3 bg-evoya-orange hover:bg-evoya-orange/90 text-white hover:text-white text-base font-medium"
+                className="w-full h-auto py-3 bg-evoya-orange text-white font-medium text-base hover:bg-evoya-orange/90 [&:hover]:text-white"
               >
                 <a 
                   href="https://avaia.io/accounts/signup/"
