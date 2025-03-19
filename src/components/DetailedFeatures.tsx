@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic, Shield, Lock, Database, ArrowRight, User, Globe2, RefreshCcw, Book, Layers, Network, Brain, Search } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -192,6 +191,18 @@ const DetailedFeatures: React.FC = () => {
     </div>
   );
 
+  const imageRecognitionContent = (
+    <div className="relative w-full h-[450px] overflow-hidden rounded-xl shadow-xl bg-[#1A1E35]">
+      <div className="absolute inset-0 w-full h-full overflow-hidden flex items-center justify-center">
+        <img 
+          src="/lovable-uploads/891d84e6-9349-4948-992d-4e2937f43a7b.png"
+          alt="Handschrifterkennung: Umwandlung von handgeschriebenem Text in getippten Text"
+          className="w-full h-auto object-contain"
+        />
+      </div>
+    </div>
+  );
+
   const features = [
     {
       title: "Textgenerierung",
@@ -235,10 +246,11 @@ const DetailedFeatures: React.FC = () => {
         "Extraktion von Textinformationen aus Bildern und Dokumenten",
       ],
       icon: <Eye className="w-6 h-6 text-white" />,
-      image: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c",
+      image: "",
       alt: "Bilderkennung durch künstliche Intelligenz",
       isReversed: false,
       accentColor: "text-evoya-blue bg-evoya-blue/10",
+      customContent: imageRecognitionContent,
     },
     {
       title: "Dokumentenanalyse",
