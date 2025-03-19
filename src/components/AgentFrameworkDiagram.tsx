@@ -25,7 +25,7 @@ const AgentFrameworkDiagram: React.FC = () => {
           <Plus className="w-5 h-5 text-evoya-blue" />
         </div>
         
-        {/* Vertical line connecting to Sprachmodell */}
+        {/* Vertical line connecting top row to Sprachmodell */}
         <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 flex flex-col items-center" style={{height: '40px'}}>
           <div className="w-0.5 h-full bg-evoya-blue/70"></div>
           <div className="absolute top-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
@@ -57,20 +57,20 @@ const AgentFrameworkDiagram: React.FC = () => {
         />
         
         {/* Left horizontal connecting line (Tools to Sprachmodell) */}
-        <div className="absolute top-1/2 left-0 w-1/6 transform -translate-y-1/2">
+        <div className="absolute top-1/2 left-[calc(33.333%-2px)] w-[calc(16.6667%+2px)] transform -translate-y-1/2">
           <div className="w-full h-0.5 bg-evoya-blue/70"></div>
           <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
           <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
         </div>
         
         {/* Right horizontal connecting line (Sprachmodell to Interface) */}
-        <div className="absolute top-1/2 right-0 w-1/6 transform -translate-y-1/2">
+        <div className="absolute top-1/2 right-[calc(33.333%-2px)] w-[calc(16.6667%+2px)] transform -translate-y-1/2">
           <div className="w-full h-0.5 bg-evoya-blue/70"></div>
           <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
           <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
         </div>
         
-        {/* Vertical line connecting to Wissen */}
+        {/* Vertical line connecting Sprachmodell to Wissen */}
         <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 flex flex-col items-center" style={{height: '40px'}}>
           <div className="w-0.5 h-full bg-evoya-blue/70"></div>
           <div className="absolute top-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
