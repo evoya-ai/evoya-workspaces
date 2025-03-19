@@ -5,10 +5,10 @@ import AgentComponent from './AgentComponent';
 
 const AgentFrameworkDiagram: React.FC = () => {
   // Connection line length (adjust this single value to control all connections)
-  const connectionLength = "40px";
+  const connectionLength = "80px";
   
   return (
-    <div className="max-w-4xl mx-auto py-6">
+    <div className="max-w-4xl mx-auto py-6 relative">
       {/* Top row: Instruktionen + Persona */}
       <div className="grid grid-cols-2 gap-4 mb-16 relative">
         <AgentComponent 
@@ -29,13 +29,6 @@ const AgentFrameworkDiagram: React.FC = () => {
         </div>
       </div>
       
-      {/* Vertical line connecting Sprachmodell to top row */}
-      <div className="absolute left-1/2 top-[calc(16.67%-8px)] transform -translate-x-1/2 flex flex-col items-center" style={{height: connectionLength}}>
-        <div className="w-0.5 h-full bg-evoya-blue/70"></div>
-        <div className="absolute top-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
-        <div className="absolute bottom-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
-      </div>
-      
       {/* Middle row: Tools + Sprachmodell + Interface */}
       <div className="grid grid-cols-3 gap-4 mb-16 relative">
         {/* Left: Tools */}
@@ -46,11 +39,49 @@ const AgentFrameworkDiagram: React.FC = () => {
         />
         
         {/* Center: Sprachmodell */}
-        <AgentComponent 
-          title="Sprachmodell" 
-          icon={<Brain className="w-7 h-7" />} 
-          color="bg-evoya-orange" 
-        />
+        <div className="relative">
+          <AgentComponent 
+            title="Sprachmodell" 
+            icon={<Brain className="w-7 h-7" />} 
+            color="bg-evoya-orange" 
+          />
+          
+          {/* Top connection from Sprachmodell */}
+          <div className="absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-full">
+            <div className="flex flex-col items-center" style={{height: connectionLength}}>
+              <div className="w-0.5 h-full bg-evoya-blue/70"></div>
+              <div className="absolute top-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
+              <div className="absolute bottom-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
+            </div>
+          </div>
+          
+          {/* Left connection from Sprachmodell */}
+          <div className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-full">
+            <div className="flex items-center" style={{width: connectionLength}}>
+              <div className="w-full h-0.5 bg-evoya-blue/70"></div>
+              <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
+              <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
+            </div>
+          </div>
+          
+          {/* Right connection from Sprachmodell */}
+          <div className="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-full">
+            <div className="flex items-center" style={{width: connectionLength}}>
+              <div className="w-full h-0.5 bg-evoya-blue/70"></div>
+              <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
+              <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
+            </div>
+          </div>
+          
+          {/* Bottom connection from Sprachmodell */}
+          <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-full">
+            <div className="flex flex-col items-center" style={{height: connectionLength}}>
+              <div className="w-0.5 h-full bg-evoya-blue/70"></div>
+              <div className="absolute top-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
+              <div className="absolute bottom-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
+            </div>
+          </div>
+        </div>
         
         {/* Right: Interface */}
         <AgentComponent 
@@ -58,27 +89,6 @@ const AgentFrameworkDiagram: React.FC = () => {
           icon={<Computer className="w-7 h-7" />} 
           color="bg-evoya-blue" 
         />
-        
-        {/* Left horizontal connecting line (Sprachmodell to Tools) */}
-        <div className="absolute top-1/2 left-[33.333%] transform -translate-y-1/2" style={{width: connectionLength, right: 'auto'}}>
-          <div className="w-full h-0.5 bg-evoya-blue/70"></div>
-          <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
-          <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
-        </div>
-        
-        {/* Right horizontal connecting line (Sprachmodell to Interface) */}
-        <div className="absolute top-1/2 right-[33.333%] transform -translate-y-1/2" style={{width: connectionLength, left: 'auto'}}>
-          <div className="w-full h-0.5 bg-evoya-blue/70"></div>
-          <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
-          <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
-        </div>
-      </div>
-      
-      {/* Vertical line connecting Sprachmodell to Wissen */}
-      <div className="absolute left-1/2 bottom-[33.333%] transform -translate-x-1/2 flex flex-col items-center" style={{height: connectionLength}}>
-        <div className="w-0.5 h-full bg-evoya-blue/70"></div>
-        <div className="absolute top-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
-        <div className="absolute bottom-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
       </div>
       
       {/* Bottom row: Wissen */}
