@@ -1,7 +1,8 @@
 
 import React, { useState } from 'react';
-import { Check, X } from 'lucide-react';
+import { Check, X, AlertTriangle, Info } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './ui/tooltip';
 
 const Comparison: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -14,28 +15,79 @@ const Comparison: React.FC = () => {
     'Nutzungsbasierte Abrechnung',
     'Massgeschneiderte KI-Lösungen',
     'Persönliche Betreuung',
+    'Dynamische Dokumentbearbeitung',
   ];
+
+  const tooltips = {
+    'Dynamische Dokumentbearbeitung': {
+      'Evoya AI': 'Vollständig integriert – Inhalte können direkt und dynamisch im Chat-Interface bearbeitet werden.',
+      'OpenAI': 'Ähnlich wie Evoya AI – über ein eigenes Interface verfügbar.',
+      'Microsoft Copilot': 'Eingeschränkt – Bearbeitung nur in Office-Anwendungen wie Word oder Excel möglich.',
+    }
+  };
 
   const products = [
     {
-      name: 'evoya',
+      name: 'Evoya AI',
       description: 'KI-Workspaces',
-      results: [true, true, true, true, true, true, true],
+      results: [true, true, true, true, true, true, true, true],
       highlighted: true
     },
     {
-      name: 'ChatGPT',
-      description: 'Plus',
-      results: [false, false, false, false, false, false, false],
+      name: 'OpenAI',
+      description: 'ChatGPT',
+      results: [false, false, false, false, false, false, false, true],
       highlighted: false
     },
     {
-      name: 'Microsoft',
-      description: 'Copilot',
-      results: [false, false, true, false, false, false, false],
+      name: 'Microsoft Copilot',
+      description: '',
+      results: [false, false, true, false, false, false, false, 'limited'],
       highlighted: false
     }
   ];
+
+  const renderFeatureStatus = (productIndex, featureIndex) => {
+    const result = products[productIndex].results[featureIndex];
+    const isHighlighted = products[productIndex].highlighted;
+    const featureName = features[featureIndex];
+    const productName = products[productIndex].name;
+    
+    // Check if tooltip exists for this feature and product
+    const hasTooltip = tooltips[featureName] && tooltips[featureName][productName];
+
+    const statusIcon = (() => {
+      if (result === true) {
+        return <Check className={`mx-auto w-5 h-5 ${isHighlighted ? 'text-evoya-orange' : 'text-evoya-orange'}`} />;
+      } else if (result === 'limited') {
+        return <AlertTriangle className="mx-auto w-5 h-5 text-amber-500" />;
+      } else {
+        return <X className="mx-auto w-5 h-5 text-gray-400" />;
+      }
+    })();
+
+    if (hasTooltip) {
+      return (
+        <div className="flex items-center justify-center">
+          {statusIcon}
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <button className="ml-1">
+                  <Info className="w-4 h-4 text-gray-400 hover:text-gray-600" />
+                </button>
+              </TooltipTrigger>
+              <TooltipContent className="max-w-xs bg-white p-2 shadow-lg rounded-lg border border-gray-200">
+                <p className="text-xs text-gray-700">{tooltips[featureName][productName]}</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        </div>
+      );
+    }
+
+    return statusIcon;
+  };
 
   return (
     <section id="comparison" className="py-24 relative overflow-hidden">
@@ -89,14 +141,18 @@ const Comparison: React.FC = () => {
                       <div className={`font-semibold text-lg ${product.highlighted ? 'text-evoya-blue' : 'text-gray-800'}`}>
                         {product.name}
                       </div>
-                      <div className="text-sm text-gray-500">{product.description}</div>
+                      {product.description && (
+                        <div className="text-sm text-gray-500">{product.description}</div>
+                      )}
                     </th>
                   ))}
                   <th className="px-6 py-4 md:hidden">
                     <div className={`font-semibold text-lg ${products[activeTab].highlighted ? 'text-evoya-blue' : 'text-gray-800'}`}>
                       {products[activeTab].name}
                     </div>
-                    <div className="text-sm text-gray-500">{products[activeTab].description}</div>
+                    {products[activeTab].description && (
+                      <div className="text-sm text-gray-500">{products[activeTab].description}</div>
+                    )}
                   </th>
                 </tr>
               </thead>
@@ -111,19 +167,11 @@ const Comparison: React.FC = () => {
                           productIndex === 0 ? 'bg-evoya-blue/5' : ''
                         } hidden md:table-cell`}
                       >
-                        {product.results[featureIndex] ? (
-                          <Check className={`mx-auto w-5 h-5 ${product.highlighted ? 'text-evoya-blue' : 'text-green-500'}`} />
-                        ) : (
-                          <X className="mx-auto w-5 h-5 text-gray-400" />
-                        )}
+                        {renderFeatureStatus(productIndex, featureIndex)}
                       </td>
                     ))}
                     <td className="px-6 py-4 text-center md:hidden">
-                      {products[activeTab].results[featureIndex] ? (
-                        <Check className={`mx-auto w-5 h-5 ${products[activeTab].highlighted ? 'text-evoya-blue' : 'text-green-500'}`} />
-                      ) : (
-                        <X className="mx-auto w-5 h-5 text-gray-400" />
-                      )}
+                      {renderFeatureStatus(activeTab, featureIndex)}
                     </td>
                   </tr>
                 ))}
