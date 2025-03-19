@@ -18,10 +18,12 @@ const AgentComponent: React.FC<AgentComponentProps> = ({
 }) => {
   return (
     <div className={`relative ${className}`}>
-      <div className={`flex items-center justify-center rounded-xl ${color} ${textColor} p-5 shadow-md h-full`}>
+      <div className={`flex items-center justify-center rounded-xl ${color} ${textColor} p-6 shadow-md h-full`}>
         <div className="flex flex-col items-center text-center">
-          {icon}
-          <span className="mt-2 font-medium">{title}</span>
+          <div className="text-3xl mb-2">
+            {icon}
+          </div>
+          <span className="font-medium">{title}</span>
         </div>
       </div>
     </div>
