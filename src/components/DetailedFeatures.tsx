@@ -3,7 +3,6 @@ import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool
 import AnimatedSection from './AnimatedSection';
 import { cn } from '../lib/utils';
 import { Separator } from './ui/separator';
-import { Badge } from './ui/badge';
 
 interface FeatureDetailProps {
   title: string;
@@ -15,7 +14,6 @@ interface FeatureDetailProps {
   isReversed?: boolean;
   accentColor: string;
   customContent?: React.ReactNode;
-  badge?: React.ReactNode;
 }
 
 const FeatureDetail: React.FC<FeatureDetailProps> = ({
@@ -28,7 +26,6 @@ const FeatureDetail: React.FC<FeatureDetailProps> = ({
   isReversed = false,
   accentColor,
   customContent,
-  badge,
 }) => {
   return (
     <div className={cn(
@@ -43,19 +40,16 @@ const FeatureDetail: React.FC<FeatureDetailProps> = ({
         animation={isReversed ? "fade-up" : "fade-up"}
       >
         <div className="max-w-xl">
-          <div className="flex items-center mb-4">
-            <div className={`inline-flex items-center justify-center rounded-full p-2 ${accentColor} mr-3`}>
-              {icon}
-            </div>
-            {badge && <div>{badge}</div>}
+          <div className={`inline-flex items-center justify-center rounded-full p-2 ${accentColor} mb-4`}>
+            {icon}
           </div>
           <h3 className="text-2xl lg:text-3xl font-semibold mb-4">{title}</h3>
           <p className="text-lg text-gray-600 mb-6">{description}</p>
           <ul className="space-y-3">
             {details.map((detail, index) => (
               <li key={index} className="flex items-start">
-                <div className="flex-shrink-0 w-5 h-5 rounded-full bg-evoya-orange/10 flex items-center justify-center mt-1 mr-3">
-                  <div className="w-2 h-2 rounded-full bg-evoya-orange"></div>
+                <div className="flex-shrink-0 w-5 h-5 rounded-full bg-evoya-blue/10 flex items-center justify-center mt-1 mr-3">
+                  <div className="w-2 h-2 rounded-full bg-evoya-blue"></div>
                 </div>
                 <span className="text-gray-700">{detail}</span>
               </li>
@@ -209,12 +203,6 @@ const DetailedFeatures: React.FC = () => {
     </div>
   );
 
-  const comingSoonBadge = (
-    <Badge variant="outline" className="bg-evoya-orange/10 text-evoya-orange border-evoya-orange/20 ml-2">
-      Coming Soon
-    </Badge>
-  );
-
   const features = [
     {
       title: "Textgenerierung",
@@ -229,7 +217,7 @@ const DetailedFeatures: React.FC = () => {
       image: "",
       alt: "Person arbeitet an einem Text-Dokument",
       isReversed: false,
-      accentColor: "text-evoya-orange bg-evoya-orange/10",
+      accentColor: "text-evoya-blue bg-evoya-blue/10",
       customContent: textGenerationContent,
     },
     {
@@ -245,7 +233,7 @@ const DetailedFeatures: React.FC = () => {
       image: "",
       alt: "Generierte Bilder auf einem Display",
       isReversed: true,
-      accentColor: "text-evoya-orange bg-evoya-orange/10",
+      accentColor: "text-evoya-blue bg-evoya-blue/10",
       customContent: businessmanContent,
     },
     {
@@ -261,7 +249,7 @@ const DetailedFeatures: React.FC = () => {
       image: "",
       alt: "Bilderkennung durch künstliche Intelligenz",
       isReversed: false,
-      accentColor: "text-evoya-orange bg-evoya-orange/10",
+      accentColor: "text-evoya-blue bg-evoya-blue/10",
       customContent: imageRecognitionContent,
     },
     {
@@ -271,13 +259,13 @@ const DetailedFeatures: React.FC = () => {
         "Automatische Extraktion von Daten aus Rechnungen, Verträgen, Berichten und Anträgen",
         "Strukturierung ungeordneter Textinhalte in durchsuchbare, analysierbare Formate",
         "Intelligente Erkennung von Schlüsselinformationen in komplexen Dokumenten",
-        "Schnelle Verarbeitung grosser Dokumentenmengen mit automatischer Extraktion und Zusammenfassung relevanter Inhalte",
+        "Schnelle Verarbeitung großer Dokumentenmengen mit automatischer Extraktion und Zusammenfassung relevanter Inhalte",
       ],
       icon: <FileSearch className="w-6 h-6 text-white" />,
       image: "",
       alt: "Dokumentenanalyse auf einem Laptop",
       isReversed: true,
-      accentColor: "text-evoya-orange bg-evoya-orange/10",
+      accentColor: "text-evoya-blue bg-evoya-blue/10",
       customContent: documentContent,
     },
     {
@@ -293,7 +281,7 @@ const DetailedFeatures: React.FC = () => {
       image: "",
       alt: "Echtzeitdaten auf einem Dashboard",
       isReversed: false,
-      accentColor: "text-evoya-orange bg-evoya-orange/10",
+      accentColor: "text-evoya-blue bg-evoya-blue/10",
       customContent: webContent,
     },
     {
@@ -309,42 +297,40 @@ const DetailedFeatures: React.FC = () => {
       image: "",
       alt: "Visualisierung von Geschäftsprozessen",
       isReversed: true,
-      accentColor: "text-evoya-orange bg-evoya-orange/10",
+      accentColor: "text-evoya-blue bg-evoya-blue/10",
       customContent: diagramContent,
     },
     {
       title: "Creator",
-      description: "Bearbeiten Sie KI-generierte Inhalte direkt in einem interaktiven Dokumenteneditor – im Gegensatz zu einem herkömmlichen Chat.",
+      description: "Bearbeiten Sie KI-generierte Inhalte direkt in einem dynamischen Dokumenteneditor.",
       details: [
-        "Vollwertiger Dokumenteneditor statt sequentieller Chat-Ansicht, der komplette Texte als bearbeitbares Dokument darstellt",
-        "Selektive Bearbeitung: Markieren und editieren Sie gezielt einzelne Passagen oder ganze Abschnitte mit Vorher/Nachher-Ansicht",
-        "Formatierungskontrolle mit Überschriften, Absätzen und Textauszeichnungen direkt im Editor",
-        "Interaktive Zusammenarbeit mit der KI innerhalb des Dokuments – nicht nur sequentielle Antworten wie in einem Chat",
+        "Dynamischer Dokumenteneditor für die direkte Bearbeitung KI-generierter Inhalte",
+        "Echtzeit-Zusammenarbeit zwischen Mensch und KI für optimale Ergebnisse",
+        "Nahtlose Integration des Editors in bestehende Dokumentenworkflows",
+        "Vielfältige Formatierungsoptionen für professionelle Geschäftsdokumente",
       ],
       icon: <PenTool className="w-6 h-6 text-white" />,
       customContent: creatorImageInterface,
       image: "", // Not used when customContent is provided
       alt: "Kreative Bearbeitung von Inhalten",
       isReversed: false,
-      accentColor: "text-evoya-orange bg-evoya-orange/10",
-      badge: comingSoonBadge,
+      accentColor: "text-evoya-blue bg-evoya-blue/10",
     },
     {
       title: "Voice",
-      description: "Kommunizieren Sie per Sprache mit dem KI-Agenten und transkribieren Sie gesprochene Inhalte für barrierefreie und schnelle Interaktion.",
+      description: "Verwandeln Sie gesprochene Inhalte direkt in Text für barrierefreie und schnelle Kommunikation.",
       details: [
-        "Direkte Sprach-Interaktion mit dem KI-Agenten ohne Tippen – ideal für unterwegs oder bei eingeschränkter Mobilität",
-        "Präzise Echtzeit-Transkription von Meetings und Gesprächen mit automatischer Protokollerstellung",
-        "Mehrsprachige Unterstützung für internationale Teams und Kommunikation in verschiedenen Sprachen",
-        "Barrierefreie Nutzung für Menschen mit Sehbehinderungen oder eingeschränkter Tastaturnutzung",
+        "Präzise Echtzeit-Transkription von Sprache zu Text für Meetings und Präsentationen",
+        "Unterstützung mehrerer Sprachen für internationale Teams und Kommunikation",
+        "Automatische Protokollerstellung aus Besprechungsaufnahmen",
+        "Spracherkennung für die Erstellung von Notizen und Aufgabenlisten unterwegs",
       ],
       icon: <Mic className="w-6 h-6 text-white" />,
       customContent: audioWaveform,
       image: "", // Not used when customContent is provided
       alt: "Spracherkennung und Transkription",
       isReversed: true,
-      accentColor: "text-evoya-orange bg-evoya-orange/10",
-      badge: comingSoonBadge,
+      accentColor: "text-evoya-blue bg-evoya-blue/10",
     },
   ];
   
@@ -377,7 +363,6 @@ const DetailedFeatures: React.FC = () => {
               isReversed={feature.isReversed}
               accentColor={feature.accentColor}
               customContent={feature.customContent}
-              badge={feature.badge}
             />
           ))}
         </div>
@@ -478,7 +463,7 @@ const DetailedFeatures: React.FC = () => {
                     <h5 className="text-lg font-medium mb-2 text-evoya-navy">Kontextbasierte Verknüpfung</h5>
                     <p className="text-gray-600">
                       Automatische Erkennung von Beziehungen zwischen Konzepten, Personen und 
-                      Ereignissen für ein tiefgreifendes Verständnis Ihrer Geschäftsdaten.
+                      Ereignissen f��r ein tiefgreifendes Verständnis Ihrer Geschäftsdaten.
                     </p>
                   </div>
                 </div>
@@ -611,6 +596,97 @@ const DetailedFeatures: React.FC = () => {
                     </div>
                   </div>
                 </div>
+                
+                <div className="flex lg:hidden justify-center">
+                  <div className="bg-gray-200 w-12 h-12 rounded-full flex items-center justify-center">
+                    <ArrowRight className="w-6 h-6 text-gray-600 transform rotate-90 lg:rotate-0" />
+                  </div>
+                </div>
+                
+                <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6 lg:p-8 flex-1 z-20">
+                  <div className="flex flex-col h-full">
+                    <div className="mb-4">
+                      <div className="inline-flex items-center justify-center bg-gray-700 text-white rounded-full py-1 px-3 text-sm font-medium">
+                        <div className="bg-white text-gray-700 rounded-full w-6 h-6 flex items-center justify-center mr-2 font-bold">2</div>
+                        SCHRITT 2
+                      </div>
+                      <h5 className="text-lg font-semibold mt-3 mb-4">Sprachmodell generiert Antwort mit anonymisierten Daten</h5>
+                    </div>
+                    
+                    <div className="flex flex-col items-center justify-center flex-grow">
+                      <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mb-4">
+                        <Globe2 className="w-16 h-16 text-gray-700" />
+                      </div>
+                      
+                      <p className="text-center text-gray-600">
+                        Verarbeitung anonymisierter Daten<br />durch externe KI
+                      </p>
+                    </div>
+                    
+                    <div className="mt-6 flex justify-center">
+                      <div className="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center shadow-md">
+                        <Globe2 className="w-6 h-6 text-white" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex lg:hidden justify-center">
+                  <div className="bg-gray-200 w-12 h-12 rounded-full flex items-center justify-center">
+                    <ArrowRight className="w-6 h-6 text-gray-600 transform rotate-90 lg:rotate-0" />
+                  </div>
+                </div>
+                
+                <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6 lg:p-8 flex-1 z-20">
+                  <div className="flex flex-col h-full">
+                    <div className="mb-4">
+                      <div className="inline-flex items-center justify-center bg-evoya-lightBlue text-white rounded-full py-1 px-3 text-sm font-medium">
+                        <div className="bg-white text-evoya-lightBlue rounded-full w-6 h-6 flex items-center justify-center mr-2 font-bold">3</div>
+                        SCHRITT 3
+                      </div>
+                      <h5 className="text-lg font-semibold mt-3 mb-4">Anonymisierte Daten werden deanonymisiert (Schweiz)</h5>
+                    </div>
+                    
+                    <div className="space-y-4 flex-grow">
+                      <div className="bg-evoya-lightBlue text-white p-4 rounded text-center font-medium">
+                        Max Mustermann
+                      </div>
+                      
+                      <div className="flex justify-center">
+                        <div className="p-1 rounded-full bg-green-100">
+                          <ArrowRight className="w-6 h-6 text-green-500 transform -rotate-90" />
+                        </div>
+                      </div>
+                      
+                      <div className="bg-evoya-lightBlue text-white p-4 rounded text-center font-medium">
+                        [Name 1]
+                      </div>
+                    </div>
+                    
+                    <div className="mt-6 flex justify-center">
+                      <div className="w-12 h-12 rounded-full bg-evoya-lightBlue flex items-center justify-center shadow-md">
+                        <RefreshCcw className="w-6 h-6 text-white" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 p-6 rounded-xl mt-6 shadow-sm">
+              <h4 className="text-xl font-semibold mb-4">Ihre Daten in sicheren Händen</h4>
+              <p className="text-gray-600 mb-4">
+                Das Evoya Privacy Shield stellt sicher, dass sensitive Informationen niemals ungeschützt an externe Systeme übermittelt werden. 
+                Stattdessen werden sie vor der Verarbeitung durch Sprachmodelle anonymisiert und erst nach der Verarbeitung wieder deanonymisiert. 
+                Dieser gesamte Prozess findet ausschliesslich in der Schweiz statt.
+              </p>
+              <div className="flex items-center mt-4">
+                <div className="rounded-full bg-green-100 p-2 mr-3">
+                  <Shield className="w-6 h-6 text-green-600" />
+                </div>
+                <p className="text-green-600 font-medium">
+                  Datenschutz auf höchstem Niveau, ohne Kompromisse bei der Leistungsfähigkeit
+                </p>
               </div>
             </div>
           </div>
