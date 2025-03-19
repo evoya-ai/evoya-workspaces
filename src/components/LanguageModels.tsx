@@ -8,22 +8,20 @@ import { cn } from '../lib/utils';
 interface ModelCardProps {
   provider: string;
   description: string;
-  accentColor: string;
   isSwissHosted?: boolean;
 }
 
 const ModelCard: React.FC<ModelCardProps> = ({
   provider,
   description,
-  accentColor,
   isSwissHosted = false,
 }) => {
   return (
     <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg group border border-gray-100 h-full">
-      <div className={`h-2 w-full ${accentColor}`} />
+      <div className="h-2 w-full bg-evoya-orange" />
       <CardContent className="p-5">
         <div className="flex items-start gap-4">
-          <div className={`p-3 rounded-full ${accentColor} transition-all duration-300 shadow-sm flex items-center justify-center`}>
+          <div className="p-3 rounded-full bg-evoya-orange transition-all duration-300 shadow-sm flex items-center justify-center">
             {/* Logo placeholder - will be replaced with actual provider logos later */}
             <Bot className="w-5 h-5 text-white" />
           </div>
@@ -50,49 +48,41 @@ const LanguageModels: React.FC = () => {
     {
       provider: "OpenAI",
       description: "Anbieter leistungsstarker KI-Sprachmodelle mit breitem Anwendungsspektrum",
-      accentColor: "bg-evoya-blue text-white",
       isSwissHosted: false
     },
     {
       provider: "Anthropic",
       description: "Fokus auf sichere, zuverlässige und kontrollierbare KI-Systeme",
-      accentColor: "bg-evoya-blue text-white",
       isSwissHosted: false
     },
     {
       provider: "Mistral AI",
       description: "Europäischer Anbieter effizienter KI-Modelle mit ausgezeichnetem Preis-Leistungs-Verhältnis",
-      accentColor: "bg-evoya-orange text-white",
       isSwissHosted: false
     },
     {
       provider: "Meta",
       description: "Open-Source-Modelle mit umfangreichen Anpassungsmöglichkeiten",
-      accentColor: "bg-evoya-orange text-white",
       isSwissHosted: false
     },
     {
       provider: "DeepSeek",
       description: "Spezialisiert auf fortschrittliche Forschung und technologische Innovation",
-      accentColor: "bg-evoya-blue text-white",
       isSwissHosted: false
     },
     {
       provider: "Google",
       description: "Führende KI-Technologien mit tiefer Integration in Web- und Cloud-Dienste",
-      accentColor: "bg-evoya-blue text-white",
       isSwissHosted: false
     },
     {
       provider: "Nvidia",
       description: "Hardware-optimierte KI-Lösungen mit Fokus auf Leistung und Skalierbarkeit",
-      accentColor: "bg-evoya-green text-white",
       isSwissHosted: false
     },
     {
       provider: "Microsoft",
       description: "Enterprise-orientierte KI-Dienste mit nahtloser Integration in Geschäftsanwendungen",
-      accentColor: "bg-evoya-navy text-white",
       isSwissHosted: false
     },
   ];
@@ -125,7 +115,6 @@ const LanguageModels: React.FC = () => {
               <ModelCard
                 provider={provider.provider}
                 description={provider.description}
-                accentColor={provider.accentColor}
                 isSwissHosted={provider.isSwissHosted}
               />
             </AnimatedSection>
