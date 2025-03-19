@@ -2,13 +2,16 @@
 import React, { useState } from 'react';
 import { Check, X, AlertTriangle } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './ui/tooltip';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translate } from '../utils/translations';
 
 type FeatureResult = boolean | 'limited';
 
 const Comparison: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const { language } = useLanguage();
   
+  // These features should be translated in future updates if needed
   const features = [
     'Flexibles Preismodell',
     'Über 20 KI-Modelle',
@@ -64,8 +67,6 @@ const Comparison: React.FC = () => {
   const renderFeatureStatus = (productIndex: number, featureIndex: number) => {
     const result = products[productIndex].results[featureIndex];
     const isHighlighted = products[productIndex].highlighted;
-    const featureName = features[featureIndex];
-    const productName = products[productIndex].name;
     
     let icon;
     if (result === true) {
@@ -89,13 +90,15 @@ const Comparison: React.FC = () => {
       <div className="section-container">
         <AnimatedSection className="text-center mb-16">
           <div className="inline-block mb-4 px-3 py-1 rounded-full bg-evoya-blue/10 text-evoya-blue text-sm font-medium">
-            Vergleich
+            {translate('nav_comparison', language)}
           </div>
           <h2 className="mb-6 max-w-3xl mx-auto">
-            Evoya AI im Vergleich zu anderen <span className="text-evoya-blue">KI-Lösungen</span>
+            Evoya AI {language === 'de' ? 'im Vergleich zu anderen' : 'compared to other'} <span className="text-evoya-blue">{language === 'de' ? 'KI-Lösungen' : 'AI solutions'}</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Entdecken Sie, wie sich unsere KI-Workspaces von anderen Lösungen auf dem Markt unterscheiden.
+            {language === 'de' 
+              ? 'Entdecken Sie, wie sich unsere KI-Workspaces von anderen Lösungen auf dem Markt unterscheiden.'
+              : 'Discover how our AI Workspaces differ from other solutions on the market.'}
           </p>
         </AnimatedSection>
 
@@ -126,7 +129,9 @@ const Comparison: React.FC = () => {
             <table className="w-full text-left">
               <thead>
                 <tr className="bg-gray-50 border-b border-gray-200">
-                  <th className="px-6 py-4 font-medium text-gray-600">Funktionen</th>
+                  <th className="px-6 py-4 font-medium text-gray-600">
+                    {language === 'de' ? 'Funktionen' : 'Features'}
+                  </th>
                   {products.map((product, index) => (
                     <th 
                       key={index} 

@@ -4,6 +4,8 @@ import { Check, Plus, Rocket } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translate } from '../utils/translations';
 
 const PricingFeature: React.FC<{ text: string }> = ({ text }) => (
   <div className="flex items-center space-x-2 text-sm text-gray-600">
@@ -13,18 +15,20 @@ const PricingFeature: React.FC<{ text: string }> = ({ text }) => (
 );
 
 const Pricing: React.FC = () => {
+  const { language } = useLanguage();
+
   return (
     <section id="pricing" className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
       <div className="section-container">
         <AnimatedSection className="text-center mb-16">
           <div className="inline-block mb-4 px-3 py-1 rounded-full bg-evoya-blue/10 text-evoya-blue text-sm font-medium">
-            Preisgestaltung
+            {translate('pricing_badge', language)}
           </div>
           <h2 className="mb-6 max-w-3xl mx-auto">
-            Transparente <span className="text-evoya-blue">Preise</span> für Ihre KI-Workspaces
+            {translate('pricing_title', language)} <span className="text-evoya-blue">{translate('pricing_title_colored', language)}</span> {translate('pricing_title_end', language)}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Mit unserem flexiblen Preismodell zahlen Sie nur für das, was Sie wirklich benötigen.
+            {translate('pricing_description', language)}
           </p>
         </AnimatedSection>
 
@@ -33,29 +37,29 @@ const Pricing: React.FC = () => {
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-evoya-blue to-evoya-lightBlue"></div>
             <CardHeader className="pb-0">
               <div>
-                <CardTitle className="text-3xl font-bold text-evoya-blue">Unlimited</CardTitle>
+                <CardTitle className="text-3xl font-bold text-evoya-blue">{translate('pricing_unlimited', language)}</CardTitle>
                 <CardDescription className="text-base mt-2">
-                  Ihr Komplettpaket für professionelle KI-Workspaces mit allen Funktionen und umfangreichen Ressourcen.
+                  {translate('pricing_unlimited_desc', language)}
                 </CardDescription>
               </div>
               <div className="mt-6">
                 <div className="flex items-baseline">
                   <span className="text-4xl font-bold text-gray-900">CHF 99</span>
-                  <span className="text-gray-600 ml-1">/ Monat</span>
+                  <span className="text-gray-600 ml-1">{translate('pricing_per_month', language)}</span>
                 </div>
               </div>
             </CardHeader>
             <CardContent className="pt-6">
               <div className="space-y-4">
-                <PricingFeature text="2'500 Credits / Monat" />
-                <PricingFeature text="Unlimitierte Benutzer (inkl. 2 Admins)" />
-                <PricingFeature text="Unlimitierte Workspace-Agenten" />
-                <PricingFeature text="Alle Sprachmodelle" />
-                <PricingFeature text="Datenquellen: 100 Rohtext, 100 URLs, 100 Dateien" />
-                <PricingFeature text="Alle Funktionen" />
-                <PricingFeature text="Alle Agenten-Tools" />
-                <PricingFeature text="Automatische Datenaktualisierung" />
-                <PricingFeature text="2 Mailboxen" />
+                <PricingFeature text={translate('pricing_credits', language)} />
+                <PricingFeature text={translate('pricing_users', language)} />
+                <PricingFeature text={translate('pricing_agents', language)} />
+                <PricingFeature text={translate('pricing_models', language)} />
+                <PricingFeature text={translate('pricing_datasources', language)} />
+                <PricingFeature text={translate('pricing_features', language)} />
+                <PricingFeature text={translate('pricing_tools', language)} />
+                <PricingFeature text={translate('pricing_data_update', language)} />
+                <PricingFeature text={translate('pricing_mailboxes', language)} />
               </div>
 
               <div className="mt-8">
@@ -63,9 +67,9 @@ const Pricing: React.FC = () => {
                   <div className="flex items-start space-x-3">
                     <Plus className="h-5 w-5 text-evoya-orange mt-0.5 flex-shrink-0" />
                     <div>
-                      <h4 className="font-medium text-gray-900">Zusätzliche Credits</h4>
+                      <h4 className="font-medium text-gray-900">{translate('pricing_additional', language)}</h4>
                       <p className="text-sm text-gray-600 mt-1">
-                        Benötigen Sie mehr? Erhalten Sie 1'000 zusätzliche Credits für nur CHF 35 pro Monat.
+                        {translate('pricing_additional_desc', language)}
                       </p>
                     </div>
                   </div>
@@ -84,10 +88,10 @@ const Pricing: React.FC = () => {
                   className="flex items-center justify-center"
                 >
                   <Rocket className="mr-2 h-5 w-5" />
-                  Jetzt kostenlos starten
+                  {translate('pricing_start_free', language)}
                 </a>
               </Button>
-              <p className="text-xs text-gray-500 mt-3">Keine Kreditkarte notwendig</p>
+              <p className="text-xs text-gray-500 mt-3">{translate('pricing_no_card', language)}</p>
             </CardFooter>
           </Card>
         </AnimatedSection>
