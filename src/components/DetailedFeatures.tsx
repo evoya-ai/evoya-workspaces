@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic, Shield, Lock, Database, ArrowRight, User, Globe2, RefreshCcw, Book, Layers, Network, Brain, Search } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -290,7 +289,7 @@ const DetailedFeatures: React.FC = () => {
               
               <div className="p-5 bg-gradient-to-r from-evoya-lightBlue/5 to-transparent rounded-lg border border-evoya-lightBlue/20 shadow-sm">
                 <div className="flex items-center">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-evoya-lightBlue/20 flex items-center justify-center mr-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-evoya-orange/20 flex items-center justify-center mr-4">
                     <Brain className="w-6 h-6 text-evoya-orange" />
                   </div>
                   <p className="text-evoya-navy font-medium">
