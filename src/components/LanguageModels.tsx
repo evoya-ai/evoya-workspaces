@@ -10,21 +10,26 @@ interface ModelCardProps {
   provider: string;
   description: string;
   isSwissHosted?: boolean;
+  logoSrc?: string;
 }
 
 const ModelCard: React.FC<ModelCardProps> = ({
   provider,
   description,
   isSwissHosted = false,
+  logoSrc,
 }) => {
   return (
     <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg group border border-gray-100 h-full">
       <div className="h-2 w-full bg-evoya-orange" />
       <CardContent className="p-5">
         <div className="flex items-start gap-4">
-          <div className="p-3 rounded-full bg-evoya-orange transition-all duration-300 shadow-sm flex items-center justify-center">
-            {/* Logo placeholder - will be replaced with actual provider logos later */}
-            <Bot className="w-5 h-5 text-white" />
+          <div className="p-3 rounded-full bg-evoya-orange/5 border border-evoya-orange/10 transition-all duration-300 shadow-sm flex items-center justify-center">
+            {logoSrc ? (
+              <img src={logoSrc} alt={`${provider} logo`} className="w-5 h-5 object-contain" />
+            ) : (
+              <Bot className="w-5 h-5 text-evoya-orange" />
+            )}
           </div>
           <div className="flex-1">
             <div className="flex items-center justify-between gap-2 mb-2">
@@ -56,42 +61,50 @@ const LanguageModels: React.FC = () => {
     {
       provider: "OpenAI",
       description: "Anbieter leistungsstarker KI-Sprachmodelle mit breitem Anwendungsspektrum",
-      isSwissHosted: false
+      isSwissHosted: false,
+      logoSrc: "/lovable-uploads/ccb72968-6ff5-4bb9-b351-6ae607663d94.png" // OpenAI logo
     },
     {
       provider: "Anthropic",
       description: "Fokus auf sichere, zuverlässige und kontrollierbare KI-Systeme",
-      isSwissHosted: false
+      isSwissHosted: false,
+      logoSrc: "/lovable-uploads/d7119a96-5af2-41e4-b89f-6b10ccff8ac7.png" // Anthropic logo
     },
     {
       provider: "Mistral AI",
       description: "Europäischer Anbieter effizienter KI-Modelle mit ausgezeichnetem Preis-Leistungs-Verhältnis",
-      isSwissHosted: false
+      isSwissHosted: false,
+      logoSrc: "/lovable-uploads/a999219d-b2cd-4459-95e5-85e6ec0ac2ba.png" // Mistral AI logo
     },
     {
       provider: "Meta",
       description: "Open-Source-Modelle mit umfangreichen Anpassungsmöglichkeiten",
-      isSwissHosted: false
+      isSwissHosted: false,
+      logoSrc: "/lovable-uploads/37757fce-6a3d-43fa-86c1-09e26f66e649.png" // Meta logo
     },
     {
       provider: "DeepSeek",
       description: "Spezialisiert auf fortschrittliche Forschung und technologische Innovation",
-      isSwissHosted: false
+      isSwissHosted: false,
+      logoSrc: "/lovable-uploads/555a0131-efa6-4bb5-94dc-9f4694784ce5.png" // DeepSeek logo (using the star-shaped logo)
     },
     {
       provider: "Google",
       description: "Führende KI-Technologien mit tiefer Integration in Web- und Cloud-Dienste",
-      isSwissHosted: false
+      isSwissHosted: false,
+      logoSrc: "/lovable-uploads/d265b7d1-1d48-48b0-b69a-7810191bc476.png" // Google logo (using the G logo)
     },
     {
       provider: "Nvidia",
       description: "Hardware-optimierte KI-Lösungen mit Fokus auf Leistung und Skalierbarkeit",
-      isSwissHosted: false
+      isSwissHosted: false,
+      logoSrc: "/lovable-uploads/0e6c0d2e-5828-4c27-b935-109b5208071b.png" // Nvidia logo
     },
     {
       provider: "Microsoft",
       description: "Enterprise-orientierte KI-Dienste mit nahtloser Integration in Geschäftsanwendungen",
-      isSwissHosted: false
+      isSwissHosted: false,
+      logoSrc: "/lovable-uploads/04028227-221a-43f3-80fc-ed495331a8a5.png" // Microsoft logo
     },
   ];
 
@@ -124,6 +137,7 @@ const LanguageModels: React.FC = () => {
                 provider={provider.provider}
                 description={provider.description}
                 isSwissHosted={provider.isSwissHosted}
+                logoSrc={provider.logoSrc}
               />
             </AnimatedSection>
           ))}
