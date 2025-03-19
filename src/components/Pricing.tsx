@@ -76,7 +76,7 @@ const Pricing: React.FC = () => {
               <Button 
                 asChild
                 variant="default"
-                className="w-full py-3 px-6 bg-evoya-orange hover:bg-evoya-orange/90 text-white text-base font-medium"
+                className="w-full h-auto py-3 bg-evoya-orange hover:bg-evoya-orange/90 text-white hover:text-white text-base font-medium"
               >
                 <a 
                   href="https://avaia.io/accounts/signup/"
