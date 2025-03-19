@@ -1,9 +1,55 @@
 
-import React from 'react';
-import { Mail, Phone, ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { Mail, Phone, ArrowRight, Check } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
+import { Button } from './ui/button';
+import { Input } from './ui/input';
+import { Textarea } from './ui/textarea';
+import { useToast } from '@/hooks/use-toast';
 
 const CallToAction: React.FC = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      // Ersetzen Sie 'YOUR_FORMSPREE_ID' mit Ihrer Formspree-Form-ID
+      const response = await fetch('https://formspree.io/f/YOUR_FORMSPREE_ID', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        setIsSuccess(true);
+        form.reset();
+        toast({
+          title: "Nachricht gesendet",
+          description: "Vielen Dank für Ihre Nachricht. Wir werden uns schnellstmöglich bei Ihnen melden.",
+        });
+      } else {
+        throw new Error('Formular konnte nicht gesendet werden');
+      }
+    } catch (error) {
+      toast({
+        title: "Fehler",
+        description: "Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-24 bg-gradient-to-b from-gray-50 to-white">
       <div className="section-container">
@@ -66,77 +112,104 @@ const CallToAction: React.FC = () => {
           <AnimatedSection animation="fade-up" delay={150} className="rounded-xl overflow-hidden">
             <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
               <h3 className="text-2xl font-semibold mb-6">Kontaktieren Sie uns</h3>
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">
-                      Vorname
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-evoya-blue/30 focus:border-evoya-blue transition-colors"
-                      placeholder="Ihr Vorname"
-                    />
+              
+              {isSuccess ? (
+                <div className="flex flex-col items-center justify-center py-12 text-center">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                    <Check className="h-8 w-8 text-green-600" />
                   </div>
-                  <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">
-                      Nachname
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-evoya-blue/30 focus:border-evoya-blue transition-colors"
-                      placeholder="Ihr Nachname"
-                    />
-                  </div>
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    E-Mail
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-evoya-blue/30 focus:border-evoya-blue transition-colors"
-                    placeholder="Ihre E-Mail-Adresse"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
-                    Unternehmen
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-evoya-blue/30 focus:border-evoya-blue transition-colors"
-                    placeholder="Ihr Unternehmen"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                    Nachricht
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-evoya-blue/30 focus:border-evoya-blue transition-colors"
-                    placeholder="Ihre Nachricht oder Anfrage"
-                  ></textarea>
-                </div>
-                
-                <div>
-                  <button
-                    type="submit"
-                    className="w-full btn-primary justify-center py-3"
+                  <h4 className="text-xl font-medium mb-2">Nachricht gesendet!</h4>
+                  <p className="text-gray-600 mb-6">Vielen Dank für Ihre Nachricht. Wir werden uns schnellstmöglich bei Ihnen melden.</p>
+                  <Button 
+                    onClick={() => setIsSuccess(false)} 
+                    variant="outline"
                   >
-                    Nachricht senden
-                  </button>
+                    Neues Formular
+                  </Button>
                 </div>
-              </form>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">
+                        Vorname
+                      </label>
+                      <Input
+                        type="text"
+                        id="firstName"
+                        name="firstName"
+                        required
+                        placeholder="Ihr Vorname"
+                        className="w-full"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">
+                        Nachname
+                      </label>
+                      <Input
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        required
+                        placeholder="Ihr Nachname"
+                        className="w-full"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                      E-Mail
+                    </label>
+                    <Input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      placeholder="Ihre E-Mail-Adresse"
+                      className="w-full"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
+                      Unternehmen
+                    </label>
+                    <Input
+                      type="text"
+                      id="company"
+                      name="company"
+                      placeholder="Ihr Unternehmen"
+                      className="w-full"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                      Nachricht
+                    </label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      rows={4}
+                      required
+                      placeholder="Ihre Nachricht oder Anfrage"
+                      className="w-full"
+                    />
+                  </div>
+                  
+                  <div>
+                    <Button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-evoya-blue hover:bg-evoya-blue/90 text-white font-medium py-3 px-6 rounded-md transition-colors duration-300 flex justify-center items-center"
+                    >
+                      {isSubmitting ? 'Wird gesendet...' : 'Nachricht senden'}
+                    </Button>
+                  </div>
+                </form>
+              )}
             </div>
           </AnimatedSection>
         </div>
