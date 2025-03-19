@@ -259,7 +259,7 @@ const DetailedFeatures: React.FC = () => {
         "Automatische Extraktion von Daten aus Rechnungen, Verträgen, Berichten und Anträgen",
         "Strukturierung ungeordneter Textinhalte in durchsuchbare, analysierbare Formate",
         "Intelligente Erkennung von Schlüsselinformationen in komplexen Dokumenten",
-        "Vergleichsanalyse zwischen verschiedenen Dokumentversionen für effizientes Review",
+        "Schnelle Verarbeitung großer Dokumentenmengen mit automatischer Extraktion und Zusammenfassung relevanter Inhalte",
       ],
       icon: <FileSearch className="w-6 h-6 text-white" />,
       image: "",
