@@ -22,7 +22,7 @@ const Comparison: React.FC = () => {
     'Dynamische Dokumentbearbeitung': {
       'Evoya AI': 'Vollständig integriert – Inhalte können direkt und dynamisch im Chat-Interface bearbeitet werden.',
       'OpenAI': 'Ähnlich wie Evoya AI – über ein eigenes Interface verfügbar.',
-      'Microsoft Copilot': 'Eingeschränkt – Bearbeitung nur in Office-Anwendungen wie Word oder Excel möglich.',
+      'Microsoft': 'Eingeschränkt – Bearbeitung nur in Office-Anwendungen wie Word oder Excel möglich.',
     }
   };
 
@@ -40,9 +40,9 @@ const Comparison: React.FC = () => {
       highlighted: false
     },
     {
-      name: 'Microsoft Copilot',
-      description: '',
-      results: [false, false, true, false, false, false, false, 'limited'],
+      name: 'Microsoft',
+      description: 'Copilot',
+      results: [false, false, true, false, false, false, false, false],
       highlighted: false
     }
   ];
@@ -56,15 +56,17 @@ const Comparison: React.FC = () => {
     // Check if tooltip exists for this feature and product
     const hasTooltip = tooltips[featureName] && tooltips[featureName][productName];
 
-    const statusIcon = (() => {
-      if (result === true) {
-        return <Check className={`mx-auto w-5 h-5 ${isHighlighted ? 'text-evoya-orange' : 'text-evoya-orange'}`} />;
-      } else if (result === 'limited') {
-        return <AlertTriangle className="mx-auto w-5 h-5 text-amber-500" />;
-      } else {
-        return <X className="mx-auto w-5 h-5 text-gray-400" />;
-      }
-    })();
+    let statusIcon;
+    if (featureName === 'Dynamische Dokumentbearbeitung' && productName === 'Microsoft') {
+      // For Microsoft Copilot's document editing feature - special case with X icon
+      statusIcon = <X className="mx-auto w-5 h-5 text-gray-400" />;
+    } else if (result === true) {
+      statusIcon = <Check className={`mx-auto w-5 h-5 ${isHighlighted ? 'text-evoya-orange' : 'text-evoya-orange'}`} />;
+    } else if (result === 'limited') {
+      statusIcon = <AlertTriangle className="mx-auto w-5 h-5 text-amber-500" />;
+    } else {
+      statusIcon = <X className="mx-auto w-5 h-5 text-gray-400" />;
+    }
 
     if (hasTooltip) {
       return (
@@ -98,7 +100,7 @@ const Comparison: React.FC = () => {
             Vergleich
           </div>
           <h2 className="mb-6 max-w-3xl mx-auto">
-            Evoya im Vergleich zu anderen <span className="text-evoya-blue">KI-Lösungen</span>
+            Evoya AI im Vergleich zu anderen <span className="text-evoya-blue">KI-Lösungen</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Entdecken Sie, wie sich unsere KI-Workspaces von anderen Lösungen auf dem Markt unterscheiden.
