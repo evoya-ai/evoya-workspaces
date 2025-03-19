@@ -4,6 +4,8 @@ import { Check, X, AlertTriangle, Info } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './ui/tooltip';
 
+type FeatureResult = boolean | 'limited';
+
 const Comparison: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   
@@ -30,24 +32,24 @@ const Comparison: React.FC = () => {
     {
       name: 'Evoya AI',
       description: 'KI-Workspaces',
-      results: [true, true, true, true, true, true, true, true],
+      results: [true, true, true, true, true, true, true, true] as FeatureResult[],
       highlighted: true
     },
     {
       name: 'OpenAI',
       description: 'ChatGPT',
-      results: [false, false, false, false, false, false, false, true],
+      results: [false, false, false, false, false, false, false, true] as FeatureResult[],
       highlighted: false
     },
     {
       name: 'Microsoft',
       description: 'Copilot',
-      results: [false, false, true, false, false, false, false, false],
+      results: [false, false, true, false, false, false, false, false] as FeatureResult[],
       highlighted: false
     }
   ];
 
-  const renderFeatureStatus = (productIndex, featureIndex) => {
+  const renderFeatureStatus = (productIndex: number, featureIndex: number) => {
     const result = products[productIndex].results[featureIndex];
     const isHighlighted = products[productIndex].highlighted;
     const featureName = features[featureIndex];
