@@ -132,15 +132,23 @@ const LLMAgentStructure: React.FC = () => {
           </p>
         </AnimatedSection>
 
-        <AnimatedSection animation="fade-up" delay={50} className="mb-10">
-          <Alert className="border border-evoya-lightBlue/30 bg-evoya-blue/5 text-evoya-navy">
-            <Info className="h-5 w-5 text-evoya-blue" />
-            <AlertTitle className="text-evoya-blue font-semibold ml-2">Was sind KI-Agenten?</AlertTitle>
-            <AlertDescription className="text-gray-700 ml-7">
-              KI-Agenten sind intelligente Softwareeinheiten, die eigenständig Aufgaben ausführen und komplexe Probleme lösen können.
-            </AlertDescription>
-          </Alert>
-        </AnimatedSection>
+        <div className="mb-6">
+          <AnimatedSection animation="fade-up" delay={50}>
+            <Alert className="border border-evoya-lightBlue/30 bg-evoya-blue/5 shadow-sm rounded-lg p-4">
+              <div className="flex items-start">
+                <div className="bg-white rounded-full p-1.5 shadow-sm">
+                  <Info className="h-5 w-5 text-evoya-blue" />
+                </div>
+                <div className="ml-3">
+                  <AlertTitle className="text-evoya-navy font-semibold text-base">Was sind KI-Agenten?</AlertTitle>
+                  <AlertDescription className="text-gray-600 mt-1">
+                    KI-Agenten sind intelligente Softwareeinheiten, die eigenständig Aufgaben ausführen und komplexe Probleme lösen können.
+                  </AlertDescription>
+                </div>
+              </div>
+            </Alert>
+          </AnimatedSection>
+        </div>
 
         <FrameworkExplanation />
 
