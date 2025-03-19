@@ -259,7 +259,7 @@ const DetailedFeatures: React.FC = () => {
         "Automatische Extraktion von Daten aus Rechnungen, Verträgen, Berichten und Anträgen",
         "Strukturierung ungeordneter Textinhalte in durchsuchbare, analysierbare Formate",
         "Intelligente Erkennung von Schlüsselinformationen in komplexen Dokumenten",
-        "Schnelle Verarbeitung großer Dokumentenmengen mit automatischer Extraktion und Zusammenfassung relevanter Inhalte",
+        "Schnelle Verarbeitung grosser Dokumentenmengen mit automatischer Extraktion und Zusammenfassung relevanter Inhalte",
       ],
       icon: <FileSearch className="w-6 h-6 text-white" />,
       image: "",
@@ -463,7 +463,7 @@ const DetailedFeatures: React.FC = () => {
                     <h5 className="text-lg font-medium mb-2 text-evoya-navy">Kontextbasierte Verknüpfung</h5>
                     <p className="text-gray-600">
                       Automatische Erkennung von Beziehungen zwischen Konzepten, Personen und 
-                      Ereignissen f��r ein tiefgreifendes Verständnis Ihrer Geschäftsdaten.
+                      Ereignissen für ein tiefgreifendes Verständnis Ihrer Geschäftsdaten.
                     </p>
                   </div>
                 </div>
@@ -596,104 +596,3 @@ const DetailedFeatures: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
-                <div className="flex lg:hidden justify-center">
-                  <div className="bg-gray-200 w-12 h-12 rounded-full flex items-center justify-center">
-                    <ArrowRight className="w-6 h-6 text-gray-600 transform rotate-90 lg:rotate-0" />
-                  </div>
-                </div>
-                
-                <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6 lg:p-8 flex-1 z-20">
-                  <div className="flex flex-col h-full">
-                    <div className="mb-4">
-                      <div className="inline-flex items-center justify-center bg-gray-700 text-white rounded-full py-1 px-3 text-sm font-medium">
-                        <div className="bg-white text-gray-700 rounded-full w-6 h-6 flex items-center justify-center mr-2 font-bold">2</div>
-                        SCHRITT 2
-                      </div>
-                      <h5 className="text-lg font-semibold mt-3 mb-4">Sprachmodell generiert Antwort mit anonymisierten Daten</h5>
-                    </div>
-                    
-                    <div className="flex flex-col items-center justify-center flex-grow">
-                      <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mb-4">
-                        <Globe2 className="w-16 h-16 text-gray-700" />
-                      </div>
-                      
-                      <p className="text-center text-gray-600">
-                        Verarbeitung anonymisierter Daten<br />durch externe KI
-                      </p>
-                    </div>
-                    
-                    <div className="mt-6 flex justify-center">
-                      <div className="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center shadow-md">
-                        <Globe2 className="w-6 h-6 text-white" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="flex lg:hidden justify-center">
-                  <div className="bg-gray-200 w-12 h-12 rounded-full flex items-center justify-center">
-                    <ArrowRight className="w-6 h-6 text-gray-600 transform rotate-90 lg:rotate-0" />
-                  </div>
-                </div>
-                
-                <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6 lg:p-8 flex-1 z-20">
-                  <div className="flex flex-col h-full">
-                    <div className="mb-4">
-                      <div className="inline-flex items-center justify-center bg-evoya-lightBlue text-white rounded-full py-1 px-3 text-sm font-medium">
-                        <div className="bg-white text-evoya-lightBlue rounded-full w-6 h-6 flex items-center justify-center mr-2 font-bold">3</div>
-                        SCHRITT 3
-                      </div>
-                      <h5 className="text-lg font-semibold mt-3 mb-4">Anonymisierte Daten werden deanonymisiert (Schweiz)</h5>
-                    </div>
-                    
-                    <div className="space-y-4 flex-grow">
-                      <div className="bg-evoya-lightBlue text-white p-4 rounded text-center font-medium">
-                        Max Mustermann
-                      </div>
-                      
-                      <div className="flex justify-center">
-                        <div className="p-1 rounded-full bg-green-100">
-                          <ArrowRight className="w-6 h-6 text-green-500 transform -rotate-90" />
-                        </div>
-                      </div>
-                      
-                      <div className="bg-evoya-lightBlue text-white p-4 rounded text-center font-medium">
-                        [Name 1]
-                      </div>
-                    </div>
-                    
-                    <div className="mt-6 flex justify-center">
-                      <div className="w-12 h-12 rounded-full bg-evoya-lightBlue flex items-center justify-center shadow-md">
-                        <RefreshCcw className="w-6 h-6 text-white" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 p-6 rounded-xl mt-6 shadow-sm">
-              <h4 className="text-xl font-semibold mb-4">Ihre Daten in sicheren Händen</h4>
-              <p className="text-gray-600 mb-4">
-                Das Evoya Privacy Shield stellt sicher, dass sensitive Informationen niemals ungeschützt an externe Systeme übermittelt werden. 
-                Stattdessen werden sie vor der Verarbeitung durch Sprachmodelle anonymisiert und erst nach der Verarbeitung wieder deanonymisiert. 
-                Dieser gesamte Prozess findet ausschliesslich in der Schweiz statt.
-              </p>
-              <div className="flex items-center mt-4">
-                <div className="rounded-full bg-green-100 p-2 mr-3">
-                  <Shield className="w-6 h-6 text-green-600" />
-                </div>
-                <p className="text-green-600 font-medium">
-                  Datenschutz auf höchstem Niveau, ohne Kompromisse bei der Leistungsfähigkeit
-                </p>
-              </div>
-            </div>
-          </div>
-        </AnimatedSection>
-      </div>
-    </section>
-  );
-};
-
-export default DetailedFeatures;
