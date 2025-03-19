@@ -1,4 +1,3 @@
-
 import { Language } from '../contexts/LanguageContext';
 
 // Translation dictionary type
@@ -559,6 +558,436 @@ export const translations: TranslationDictionary = {
   language_switch: {
     de: 'EN',
     en: 'DE',
+  },
+  
+  // DetailedFeatures Section
+  detailed_features_badge: {
+    de: 'Detaillierte Funktionen',
+    en: 'Detailed Features',
+  },
+  detailed_features_title: {
+    de: 'Entdecken Sie die umfassenden',
+    en: 'Discover the comprehensive',
+  },
+  detailed_features_title_colored: {
+    de: 'Möglichkeiten',
+    en: 'capabilities',
+  },
+  detailed_features_description: {
+    de: 'Unsere intelligenten Werkzeuge unterstützen Sie bei der Effizienzsteigerung in allen Geschäftsbereichen. Erfahren Sie mehr über jede einzelne Funktion.',
+    en: 'Our intelligent tools support you in increasing efficiency in all business areas. Learn more about each individual function.',
+  },
+  detailed_coming_soon: {
+    de: 'Coming Soon',
+    en: 'Coming Soon',
+  },
+  
+  // Text Generation
+  detailed_text_generation_title: {
+    de: 'Textgenerierung',
+    en: 'Text Generation',
+  },
+  detailed_text_generation_desc: {
+    de: 'Nutzen Sie KI-Assistenz für alle textbasierten Anwendungsfälle - vom ersten Entwurf bis zur finalen Überarbeitung.',
+    en: 'Use AI assistance for all text-based use cases - from the first draft to the final revision.',
+  },
+  detailed_text_generation_bullet1: {
+    de: 'Erstellen vollständiger Texte wie Artikel, Berichte und Geschäftsbriefe auf Basis einfacher Vorgaben',
+    en: 'Create complete texts such as articles, reports, and business letters based on simple specifications',
+  },
+  detailed_text_generation_bullet2: {
+    de: 'Intelligente Korrektur und Optimierung bestehender Texte mit konkreten Verbesserungsvorschlägen',
+    en: 'Intelligent correction and optimization of existing texts with concrete improvement suggestions',
+  },
+  detailed_text_generation_bullet3: {
+    de: 'Unterstützung bei Brainstorming und Ideenfindung für Konzepte und kreative Inhalte',
+    en: 'Support for brainstorming and idea generation for concepts and creative content',
+  },
+  detailed_text_generation_bullet4: {
+    de: 'Mehrsprachige Übersetzung und kontextgerechte Anpassung von Texten für eine zielgruppengerechte Kommunikation',
+    en: 'Multilingual translation and context-appropriate adaptation of texts for target group-specific communication',
+  },
+  detailed_text_generation_alt: {
+    de: 'Person arbeitet an einem Text-Dokument',
+    en: 'Person working on a text document',
+  },
+  
+  // Image Generation
+  detailed_image_generation_title: {
+    de: 'Bildgenerierung',
+    en: 'Image Generation',
+  },
+  detailed_image_generation_desc: {
+    de: 'Erstellen Sie Bilder mit DALL·E und Flux für vielfältige geschäftliche und kreative Zwecke.',
+    en: 'Create images with DALL·E and Flux for a variety of business and creative purposes.',
+  },
+  detailed_image_generation_bullet1: {
+    de: 'Generierung von Bildern für Newsletter, Social Media und Marketingmaterialien',
+    en: 'Generation of images for newsletters, social media, and marketing materials',
+  },
+  detailed_image_generation_bullet2: {
+    de: 'Visuelle Unterstützung für Präsentationen, Berichte und Dokumentationen',
+    en: 'Visual support for presentations, reports, and documentation',
+  },
+  detailed_image_generation_bullet3: {
+    de: 'Erstellung von Illustrationen für interne Schulungsmaterialien und Anleitungen',
+    en: 'Creation of illustrations for internal training materials and instructions',
+  },
+  detailed_image_generation_bullet4: {
+    de: 'Flexible Anpassung von Bildformaten und Stilen für unterschiedliche Verwendungszwecke',
+    en: 'Flexible adjustment of image formats and styles for different purposes',
+  },
+  detailed_image_generation_alt: {
+    de: 'Generierte Bilder auf einem Display',
+    en: 'Generated images on a display',
+  },
+  
+  // Image Recognition
+  detailed_image_recognition_title: {
+    de: 'Bilderkennung und Analyse',
+    en: 'Image Recognition and Analysis',
+  },
+  detailed_image_recognition_desc: {
+    de: 'Automatisieren Sie die Erkennung und Interpretation von Bildern und visuellen Daten für verschiedenste Anwendungsbereiche.',
+    en: 'Automate the recognition and interpretation of images and visual data for a wide range of applications.',
+  },
+  detailed_image_recognition_bullet1: {
+    de: 'OCR-Technologie zur Extraktion von handgeschriebenem und gedrucktem Text aus Bildern',
+    en: 'OCR technology for extracting handwritten and printed text from images',
+  },
+  detailed_image_recognition_bullet2: {
+    de: 'Analyse und Erkennung von Inhalten auf Screenshots oder Fotos',
+    en: 'Analysis and recognition of content on screenshots or photos',
+  },
+  detailed_image_recognition_bullet3: {
+    de: 'Extraktion von relevanten Informationen aus Dokumentenscans oder Belegen',
+    en: 'Extraction of relevant information from document scans or receipts',
+  },
+  detailed_image_recognition_bullet4: {
+    de: 'Automatische Identifikation von Objekten oder Strukturen in Bildern',
+    en: 'Automatic identification of objects or structures in images',
+  },
+  detailed_image_recognition_alt: {
+    de: 'Bilderkennung durch künstliche Intelligenz',
+    en: 'Image recognition through artificial intelligence',
+  },
+  
+  // Document Analysis
+  detailed_document_analysis_title: {
+    de: 'Dokumentenanalyse',
+    en: 'Document Analysis',
+  },
+  detailed_document_analysis_desc: {
+    de: 'Extrahieren und strukturieren Sie relevante Informationen aus verschiedenen Geschäftsdokumenten.',
+    en: 'Extract and structure relevant information from various business documents.',
+  },
+  detailed_document_analysis_bullet1: {
+    de: 'Automatische Extraktion von Daten aus Rechnungen, Verträgen, Berichten und Anträgen',
+    en: 'Automatic extraction of data from invoices, contracts, reports, and applications',
+  },
+  detailed_document_analysis_bullet2: {
+    de: 'Strukturierung ungeordneter Textinhalte in durchsuchbare, analysierbare Formate',
+    en: 'Structuring unorganized text content into searchable, analyzable formats',
+  },
+  detailed_document_analysis_bullet3: {
+    de: 'Intelligente Erkennung von Schlüsselinformationen in komplexen Dokumenten',
+    en: 'Intelligent recognition of key information in complex documents',
+  },
+  detailed_document_analysis_bullet4: {
+    de: 'Schnelle Verarbeitung grosser Dokumentenmengen mit automatischer Extraktion und Zusammenfassung relevanter Inhalte',
+    en: 'Fast processing of large document volumes with automatic extraction and summarization of relevant content',
+  },
+  detailed_document_analysis_alt: {
+    de: 'Dokumentenanalyse auf einem Laptop',
+    en: 'Document analysis on a laptop',
+  },
+  
+  // Live Search
+  detailed_live_search_title: {
+    de: 'Live-Informationsabruf',
+    en: 'Live Information Retrieval',
+  },
+  detailed_live_search_desc: {
+    de: 'Greifen Sie in Echtzeit auf aktuelle Informationen aus dem Internet zu für fundierte Entscheidungen.',
+    en: 'Access current information from the internet in real-time for informed decisions.',
+  },
+  detailed_live_search_bullet1: {
+    de: 'KI-Agenten durchsuchen das Internet gezielt nach relevanten Informationen und liefern präzise Rechercheergebnisse',
+    en: 'AI agents search the internet specifically for relevant information and deliver precise research results',
+  },
+  detailed_live_search_bullet2: {
+    de: 'Automatische Zusammenfassung und strukturierte Aufbereitung der Rechercheergebnisse mit Quellenangaben',
+    en: 'Automatic summarization and structured preparation of research results with source references',
+  },
+  detailed_live_search_bullet3: {
+    de: 'Intelligente Filterung und Kuratierung von Informationen – deutlich über klassische Suchmaschinen hinaus',
+    en: 'Intelligent filtering and curation of information – significantly beyond classic search engines',
+  },
+  detailed_live_search_bullet4: {
+    de: 'Echtzeit-Faktenprüfung und Qualitätsanalyse der Quellen für zuverlässige Geschäftsentscheidungen',
+    en: 'Real-time fact-checking and quality analysis of sources for reliable business decisions',
+  },
+  detailed_live_search_alt: {
+    de: 'Echtzeitdaten auf einem Dashboard',
+    en: 'Real-time data on a dashboard',
+  },
+  
+  // Diagrams
+  detailed_diagrams_title: {
+    de: 'Diagramme & Visuelle Darstellungen',
+    en: 'Charts & Visual Representations',
+  },
+  detailed_diagrams_desc: {
+    de: 'Erstellen Sie automatisiert Diagramme zur Visualisierung von Geschäftsprozessen und Konzepten.',
+    en: 'Create automated diagrams to visualize business processes and concepts.',
+  },
+  detailed_diagrams_bullet1: {
+    de: 'Automatische Generierung von Ablaufdiagrammen, Entscheidungsbäumen sowie weiteren Diagrammtypen für verschiedene Anwendungsfälle',
+    en: 'Automatic generation of flowcharts, decision trees, and other diagram types for various use cases',
+  },
+  detailed_diagrams_bullet2: {
+    de: 'Intuitive Visualisierung komplexer Prozesse für besseres Verständnis und einfachere Kommunikation',
+    en: 'Intuitive visualization of complex processes for better understanding and easier communication',
+  },
+  detailed_diagrams_bullet3: {
+    de: 'Grafische Aufbereitung von Konzepten, Abläufen und Strukturen für unterschiedliche Zielgruppen',
+    en: 'Graphical preparation of concepts, processes, and structures for different target groups',
+  },
+  detailed_diagrams_bullet4: {
+    de: 'Datenvisualisierung in verschiedenen Diagrammtypen',
+    en: 'Data visualization in various chart types',
+  },
+  detailed_diagrams_alt: {
+    de: 'Visualisierung von Geschäftsprozessen',
+    en: 'Visualization of business processes',
+  },
+  
+  // Creator
+  detailed_creator_title: {
+    de: 'Creator',
+    en: 'Creator',
+  },
+  detailed_creator_desc: {
+    de: 'Bearbeiten Sie KI-generierte Inhalte direkt in einem interaktiven Dokumenteneditor – im Gegensatz zu einem herkömmlichen Chat.',
+    en: 'Edit AI-generated content directly in an interactive document editor – unlike a conventional chat.',
+  },
+  detailed_creator_bullet1: {
+    de: 'Vollwertiger Dokumenteneditor statt sequentieller Chat-Ansicht, der komplette Texte als bearbeitbares Dokument darstellt',
+    en: 'Full-featured document editor instead of sequential chat view, displaying complete texts as an editable document',
+  },
+  detailed_creator_bullet2: {
+    de: 'Selektive Bearbeitung: Markieren und editieren Sie gezielt einzelne Passagen oder ganze Abschnitte mit Vorher/Nachher-Ansicht',
+    en: 'Selective editing: Mark and edit specific passages or entire sections with before/after view',
+  },
+  detailed_creator_bullet3: {
+    de: 'Formatierungskontrolle mit Überschriften, Absätzen und Textauszeichnungen direkt im Editor',
+    en: 'Formatting control with headings, paragraphs, and text formatting directly in the editor',
+  },
+  detailed_creator_bullet4: {
+    de: 'Interaktive Zusammenarbeit mit der KI innerhalb des Dokuments – nicht nur sequentielle Antworten wie in einem Chat',
+    en: 'Interactive collaboration with AI within the document – not just sequential responses as in a chat',
+  },
+  detailed_creator_alt: {
+    de: 'Kreative Bearbeitung von Inhalten',
+    en: 'Creative content editing',
+  },
+  
+  // Voice
+  detailed_voice_title: {
+    de: 'Voice',
+    en: 'Voice',
+  },
+  detailed_voice_desc: {
+    de: 'Kommunizieren Sie per Sprache mit dem KI-Agenten und transkribieren Sie gesprochene Inhalte für barrierefreie und schnelle Interaktion.',
+    en: 'Communicate by voice with the AI agent and transcribe spoken content for accessible and fast interaction.',
+  },
+  detailed_voice_bullet1: {
+    de: 'Direkte Sprach-Interaktion mit dem KI-Agenten ohne Tippen – ideal für unterwegs oder bei eingeschränkter Mobilität',
+    en: 'Direct voice interaction with the AI agent without typing – ideal when on the go or with limited mobility',
+  },
+  detailed_voice_bullet2: {
+    de: 'Präzise Echtzeit-Transkription von Meetings und Gesprächen mit automatischer Protokollerstellung',
+    en: 'Precise real-time transcription of meetings and conversations with automatic protocol creation',
+  },
+  detailed_voice_bullet3: {
+    de: 'Mehrsprachige Unterstützung für internationale Teams und Kommunikation in verschiedenen Sprachen',
+    en: 'Multilingual support for international teams and communication in different languages',
+  },
+  detailed_voice_bullet4: {
+    de: 'Barrierefreie Nutzung für Menschen mit Sehbehinderungen oder eingeschränkter Tastaturnutzung',
+    en: 'Accessible use for people with visual impairments or limited keyboard use',
+  },
+  detailed_voice_alt: {
+    de: 'Spracherkennung und Transkription',
+    en: 'Voice recognition and transcription',
+  },
+  
+  // Semantic Knowledge Base
+  detailed_semantic_badge: {
+    de: 'Intelligente Informationsverarbeitung',
+    en: 'Intelligent Information Processing',
+  },
+  detailed_semantic_title: {
+    de: 'Semantische Wissensbasis',
+    en: 'Semantic Knowledge Base',
+  },
+  detailed_semantic_description: {
+    de: 'Semantische Verarbeitung verschiedener Dokumentformate und Webinhalte für präzise, kontextbasierte Informationsextraktion und -verknüpfung.',
+    en: 'Semantic processing of various document formats and web content for precise, context-based information extraction and linking.',
+  },
+  detailed_semantic_center: {
+    de: 'Semantische Analyse',
+    en: 'Semantic Analysis',
+  },
+  detailed_semantic_documents: {
+    de: 'Dokumente',
+    en: 'Documents',
+  },
+  detailed_semantic_web: {
+    de: 'Webinhalte',
+    en: 'Web Content',
+  },
+  detailed_semantic_search: {
+    de: 'Präzise Suche',
+    en: 'Precise Search',
+  },
+  detailed_semantic_api: {
+    de: 'API',
+    en: 'API',
+  },
+  detailed_semantic_efficiency: {
+    de: 'Steigern Sie die Effizienz Ihrer Teams um bis zu 30% durch präzise Informationsextraktion.',
+    en: 'Increase your teams\' efficiency by up to 30% through precise information extraction.',
+  },
+  detailed_semantic_processing_title: {
+    de: 'Intelligente Verarbeitung von Unternehmenswissen',
+    en: 'Intelligent Processing of Company Knowledge',
+  },
+  detailed_semantic_processing_desc: {
+    de: 'Unsere semantische Wissensbasis transformiert unstrukturierte Daten in vernetzte, contextreiche Informationen - die Grundlage für präzise KI-Anwendungen und datengesteuerte Entscheidungen in Ihrem Unternehmen.',
+    en: 'Our semantic knowledge base transforms unstructured data into networked, context-rich information - the foundation for precise AI applications and data-driven decisions in your company.',
+  },
+  detailed_semantic_multiformat_title: {
+    de: 'Multiformat-Verarbeitung',
+    en: 'Multi-format Processing',
+  },
+  detailed_semantic_multiformat_desc: {
+    de: 'Automatische Extraktion von Wissen aus PDFs, Word-Dokumenten, Präsentationen, APIs und Webseiten in eine einheitliche Wissensbasis.',
+    en: 'Automatic extraction of knowledge from PDFs, Word documents, presentations, APIs, and websites into a unified knowledge base.',
+  },
+  detailed_semantic_context_title: {
+    de: 'Kontextbasierte Verknüpfung',
+    en: 'Context-based Linking',
+  },
+  detailed_semantic_context_desc: {
+    de: 'Automatische Erkennung von Beziehungen zwischen Konzepten, Personen und Ereignissen für ein tiefgreifendes Verständnis Ihrer Geschäftsdaten.',
+    en: 'Automatic recognition of relationships between concepts, people, and events for a profound understanding of your business data.',
+  },
+  detailed_semantic_precision_title: {
+    de: 'Präzise Informationsgewinnung',
+    en: 'Precise Information Extraction',
+  },
+  detailed_semantic_precision_desc: {
+    de: 'Natürlichsprachliche Abfragen liefern kontextrelevante Antworten statt einfacher Keyword-Suchen, basierend auf dem tatsächlichen Bedeutungsgehalt.',
+    en: 'Natural language queries provide context-relevant answers instead of simple keyword searches, based on the actual semantic content.',
+  },
+  
+  // Privacy Shield
+  detailed_privacy_badge: {
+    de: 'Datenschutz',
+    en: 'Data Protection',
+  },
+  detailed_privacy_storage_title: {
+    de: 'Datenspeicherung',
+    en: 'Data Storage',
+  },
+  detailed_privacy_storage_desc: {
+    de: 'Die Daten werden in sicheren Rechenzentren in der Schweiz gespeichert.',
+    en: 'The data is stored in secure data centers in Switzerland.',
+  },
+  detailed_privacy_gdpr_title: {
+    de: 'DSGVO-Konformität',
+    en: 'GDPR Compliance',
+  },
+  detailed_privacy_gdpr_desc: {
+    de: 'Vollständige Einhaltung der Europäischen Datenschutz-Grundverordnung und der Schweizer Datenschutzgesetze.',
+    en: 'Full compliance with the European General Data Protection Regulation and Swiss data protection laws.',
+  },
+  detailed_privacy_encryption_title: {
+    de: 'Verschlüsselung',
+    en: 'Encryption',
+  },
+  detailed_privacy_encryption_desc: {
+    de: 'Modernste End-to-End-Verschlüsselung für alle Daten während der Übertragung. Sichere Speicherung nach Industriestandards.',
+    en: 'State-of-the-art end-to-end encryption for all data during transmission. Secure storage according to industry standards.',
+  },
+  detailed_shield_title: {
+    de: 'Privacy Shield',
+    en: 'Privacy Shield',
+  },
+  detailed_shield_description: {
+    de: 'Das Evoya Privacy Shield schützt Ihre sensiblen Daten durch einen mehrstufigen Anonymisierungsprozess, der ausschließlich in sicheren Schweizer Rechenzentren stattfindet.',
+    en: 'The Evoya Privacy Shield protects your sensitive data through a multi-stage anonymization process that takes place exclusively in secure Swiss data centers.',
+  },
+  detailed_shield_how: {
+    de: 'So funktioniert es',
+    en: 'How it works',
+  },
+  detailed_shield_step1_badge: {
+    de: 'SCHRITT 1',
+    en: 'STEP 1',
+  },
+  detailed_shield_step1_title: {
+    de: 'Vertrauliche Daten werden anonymisiert (Schweiz)',
+    en: 'Confidential data is anonymized (Switzerland)',
+  },
+  detailed_shield_step1_name: {
+    de: 'Max Mustermann',
+    en: 'John Doe',
+  },
+  detailed_shield_step1_placeholder: {
+    de: '[Name 1]',
+    en: '[Name 1]',
+  },
+  detailed_shield_step2_badge: {
+    de: 'SCHRITT 2',
+    en: 'STEP 2',
+  },
+  detailed_shield_step2_title: {
+    de: 'Sprachmodell generiert Antwort mit anonymisierten Daten',
+    en: 'Language model generates response with anonymized data',
+  },
+  detailed_shield_step2_desc: {
+    de: 'Verarbeitung anonymisierter Daten durch externe KI',
+    en: 'Processing of anonymized data by external AI',
+  },
+  detailed_shield_step3_badge: {
+    de: 'SCHRITT 3',
+    en: 'STEP 3',
+  },
+  detailed_shield_step3_title: {
+    de: 'Anonymisierte Daten werden deanonymisiert (Schweiz)',
+    en: 'Anonymized data is deanonymized (Switzerland)',
+  },
+  detailed_shield_step3_name: {
+    de: 'Max Mustermann',
+    en: 'John Doe',
+  },
+  detailed_shield_step3_placeholder: {
+    de: '[Name 1]',
+    en: '[Name 1]',
+  },
+  detailed_shield_data_title: {
+    de: 'Ihre Daten in sicheren Händen',
+    en: 'Your data in safe hands',
+  },
+  detailed_shield_data_desc: {
+    de: 'Das Evoya Privacy Shield stellt sicher, dass sensitive Informationen niemals ungeschützt an externe Systeme übermittelt werden. Stattdessen werden sie vor der Verarbeitung durch Sprachmodelle anonymisiert und erst nach der Verarbeitung wieder deanonymisiert. Dieser gesamte Prozess findet ausschließlich in der Schweiz statt.',
+    en: 'The Evoya Privacy Shield ensures that sensitive information is never transmitted unprotected to external systems. Instead, it is anonymized before processing by language models and only deanonymized after processing. This entire process takes place exclusively in Switzerland.',
+  },
+  detailed_shield_highlight: {
+    de: 'Datenschutz auf höchstem Niveau, ohne Kompromisse bei der Leistungsfähigkeit',
+    en: 'Data protection at the highest level, without compromising performance',
   },
 };
 

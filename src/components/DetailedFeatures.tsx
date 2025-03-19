@@ -4,6 +4,8 @@ import AnimatedSection from './AnimatedSection';
 import { cn } from '../lib/utils';
 import { Separator } from './ui/separator';
 import { Badge } from './ui/badge';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translate } from '../utils/translations';
 
 interface FeatureDetailProps {
   title: string;
@@ -32,6 +34,8 @@ const FeatureDetail: React.FC<FeatureDetailProps> = ({
   customContent,
   comingSoon = false,
 }) => {
+  const { language } = useLanguage();
+  
   return (
     <div className={cn(
       "grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-16 border-b border-gray-200 last:border-0",
@@ -52,7 +56,7 @@ const FeatureDetail: React.FC<FeatureDetailProps> = ({
             <h3 className="text-2xl lg:text-3xl font-semibold">{title}</h3>
             {comingSoon && (
               <Badge variant="outline" className="bg-evoya-orange/10 text-evoya-orange border-evoya-orange/30">
-                Coming Soon
+                {translate('detailed_coming_soon', language)}
               </Badge>
             )}
           </div>
@@ -96,6 +100,8 @@ const FeatureDetail: React.FC<FeatureDetailProps> = ({
 };
 
 const DetailedFeatures: React.FC = () => {
+  const { language } = useLanguage();
+  
   const creatorImageInterface = (
     <div className="relative w-full h-[450px] overflow-hidden rounded-xl shadow-xl bg-[#1A1E35]">
       <div className="absolute inset-0 w-full h-full overflow-hidden">
@@ -217,138 +223,138 @@ const DetailedFeatures: React.FC = () => {
 
   const features = [
     {
-      title: "Textgenerierung",
-      description: "Nutzen Sie KI-Assistenz für alle textbasierten Anwendungsfälle - vom ersten Entwurf bis zur finalen Überarbeitung.",
-      details: [
-        "Erstellen vollständiger Texte wie Artikel, Berichte und Geschäftsbriefe auf Basis einfacher Vorgaben",
-        "Intelligente Korrektur und Optimierung bestehender Texte mit konkreten Verbesserungsvorschlägen",
-        "Unterstützung bei Brainstorming und Ideenfindung für Konzepte und kreative Inhalte",
-        "Mehrsprachige Übersetzung und kontextgerechte Anpassung von Texten für eine zielgruppengerechte Kommunikation.",
+      titleKey: 'detailed_text_generation_title',
+      descriptionKey: 'detailed_text_generation_desc',
+      detailsKeys: [
+        'detailed_text_generation_bullet1',
+        'detailed_text_generation_bullet2',
+        'detailed_text_generation_bullet3',
+        'detailed_text_generation_bullet4',
       ],
       icon: <FileText className="w-6 h-6 text-evoya-orange" />,
       image: "",
-      alt: "Person arbeitet an einem Text-Dokument",
+      alt: translate('detailed_text_generation_alt', language),
       isReversed: false,
       accentColor: "text-evoya-orange bg-evoya-orange/10",
       iconBgColor: "bg-evoya-orange/20",
       customContent: textGenerationContent,
     },
     {
-      title: "Bildgenerierung",
-      description: "Erstellen Sie Bilder mit DALL·E und Flux für vielfältige geschäftliche und kreative Zwecke.",
-      details: [
-        "Generierung von Bildern für Newsletter, Social Media und Marketingmaterialien",
-        "Visuelle Unterstützung für Präsentationen, Berichte und Dokumentationen",
-        "Erstellung von Illustrationen für interne Schulungsmaterialien und Anleitungen",
-        "Flexible Anpassung von Bildformaten und Stilen für unterschiedliche Verwendungszwecke",
+      titleKey: 'detailed_image_generation_title',
+      descriptionKey: 'detailed_image_generation_desc',
+      detailsKeys: [
+        'detailed_image_generation_bullet1',
+        'detailed_image_generation_bullet2',
+        'detailed_image_generation_bullet3',
+        'detailed_image_generation_bullet4',
       ],
       icon: <ImageIcon className="w-6 h-6 text-evoya-orange" />,
       image: "",
-      alt: "Generierte Bilder auf einem Display",
+      alt: translate('detailed_image_generation_alt', language),
       isReversed: true,
       accentColor: "text-evoya-orange bg-evoya-orange/10",
       iconBgColor: "bg-evoya-orange/20",
       customContent: businessmanContent,
     },
     {
-      title: "Bilderkennung und Analyse",
-      description: "Automatisieren Sie die Erkennung und Interpretation von Bildern und visuellen Daten für verschiedenste Anwendungsbereiche.",
-      details: [
-        "OCR-Technologie zur Extraktion von handgeschriebenem und gedrucktem Text aus Bildern",
-        "Analyse und Erkennung von Inhalten auf Screenshots oder Fotos",
-        "Extraktion von relevanten Informationen aus Dokumentenscans oder Belegen",
-        "Automatische Identifikation von Objekten oder Strukturen in Bildern",
+      titleKey: 'detailed_image_recognition_title',
+      descriptionKey: 'detailed_image_recognition_desc',
+      detailsKeys: [
+        'detailed_image_recognition_bullet1',
+        'detailed_image_recognition_bullet2',
+        'detailed_image_recognition_bullet3',
+        'detailed_image_recognition_bullet4',
       ],
       icon: <Eye className="w-6 h-6 text-evoya-orange" />,
       image: "",
-      alt: "Bilderkennung durch künstliche Intelligenz",
+      alt: translate('detailed_image_recognition_alt', language),
       isReversed: false,
       accentColor: "text-evoya-orange bg-evoya-orange/10",
       iconBgColor: "bg-evoya-orange/20",
       customContent: imageRecognitionContent,
     },
     {
-      title: "Dokumentenanalyse",
-      description: "Extrahieren und strukturieren Sie relevante Informationen aus verschiedenen Geschäftsdokumenten.",
-      details: [
-        "Automatische Extraktion von Daten aus Rechnungen, Verträgen, Berichten und Anträgen",
-        "Strukturierung ungeordneter Textinhalte in durchsuchbare, analysierbare Formate",
-        "Intelligente Erkennung von Schlüsselinformationen in komplexen Dokumenten",
-        "Schnelle Verarbeitung grosser Dokumentenmengen mit automatischer Extraktion und Zusammenfassung relevanter Inhalte",
+      titleKey: 'detailed_document_analysis_title',
+      descriptionKey: 'detailed_document_analysis_desc',
+      detailsKeys: [
+        'detailed_document_analysis_bullet1',
+        'detailed_document_analysis_bullet2',
+        'detailed_document_analysis_bullet3',
+        'detailed_document_analysis_bullet4',
       ],
       icon: <FileSearch className="w-6 h-6 text-evoya-orange" />,
       image: "",
-      alt: "Dokumentenanalyse auf einem Laptop",
+      alt: translate('detailed_document_analysis_alt', language),
       isReversed: true,
       accentColor: "text-evoya-orange bg-evoya-orange/10",
       iconBgColor: "bg-evoya-orange/20",
       customContent: documentContent,
     },
     {
-      title: "Live-Informationsabruf",
-      description: "Greifen Sie in Echtzeit auf aktuelle Informationen aus dem Internet zu für fundierte Entscheidungen.",
-      details: [
-        "KI-Agenten durchsuchen das Internet gezielt nach relevanten Informationen und liefern präzise Rechercheergebnisse",
-        "Automatische Zusammenfassung und strukturierte Aufbereitung der Rechercheergebnisse mit Quellenangaben",
-        "Intelligente Filterung und Kuratierung von Informationen – deutlich über klassische Suchmaschinen hinaus",
-        "Echtzeit-Faktenprüfung und Qualitätsanalyse der Quellen für zuverlässige Geschäftsentscheidungen",
+      titleKey: 'detailed_live_search_title',
+      descriptionKey: 'detailed_live_search_desc',
+      detailsKeys: [
+        'detailed_live_search_bullet1',
+        'detailed_live_search_bullet2',
+        'detailed_live_search_bullet3',
+        'detailed_live_search_bullet4',
       ],
       icon: <Globe className="w-6 h-6 text-evoya-orange" />,
       image: "",
-      alt: "Echtzeitdaten auf einem Dashboard",
+      alt: translate('detailed_live_search_alt', language),
       isReversed: false,
       accentColor: "text-evoya-orange bg-evoya-orange/10",
       iconBgColor: "bg-evoya-orange/20",
       customContent: webContent,
     },
     {
-      title: "Diagramme & Visuelle Darstellungen",
-      description: "Erstellen Sie automatisiert Diagramme zur Visualisierung von Geschäftsprozessen und Konzepten.",
-      details: [
-        "Automatische Generierung von Ablaufdiagrammen, Entscheidungsbäumen sowie weiteren Diagrammtypen für verschiedene Anwendungsfälle",
-        "Intuitive Visualisierung komplexer Prozesse für besseres Verständnis und einfachere Kommunikation",
-        "Grafische Aufbereitung von Konzepten, Abläufen und Strukturen für unterschiedliche Zielgruppen",
-        "Datenvisualisierung in verschiedenen Diagrammtypen",
+      titleKey: 'detailed_diagrams_title',
+      descriptionKey: 'detailed_diagrams_desc',
+      detailsKeys: [
+        'detailed_diagrams_bullet1',
+        'detailed_diagrams_bullet2',
+        'detailed_diagrams_bullet3',
+        'detailed_diagrams_bullet4',
       ],
       icon: <BarChart className="w-6 h-6 text-evoya-orange" />,
       image: "",
-      alt: "Visualisierung von Geschäftsprozessen",
+      alt: translate('detailed_diagrams_alt', language),
       isReversed: true,
       accentColor: "text-evoya-orange bg-evoya-orange/10",
       iconBgColor: "bg-evoya-orange/20",
       customContent: diagramContent,
     },
     {
-      title: "Creator",
-      description: "Bearbeiten Sie KI-generierte Inhalte direkt in einem interaktiven Dokumenteneditor – im Gegensatz zu einem herkömmlichen Chat.",
-      details: [
-        "Vollwertiger Dokumenteneditor statt sequentieller Chat-Ansicht, der komplette Texte als bearbeitbares Dokument darstellt",
-        "Selektive Bearbeitung: Markieren und editieren Sie gezielt einzelne Passagen oder ganze Abschnitte mit Vorher/Nachher-Ansicht",
-        "Formatierungskontrolle mit Überschriften, Absätzen und Textauszeichnungen direkt im Editor",
-        "Interaktive Zusammenarbeit mit der KI innerhalb des Dokuments – nicht nur sequentielle Antworten wie in einem Chat",
+      titleKey: 'detailed_creator_title',
+      descriptionKey: 'detailed_creator_desc',
+      detailsKeys: [
+        'detailed_creator_bullet1',
+        'detailed_creator_bullet2',
+        'detailed_creator_bullet3',
+        'detailed_creator_bullet4',
       ],
       icon: <PenTool className="w-6 h-6 text-evoya-orange" />,
       customContent: creatorImageInterface,
-      image: "", // Not used when customContent is provided
-      alt: "Kreative Bearbeitung von Inhalten",
+      image: "", 
+      alt: translate('detailed_creator_alt', language),
       isReversed: false,
       accentColor: "text-evoya-orange bg-evoya-orange/10",
       iconBgColor: "bg-evoya-orange/20",
       comingSoon: true,
     },
     {
-      title: "Voice",
-      description: "Kommunizieren Sie per Sprache mit dem KI-Agenten und transkribieren Sie gesprochene Inhalte für barrierefreie und schnelle Interaktion.",
-      details: [
-        "Direkte Sprach-Interaktion mit dem KI-Agenten ohne Tippen – ideal für unterwegs oder bei eingeschränkter Mobilität",
-        "Präzise Echtzeit-Transkription von Meetings und Gesprächen mit automatischer Protokollerstellung",
-        "Mehrsprachige Unterstützung für internationale Teams und Kommunikation in verschiedenen Sprachen",
-        "Barrierefreie Nutzung für Menschen mit Sehbehinderungen oder eingeschränkter Tastaturnutzung",
+      titleKey: 'detailed_voice_title',
+      descriptionKey: 'detailed_voice_desc',
+      detailsKeys: [
+        'detailed_voice_bullet1',
+        'detailed_voice_bullet2',
+        'detailed_voice_bullet3',
+        'detailed_voice_bullet4',
       ],
       icon: <Mic className="w-6 h-6 text-evoya-orange" />,
       customContent: audioWaveform,
-      image: "", // Not used when customContent is provided
-      alt: "Spracherkennung und Transkription",
+      image: "",
+      alt: translate('detailed_voice_alt', language),
       isReversed: true,
       accentColor: "text-evoya-orange bg-evoya-orange/10",
       iconBgColor: "bg-evoya-orange/20",
@@ -361,14 +367,13 @@ const DetailedFeatures: React.FC = () => {
       <div className="section-container">
         <AnimatedSection className="text-center mb-16">
           <div className="inline-block mb-4 px-3 py-1 rounded-full bg-evoya-orange/10 text-evoya-orange text-sm font-medium">
-            Detaillierte Funktionen
+            {translate('detailed_features_badge', language)}
           </div>
           <h2 className="mb-6 max-w-3xl mx-auto">
-            Entdecken Sie die umfassenden <span className="text-evoya-orange">Möglichkeiten</span> unserer KI-Workspaces
+            {translate('detailed_features_title', language)} <span className="text-evoya-orange">{translate('detailed_features_title_colored', language)}</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Unsere intelligenten Werkzeuge unterstützen Sie bei der Effizienzsteigerung in allen Geschäftsbereichen.
-            Erfahren Sie mehr über jede einzelne Funktion.
+            {translate('detailed_features_description', language)}
           </p>
         </AnimatedSection>
 
@@ -376,9 +381,9 @@ const DetailedFeatures: React.FC = () => {
           {features.map((feature, index) => (
             <FeatureDetail
               key={index}
-              title={feature.title}
-              description={feature.description}
-              details={feature.details}
+              title={translate(feature.titleKey, language)}
+              description={translate(feature.descriptionKey, language)}
+              details={feature.detailsKeys.map(key => translate(key, language))}
               icon={feature.icon}
               image={feature.image}
               alt={feature.alt}
@@ -394,12 +399,11 @@ const DetailedFeatures: React.FC = () => {
         <AnimatedSection className="mt-24 mb-24" animation="fade-up">
           <div className="mb-16 text-center">
             <div className="inline-block mb-4 px-3 py-1 rounded-full bg-evoya-lightBlue/10 text-evoya-lightBlue text-sm font-medium">
-              Intelligente Informationsverarbeitung
+              {translate('detailed_semantic_badge', language)}
             </div>
-            <h3 className="text-2xl lg:text-3xl font-semibold mb-6">Semantische Wissensbasis</h3>
+            <h3 className="text-2xl lg:text-3xl font-semibold mb-6">{translate('detailed_semantic_title', language)}</h3>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-10">
-              Semantische Verarbeitung verschiedener Dokumentformate und Webinhalte für präzise, 
-              kontextbasierte Informationsextraktion und -verknüpfung.
+              {translate('detailed_semantic_description', language)}
             </p>
           </div>
 
@@ -411,7 +415,7 @@ const DetailedFeatures: React.FC = () => {
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-white rounded-full shadow-xl border-4 border-evoya-lightBlue/30 flex items-center justify-center z-20">
                   <div className="text-center p-2">
                     <Brain className="w-12 h-12 text-evoya-navy mx-auto mb-2" />
-                    <span className="block text-sm font-semibold text-evoya-navy">Semantische Analyse</span>
+                    <span className="block text-sm font-semibold text-evoya-navy">{translate('detailed_semantic_center', language)}</span>
                   </div>
                 </div>
                 
@@ -426,22 +430,22 @@ const DetailedFeatures: React.FC = () => {
                 
                 <div className="absolute top-[10%] left-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '0s' }}>
                   <Book className="w-8 h-8 text-evoya-orange mx-auto mb-1" />
-                  <span className="block text-xs font-medium text-center">Dokumente</span>
+                  <span className="block text-xs font-medium text-center">{translate('detailed_semantic_documents', language)}</span>
                 </div>
                 
                 <div className="absolute top-[10%] right-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '1.5s' }}>
                   <Globe className="w-8 h-8 text-evoya-orange mx-auto mb-1" />
-                  <span className="block text-xs font-medium text-center">Webinhalte</span>
+                  <span className="block text-xs font-medium text-center">{translate('detailed_semantic_web', language)}</span>
                 </div>
                 
                 <div className="absolute bottom-[10%] left-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '6s' }}>
                   <Search className="w-8 h-8 text-evoya-orange mx-auto mb-1" />
-                  <span className="block text-xs font-medium text-center">Präzise Suche</span>
+                  <span className="block text-xs font-medium text-center">{translate('detailed_semantic_search', language)}</span>
                 </div>
                 
                 <div className="absolute bottom-[10%] right-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '7.5s' }}>
                   <Network className="w-8 h-8 text-evoya-orange mx-auto mb-1" />
-                  <span className="block text-xs font-medium text-center">API</span>
+                  <span className="block text-xs font-medium text-center">{translate('detailed_semantic_api', language)}</span>
                 </div>
               </div>
               
@@ -451,18 +455,16 @@ const DetailedFeatures: React.FC = () => {
                     <Brain className="w-6 h-6 text-evoya-orange" />
                   </div>
                   <p className="text-evoya-navy font-medium">
-                    Steigern Sie die Effizienz Ihrer Teams um bis zu 30% durch präzise Informationsextraktion.
+                    {translate('detailed_semantic_efficiency', language)}
                   </p>
                 </div>
               </div>
             </div>
             
             <div className="max-w-xl">
-              <h4 className="text-xl font-semibold mb-6 text-evoya-navy">Intelligente Verarbeitung von Unternehmenswissen</h4>
+              <h4 className="text-xl font-semibold mb-6 text-evoya-navy">{translate('detailed_semantic_processing_title', language)}</h4>
               <p className="text-gray-600 mb-8">
-                Unsere semantische Wissensbasis transformiert unstrukturierte Daten in vernetzte, 
-                kontextreiche Informationen - die Grundlage für präzise KI-Anwendungen und 
-                datengesteuerte Entscheidungen in Ihrem Unternehmen.
+                {translate('detailed_semantic_processing_desc', language)}
               </p>
               
               <div className="space-y-6">
@@ -471,10 +473,9 @@ const DetailedFeatures: React.FC = () => {
                     <Book className="w-5 h-5 text-evoya-orange" />
                   </div>
                   <div>
-                    <h5 className="text-lg font-medium mb-2 text-evoya-navy">Multiformat-Verarbeitung</h5>
+                    <h5 className="text-lg font-medium mb-2 text-evoya-navy">{translate('detailed_semantic_multiformat_title', language)}</h5>
                     <p className="text-gray-600">
-                      Automatische Extraktion von Wissen aus PDFs, Word-Dokumenten, 
-                      Präsentationen, APIs und Webseiten in eine einheitliche Wissensbasis.
+                      {translate('detailed_semantic_multiformat_desc', language)}
                     </p>
                   </div>
                 </div>
@@ -484,10 +485,9 @@ const DetailedFeatures: React.FC = () => {
                     <Network className="w-5 h-5 text-evoya-orange" />
                   </div>
                   <div>
-                    <h5 className="text-lg font-medium mb-2 text-evoya-navy">Kontextbasierte Verknüpfung</h5>
+                    <h5 className="text-lg font-medium mb-2 text-evoya-navy">{translate('detailed_semantic_context_title', language)}</h5>
                     <p className="text-gray-600">
-                      Automatische Erkennung von Beziehungen zwischen Konzepten, Personen und 
-                      Ereignissen f��r ein tiefgreifendes Verständnis Ihrer Geschäftsdaten.
+                      {translate('detailed_semantic_context_desc', language)}
                     </p>
                   </div>
                 </div>
@@ -497,10 +497,9 @@ const DetailedFeatures: React.FC = () => {
                     <Search className="w-5 h-5 text-evoya-orange" />
                   </div>
                   <div>
-                    <h5 className="text-lg font-medium mb-2 text-evoya-navy">Präzise Informationsgewinnung</h5>
+                    <h5 className="text-lg font-medium mb-2 text-evoya-navy">{translate('detailed_semantic_precision_title', language)}</h5>
                     <p className="text-gray-600">
-                      Natürlichsprachliche Abfragen liefern kontextrelevante Antworten statt 
-                      einfacher Keyword-Suchen, basierend auf dem tatsächlichen Bedeutungsgehalt.
+                      {translate('detailed_semantic_precision_desc', language)}
                     </p>
                   </div>
                 </div>
@@ -513,7 +512,7 @@ const DetailedFeatures: React.FC = () => {
 
         <AnimatedSection className="mt-32 text-center" animation="fade-up">
           <div className="inline-block mb-4 px-3 py-1 rounded-full bg-evoya-navy/10 text-evoya-navy text-sm font-medium">
-            Datenschutz
+            {translate('detailed_privacy_badge', language)}
           </div>
           
           <div className="max-w-3xl mx-auto relative">
@@ -522,9 +521,9 @@ const DetailedFeatures: React.FC = () => {
                 <div className="w-12 h-12 rounded-full bg-evoya-navy/10 flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-6 h-6 text-evoya-navy" />
                 </div>
-                <h4 className="text-lg font-semibold mb-2 text-center">Datenspeicherung</h4>
+                <h4 className="text-lg font-semibold mb-2 text-center">{translate('detailed_privacy_storage_title', language)}</h4>
                 <p className="text-gray-600 text-center">
-                  Die Daten werden in sicheren Rechenzentren in der Schweiz gespeichert.
+                  {translate('detailed_privacy_storage_desc', language)}
                 </p>
               </div>
               
@@ -532,9 +531,9 @@ const DetailedFeatures: React.FC = () => {
                 <div className="w-12 h-12 rounded-full bg-evoya-navy/10 flex items-center justify-center mx-auto mb-4">
                   <Database className="w-6 h-6 text-evoya-navy" />
                 </div>
-                <h4 className="text-lg font-semibold mb-2 text-center">DSGVO-Konformität</h4>
+                <h4 className="text-lg font-semibold mb-2 text-center">{translate('detailed_privacy_gdpr_title', language)}</h4>
                 <p className="text-gray-600 text-center">
-                  Vollständige Einhaltung der Europäischen Datenschutz-Grundverordnung und der Schweizer Datenschutzgesetze.
+                  {translate('detailed_privacy_gdpr_desc', language)}
                 </p>
               </div>
               
@@ -542,9 +541,9 @@ const DetailedFeatures: React.FC = () => {
                 <div className="w-12 h-12 rounded-full bg-evoya-navy/10 flex items-center justify-center mx-auto mb-4">
                   <Lock className="w-6 h-6 text-evoya-navy" />
                 </div>
-                <h4 className="text-lg font-semibold mb-2 text-center">Verschlüsselung</h4>
+                <h4 className="text-lg font-semibold mb-2 text-center">{translate('detailed_privacy_encryption_title', language)}</h4>
                 <p className="text-gray-600 text-center">
-                  Modernste End-to-End-Verschlüsselung für alle Daten während der Übertragung. Sichere Speicherung nach Industriestandards.
+                  {translate('detailed_privacy_encryption_desc', language)}
                 </p>
               </div>
             </div>
@@ -556,15 +555,14 @@ const DetailedFeatures: React.FC = () => {
         <AnimatedSection className="mt-28" animation="fade-up">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12 text-center">
-              <h3 className="text-2xl lg:text-3xl font-semibold mb-6">Privacy Shield</h3>
+              <h3 className="text-2xl lg:text-3xl font-semibold mb-6">{translate('detailed_shield_title', language)}</h3>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Das Evoya Privacy Shield schützt Ihre sensiblen Daten durch einen mehrstufigen Anonymisierungsprozess, 
-                der ausschliesslich in sicheren Schweizer Rechenzentren stattfindet.
+                {translate('detailed_shield_description', language)}
               </p>
             </div>
 
             <div className="text-center mb-10">
-              <h4 className="text-xl font-medium text-evoya-navy mb-4">So funktioniert es</h4>
+              <h4 className="text-xl font-medium text-evoya-navy mb-4">{translate('detailed_shield_how', language)}</h4>
             </div>
 
             <div className="w-full mx-auto mt-6 pb-16">
@@ -592,14 +590,14 @@ const DetailedFeatures: React.FC = () => {
                     <div className="mb-4">
                       <div className="inline-flex items-center justify-center bg-evoya-navy text-white rounded-full py-1 px-3 text-sm font-medium">
                         <div className="bg-white text-evoya-navy rounded-full w-6 h-6 flex items-center justify-center mr-2 font-bold">1</div>
-                        SCHRITT 1
+                        {translate('detailed_shield_step1_badge', language)}
                       </div>
-                      <h5 className="text-lg font-semibold mt-3 mb-4">Vertrauliche Daten werden anonymisiert (Schweiz)</h5>
+                      <h5 className="text-lg font-semibold mt-3 mb-4">{translate('detailed_shield_step1_title', language)}</h5>
                     </div>
                     
                     <div className="space-y-4 flex-grow">
                       <div className="bg-evoya-navy text-white p-4 rounded text-center font-medium">
-                        Max Mustermann
+                        {translate('detailed_shield_step1_name', language)}
                       </div>
                       
                       <div className="flex justify-center">
@@ -609,7 +607,7 @@ const DetailedFeatures: React.FC = () => {
                       </div>
                       
                       <div className="bg-evoya-navy text-white p-4 rounded text-center font-medium">
-                        [Name 1]
+                        {translate('detailed_shield_step1_placeholder', language)}
                       </div>
                     </div>
                     
@@ -632,9 +630,9 @@ const DetailedFeatures: React.FC = () => {
                     <div className="mb-4">
                       <div className="inline-flex items-center justify-center bg-gray-700 text-white rounded-full py-1 px-3 text-sm font-medium">
                         <div className="bg-white text-gray-700 rounded-full w-6 h-6 flex items-center justify-center mr-2 font-bold">2</div>
-                        SCHRITT 2
+                        {translate('detailed_shield_step2_badge', language)}
                       </div>
-                      <h5 className="text-lg font-semibold mt-3 mb-4">Sprachmodell generiert Antwort mit anonymisierten Daten</h5>
+                      <h5 className="text-lg font-semibold mt-3 mb-4">{translate('detailed_shield_step2_title', language)}</h5>
                     </div>
                     
                     <div className="flex flex-col items-center justify-center flex-grow">
@@ -643,7 +641,7 @@ const DetailedFeatures: React.FC = () => {
                       </div>
                       
                       <p className="text-center text-gray-600">
-                        Verarbeitung anonymisierter Daten<br />durch externe KI
+                        {translate('detailed_shield_step2_desc', language)}
                       </p>
                     </div>
                     
@@ -666,14 +664,14 @@ const DetailedFeatures: React.FC = () => {
                     <div className="mb-4">
                       <div className="inline-flex items-center justify-center bg-evoya-lightBlue text-white rounded-full py-1 px-3 text-sm font-medium">
                         <div className="bg-white text-evoya-lightBlue rounded-full w-6 h-6 flex items-center justify-center mr-2 font-bold">3</div>
-                        SCHRITT 3
+                        {translate('detailed_shield_step3_badge', language)}
                       </div>
-                      <h5 className="text-lg font-semibold mt-3 mb-4">Anonymisierte Daten werden deanonymisiert (Schweiz)</h5>
+                      <h5 className="text-lg font-semibold mt-3 mb-4">{translate('detailed_shield_step3_title', language)}</h5>
                     </div>
                     
                     <div className="space-y-4 flex-grow">
                       <div className="bg-evoya-lightBlue text-white p-4 rounded text-center font-medium">
-                        Max Mustermann
+                        {translate('detailed_shield_step3_name', language)}
                       </div>
                       
                       <div className="flex justify-center">
@@ -683,7 +681,7 @@ const DetailedFeatures: React.FC = () => {
                       </div>
                       
                       <div className="bg-evoya-lightBlue text-white p-4 rounded text-center font-medium">
-                        [Name 1]
+                        {translate('detailed_shield_step3_placeholder', language)}
                       </div>
                     </div>
                     
@@ -698,18 +696,16 @@ const DetailedFeatures: React.FC = () => {
             </div>
 
             <div className="bg-gray-50 p-6 rounded-xl mt-6 shadow-sm">
-              <h4 className="text-xl font-semibold mb-4">Ihre Daten in sicheren Händen</h4>
+              <h4 className="text-xl font-semibold mb-4">{translate('detailed_shield_data_title', language)}</h4>
               <p className="text-gray-600 mb-4">
-                Das Evoya Privacy Shield stellt sicher, dass sensitive Informationen niemals ungeschützt an externe Systeme übermittelt werden. 
-                Stattdessen werden sie vor der Verarbeitung durch Sprachmodelle anonymisiert und erst nach der Verarbeitung wieder deanonymisiert. 
-                Dieser gesamte Prozess findet ausschliesslich in der Schweiz statt.
+                {translate('detailed_shield_data_desc', language)}
               </p>
               <div className="flex items-center mt-4">
                 <div className="rounded-full bg-green-100 p-2 mr-3">
                   <Shield className="w-6 h-6 text-green-600" />
                 </div>
                 <p className="text-green-600 font-medium">
-                  Datenschutz auf höchstem Niveau, ohne Kompromisse bei der Leistungsfähigkeit
+                  {translate('detailed_shield_highlight', language)}
                 </p>
               </div>
             </div>
