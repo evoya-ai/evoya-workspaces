@@ -118,17 +118,17 @@ const Benefits: React.FC = () => {
           </AnimatedSection>
         </div>
         
-        {/* Updated fourth card with icon at the top */}
+        {/* Updated fourth card with left-aligned icon and text */}
         <AnimatedSection delay={450} className="rounded-xl overflow-hidden bg-white shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-xl">
           <div className="p-8">
-            <div className="flex flex-col items-center text-center mb-6">
+            <div className="flex flex-col items-start mb-6">
               <div className="w-16 h-16 rounded-full bg-evoya-blue/10 flex items-center justify-center mb-4">
                 <MapPin className="w-8 h-8 text-evoya-blue" />
               </div>
               <h3 className="text-xl font-semibold text-custom-darkGray">Lokaler Partner mit Schweizer Expertise</h3>
             </div>
             
-            <p className="text-gray-600 mb-6 text-center max-w-3xl mx-auto">
+            <p className="text-gray-600 mb-6 text-left">
               Als Schweizer Unternehmen kennen wir die lokalen Marktanforderungen und regulatorischen Besonderheiten. Wir verstehen die spezifischen Bedürfnisse von Schweizer KMUs und bieten massgeschneiderte KI-Lösungen, die regionalen Gegebenheiten optimal Rechnung tragen.
             </p>
             
