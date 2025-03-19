@@ -11,7 +11,6 @@ import Comparison from '../components/Comparison';
 import CallToAction from '../components/CallToAction';
 import Footer from '../components/Footer';
 import BlurBackground from '../components/BlurBackground';
-import AgenticFramework from '../components/AgenticFramework';
 import LLMAgentStructure from '../components/LLMAgentStructure';
 
 const Index = () => {
@@ -52,7 +51,6 @@ const Index = () => {
         <Features />
         <DetailedFeatures />
         <LanguageModels />
-        <AgenticFramework />
         <LLMAgentStructure />
         <Benefits />
         <Services />
