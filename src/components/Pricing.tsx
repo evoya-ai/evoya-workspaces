@@ -4,7 +4,6 @@ import { Check, Plus, CreditCard } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
-import { Badge } from './ui/badge';
 
 const PricingFeature: React.FC<{ text: string }> = ({ text }) => (
   <div className="flex items-center space-x-2 text-sm text-gray-600">
@@ -33,16 +32,11 @@ const Pricing: React.FC = () => {
           <Card className="border-2 border-evoya-blue/20 shadow-xl relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-evoya-blue to-evoya-lightBlue"></div>
             <CardHeader className="pb-0">
-              <div className="flex justify-between items-start">
-                <div>
-                  <CardTitle className="text-3xl font-bold text-evoya-blue">Unlimited</CardTitle>
-                  <CardDescription className="text-base mt-2">
-                    Ihr Komplettpaket für professionelle KI-Workspaces mit allen Funktionen und umfangreichen Ressourcen.
-                  </CardDescription>
-                </div>
-                <Badge variant="outline" className="bg-evoya-blue/10 text-evoya-blue border-0 px-3 py-1">
-                  Beliebt
-                </Badge>
+              <div>
+                <CardTitle className="text-3xl font-bold text-evoya-blue">Unlimited</CardTitle>
+                <CardDescription className="text-base mt-2">
+                  Ihr Komplettpaket für professionelle KI-Workspaces mit allen Funktionen und umfangreichen Ressourcen.
+                </CardDescription>
               </div>
               <div className="mt-6">
                 <div className="flex items-baseline">
@@ -76,11 +70,12 @@ const Pricing: React.FC = () => {
                 </div>
               </div>
             </CardContent>
-            <CardFooter className="pt-2 pb-8">
+            <CardFooter className="flex flex-col pt-2 pb-8">
               <Button className="w-full py-6 text-base" size="lg">
                 <CreditCard className="mr-2 h-5 w-5" />
-                Jetzt starten
+                Jetzt kostenlos starten
               </Button>
+              <p className="text-xs text-gray-500 mt-3">Keine Kreditkarte notwendig</p>
             </CardFooter>
           </Card>
         </AnimatedSection>
