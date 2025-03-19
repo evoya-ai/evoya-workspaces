@@ -8,6 +8,7 @@ import LanguageModels from '../components/LanguageModels';
 import Benefits from '../components/Benefits';
 import Services from '../components/Services';
 import Comparison from '../components/Comparison';
+import Pricing from '../components/Pricing';
 import CallToAction from '../components/CallToAction';
 import Footer from '../components/Footer';
 import BlurBackground from '../components/BlurBackground';
@@ -55,6 +56,7 @@ const Index = () => {
         <Benefits />
         <Services />
         <Comparison />
+        <Pricing />
         <CallToAction />
       </main>
       <Footer />
