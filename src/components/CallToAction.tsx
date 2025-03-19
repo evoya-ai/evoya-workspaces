@@ -17,16 +17,13 @@ const CallToAction: React.FC = () => {
     setIsSubmitting(true);
 
     const form = e.currentTarget;
-    const formData = new FormData(form);
-
+    
     try {
-      // Ersetzen Sie 'YOUR_FORMSPREE_ID' mit Ihrer Formspree-Form-ID
-      const response = await fetch('https://formspree.io/f/YOUR_FORMSPREE_ID', {
+      // FormSubmit verwendet hier die E-Mail als Endpunkt
+      // Ihre E-Mail wird beim ersten Formular-Submit bestätigt
+      const response = await fetch('https://formsubmit.co/your-email@example.com', {
         method: 'POST',
-        body: formData,
-        headers: {
-          Accept: 'application/json',
-        },
+        body: new FormData(form),
       });
 
       if (response.ok) {
@@ -129,6 +126,12 @@ const CallToAction: React.FC = () => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* FormSubmit benötigt diese Felder für Konfiguration */}
+                  <input type="hidden" name="_subject" value="Neue Kontaktanfrage von der Webseite" />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_template" value="table" />
+                  <input type="text" name="_honey" style={{display: 'none'}} />
+                  
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">
