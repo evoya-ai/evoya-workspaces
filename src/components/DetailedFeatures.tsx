@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic, Shield, Lock, Database, ArrowRight, User, Globe2, RefreshCcw, Book, Layers, Network, Brain, Search } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -281,14 +280,14 @@ const DetailedFeatures: React.FC = () => {
                 <span className="block text-xs font-medium text-center">Webinhalte</span>
               </div>
               
-              {/* Middle left: Strukturierte Daten - perfectly aligned horizontally with the center */}
-              <div className="absolute left-[12.5%] top-1/2 transform -translate-y-1/2 w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '3s' }}>
+              {/* Middle left: Strukturierte Daten - aligned directly in line with the horizontal connecting line */}
+              <div className="absolute top-[225px] left-[50px] transform -translate-y-1/2 w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '3s' }}>
                 <Layers className="w-8 h-8 text-evoya-purple mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Strukturierte Daten</span>
               </div>
               
-              {/* Middle right: Analyse - perfectly aligned horizontally with the center */}
-              <div className="absolute right-[12.5%] top-1/2 transform -translate-y-1/2 w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '4.5s' }}>
+              {/* Middle right: Analyse - aligned directly in line with the horizontal connecting line */}
+              <div className="absolute top-[225px] right-[50px] transform -translate-y-1/2 w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '4.5s' }}>
                 <FileSearch className="w-8 h-8 text-evoya-yellow mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Analyse</span>
               </div>
@@ -421,31 +420,26 @@ const DetailedFeatures: React.FC = () => {
               </p>
             </div>
 
-            {/* Horizontal Process Flow */}
             <div className="w-full mx-auto mt-12 pb-16">
               <div className="flex flex-col lg:flex-row items-stretch justify-between gap-8 relative">
-                {/* Connecting Lines */}
                 <div className="hidden lg:block absolute top-1/2 left-0 w-full h-2 z-0">
                   <div className="w-full h-full flex items-center">
                     <div className="h-2 bg-gray-300 w-full"></div>
                   </div>
                 </div>
                 
-                {/* Left connector arrow (visible only on desktop) */}
                 <div className="hidden lg:flex absolute left-[calc(33%-30px)] top-1/2 transform -translate-y-1/2 z-10">
                   <div className="bg-gray-300 w-14 h-14 rounded-full flex items-center justify-center">
                     <ArrowRight className="w-8 h-8 text-gray-600" />
                   </div>
                 </div>
                 
-                {/* Right connector arrow (visible only on desktop) */}
                 <div className="hidden lg:flex absolute right-[calc(33%-30px)] top-1/2 transform -translate-y-1/2 z-10">
                   <div className="bg-gray-300 w-14 h-14 rounded-full flex items-center justify-center">
                     <ArrowRight className="w-8 h-8 text-gray-600" />
                   </div>
                 </div>
                 
-                {/* Step 1 */}
                 <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6 lg:p-8 flex-1 z-20">
                   <div className="flex flex-col h-full">
                     <div className="mb-4">
@@ -480,14 +474,12 @@ const DetailedFeatures: React.FC = () => {
                   </div>
                 </div>
                 
-                {/* Arrow - Only visible on mobile */}
                 <div className="flex lg:hidden justify-center">
                   <div className="bg-gray-200 w-12 h-12 rounded-full flex items-center justify-center">
                     <ArrowRight className="w-6 h-6 text-gray-600 transform rotate-90 lg:rotate-0" />
                   </div>
                 </div>
                 
-                {/* Step 2 */}
                 <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6 lg:p-8 flex-1 z-20">
                   <div className="flex flex-col h-full">
                     <div className="mb-4">
@@ -516,14 +508,12 @@ const DetailedFeatures: React.FC = () => {
                   </div>
                 </div>
                 
-                {/* Arrow - Only visible on mobile */}
                 <div className="flex lg:hidden justify-center">
                   <div className="bg-gray-200 w-12 h-12 rounded-full flex items-center justify-center">
                     <ArrowRight className="w-6 h-6 text-gray-600 transform rotate-90 lg:rotate-0" />
                   </div>
                 </div>
                 
-                {/* Step 3 */}
                 <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6 lg:p-8 flex-1 z-20">
                   <div className="flex flex-col h-full">
                     <div className="mb-4">
@@ -584,3 +574,4 @@ const DetailedFeatures: React.FC = () => {
 };
 
 export default DetailedFeatures;
+
