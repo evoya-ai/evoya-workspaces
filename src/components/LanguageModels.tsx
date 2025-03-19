@@ -2,36 +2,34 @@
 import React from 'react';
 import { Shield, Bot } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
-import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
 import { cn } from '../lib/utils';
 
 interface ModelCardProps {
-  name: string;
+  provider: string;
   description: string;
-  icon: React.ReactNode;
   accentColor: string;
   isSwissHosted?: boolean;
 }
 
 const ModelCard: React.FC<ModelCardProps> = ({
-  name,
+  provider,
   description,
-  icon,
   accentColor,
   isSwissHosted = false,
 }) => {
   return (
-    <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg group border border-gray-100">
+    <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg group border border-gray-100 h-full">
       <div className={`h-2 w-full ${accentColor}`} />
       <CardContent className="p-5">
         <div className="flex items-start gap-4">
-          <div className={`p-3 rounded-full ${accentColor} transition-all duration-300 shadow-sm`}>
-            {icon}
+          <div className={`p-3 rounded-full ${accentColor} transition-all duration-300 shadow-sm flex items-center justify-center`}>
+            {/* Logo placeholder - will be replaced with actual provider logos later */}
+            <Bot className="w-5 h-5 text-white" />
           </div>
           <div className="flex-1">
             <div className="flex items-center justify-between gap-2 mb-2">
-              <h3 className="text-xl font-semibold">{name}</h3>
+              <h3 className="text-xl font-semibold">{provider}</h3>
               {isSwissHosted && (
                 <span className="inline-flex items-center rounded-full bg-evoya-blue/10 px-2.5 py-1 text-xs font-medium text-evoya-blue">
                   <Shield className="w-3 h-3 mr-1" />
@@ -48,47 +46,53 @@ const ModelCard: React.FC<ModelCardProps> = ({
 };
 
 const LanguageModels: React.FC = () => {
-  const models = [
+  const providers = [
     {
-      name: "ChatGPT-4o",
-      description: "OpenAIs neuestes Sprachmodell mit herausragender Allround-Leistung",
-      icon: <Bot className="w-5 h-5 text-white" />,
+      provider: "OpenAI",
+      description: "Anbieter leistungsstarker KI-Sprachmodelle mit breitem Anwendungsspektrum",
       accentColor: "bg-evoya-blue text-white",
       isSwissHosted: false
     },
     {
-      name: "Claude 3 Opus",
-      description: "Anthropics fortschrittlichstes Modell mit aussergewöhnlicher Genauigkeit",
-      icon: <Bot className="w-5 h-5 text-white" />,
+      provider: "Anthropic",
+      description: "Fokus auf sichere, zuverlässige und kontrollierbare KI-Systeme",
       accentColor: "bg-evoya-blue text-white",
       isSwissHosted: false
     },
     {
-      name: "SwissLama 3.3",
-      description: "In der Schweiz gehostetes leistungsstarkes Open-Source-Modell",
-      icon: <Bot className="w-5 h-5 text-white" />,
-      accentColor: "bg-evoya-blue text-white",
-      isSwissHosted: true
-    },
-    {
-      name: "Mistral Large",
-      description: "Effizientes Modell mit ausgezeichnetem Preis-Leistungs-Verhältnis",
-      icon: <Bot className="w-5 h-5 text-white" />,
+      provider: "Mistral AI",
+      description: "Europäischer Anbieter effizienter KI-Modelle mit ausgezeichnetem Preis-Leistungs-Verhältnis",
       accentColor: "bg-evoya-orange text-white",
       isSwissHosted: false
     },
     {
-      name: "Perplexity Pro",
-      description: "Spezialisiert auf Faktenrecherche mit Echtzeitdaten",
-      icon: <Bot className="w-5 h-5 text-white" />,
+      provider: "Meta",
+      description: "Open-Source-Modelle mit umfangreichen Anpassungsmöglichkeiten",
+      accentColor: "bg-evoya-orange text-white",
+      isSwissHosted: false
+    },
+    {
+      provider: "DeepSeek",
+      description: "Spezialisiert auf fortschrittliche Forschung und technologische Innovation",
       accentColor: "bg-evoya-blue text-white",
       isSwissHosted: false
     },
     {
-      name: "Llama 3",
-      description: "Open-Source-Modell von Meta mit umfangreichen Anpassungsmöglichkeiten",
-      icon: <Bot className="w-5 h-5 text-white" />,
-      accentColor: "bg-evoya-orange text-white",
+      provider: "Google",
+      description: "Führende KI-Technologien mit tiefer Integration in Web- und Cloud-Dienste",
+      accentColor: "bg-evoya-blue text-white",
+      isSwissHosted: false
+    },
+    {
+      provider: "Nvidia",
+      description: "Hardware-optimierte KI-Lösungen mit Fokus auf Leistung und Skalierbarkeit",
+      accentColor: "bg-evoya-green text-white",
+      isSwissHosted: false
+    },
+    {
+      provider: "Microsoft",
+      description: "Enterprise-orientierte KI-Dienste mit nahtloser Integration in Geschäftsanwendungen",
+      accentColor: "bg-evoya-navy text-white",
       isSwissHosted: false
     },
   ];
@@ -111,30 +115,22 @@ const LanguageModels: React.FC = () => {
           </p>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {models.map((model, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {providers.map((provider, index) => (
             <AnimatedSection 
               key={index} 
               animation="fade-up" 
               delay={100 * index}
             >
               <ModelCard
-                name={model.name}
-                description={model.description}
-                icon={model.icon}
-                accentColor={model.accentColor}
-                isSwissHosted={model.isSwissHosted}
+                provider={provider.provider}
+                description={provider.description}
+                accentColor={provider.accentColor}
+                isSwissHosted={provider.isSwissHosted}
               />
             </AnimatedSection>
           ))}
         </div>
-
-        <AnimatedSection className="mt-12 text-center" animation="fade-up">
-          <Button className="bg-evoya-blue hover:bg-evoya-navy text-white px-6 py-2.5">
-            <Shield className="w-4 h-4 mr-2" />
-            Mehr zu unseren Datenschutzstandards
-          </Button>
-        </AnimatedSection>
       </div>
     </section>
   );
