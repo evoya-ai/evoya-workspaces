@@ -256,15 +256,14 @@ const DetailedFeatures: React.FC = () => {
                 </div>
               </div>
               
-              {/* Connecting lines */}
+              {/* Connecting lines - Modified to remove middle connections */}
               <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 450" xmlns="http://www.w3.org/2000/svg">
                 <g stroke="#5B6CAD" strokeWidth="1.5" strokeDasharray="5,3" opacity="0.6">
                   <line x1="200" y1="225" x2="70" y2="80" />
                   <line x1="200" y1="225" x2="330" y2="80" />
                   <line x1="200" y1="225" x2="70" y2="370" />
                   <line x1="200" y1="225" x2="330" y2="370" />
-                  <line x1="200" y1="225" x2="50" y2="225" />
-                  <line x1="200" y1="225" x2="350" y2="225" />
+                  {/* Removed the middle left and right connecting lines */}
                 </g>
               </svg>
               
@@ -280,17 +279,9 @@ const DetailedFeatures: React.FC = () => {
                 <span className="block text-xs font-medium text-center">Webinhalte</span>
               </div>
               
-              {/* Middle left: Strukturierte Daten - Exakte Ausrichtung mit dem Mittelpunkt zur Verbindungslinie */}
-              <div className="absolute top-[225px] left-[12px] transform -translate-y-1/2 w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '3s' }}>
-                <Layers className="w-8 h-8 text-evoya-purple mx-auto mb-1" />
-                <span className="block text-xs font-medium text-center">Strukturierte Daten</span>
-              </div>
+              {/* Removed Middle left: Strukturierte Daten */}
               
-              {/* Middle right: Analyse - Exakte Ausrichtung mit dem Mittelpunkt zur Verbindungslinie */}
-              <div className="absolute top-[225px] right-[12px] transform -translate-y-1/2 w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '4.5s' }}>
-                <FileSearch className="w-8 h-8 text-evoya-yellow mx-auto mb-1" />
-                <span className="block text-xs font-medium text-center">Analyse</span>
-              </div>
+              {/* Removed Middle right: Analyse */}
               
               {/* Bottom left: Präzise Suche */}
               <div className="absolute bottom-[10%] left-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '6s' }}>
@@ -298,10 +289,10 @@ const DetailedFeatures: React.FC = () => {
                 <span className="block text-xs font-medium text-center">Präzise Suche</span>
               </div>
               
-              {/* Bottom right: Knowledge Graph */}
+              {/* Bottom right: API (renamed from Knowledge Graph) */}
               <div className="absolute bottom-[10%] right-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '7.5s' }}>
                 <Network className="w-8 h-8 text-evoya-lightBlue mx-auto mb-1" />
-                <span className="block text-xs font-medium text-center">Knowledge Graph</span>
+                <span className="block text-xs font-medium text-center">API</span>
               </div>
             </div>
             
