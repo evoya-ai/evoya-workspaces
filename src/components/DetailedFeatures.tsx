@@ -246,9 +246,10 @@ const DetailedFeatures: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-[400px] overflow-hidden rounded-xl shadow-lg">
+            <div className="relative h-[450px] overflow-hidden rounded-xl shadow-lg">
               <div className="absolute inset-0 bg-gradient-to-r from-evoya-lightBlue/5 to-evoya-navy/10 z-0"></div>
               
+              {/* Central Brain Component */}
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-white rounded-full shadow-xl border-4 border-evoya-lightBlue/30 flex items-center justify-center z-20">
                 <div className="text-center p-2">
                   <Brain className="w-12 h-12 text-evoya-navy mx-auto mb-2" />
@@ -256,43 +257,50 @@ const DetailedFeatures: React.FC = () => {
                 </div>
               </div>
               
-              <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+              {/* Connecting lines */}
+              <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 450" xmlns="http://www.w3.org/2000/svg">
                 <g stroke="#5B6CAD" strokeWidth="1.5" strokeDasharray="5,3" opacity="0.6">
-                  <line x1="200" y1="200" x2="80" y2="100" />
-                  <line x1="200" y1="200" x2="320" y2="100" />
-                  <line x1="200" y1="200" x2="320" y2="300" />
-                  <line x1="200" y1="200" x2="80" y2="300" />
-                  <line x1="200" y1="200" x2="60" y2="200" />
-                  <line x1="200" y1="200" x2="340" y2="200" />
+                  <line x1="200" y1="225" x2="70" y2="80" />
+                  <line x1="200" y1="225" x2="330" y2="80" />
+                  <line x1="200" y1="225" x2="70" y2="370" />
+                  <line x1="200" y1="225" x2="330" y2="370" />
+                  <line x1="200" y1="225" x2="50" y2="225" />
+                  <line x1="200" y1="225" x2="350" y2="225" />
                 </g>
               </svg>
               
-              <div className="absolute top-[15%] left-[20%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '0s' }}>
+              {/* Top left: Dokumente */}
+              <div className="absolute top-[10%] left-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '0s' }}>
                 <Book className="w-8 h-8 text-evoya-orange mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Dokumente</span>
               </div>
               
-              <div className="absolute top-[15%] right-[20%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '1.5s' }}>
+              {/* Top right: Webinhalte */}
+              <div className="absolute top-[10%] right-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '1.5s' }}>
                 <Globe className="w-8 h-8 text-evoya-green mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Webinhalte</span>
               </div>
               
-              <div className="absolute left-[15%] top-[35%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '3s' }}>
+              {/* Middle left: Strukturierte Daten - vertically centered */}
+              <div className="absolute left-[12.5%] top-[50%] transform -translate-y-1/2 w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '3s' }}>
                 <Layers className="w-8 h-8 text-evoya-purple mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Strukturierte Daten</span>
               </div>
               
-              <div className="absolute right-[15%] top-[35%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '4.5s' }}>
+              {/* Middle right: Analyse - vertically centered */}
+              <div className="absolute right-[12.5%] top-[50%] transform -translate-y-1/2 w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '4.5s' }}>
                 <FileSearch className="w-8 h-8 text-evoya-yellow mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Analyse</span>
               </div>
               
-              <div className="absolute bottom-[15%] left-[20%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '6s' }}>
+              {/* Bottom left: Präzise Suche */}
+              <div className="absolute bottom-[10%] left-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '6s' }}>
                 <Search className="w-8 h-8 text-evoya-navy mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Präzise Suche</span>
               </div>
               
-              <div className="absolute bottom-[15%] right-[20%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '7.5s' }}>
+              {/* Bottom right: Knowledge Graph */}
+              <div className="absolute bottom-[10%] right-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '7.5s' }}>
                 <Network className="w-8 h-8 text-evoya-lightBlue mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Knowledge Graph</span>
               </div>
