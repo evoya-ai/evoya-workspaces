@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, X, AlertTriangle, Info } from 'lucide-react';
+import { Check, X, AlertTriangle } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './ui/tooltip';
 
@@ -9,7 +9,6 @@ const Comparison: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   
   const features = [
-    'Schweizer Datenschutz',
     'Flexibles Preismodell',
     'Über 20 KI-Modelle',
     'Lokale Modell-Hosting-Option',
@@ -44,19 +43,19 @@ const Comparison: React.FC = () => {
     {
       name: 'Evoya AI',
       description: 'KI-Workspaces',
-      results: [true, true, true, true, true, true, true, true, true, true, true] as FeatureResult[],
+      results: [true, true, true, true, true, true, true, true, true, true] as FeatureResult[],
       highlighted: true
     },
     {
       name: 'OpenAI',
       description: 'ChatGPT',
-      results: [false, false, false, false, false, false, false, true, false, false, false] as FeatureResult[],
+      results: [false, false, false, false, false, false, true, false, false, false] as FeatureResult[],
       highlighted: false
     },
     {
       name: 'Microsoft',
       description: 'Copilot',
-      results: [false, false, true, false, false, false, false, false, false, false, false] as FeatureResult[],
+      results: [false, true, false, false, false, false, false, false, false, false] as FeatureResult[],
       highlighted: false
     }
   ];
@@ -67,9 +66,6 @@ const Comparison: React.FC = () => {
     const featureName = features[featureIndex];
     const productName = products[productIndex].name;
     
-    const hasTooltip = tooltips[featureName as keyof typeof tooltips] && 
-                        tooltips[featureName as keyof typeof tooltips][productName as keyof (typeof tooltips)[keyof typeof tooltips]];
-
     let icon;
     if (result === true) {
       icon = <Check className={`w-5 h-5 ${isHighlighted ? 'text-evoya-orange' : 'text-evoya-orange'}`} />;
@@ -77,32 +73,6 @@ const Comparison: React.FC = () => {
       icon = <AlertTriangle className="w-5 h-5 text-amber-500" />;
     } else {
       icon = <X className="w-5 h-5 text-gray-400" />;
-    }
-
-    if (hasTooltip) {
-      return (
-        <div className="flex justify-center items-center">
-          <div className="relative inline-flex items-center">
-            <span className="inline-block">{icon}</span>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <button className="ml-1 inline-flex">
-                    <Info className="w-4 h-4 text-gray-400 hover:text-gray-600" />
-                  </button>
-                </TooltipTrigger>
-                <TooltipContent 
-                  side="left" 
-                  align="center" 
-                  className="max-w-xs bg-white p-2 shadow-lg rounded-lg border border-gray-200 z-50"
-                >
-                  <p className="text-xs text-gray-700">{tooltips[featureName as keyof typeof tooltips][productName as keyof (typeof tooltips)[keyof typeof tooltips]]}</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-          </div>
-        </div>
-      );
     }
 
     return (
