@@ -1,19 +1,29 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
-import Features from '../components/Features';
-import DetailedFeatures from '../components/DetailedFeatures';
-import LanguageModels from '../components/LanguageModels';
-import Benefits from '../components/Benefits';
-import Services from '../components/Services';
-import Comparison from '../components/Comparison';
-import Pricing from '../components/Pricing';
-import CallToAction from '../components/CallToAction';
-import Footer from '../components/Footer';
 import BlurBackground from '../components/BlurBackground';
-import LLMAgentStructure from '../components/LLMAgentStructure';
 import { LanguageProvider } from '../contexts/LanguageContext';
+import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink } from '@/components/ui/breadcrumb';
+
+// Lazy load components for better performance
+const Features = lazy(() => import('../components/Features'));
+const DetailedFeatures = lazy(() => import('../components/DetailedFeatures'));
+const LanguageModels = lazy(() => import('../components/LanguageModels'));
+const Benefits = lazy(() => import('../components/Benefits'));
+const Services = lazy(() => import('../components/Services'));
+const Comparison = lazy(() => import('../components/Comparison'));
+const Pricing = lazy(() => import('../components/Pricing'));
+const CallToAction = lazy(() => import('../components/CallToAction'));
+const Footer = lazy(() => import('../components/Footer'));
+const LLMAgentStructure = lazy(() => import('../components/LLMAgentStructure'));
+
+// Loading fallback component
+const LoadingFallback = () => (
+  <div className="flex justify-center items-center py-12">
+    <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-evoya-blue"></div>
+  </div>
+);
 
 const Index = () => {
   useEffect(() => {
@@ -49,19 +59,51 @@ const Index = () => {
       <div className="relative min-h-screen overflow-hidden">
         <BlurBackground />
         <Header />
+        
+        {/* SEO-friendly breadcrumb for navigation */}
+        <div className="container mx-auto px-4 pt-24 pb-4">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+        
         <main>
           <Hero />
-          <Features />
-          <DetailedFeatures />
-          <LanguageModels />
-          <LLMAgentStructure />
-          <Benefits />
-          <Services />
-          <Comparison />
-          <Pricing />
-          <CallToAction />
+          <Suspense fallback={<LoadingFallback />}>
+            <Features />
+          </Suspense>
+          <Suspense fallback={<LoadingFallback />}>
+            <DetailedFeatures />
+          </Suspense>
+          <Suspense fallback={<LoadingFallback />}>
+            <LanguageModels />
+          </Suspense>
+          <Suspense fallback={<LoadingFallback />}>
+            <LLMAgentStructure />
+          </Suspense>
+          <Suspense fallback={<LoadingFallback />}>
+            <Benefits />
+          </Suspense>
+          <Suspense fallback={<LoadingFallback />}>
+            <Services />
+          </Suspense>
+          <Suspense fallback={<LoadingFallback />}>
+            <Comparison />
+          </Suspense>
+          <Suspense fallback={<LoadingFallback />}>
+            <Pricing />
+          </Suspense>
+          <Suspense fallback={<LoadingFallback />}>
+            <CallToAction />
+          </Suspense>
         </main>
-        <Footer />
+        <Suspense fallback={<LoadingFallback />}>
+          <Footer />
+        </Suspense>
       </div>
     </LanguageProvider>
   );
