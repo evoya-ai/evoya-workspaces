@@ -21,7 +21,7 @@ const CallToAction: React.FC = () => {
     try {
       // FormSubmit verwendet hier die E-Mail als Endpunkt
       // Ihre E-Mail wird beim ersten Formular-Submit bestätigt
-      const response = await fetch('https://formsubmit.co/your-email@example.com', {
+      const response = await fetch('https://formsubmit.co/s.chareonbood@evoya.ai', {
         method: 'POST',
         body: new FormData(form),
       });
