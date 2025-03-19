@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic, Shield, Lock, Database, ArrowRight, User, Globe2, RefreshCcw, Book, Layers, Network, Brain, Search } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -366,7 +367,7 @@ const DetailedFeatures: React.FC = () => {
                 </div>
                 <h4 className="text-lg font-semibold mb-2 text-center">Datenspeicherung</h4>
                 <p className="text-gray-600 text-center">
-                  Ihre Daten werden in sicheren Rechenzentren in der Schweiz gespeichert. Die Verarbeitung kann durch Sprachmodelle ausserhalb der Schweiz erfolgen.
+                  Die Daten werden in sicheren Rechenzentren in der Schweiz gespeichert.
                 </p>
               </div>
               
@@ -376,7 +377,7 @@ const DetailedFeatures: React.FC = () => {
                 </div>
                 <h4 className="text-lg font-semibold mb-2 text-center">DSGVO-Konformität</h4>
                 <p className="text-gray-600 text-center">
-                  Vollständige Einhaltung der europäischen Datenschutz-Grundverordnung und schweizerischer Datenschutzgesetze.
+                  Vollständige Einhaltung der Europäischen Datenschutz-Grundverordnung und der Schweizer Datenschutzgesetze.
                 </p>
               </div>
               
@@ -441,17 +442,17 @@ const DetailedFeatures: React.FC = () => {
                     
                     <div className="space-y-4 flex-grow">
                       <div className="bg-evoya-navy text-white p-4 rounded text-center font-medium">
-                        Max Mustermann
+                        [Name 1]
                       </div>
                       
                       <div className="flex justify-center">
                         <div className="p-1 rounded-full bg-red-100">
-                          <ArrowRight className="w-6 h-6 text-red-500 transform rotate-90" />
+                          <ArrowRight className="w-6 h-6 text-red-500 transform -rotate-90" />
                         </div>
                       </div>
                       
                       <div className="bg-evoya-navy text-white p-4 rounded text-center font-medium">
-                        [Name 1]
+                        Max Mustermann
                       </div>
                     </div>
                     
@@ -515,7 +516,7 @@ const DetailedFeatures: React.FC = () => {
                     
                     <div className="space-y-4 flex-grow">
                       <div className="bg-evoya-lightBlue text-white p-4 rounded text-center font-medium">
-                        [Name 1]
+                        Max Mustermann
                       </div>
                       
                       <div className="flex justify-center">
@@ -525,7 +526,7 @@ const DetailedFeatures: React.FC = () => {
                       </div>
                       
                       <div className="bg-evoya-lightBlue text-white p-4 rounded text-center font-medium">
-                        Max Mustermann
+                        [Name 1]
                       </div>
                     </div>
                     
