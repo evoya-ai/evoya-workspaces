@@ -147,8 +147,8 @@ const DetailedFeatures: React.FC = () => {
     <div className="relative w-full h-[450px] overflow-hidden rounded-xl shadow-xl bg-[#1A1E35]">
       <div className="absolute inset-0 w-full h-full overflow-hidden flex items-center justify-center">
         <img 
-          src="/lovable-uploads/44fd2f97-fa37-4db8-b7bb-1e9b2d9f7abe.png"
-          alt="Flowchart diagram showing generative AI data processing"
+          src="/lovable-uploads/b2891f9c-8c76-4722-af23-002f25df916e.png"
+          alt="Diagramm einer generativen KI mit Dateneingabe, Modelltraining und neuronalen Netzen"
           className="w-full h-auto object-contain"
         />
       </div>
