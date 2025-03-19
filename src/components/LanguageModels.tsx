@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Shield, Bot, Server, Lock } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -138,8 +137,7 @@ const LanguageModels: React.FC = () => {
                 <h3 className="text-2xl font-bold mb-3 text-evoya-blue">Swiss Llama 3.3</h3>
                 <p className="text-gray-700 mb-4">
                   Unser Schweizer Premium-Modell bietet höchste Qualität bei vollständiger Datensouveränität. 
-                  Swiss Llama 3.3 wird ausschliesslich in der Schweiz gehostet und unterliegt den strengen 
-                  Schweizer Datenschutzgesetzen.
+                  Swiss Llama 3.3 wird ausschliesslich in der Schweiz gehostet.
                 </p>
                 <div className="flex flex-wrap gap-3 mt-2 justify-center md:justify-start">
                   <span className="px-3 py-1 rounded-full bg-white text-sm font-medium border border-evoya-blue/20 text-evoya-blue flex items-center">
