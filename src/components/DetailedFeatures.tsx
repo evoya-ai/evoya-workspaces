@@ -344,22 +344,6 @@ const DetailedFeatures: React.FC = () => {
       isReversed: true,
       accentColor: "text-evoya-blue bg-evoya-blue/10",
     },
-    {
-      title: "Chat",
-      description: "Nutzen Sie eine intuitive Chat-Schnittstelle für natürlichsprachliche Interaktionen mit der KI.",
-      details: [
-        "Kontextbewusste Kommunikation für effiziente Problemlösung",
-        "Mehrsprachige Unterstützung für internationale Teams",
-        "Integration von Webseitenabfragen und Datenrecherche",
-        "Anpassbare Vorlagen für häufig gestellte Anfragen",
-      ],
-      icon: <User className="w-6 h-6 text-white" />,
-      customContent: chatInterface,
-      image: "", // Not used when customContent is provided
-      alt: "Chat-Interface mit KI-Assistent",
-      isReversed: false,
-      accentColor: "text-evoya-blue bg-evoya-blue/10",
-    },
   ];
   
   return (
@@ -618,3 +602,4 @@ const DetailedFeatures: React.FC = () => {
 };
 
 export default DetailedFeatures;
+
