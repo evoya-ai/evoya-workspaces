@@ -238,12 +238,12 @@ const DetailedFeatures: React.FC = () => {
     },
     {
       title: "Bilderkennung und Analyse",
-      description: "Automatisieren Sie die Texterkennung und Analyse visueller Daten für effizientere Geschäftsprozesse.",
+      description: "Automatisieren Sie die Erkennung und Interpretation von Bildern und visuellen Daten für verschiedenste Anwendungsbereiche.",
       details: [
-        "Optische Zeichenerkennung (OCR) zur Texterkennung aus Bildern und Dokumenten",
-        "Umwandlung von handgeschriebenen Notizen in bearbeitbaren Text",
-        "Erkennung und Klassifizierung wichtiger Dokumentelemente und Strukturen",
-        "Automatische Extraktion relevanter Textinformationen aus visuellen Medien",
+        "OCR-Technologie zur Extraktion von handgeschriebenem und gedrucktem Text aus Bildern",
+        "Analyse und Erkennung von Inhalten auf Screenshots oder Fotos",
+        "Extraktion von relevanten Informationen aus Dokumentenscans oder Belegen",
+        "Automatische Identifikation von Objekten oder Strukturen in Bildern",
       ],
       icon: <Eye className="w-6 h-6 text-white" />,
       image: "",
