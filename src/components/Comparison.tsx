@@ -58,39 +58,49 @@ const Comparison: React.FC = () => {
     // Check if tooltip exists for this feature and product
     const hasTooltip = tooltips[featureName] && tooltips[featureName][productName];
 
-    let statusIcon;
+    let icon;
     if (featureName === 'Dynamische Dokumentbearbeitung' && productName === 'Microsoft') {
       // For Microsoft Copilot's document editing feature - special case with X icon
-      statusIcon = <X className="mx-auto w-5 h-5 text-gray-400" />;
+      icon = <X className="w-5 h-5 text-gray-400" />;
     } else if (result === true) {
-      statusIcon = <Check className={`mx-auto w-5 h-5 ${isHighlighted ? 'text-evoya-orange' : 'text-evoya-orange'}`} />;
+      icon = <Check className={`w-5 h-5 ${isHighlighted ? 'text-evoya-orange' : 'text-evoya-orange'}`} />;
     } else if (result === 'limited') {
-      statusIcon = <AlertTriangle className="mx-auto w-5 h-5 text-amber-500" />;
+      icon = <AlertTriangle className="w-5 h-5 text-amber-500" />;
     } else {
-      statusIcon = <X className="mx-auto w-5 h-5 text-gray-400" />;
+      icon = <X className="w-5 h-5 text-gray-400" />;
     }
 
     if (hasTooltip) {
       return (
-        <div className="flex items-center justify-center relative">
-          <div className="flex-shrink-0">{statusIcon}</div>
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <button className="ml-1 flex-shrink-0">
-                  <Info className="w-4 h-4 text-gray-400 hover:text-gray-600" />
-                </button>
-              </TooltipTrigger>
-              <TooltipContent side="left" className="max-w-xs bg-white p-2 shadow-lg rounded-lg border border-gray-200 z-50">
-                <p className="text-xs text-gray-700">{tooltips[featureName][productName]}</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
+        <div className="flex justify-center items-center">
+          <div className="relative inline-flex items-center">
+            <span className="inline-block">{icon}</span>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <button className="ml-1 inline-flex">
+                    <Info className="w-4 h-4 text-gray-400 hover:text-gray-600" />
+                  </button>
+                </TooltipTrigger>
+                <TooltipContent 
+                  side="left" 
+                  align="center" 
+                  className="max-w-xs bg-white p-2 shadow-lg rounded-lg border border-gray-200 z-50"
+                >
+                  <p className="text-xs text-gray-700">{tooltips[featureName][productName]}</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </div>
         </div>
       );
     }
 
-    return statusIcon;
+    return (
+      <div className="flex justify-center items-center">
+        {icon}
+      </div>
+    );
   };
 
   return (
@@ -167,14 +177,14 @@ const Comparison: React.FC = () => {
                     {products.map((product, productIndex) => (
                       <td
                         key={productIndex}
-                        className={`px-6 py-4 text-center ${
+                        className={`px-6 py-4 ${
                           productIndex === 0 ? 'bg-evoya-blue/5' : ''
                         } hidden md:table-cell`}
                       >
                         {renderFeatureStatus(productIndex, featureIndex)}
                       </td>
                     ))}
-                    <td className="px-6 py-4 text-center md:hidden">
+                    <td className="px-6 py-4 md:hidden">
                       {renderFeatureStatus(activeTab, featureIndex)}
                     </td>
                   </tr>
