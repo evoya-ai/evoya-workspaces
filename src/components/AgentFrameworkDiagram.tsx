@@ -15,12 +15,16 @@ const AgentFrameworkDiagram: React.FC = () => {
           title="Instruktionen" 
           icon={<BookText className="w-7 h-7" />} 
           color="bg-evoya-blue" 
+          outline="dashed"
+          outlineColor="border-evoya-lightBlue/70"
         />
         
         <AgentComponent 
           title="Persona" 
           icon={<User className="w-7 h-7" />} 
           color="bg-evoya-blue" 
+          outline="dashed"
+          outlineColor="border-evoya-lightBlue/70"
         />
         
         {/* Plus icon between Instruktionen and Persona */}
