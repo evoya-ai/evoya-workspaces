@@ -24,8 +24,9 @@ const Hero: React.FC = () => {
               Innovativ. Kollaborativ. Sicher.
             </div>
             <h1 className="mb-6 text-white">
-              <span className="block mb-2">Optimieren Sie Arbeitsabläufe</span>
-              <span className="block mb-2">mit KI-gestützten</span>
+              <span className="block">Optimieren Sie</span>
+              <span className="block">Arbeitsabläufe</span>
+              <span className="block">mit KI-gestützten</span>
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-evoya-teal">
                 Workspaces
               </span>
