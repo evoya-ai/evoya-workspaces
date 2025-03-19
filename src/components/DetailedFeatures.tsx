@@ -272,10 +272,10 @@ const DetailedFeatures: React.FC = () => {
       title: "Live-Informationsabruf",
       description: "Greifen Sie in Echtzeit auf aktuelle Informationen aus dem Internet zu für fundierte Entscheidungen.",
       details: [
-        "KI-Agenten recherchieren selbstständig aktuelle Informationen für Ihre Anfragen",
-        "Automatisierte Wettbewerbsbeobachtung und Erfassung von Branchentrends",
-        "Personalisierte Informationsfeeds zu relevanten Geschäftsthemen",
-        "Echtzeit-Faktenprüfung und Quellenanalyse für verlässliche Recherchen",
+        "KI-Agenten durchsuchen das Internet gezielt nach relevanten Informationen und liefern präzise Rechercheergebnisse",
+        "Automatische Zusammenfassung und strukturierte Aufbereitung der Rechercheergebnisse mit Quellenangaben",
+        "Intelligente Filterung und Kuratierung von Informationen – deutlich über klassische Suchmaschinen hinaus",
+        "Echtzeit-Faktenprüfung und Qualitätsanalyse der Quellen für zuverlässige Geschäftsentscheidungen",
       ],
       icon: <Globe className="w-6 h-6 text-white" />,
       image: "",
@@ -697,3 +697,4 @@ const DetailedFeatures: React.FC = () => {
 };
 
 export default DetailedFeatures;
+
