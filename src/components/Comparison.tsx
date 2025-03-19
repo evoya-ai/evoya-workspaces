@@ -72,16 +72,16 @@ const Comparison: React.FC = () => {
 
     if (hasTooltip) {
       return (
-        <div className="flex items-center justify-center">
-          {statusIcon}
+        <div className="flex items-center justify-center relative">
+          <div className="flex-shrink-0">{statusIcon}</div>
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <button className="ml-1">
+                <button className="ml-1 flex-shrink-0">
                   <Info className="w-4 h-4 text-gray-400 hover:text-gray-600" />
                 </button>
               </TooltipTrigger>
-              <TooltipContent className="max-w-xs bg-white p-2 shadow-lg rounded-lg border border-gray-200">
+              <TooltipContent side="left" className="max-w-xs bg-white p-2 shadow-lg rounded-lg border border-gray-200 z-50">
                 <p className="text-xs text-gray-700">{tooltips[featureName][productName]}</p>
               </TooltipContent>
             </Tooltip>
