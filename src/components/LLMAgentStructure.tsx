@@ -1,8 +1,7 @@
 
 import React from 'react';
-import { BookText, User, Wrench, Brain, Computer, Database, Workflow, Package, Plus } from 'lucide-react';
+import { BookText, User, Wrench, Brain, Computer, Database, Plus } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
-import { Card, CardContent } from './ui/card';
 
 interface AgentComponentProps {
   title: string;
@@ -167,103 +166,106 @@ const LLMAgentStructure: React.FC = () => {
           <div className="p-6 rounded-xl bg-white shadow-lg border border-gray-100">
             <div className="text-2xl font-bold text-evoya-blue mb-8 text-center">Aufbau des Agentic Frameworks</div>
             
-            {/* Gesamtes Framework-Diagramm */}
-            <div className="relative w-full max-w-4xl mx-auto">
+            {/* Framework-Diagramm, neu gestaltet gemäß dem Screenshot */}
+            <div className="relative w-full max-w-4xl mx-auto p-4">
               {/* Top Row - Instruktionen und Persona */}
-              <div className="grid grid-cols-2 gap-4 mb-12 relative">
-                <div className="relative">
-                  <AgentComponent
-                    title="Instruktionen"
-                    icon={<BookText className="w-6 h-6" />}
-                    color="bg-evoya-blue"
-                    textColor="text-white"
-                  />
-                  
-                  {/* Pluszeichen zwischen Instruktionen und Persona */}
-                  <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-1.5 shadow-md border border-gray-200">
-                    <Plus className="w-5 h-5 text-evoya-blue" />
+              <div className="flex justify-center gap-2 mb-10 relative">
+                {/* Instruktionen */}
+                <div className="w-full max-w-[450px]">
+                  <div className="bg-evoya-blue text-white p-5 rounded-xl flex flex-col items-center">
+                    <BookText className="w-7 h-7 mb-2" />
+                    <div className="font-medium">Instruktionen</div>
                   </div>
                 </div>
                 
-                <AgentComponent
-                  title="Persona"
-                  icon={<User className="w-6 h-6" />}
-                  color="bg-evoya-blue"
-                  textColor="text-white"
-                />
+                {/* Plus Sign zwischen Instruktionen und Persona */}
+                <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-1 shadow-md border border-gray-200">
+                  <Plus className="w-6 h-6 text-evoya-blue" />
+                </div>
+                
+                {/* Persona */}
+                <div className="w-full max-w-[450px]">
+                  <div className="bg-evoya-blue text-white p-5 rounded-xl flex flex-col items-center">
+                    <User className="w-7 h-7 mb-2" />
+                    <div className="font-medium">Persona</div>
+                  </div>
+                </div>
               </div>
               
-              {/* Connector von oben nach Mitte */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-12 bg-evoya-blue/70 top-[6.5rem]">
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
+              {/* Vertikale Linie von Top Row zur Mittellinie */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center" style={{top: '150px', height: '65px'}}>
+                <div className="w-0.5 h-full bg-evoya-blue/70"></div>
+                <div className="absolute top-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
+                <div className="absolute bottom-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
               </div>
               
-              {/* Middle Row - Tools, LLM, Interface */}
-              <div className="grid grid-cols-3 gap-4 mb-12 items-center">
+              {/* Mittlere Reihe mit Tools und Sprachmodell */}
+              <div className="flex justify-between mb-16 relative" style={{marginTop: "50px"}}>
                 {/* Tools */}
-                <div className="flex justify-center">
-                  <AgentComponent
-                    title="Tools"
-                    icon={<Wrench className="w-6 h-6" />}
-                    color="bg-evoya-blue"
-                    textColor="text-white"
-                    className="w-full max-w-[180px]"
-                  />
+                <div className="w-64">
+                  <div className="bg-evoya-blue text-white p-5 rounded-xl flex flex-col items-center">
+                    <Wrench className="w-7 h-7 mb-2" />
+                    <div className="font-medium">Tools</div>
+                  </div>
                 </div>
                 
-                {/* Connector von Tools zum LLM */}
-                <div className="flex items-center justify-center">
+                {/* Horizontale Linie zwischen Tools und Sprachmodell */}
+                <div className="absolute left-1/2 top-16 transform -translate-x-1/2 -translate-y-1/2 w-64 flex items-center">
                   <div className="w-full h-0.5 bg-evoya-blue/70 relative">
                     <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
                     <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
                   </div>
                 </div>
                 
-                {/* LLM/Sprachmodell */}
-                <div className="flex justify-center">
-                  <AgentComponent
-                    title="Sprachmodell"
-                    icon={<Brain className="w-6 h-6" />}
-                    color="bg-evoya-orange"
-                    textColor="text-white"
-                    className="w-full max-w-[180px]"
-                  />
+                {/* Sprachmodell */}
+                <div className="w-64">
+                  <div className="bg-evoya-orange text-white p-5 rounded-xl flex flex-col items-center">
+                    <Brain className="w-7 h-7 mb-2" />
+                    <div className="font-medium">Sprachmodell</div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Interface in der dritten Zeile */}
+              <div className="flex justify-end mb-16 relative">
+                <div className="w-64">
+                  <div className="bg-evoya-blue text-white p-5 rounded-xl flex flex-col items-center">
+                    <Computer className="w-7 h-7 mb-2" />
+                    <div className="font-medium">Interface</div>
+                  </div>
                 </div>
                 
-                {/* Connector von LLM zum Interface */}
-                <div className="col-span-3 flex items-center justify-center mt-4">
-                  <div className="w-full max-w-[180px]"></div>
+                {/* Horizontale Linie zum Interface */}
+                <div className="absolute right-[340px] top-8 w-[calc(100%-340px)] flex items-center">
                   <div className="w-full h-0.5 bg-evoya-blue/70 relative">
                     <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
                     <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
                   </div>
-                  <div className="w-full max-w-[180px]">
-                    <AgentComponent
-                      title="Interface"
-                      icon={<Computer className="w-6 h-6" />}
-                      color="bg-evoya-blue"
-                      textColor="text-white"
-                    />
-                  </div>
+                </div>
+                
+                {/* Vertikale Linie von der Mittellinie zum Interface */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center" style={{top: '32px', height: '30px'}}>
+                  <div className="w-0.5 h-full bg-evoya-blue/70"></div>
+                  <div className="absolute top-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
+                  <div className="absolute bottom-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
                 </div>
               </div>
               
-              {/* Connector von Mitte nach unten */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-12 bg-evoya-blue/70" style={{ top: 'calc(50% + 2rem)' }}>
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
+              {/* Vertikale Linie zur unteren Reihe */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center" style={{top: '330px', height: '50px'}}>
+                <div className="w-0.5 h-full bg-evoya-blue/70"></div>
+                <div className="absolute top-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
+                <div className="absolute bottom-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
               </div>
               
-              {/* Bottom Row - Wissen */}
+              {/* Wissen in der unteren Reihe */}
               <div className="flex justify-center">
-                <AgentComponent
-                  title="Wissen"
-                  icon={<Database className="w-6 h-6" />}
-                  color="bg-evoya-blue"
-                  textColor="text-white"
-                  className="max-w-[180px]"
-                />
+                <div className="w-64">
+                  <div className="bg-evoya-blue text-white p-5 rounded-xl flex flex-col items-center">
+                    <Database className="w-7 h-7 mb-2" />
+                    <div className="font-medium">Wissen</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
