@@ -1,9 +1,10 @@
 
 import React from 'react';
-import { Shield, Bot } from 'lucide-react';
+import { Shield, Bot, Server, Lock } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { Card, CardContent } from './ui/card';
 import { cn } from '../lib/utils';
+import { Button } from './ui/button';
 
 interface ModelCardProps {
   provider: string;
@@ -120,6 +121,74 @@ const LanguageModels: React.FC = () => {
             </AnimatedSection>
           ))}
         </div>
+
+        {/* Swiss Llama 3.3 Special Section */}
+        <AnimatedSection className="mt-16" animation="fade-up">
+          <div className="bg-gradient-to-r from-evoya-blue/5 to-evoya-blue/10 rounded-2xl p-8 border border-evoya-blue/20">
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+              <div className="md:w-1/3 flex justify-center">
+                <div className="w-24 h-24 md:w-32 md:h-32 relative flex items-center justify-center rounded-full bg-white shadow-lg p-4 border-2 border-evoya-blue/20">
+                  <Shield className="w-12 h-12 md:w-16 md:h-16 text-evoya-blue" />
+                  <div className="absolute -top-2 -right-2 bg-evoya-orange text-white text-xs font-bold px-2 py-1 rounded-full">
+                    Schweiz
+                  </div>
+                </div>
+              </div>
+              <div className="md:w-2/3 text-center md:text-left">
+                <h3 className="text-2xl font-bold mb-3 text-evoya-blue">Swiss Llama 3.3</h3>
+                <p className="text-gray-700 mb-4">
+                  Unser Schweizer Premium-Modell bietet höchste Qualität bei vollständiger Datensouveränität. 
+                  Swiss Llama 3.3 wird ausschliesslich in der Schweiz gehostet und unterliegt den strengen 
+                  Schweizer Datenschutzgesetzen.
+                </p>
+                <div className="flex flex-wrap gap-3 mt-2 justify-center md:justify-start">
+                  <span className="px-3 py-1 rounded-full bg-white text-sm font-medium border border-evoya-blue/20 text-evoya-blue flex items-center">
+                    <Shield className="w-3 h-3 mr-1" />
+                    Schweizer Hosting
+                  </span>
+                  <span className="px-3 py-1 rounded-full bg-white text-sm font-medium border border-evoya-blue/20 text-evoya-blue flex items-center">
+                    <Lock className="w-3 h-3 mr-1" />
+                    DSGVO-konform
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* On-Premise Solutions Section */}
+        <AnimatedSection className="mt-12 mb-8" animation="fade-up">
+          <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-8 border border-gray-200">
+            <div className="flex flex-col items-center text-center">
+              <div className="p-4 bg-white rounded-full shadow-md mb-6">
+                <Server className="w-10 h-10 text-evoya-orange" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4">On-Premise Lösungen</h3>
+              <p className="text-gray-700 max-w-3xl mb-6">
+                Maximale Kontrolle über Ihre KI-Infrastruktur: Wir bieten massgeschneiderte On-Premise-Lösungen, 
+                bei denen die KI-Modelle direkt auf Ihren Servern laufen. So bleiben Ihre Daten immer in Ihrer 
+                Infrastruktur und Sie profitieren von höchster Sicherheit und Datenschutz.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-3xl">
+                <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                  <h4 className="font-semibold mb-2">Volle Kontrolle</h4>
+                  <p className="text-sm text-gray-600">Modelle laufen in Ihrer eigenen Infrastruktur und unter Ihrer Kontrolle.</p>
+                </div>
+                <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                  <h4 className="font-semibold mb-2">Massgeschneidert</h4>
+                  <p className="text-sm text-gray-600">Anpassbar an Ihre spezifischen Anforderungen und Sicherheitsrichtlinien.</p>
+                </div>
+                <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                  <h4 className="font-semibold mb-2">Keine Datenexporte</h4>
+                  <p className="text-sm text-gray-600">Sensible Daten verlassen niemals Ihr Unternehmensnetzwerk.</p>
+                </div>
+              </div>
+              <Button className="mt-8 bg-evoya-orange text-white hover:bg-evoya-orange/90">
+                Beratung anfragen
+              </Button>
+            </div>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );
