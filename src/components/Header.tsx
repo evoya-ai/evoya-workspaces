@@ -1,10 +1,13 @@
 
 import React, { useState, useEffect } from 'react';
-import { X, Menu } from 'lucide-react';
+import { X, Menu, Globe } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translate } from '../utils/translations';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, setLanguage } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +25,10 @@ const Header: React.FC = () => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'de' ? 'en' : 'de');
   };
 
   return (
@@ -43,18 +50,51 @@ const Header: React.FC = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#features" className={`${isScrolled ? 'text-evoya-navy font-semibold' : 'text-white'} hover:text-evoya-orange transition-colors`}>Funktionen</a>
-          <a href="#benefits" className={`${isScrolled ? 'text-evoya-navy font-semibold' : 'text-white'} hover:text-evoya-orange transition-colors`}>Vorteile</a>
-          <a href="#services" className={`${isScrolled ? 'text-evoya-navy font-semibold' : 'text-white'} hover:text-evoya-orange transition-colors`}>Dienstleistungen</a>
-          <a href="#comparison" className={`${isScrolled ? 'text-evoya-navy font-semibold' : 'text-white'} hover:text-evoya-orange transition-colors`}>Vergleich</a>
-          <a href="#pricing" className={`${isScrolled ? 'text-evoya-navy font-semibold' : 'text-white'} hover:text-evoya-orange transition-colors`}>Preise</a>
-          <a href="#contact" className="bg-white text-evoya-navy hover:bg-evoya-orange hover:text-white transition-colors duration-300 font-medium py-2 px-4 rounded-md">Kontakt</a>
+          <a href="#features" className={`${isScrolled ? 'text-evoya-navy font-semibold' : 'text-white'} hover:text-evoya-orange transition-colors`}>
+            {translate('nav_features', language)}
+          </a>
+          <a href="#benefits" className={`${isScrolled ? 'text-evoya-navy font-semibold' : 'text-white'} hover:text-evoya-orange transition-colors`}>
+            {translate('nav_benefits', language)}
+          </a>
+          <a href="#services" className={`${isScrolled ? 'text-evoya-navy font-semibold' : 'text-white'} hover:text-evoya-orange transition-colors`}>
+            {translate('nav_services', language)}
+          </a>
+          <a href="#comparison" className={`${isScrolled ? 'text-evoya-navy font-semibold' : 'text-white'} hover:text-evoya-orange transition-colors`}>
+            {translate('nav_comparison', language)}
+          </a>
+          <a href="#pricing" className={`${isScrolled ? 'text-evoya-navy font-semibold' : 'text-white'} hover:text-evoya-orange transition-colors`}>
+            {translate('nav_pricing', language)}
+          </a>
+          <a href="#contact" className="bg-white text-evoya-navy hover:bg-evoya-orange hover:text-white transition-colors duration-300 font-medium py-2 px-4 rounded-md">
+            {translate('nav_contact', language)}
+          </a>
+          
+          {/* Language Switcher */}
+          <button 
+            onClick={toggleLanguage} 
+            className={`flex items-center ${isScrolled ? 'text-evoya-navy' : 'text-white'} hover:text-evoya-orange transition-colors`}
+            aria-label="Toggle language"
+          >
+            <Globe className="h-5 w-5 mr-1" />
+            <span className="text-sm font-medium">{translate('language_switch', language)}</span>
+          </button>
         </nav>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden" onClick={toggleMobileMenu}>
-          <Menu className={`h-6 w-6 ${isScrolled ? 'text-evoya-navy' : 'text-white'}`} />
-        </button>
+        <div className="md:hidden flex items-center space-x-4">
+          {/* Language Switcher for Mobile */}
+          <button 
+            onClick={toggleLanguage} 
+            className={`flex items-center ${isScrolled ? 'text-evoya-navy' : 'text-white'} hover:text-evoya-orange transition-colors`}
+            aria-label="Toggle language"
+          >
+            <Globe className="h-5 w-5" />
+          </button>
+          
+          <button onClick={toggleMobileMenu}>
+            <Menu className={`h-6 w-6 ${isScrolled ? 'text-evoya-navy' : 'text-white'}`} />
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation */}
@@ -72,9 +112,19 @@ const Header: React.FC = () => {
                 className="h-8" 
               />
             </div>
-            <button onClick={toggleMobileMenu}>
-              <X className="h-6 w-6 text-gray-700" />
-            </button>
+            <div className="flex items-center space-x-4">
+              <button 
+                onClick={toggleLanguage} 
+                className="flex items-center text-gray-700"
+                aria-label="Toggle language"
+              >
+                <Globe className="h-5 w-5 mr-1" />
+                <span className="text-sm font-medium">{translate('language_switch', language)}</span>
+              </button>
+              <button onClick={toggleMobileMenu}>
+                <X className="h-6 w-6 text-gray-700" />
+              </button>
+            </div>
           </div>
           <nav className="flex flex-col space-y-6">
             <a 
@@ -82,42 +132,42 @@ const Header: React.FC = () => {
               className="text-gray-700 text-lg py-2 border-b border-gray-100"
               onClick={toggleMobileMenu}
             >
-              Funktionen
+              {translate('nav_features', language)}
             </a>
             <a 
               href="#benefits" 
               className="text-gray-700 text-lg py-2 border-b border-gray-100"
               onClick={toggleMobileMenu}
             >
-              Vorteile
+              {translate('nav_benefits', language)}
             </a>
             <a 
               href="#services" 
               className="text-gray-700 text-lg py-2 border-b border-gray-100"
               onClick={toggleMobileMenu}
             >
-              Dienstleistungen
+              {translate('nav_services', language)}
             </a>
             <a 
               href="#comparison" 
               className="text-gray-700 text-lg py-2 border-b border-gray-100"
               onClick={toggleMobileMenu}
             >
-              Vergleich
+              {translate('nav_comparison', language)}
             </a>
             <a 
               href="#pricing" 
               className="text-gray-700 text-lg py-2 border-b border-gray-100"
               onClick={toggleMobileMenu}
             >
-              Preise
+              {translate('nav_pricing', language)}
             </a>
             <a 
               href="#contact" 
               className="btn-primary text-center mt-4"
               onClick={toggleMobileMenu}
             >
-              Kontakt
+              {translate('nav_contact', language)}
             </a>
           </nav>
         </div>

@@ -2,8 +2,12 @@
 import React from 'react';
 import { Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translate } from '../utils/translations';
 
 const Footer: React.FC = () => {
+  const { language } = useLanguage();
+
   return (
     <footer className="bg-[#1A1F2C] text-white">
       <div className="section-container py-16">
@@ -15,7 +19,7 @@ const Footer: React.FC = () => {
               EVOYA AI
             </div>
             <p className="text-gray-300 text-sm">
-              Empowering Businesses with Practical AI Solutions
+              {translate('footer_slogan', language)}
             </p>
             <div className="flex space-x-4">
               <a 
@@ -32,7 +36,9 @@ const Footer: React.FC = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-manrope font-semibold text-white text-lg mb-6">Kontakt</h3>
+            <h3 className="font-manrope font-semibold text-white text-lg mb-6">
+              {translate('footer_contact', language)}
+            </h3>
             <ul className="space-y-4">
               <li className="flex items-center text-sm text-gray-300">
                 <MapPin className="w-4 h-4 mr-3 text-evoya-orange" />
@@ -56,7 +62,7 @@ const Footer: React.FC = () => {
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2025 Evoya AI GmbH. Alle Rechte vorbehalten.
+            {translate('footer_copyright', language)}
           </p>
           <div className="flex flex-wrap gap-6 justify-center">
             <a 
@@ -65,7 +71,7 @@ const Footer: React.FC = () => {
               rel="noopener noreferrer" 
               className="text-gray-400 hover:text-evoya-orange transition-colors text-sm"
             >
-              Datenschutz
+              {translate('footer_privacy', language)}
             </a>
             <a 
               href="https://evoya.ai/agb/" 
@@ -73,7 +79,7 @@ const Footer: React.FC = () => {
               rel="noopener noreferrer" 
               className="text-gray-400 hover:text-evoya-orange transition-colors text-sm"
             >
-              AGB
+              {translate('footer_terms', language)}
             </a>
             <a 
               href="https://evoya.ai/impressum/" 
@@ -81,7 +87,7 @@ const Footer: React.FC = () => {
               rel="noopener noreferrer" 
               className="text-gray-400 hover:text-evoya-orange transition-colors text-sm"
             >
-              Impressum
+              {translate('footer_imprint', language)}
             </a>
           </div>
         </div>

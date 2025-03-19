@@ -13,6 +13,7 @@ import CallToAction from '../components/CallToAction';
 import Footer from '../components/Footer';
 import BlurBackground from '../components/BlurBackground';
 import LLMAgentStructure from '../components/LLMAgentStructure';
+import { LanguageProvider } from '../contexts/LanguageContext';
 
 const Index = () => {
   useEffect(() => {
@@ -44,23 +45,25 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      <BlurBackground />
-      <Header />
-      <main>
-        <Hero />
-        <Features />
-        <DetailedFeatures />
-        <LanguageModels />
-        <LLMAgentStructure />
-        <Benefits />
-        <Services />
-        <Comparison />
-        <Pricing />
-        <CallToAction />
-      </main>
-      <Footer />
-    </div>
+    <LanguageProvider>
+      <div className="relative min-h-screen overflow-hidden">
+        <BlurBackground />
+        <Header />
+        <main>
+          <Hero />
+          <Features />
+          <DetailedFeatures />
+          <LanguageModels />
+          <LLMAgentStructure />
+          <Benefits />
+          <Services />
+          <Comparison />
+          <Pricing />
+          <CallToAction />
+        </main>
+        <Footer />
+      </div>
+    </LanguageProvider>
   );
 };
 

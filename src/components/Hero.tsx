@@ -1,9 +1,12 @@
-
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translate } from '../utils/translations';
 
 const Hero: React.FC = () => {
+  const { language } = useLanguage();
+  
   return (
     <section className="relative min-h-[85vh] flex items-center pt-20 pb-12 overflow-hidden bg-gradient-to-b from-evoya-navy to-evoya-blue">
       <div className="absolute inset-0 opacity-10">
@@ -21,27 +24,38 @@ const Hero: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <AnimatedSection animation="fade-up" className="text-center lg:text-left">
             <div className="inline-block mb-4 px-3 py-1 rounded-full bg-white/20 text-white text-sm font-medium">
-              Innovativ. Kollaborativ. Sicher.
+              {translate('hero_badge', language)}
             </div>
             <h1 className="mb-6 text-white">
-              <span className="block">Optimieren Sie</span>
-              <span className="block">Arbeitsabläufe</span>
-              <span className="block">mit KI-gestützten</span>
+              <span className="block">{translate('hero_title1', language)}</span>
+              <span className="block">{translate('hero_title2', language)}</span>
+              <span className="block">{translate('hero_title3', language)}</span>
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-evoya-orange to-evoya-yellow">
-                Workspaces
+                {translate('hero_title4', language)}
               </span>
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8 max-w-xl mx-auto lg:mx-0">
-              Evoya AI Workspaces ermöglichen die direkte Zusammenarbeit mit KI – für effiziente Texterstellung, 
-              Dokumentenanalyse, Live-Recherchen und visuelle Darstellungen.
+              {translate('hero_description', language)}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a href="https://tidycal.com/evoya/erstgespraech" target="_blank" rel="noopener noreferrer" className="bg-white text-evoya-navy hover:bg-evoya-orange hover:text-white transition-colors duration-300 font-medium py-3 px-6 rounded-md inline-flex items-center group">
-                Demo vereinbaren
+              <a 
+                href="https://tidycal.com/evoya/erstgespraech" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="bg-white text-evoya-navy hover:bg-evoya-orange hover:text-white transition-colors duration-300 font-medium py-3 px-6 rounded-md inline-flex items-center group"
+              >
+                {translate('hero_demo', language)}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
-              <a href="https://avaia.io/accounts/signup/" target="_blank" rel="noopener noreferrer" className="border-2 border-white bg-transparent hover:bg-white/10 hover:border-evoya-orange transition-colors duration-300 font-medium py-3 px-6 rounded-md inline-flex items-center group">
-                <span className="text-white group-hover:text-evoya-orange transition-colors duration-300">Kostenlos starten</span>
+              <a 
+                href="https://avaia.io/accounts/signup/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="border-2 border-white bg-transparent hover:bg-white/10 hover:border-evoya-orange transition-colors duration-300 font-medium py-3 px-6 rounded-md inline-flex items-center group"
+              >
+                <span className="text-white group-hover:text-evoya-orange transition-colors duration-300">
+                  {translate('hero_start', language)}
+                </span>
               </a>
             </div>
           </AnimatedSection>
