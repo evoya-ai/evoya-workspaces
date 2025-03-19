@@ -32,17 +32,12 @@ const Header: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center">
-          <div className="flex items-center">
-            <div className="bg-white rounded-lg p-1 shadow-sm">
-              <img 
-                src="/lovable-uploads/4024a740-8b36-4293-82d7-02b4a0f8ef8c.png" 
-                alt="Evoya AI Logo" 
-                className="h-8" 
-              />
-            </div>
-            <div className="ml-2 px-2 py-1 bg-gradient-to-r from-evoya-blue/10 to-evoya-green/10 rounded text-xs font-medium">
-              KI-Workspaces
-            </div>
+          <div className="bg-white rounded-lg px-3 py-1 shadow-sm">
+            <img 
+              src="/lovable-uploads/4024a740-8b36-4293-82d7-02b4a0f8ef8c.png" 
+              alt="Evoya AI Logo" 
+              className="h-8" 
+            />
           </div>
         </div>
 
@@ -70,7 +65,7 @@ const Header: React.FC = () => {
       >
         <div className="p-6">
           <div className="flex justify-between items-center mb-8">
-            <div className="bg-white rounded-lg p-1 shadow-sm">
+            <div className="bg-white rounded-lg px-3 py-1 shadow-sm">
               <img 
                 src="/lovable-uploads/4024a740-8b36-4293-82d7-02b4a0f8ef8c.png" 
                 alt="Evoya AI Logo" 
