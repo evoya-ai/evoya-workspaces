@@ -5,17 +5,17 @@ import { Separator } from '@/components/ui/separator';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-evoya-navy text-white">
+    <footer className="bg-[#1A1F2C] text-white">
       <div className="section-container py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Company Info */}
           <div className="space-y-6">
-            <div className="text-2xl font-serif font-semibold text-white">
+            <div className="text-2xl font-manrope font-semibold text-white">
               EVOYA AI
             </div>
             <p className="text-gray-300 text-sm">
-              Moderne KI-Lösungen für Ihr Unternehmen. Einfach, sicher und anpassungsfähig.
+              Empowering Businesses with Practical AI Solutions
             </p>
             <div className="flex space-x-4">
               <a 
@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-semibold text-white text-lg mb-6">Kontakt</h3>
+            <h3 className="font-manrope font-semibold text-white text-lg mb-6">Kontakt</h3>
             <ul className="space-y-4">
               <li className="flex items-center text-sm text-gray-300">
                 <MapPin className="w-4 h-4 mr-3 text-evoya-orange" />
