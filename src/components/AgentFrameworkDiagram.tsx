@@ -56,8 +56,15 @@ const AgentFrameworkDiagram: React.FC = () => {
           color="bg-evoya-blue" 
         />
         
-        {/* Horizontal connecting lines */}
-        <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2">
+        {/* Left horizontal connecting line (Tools to Sprachmodell) */}
+        <div className="absolute top-1/2 left-0 w-1/6 transform -translate-y-1/2">
+          <div className="w-full h-0.5 bg-evoya-blue/70"></div>
+          <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
+          <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
+        </div>
+        
+        {/* Right horizontal connecting line (Sprachmodell to Interface) */}
+        <div className="absolute top-1/2 right-0 w-1/6 transform -translate-y-1/2">
           <div className="w-full h-0.5 bg-evoya-blue/70"></div>
           <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
           <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
