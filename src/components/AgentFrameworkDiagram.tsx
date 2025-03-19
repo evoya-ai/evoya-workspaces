@@ -14,17 +14,19 @@ const AgentFrameworkDiagram: React.FC = () => {
         <AgentComponent 
           title="Instruktionen" 
           icon={<BookText className="w-7 h-7" />} 
-          color="bg-evoya-blue" 
+          color="bg-evoya-lightBlue/20" 
+          textColor="text-evoya-navy"
           outline="dashed"
-          outlineColor="border-evoya-lightBlue/70"
+          outlineColor="border-evoya-blue"
         />
         
         <AgentComponent 
           title="Persona" 
           icon={<User className="w-7 h-7" />} 
-          color="bg-evoya-blue" 
+          color="bg-evoya-orange/20" 
+          textColor="text-evoya-darkGray"
           outline="dashed"
-          outlineColor="border-evoya-lightBlue/70"
+          outlineColor="border-evoya-orange"
         />
         
         {/* Plus icon between Instruktionen and Persona */}
