@@ -46,6 +46,7 @@ const Header: React.FC = () => {
           <a href="#benefits" className={`${isScrolled ? 'text-evoya-navy font-semibold' : 'text-white'} hover:text-evoya-orange transition-colors`}>Vorteile</a>
           <a href="#services" className={`${isScrolled ? 'text-evoya-navy font-semibold' : 'text-white'} hover:text-evoya-orange transition-colors`}>Dienstleistungen</a>
           <a href="#comparison" className={`${isScrolled ? 'text-evoya-navy font-semibold' : 'text-white'} hover:text-evoya-orange transition-colors`}>Vergleich</a>
+          <a href="#pricing" className={`${isScrolled ? 'text-evoya-navy font-semibold' : 'text-white'} hover:text-evoya-orange transition-colors`}>Preise</a>
           <a href="#contact" className="bg-white text-evoya-navy hover:bg-evoya-orange hover:text-white transition-colors duration-300 font-medium py-2 px-4 rounded-md">Kontakt</a>
         </nav>
 
@@ -98,6 +99,13 @@ const Header: React.FC = () => {
               onClick={toggleMobileMenu}
             >
               Vergleich
+            </a>
+            <a 
+              href="#pricing" 
+              className="text-gray-700 text-lg py-2 border-b border-gray-100"
+              onClick={toggleMobileMenu}
+            >
+              Preise
             </a>
             <a 
               href="#contact" 

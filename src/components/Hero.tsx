@@ -24,14 +24,14 @@ const Hero: React.FC = () => {
               Innovativ. Kollaborativ. Sicher.
             </div>
             <h1 className="mb-6 text-white">
-              <span className="block mb-3">Optimieren Sie Arbeitsabläufe</span>
+              <span className="block mb-3">Optimieren Sie Arbeitsabläufe mit</span>
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-evoya-teal">
-                mit KI-gestützten Workspaces
+                KI-gestützten Workspaces
               </span>
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8 max-w-xl mx-auto lg:mx-0">
               Evoya AI Workspaces ermöglichen die direkte Zusammenarbeit mit KI – für effiziente Texterstellung, 
-              Dokumentenanalyse, Live-Recherchen und visuelle Darstellungen. Nahtlos integrierbar in bestehende Prozesse.
+              Dokumentenanalyse, Live-Recherchen und visuelle Darstellungen.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a href="https://tidycal.com/evoya/erstgespraech" target="_blank" rel="noopener noreferrer" className="bg-white text-evoya-navy hover:bg-evoya-orange hover:text-white transition-colors duration-300 font-medium py-3 px-6 rounded-md inline-flex items-center group">
