@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Check, X, AlertTriangle, Info } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -17,14 +16,27 @@ const Comparison: React.FC = () => {
     'Nutzungsbasierte Abrechnung',
     'Massgeschneiderte KI-Lösungen',
     'Persönliche Betreuung',
-    'Dynamische Dokumentbearbeitung',
+    'Dynamische Dokumentbearbeitung im Chat',
+    'Privacy Shield',
+    'Datenspeicherung in der Schweiz',
+    'Schweizer Sprachmodelle',
   ];
 
   const tooltips = {
-    'Dynamische Dokumentbearbeitung': {
-      'Evoya AI': 'Vollständig integriert – Inhalte können direkt und dynamisch im Chat-Interface bearbeitet werden.',
-      'OpenAI': 'Ähnlich wie Evoya AI – über ein eigenes Interface verfügbar.',
-      'Microsoft': 'Eingeschränkt – Bearbeitung nur in Office-Anwendungen wie Word oder Excel möglich.',
+    'Privacy Shield': {
+      'Evoya AI': 'Evoya AI bietet ein einzigartiges Datenschutzschild zur Anonymisierung sensibler Daten.',
+      'OpenAI': 'Diese Funktion ist nicht verfügbar.',
+      'Microsoft': 'Diese Funktion ist nicht verfügbar.',
+    },
+    'Datenspeicherung in der Schweiz': {
+      'Evoya AI': 'Daten können in sicheren Rechenzentren in der Schweiz gespeichert werden.',
+      'OpenAI': 'Keine spezifische Option für die Schweiz.',
+      'Microsoft': 'Keine spezifische Option für die Schweiz.',
+    },
+    'Schweizer Sprachmodelle': {
+      'Evoya AI': 'Unterstützt auch Schweizer Sprachmodelle.',
+      'OpenAI': 'Keine spezifische Unterstützung für Schweizer Modelle.',
+      'Microsoft': 'Keine spezifische Unterstützung für Schweizer Modelle.',
     }
   };
 
@@ -32,19 +44,19 @@ const Comparison: React.FC = () => {
     {
       name: 'Evoya AI',
       description: 'KI-Workspaces',
-      results: [true, true, true, true, true, true, true, true] as FeatureResult[],
+      results: [true, true, true, true, true, true, true, true, true, true, true] as FeatureResult[],
       highlighted: true
     },
     {
       name: 'OpenAI',
       description: 'ChatGPT',
-      results: [false, false, false, false, false, false, false, true] as FeatureResult[],
+      results: [false, false, false, false, false, false, false, true, false, false, false] as FeatureResult[],
       highlighted: false
     },
     {
       name: 'Microsoft',
       description: 'Copilot',
-      results: [false, false, true, false, false, false, false, false] as FeatureResult[],
+      results: [false, false, true, false, false, false, false, false, false, false, false] as FeatureResult[],
       highlighted: false
     }
   ];
@@ -55,14 +67,8 @@ const Comparison: React.FC = () => {
     const featureName = features[featureIndex];
     const productName = products[productIndex].name;
     
-    // Check if tooltip exists for this feature and product
-    const hasTooltip = tooltips[featureName] && tooltips[featureName][productName];
-
     let icon;
-    if (featureName === 'Dynamische Dokumentbearbeitung' && productName === 'Microsoft') {
-      // For Microsoft Copilot's document editing feature - special case with X icon
-      icon = <X className="w-5 h-5 text-gray-400" />;
-    } else if (result === true) {
+    if (result === true) {
       icon = <Check className={`w-5 h-5 ${isHighlighted ? 'text-evoya-orange' : 'text-evoya-orange'}`} />;
     } else if (result === 'limited') {
       icon = <AlertTriangle className="w-5 h-5 text-amber-500" />;
