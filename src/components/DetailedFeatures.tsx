@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic, Shield, Lock, Database, ArrowRight, User, Globe2, RefreshCcw, Book, Layers, Network, Brain, Search } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -44,13 +43,13 @@ const FeatureDetail: React.FC<FeatureDetailProps> = ({
         animation={isReversed ? "fade-up" : "fade-up"}
       >
         <div className="max-w-xl">
-          <div className={`inline-flex items-center justify-center rounded-full p-2 ${accentColor} mb-4`}>
+          <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full ${accentColor} mb-4`}>
             {icon}
           </div>
           <div className="flex items-center gap-3 mb-4">
             <h3 className="text-2xl lg:text-3xl font-semibold">{title}</h3>
             {comingSoon && (
-              <Badge variant="outline" className="bg-evoya-orange/10 text-evoya-orange border-evoya-orange/30">
+              <Badge variant="outline" className="bg-evoya-blue/10 text-evoya-blue border-evoya-blue/30">
                 Coming Soon
               </Badge>
             )}
@@ -224,11 +223,11 @@ const DetailedFeatures: React.FC = () => {
         "Unterstützung bei Brainstorming und Ideenfindung für Konzepte und kreative Inhalte",
         "Mehrsprachige Übersetzung und kontextgerechte Anpassung von Texten für eine zielgruppengerechte Kommunikation.",
       ],
-      icon: <FileText className="w-6 h-6 text-white" />,
+      icon: <FileText className="w-8 h-8 text-white" />,
       image: "",
       alt: "Person arbeitet an einem Text-Dokument",
       isReversed: false,
-      accentColor: "text-evoya-orange bg-evoya-orange/10",
+      accentColor: "bg-evoya-orange/10 text-evoya-orange",
       customContent: textGenerationContent,
     },
     {
@@ -240,11 +239,11 @@ const DetailedFeatures: React.FC = () => {
         "Erstellung von Illustrationen für interne Schulungsmaterialien und Anleitungen",
         "Flexible Anpassung von Bildformaten und Stilen für unterschiedliche Verwendungszwecke",
       ],
-      icon: <ImageIcon className="w-6 h-6 text-white" />,
+      icon: <ImageIcon className="w-8 h-8 text-white" />,
       image: "",
       alt: "Generierte Bilder auf einem Display",
       isReversed: true,
-      accentColor: "text-evoya-orange bg-evoya-orange/10",
+      accentColor: "bg-evoya-orange/10 text-evoya-orange",
       customContent: businessmanContent,
     },
     {
@@ -256,11 +255,11 @@ const DetailedFeatures: React.FC = () => {
         "Extraktion von relevanten Informationen aus Dokumentenscans oder Belegen",
         "Automatische Identifikation von Objekten oder Strukturen in Bildern",
       ],
-      icon: <Eye className="w-6 h-6 text-white" />,
+      icon: <Eye className="w-8 h-8 text-white" />,
       image: "",
       alt: "Bilderkennung durch künstliche Intelligenz",
       isReversed: false,
-      accentColor: "text-evoya-orange bg-evoya-orange/10",
+      accentColor: "bg-evoya-orange/10 text-evoya-orange",
       customContent: imageRecognitionContent,
     },
     {
@@ -272,11 +271,11 @@ const DetailedFeatures: React.FC = () => {
         "Intelligente Erkennung von Schlüsselinformationen in komplexen Dokumenten",
         "Schnelle Verarbeitung grosser Dokumentenmengen mit automatischer Extraktion und Zusammenfassung relevanter Inhalte",
       ],
-      icon: <FileSearch className="w-6 h-6 text-white" />,
+      icon: <FileSearch className="w-8 h-8 text-white" />,
       image: "",
       alt: "Dokumentenanalyse auf einem Laptop",
       isReversed: true,
-      accentColor: "text-evoya-orange bg-evoya-orange/10",
+      accentColor: "bg-evoya-orange/10 text-evoya-orange",
       customContent: documentContent,
     },
     {
@@ -288,11 +287,11 @@ const DetailedFeatures: React.FC = () => {
         "Intelligente Filterung und Kuratierung von Informationen – deutlich über klassische Suchmaschinen hinaus",
         "Echtzeit-Faktenprüfung und Qualitätsanalyse der Quellen für zuverlässige Geschäftsentscheidungen",
       ],
-      icon: <Globe className="w-6 h-6 text-white" />,
+      icon: <Globe className="w-8 h-8 text-white" />,
       image: "",
       alt: "Echtzeitdaten auf einem Dashboard",
       isReversed: false,
-      accentColor: "text-evoya-orange bg-evoya-orange/10",
+      accentColor: "bg-evoya-orange/10 text-evoya-orange",
       customContent: webContent,
     },
     {
@@ -304,11 +303,11 @@ const DetailedFeatures: React.FC = () => {
         "Grafische Aufbereitung von Konzepten, Abläufen und Strukturen für unterschiedliche Zielgruppen",
         "Datenvisualisierung in verschiedenen Diagrammtypen",
       ],
-      icon: <BarChart className="w-6 h-6 text-white" />,
+      icon: <BarChart className="w-8 h-8 text-white" />,
       image: "",
       alt: "Visualisierung von Geschäftsprozessen",
       isReversed: true,
-      accentColor: "text-evoya-orange bg-evoya-orange/10",
+      accentColor: "bg-evoya-orange/10 text-evoya-orange",
       customContent: diagramContent,
     },
     {
@@ -320,12 +319,12 @@ const DetailedFeatures: React.FC = () => {
         "Formatierungskontrolle mit Überschriften, Absätzen und Textauszeichnungen direkt im Editor",
         "Interaktive Zusammenarbeit mit der KI innerhalb des Dokuments – nicht nur sequentielle Antworten wie in einem Chat",
       ],
-      icon: <PenTool className="w-6 h-6 text-white" />,
+      icon: <PenTool className="w-8 h-8 text-white" />,
       customContent: creatorImageInterface,
       image: "", // Not used when customContent is provided
       alt: "Kreative Bearbeitung von Inhalten",
       isReversed: false,
-      accentColor: "text-evoya-orange bg-evoya-orange/10",
+      accentColor: "bg-evoya-orange/10 text-evoya-orange",
       comingSoon: true,
     },
     {
@@ -337,12 +336,12 @@ const DetailedFeatures: React.FC = () => {
         "Mehrsprachige Unterstützung für internationale Teams und Kommunikation in verschiedenen Sprachen",
         "Barrierefreie Nutzung für Menschen mit Sehbehinderungen oder eingeschränkter Tastaturnutzung",
       ],
-      icon: <Mic className="w-6 h-6 text-white" />,
+      icon: <Mic className="w-8 h-8 text-white" />,
       customContent: audioWaveform,
       image: "", // Not used when customContent is provided
       alt: "Spracherkennung und Transkription",
       isReversed: true,
-      accentColor: "text-evoya-orange bg-evoya-orange/10",
+      accentColor: "bg-evoya-orange/10 text-evoya-orange",
       comingSoon: true,
     },
   ];
