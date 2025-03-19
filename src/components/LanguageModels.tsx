@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Shield, Bot, Server, Lock } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -44,6 +45,13 @@ const ModelCard: React.FC<ModelCardProps> = ({
 };
 
 const LanguageModels: React.FC = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const providers = [
     {
       provider: "OpenAI",
@@ -181,7 +189,10 @@ const LanguageModels: React.FC = () => {
                   <p className="text-sm text-gray-600">Sensible Daten verlassen niemals Ihr Unternehmensnetzwerk.</p>
                 </div>
               </div>
-              <Button className="mt-8 bg-evoya-orange text-white hover:bg-evoya-orange/90">
+              <Button 
+                className="mt-8 bg-evoya-orange text-white hover:bg-evoya-orange/90"
+                onClick={scrollToContact}
+              >
                 Beratung anfragen
               </Button>
             </div>
