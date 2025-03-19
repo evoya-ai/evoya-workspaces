@@ -245,55 +245,70 @@ const DetailedFeatures: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-[450px] overflow-hidden rounded-xl shadow-lg">
-              <div className="absolute inset-0 bg-gradient-to-r from-evoya-lightBlue/5 to-evoya-navy/10 z-0"></div>
-              
-              {/* Central Brain Component */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-white rounded-full shadow-xl border-4 border-evoya-lightBlue/30 flex items-center justify-center z-20">
-                <div className="text-center p-2">
-                  <Brain className="w-12 h-12 text-evoya-navy mx-auto mb-2" />
-                  <span className="block text-sm font-semibold text-evoya-navy">Semantische Analyse</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <div className="flex flex-col">
+              {/* Visualization part */}
+              <div className="relative h-[450px] overflow-hidden rounded-xl shadow-lg mb-8">
+                <div className="absolute inset-0 bg-gradient-to-r from-evoya-lightBlue/5 to-evoya-navy/10 z-0"></div>
+                
+                {/* Central Brain Component */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-white rounded-full shadow-xl border-4 border-evoya-lightBlue/30 flex items-center justify-center z-20">
+                  <div className="text-center p-2">
+                    <Brain className="w-12 h-12 text-evoya-navy mx-auto mb-2" />
+                    <span className="block text-sm font-semibold text-evoya-navy">Semantische Analyse</span>
+                  </div>
+                </div>
+                
+                {/* Connecting lines - Modified to remove middle connections */}
+                <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 450" xmlns="http://www.w3.org/2000/svg">
+                  <g stroke="#5B6CAD" strokeWidth="1.5" strokeDasharray="5,3" opacity="0.6">
+                    <line x1="200" y1="225" x2="70" y2="80" />
+                    <line x1="200" y1="225" x2="330" y2="80" />
+                    <line x1="200" y1="225" x2="70" y2="370" />
+                    <line x1="200" y1="225" x2="330" y2="370" />
+                    {/* Removed the middle left and right connecting lines */}
+                  </g>
+                </svg>
+                
+                {/* Top left: Dokumente */}
+                <div className="absolute top-[10%] left-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '0s' }}>
+                  <Book className="w-8 h-8 text-evoya-orange mx-auto mb-1" />
+                  <span className="block text-xs font-medium text-center">Dokumente</span>
+                </div>
+                
+                {/* Top right: Webinhalte */}
+                <div className="absolute top-[10%] right-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '1.5s' }}>
+                  <Globe className="w-8 h-8 text-evoya-green mx-auto mb-1" />
+                  <span className="block text-xs font-medium text-center">Webinhalte</span>
+                </div>
+                
+                {/* Removed Middle left: Strukturierte Daten */}
+                
+                {/* Removed Middle right: Analyse */}
+                
+                {/* Bottom left: Präzise Suche */}
+                <div className="absolute bottom-[10%] left-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '6s' }}>
+                  <Search className="w-8 h-8 text-evoya-navy mx-auto mb-1" />
+                  <span className="block text-xs font-medium text-center">Präzise Suche</span>
+                </div>
+                
+                {/* Bottom right: API (renamed from Knowledge Graph) */}
+                <div className="absolute bottom-[10%] right-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '7.5s' }}>
+                  <Network className="w-8 h-8 text-evoya-lightBlue mx-auto mb-1" />
+                  <span className="block text-xs font-medium text-center">API</span>
                 </div>
               </div>
               
-              {/* Connecting lines - Modified to remove middle connections */}
-              <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 450" xmlns="http://www.w3.org/2000/svg">
-                <g stroke="#5B6CAD" strokeWidth="1.5" strokeDasharray="5,3" opacity="0.6">
-                  <line x1="200" y1="225" x2="70" y2="80" />
-                  <line x1="200" y1="225" x2="330" y2="80" />
-                  <line x1="200" y1="225" x2="70" y2="370" />
-                  <line x1="200" y1="225" x2="330" y2="370" />
-                  {/* Removed the middle left and right connecting lines */}
-                </g>
-              </svg>
-              
-              {/* Top left: Dokumente */}
-              <div className="absolute top-[10%] left-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '0s' }}>
-                <Book className="w-8 h-8 text-evoya-orange mx-auto mb-1" />
-                <span className="block text-xs font-medium text-center">Dokumente</span>
-              </div>
-              
-              {/* Top right: Webinhalte */}
-              <div className="absolute top-[10%] right-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '1.5s' }}>
-                <Globe className="w-8 h-8 text-evoya-green mx-auto mb-1" />
-                <span className="block text-xs font-medium text-center">Webinhalte</span>
-              </div>
-              
-              {/* Removed Middle left: Strukturierte Daten */}
-              
-              {/* Removed Middle right: Analyse */}
-              
-              {/* Bottom left: Präzise Suche */}
-              <div className="absolute bottom-[10%] left-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '6s' }}>
-                <Search className="w-8 h-8 text-evoya-navy mx-auto mb-1" />
-                <span className="block text-xs font-medium text-center">Präzise Suche</span>
-              </div>
-              
-              {/* Bottom right: API (renamed from Knowledge Graph) */}
-              <div className="absolute bottom-[10%] right-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '7.5s' }}>
-                <Network className="w-8 h-8 text-evoya-lightBlue mx-auto mb-1" />
-                <span className="block text-xs font-medium text-center">API</span>
+              {/* Callout box moved below the visualization */}
+              <div className="p-5 bg-gradient-to-r from-evoya-lightBlue/5 to-transparent rounded-lg border border-evoya-lightBlue/20 shadow-sm">
+                <div className="flex items-center">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-evoya-lightBlue/20 flex items-center justify-center mr-4">
+                    <Brain className="w-6 h-6 text-evoya-navy" />
+                  </div>
+                  <p className="text-evoya-navy font-medium">
+                    Steigern Sie die Effizienz Ihrer Teams um bis zu 30% durch präzise Informationsextraktion.
+                  </p>
+                </div>
               </div>
             </div>
             
@@ -343,17 +358,6 @@ const DetailedFeatures: React.FC = () => {
                       einfacher Keyword-Suchen, basierend auf dem tatsächlichen Bedeutungsgehalt.
                     </p>
                   </div>
-                </div>
-              </div>
-              
-              <div className="mt-10 p-4 bg-gradient-to-r from-evoya-lightBlue/5 to-transparent rounded-lg border border-evoya-lightBlue/20">
-                <div className="flex items-center">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-evoya-lightBlue/20 flex items-center justify-center mr-4">
-                    <Brain className="w-6 h-6 text-evoya-navy" />
-                  </div>
-                  <p className="text-evoya-navy font-medium">
-                    Steigern Sie die Effizienz Ihrer Teams um bis zu 30% durch präzise Informationsextraktion.
-                  </p>
                 </div>
               </div>
             </div>
