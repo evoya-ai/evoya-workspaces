@@ -67,6 +67,9 @@ const Comparison: React.FC = () => {
     const featureName = features[featureIndex];
     const productName = products[productIndex].name;
     
+    const hasTooltip = tooltips[featureName as keyof typeof tooltips] && 
+                        tooltips[featureName as keyof typeof tooltips][productName as keyof (typeof tooltips)[keyof typeof tooltips]];
+
     let icon;
     if (result === true) {
       icon = <Check className={`w-5 h-5 ${isHighlighted ? 'text-evoya-orange' : 'text-evoya-orange'}`} />;
@@ -93,7 +96,7 @@ const Comparison: React.FC = () => {
                   align="center" 
                   className="max-w-xs bg-white p-2 shadow-lg rounded-lg border border-gray-200 z-50"
                 >
-                  <p className="text-xs text-gray-700">{tooltips[featureName][productName]}</p>
+                  <p className="text-xs text-gray-700">{tooltips[featureName as keyof typeof tooltips][productName as keyof (typeof tooltips)[keyof typeof tooltips]]}</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
