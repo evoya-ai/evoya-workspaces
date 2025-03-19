@@ -71,13 +71,18 @@ export default {
 					yellow: '#FBBF24',
 					gray: '#666666',       // Ersetzt durch Grau
 					lightGray: '#F3F4F6',
-					darkGray: '#444444'    // Ersetzt durch Dunkelgrau
+					darkGray: '#222222'    // Dunkler für besseren Kontrast
 				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			textShadow: {
+				sm: '0 1px 2px rgba(0, 0, 0, 0.3)',
+				DEFAULT: '0 2px 4px rgba(0, 0, 0, 0.3)',
+				lg: '0 8px 16px rgba(0, 0, 0, 0.3)',
 			},
 			keyframes: {
 				'accordion-down': {
@@ -195,5 +200,24 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+		require("tailwindcss-animate"),
+		function ({ addUtilities }) {
+			const newUtilities = {
+				'.text-shadow': {
+					textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
+				},
+				'.text-shadow-sm': {
+					textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)',
+				},
+				'.text-shadow-lg': {
+					textShadow: '0 8px 16px rgba(0, 0, 0, 0.3)',
+				},
+				'.text-shadow-none': {
+					textShadow: 'none',
+				},
+			}
+			addUtilities(newUtilities)
+		}
+	],
 } satisfies Config;
