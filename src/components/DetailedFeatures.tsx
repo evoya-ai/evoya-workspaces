@@ -1,9 +1,9 @@
-
 import React from 'react';
 import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic, Shield, Lock, Database, ArrowRight, User, Globe2, RefreshCcw, Book, Layers, Network, Brain, Search } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { cn } from '../lib/utils';
 import { Separator } from './ui/separator';
+import { Badge } from './ui/badge';
 
 interface FeatureDetailProps {
   title: string;
@@ -15,6 +15,7 @@ interface FeatureDetailProps {
   isReversed?: boolean;
   accentColor: string;
   customContent?: React.ReactNode;
+  badge?: React.ReactNode;
 }
 
 const FeatureDetail: React.FC<FeatureDetailProps> = ({
@@ -27,6 +28,7 @@ const FeatureDetail: React.FC<FeatureDetailProps> = ({
   isReversed = false,
   accentColor,
   customContent,
+  badge,
 }) => {
   return (
     <div className={cn(
@@ -41,16 +43,19 @@ const FeatureDetail: React.FC<FeatureDetailProps> = ({
         animation={isReversed ? "fade-up" : "fade-up"}
       >
         <div className="max-w-xl">
-          <div className={`inline-flex items-center justify-center rounded-full p-2 ${accentColor} mb-4`}>
-            {icon}
+          <div className="flex items-center mb-4">
+            <div className={`inline-flex items-center justify-center rounded-full p-2 ${accentColor} mr-3`}>
+              {icon}
+            </div>
+            {badge && <div>{badge}</div>}
           </div>
           <h3 className="text-2xl lg:text-3xl font-semibold mb-4">{title}</h3>
           <p className="text-lg text-gray-600 mb-6">{description}</p>
           <ul className="space-y-3">
             {details.map((detail, index) => (
               <li key={index} className="flex items-start">
-                <div className="flex-shrink-0 w-5 h-5 rounded-full bg-evoya-blue/10 flex items-center justify-center mt-1 mr-3">
-                  <div className="w-2 h-2 rounded-full bg-evoya-blue"></div>
+                <div className="flex-shrink-0 w-5 h-5 rounded-full bg-evoya-orange/10 flex items-center justify-center mt-1 mr-3">
+                  <div className="w-2 h-2 rounded-full bg-evoya-orange"></div>
                 </div>
                 <span className="text-gray-700">{detail}</span>
               </li>
@@ -204,6 +209,12 @@ const DetailedFeatures: React.FC = () => {
     </div>
   );
 
+  const comingSoonBadge = (
+    <Badge variant="outline" className="bg-evoya-orange/10 text-evoya-orange border-evoya-orange/20 ml-2">
+      Coming Soon
+    </Badge>
+  );
+
   const features = [
     {
       title: "Textgenerierung",
@@ -218,7 +229,7 @@ const DetailedFeatures: React.FC = () => {
       image: "",
       alt: "Person arbeitet an einem Text-Dokument",
       isReversed: false,
-      accentColor: "text-evoya-blue bg-evoya-blue/10",
+      accentColor: "text-evoya-orange bg-evoya-orange/10",
       customContent: textGenerationContent,
     },
     {
@@ -234,7 +245,7 @@ const DetailedFeatures: React.FC = () => {
       image: "",
       alt: "Generierte Bilder auf einem Display",
       isReversed: true,
-      accentColor: "text-evoya-blue bg-evoya-blue/10",
+      accentColor: "text-evoya-orange bg-evoya-orange/10",
       customContent: businessmanContent,
     },
     {
@@ -250,7 +261,7 @@ const DetailedFeatures: React.FC = () => {
       image: "",
       alt: "Bilderkennung durch künstliche Intelligenz",
       isReversed: false,
-      accentColor: "text-evoya-blue bg-evoya-blue/10",
+      accentColor: "text-evoya-orange bg-evoya-orange/10",
       customContent: imageRecognitionContent,
     },
     {
@@ -266,7 +277,7 @@ const DetailedFeatures: React.FC = () => {
       image: "",
       alt: "Dokumentenanalyse auf einem Laptop",
       isReversed: true,
-      accentColor: "text-evoya-blue bg-evoya-blue/10",
+      accentColor: "text-evoya-orange bg-evoya-orange/10",
       customContent: documentContent,
     },
     {
@@ -282,7 +293,7 @@ const DetailedFeatures: React.FC = () => {
       image: "",
       alt: "Echtzeitdaten auf einem Dashboard",
       isReversed: false,
-      accentColor: "text-evoya-blue bg-evoya-blue/10",
+      accentColor: "text-evoya-orange bg-evoya-orange/10",
       customContent: webContent,
     },
     {
@@ -298,7 +309,7 @@ const DetailedFeatures: React.FC = () => {
       image: "",
       alt: "Visualisierung von Geschäftsprozessen",
       isReversed: true,
-      accentColor: "text-evoya-blue bg-evoya-blue/10",
+      accentColor: "text-evoya-orange bg-evoya-orange/10",
       customContent: diagramContent,
     },
     {
@@ -315,23 +326,25 @@ const DetailedFeatures: React.FC = () => {
       image: "", // Not used when customContent is provided
       alt: "Kreative Bearbeitung von Inhalten",
       isReversed: false,
-      accentColor: "text-evoya-blue bg-evoya-blue/10",
+      accentColor: "text-evoya-orange bg-evoya-orange/10",
+      badge: comingSoonBadge,
     },
     {
       title: "Voice",
-      description: "Verwandeln Sie gesprochene Inhalte direkt in Text für barrierefreie und schnelle Kommunikation.",
+      description: "Kommunizieren Sie per Sprache mit dem KI-Agenten und transkribieren Sie gesprochene Inhalte für barrierefreie und schnelle Interaktion.",
       details: [
-        "Präzise Echtzeit-Transkription von Sprache zu Text für Meetings und Präsentationen",
-        "Unterstützung mehrerer Sprachen für internationale Teams und Kommunikation",
-        "Automatische Protokollerstellung aus Besprechungsaufnahmen",
-        "Spracherkennung für die Erstellung von Notizen und Aufgabenlisten unterwegs",
+        "Direkte Sprach-Interaktion mit dem KI-Agenten ohne Tippen – ideal für unterwegs oder bei eingeschränkter Mobilität",
+        "Präzise Echtzeit-Transkription von Meetings und Gesprächen mit automatischer Protokollerstellung",
+        "Mehrsprachige Unterstützung für internationale Teams und Kommunikation in verschiedenen Sprachen",
+        "Barrierefreie Nutzung für Menschen mit Sehbehinderungen oder eingeschränkter Tastaturnutzung",
       ],
       icon: <Mic className="w-6 h-6 text-white" />,
       customContent: audioWaveform,
       image: "", // Not used when customContent is provided
       alt: "Spracherkennung und Transkription",
       isReversed: true,
-      accentColor: "text-evoya-blue bg-evoya-blue/10",
+      accentColor: "text-evoya-orange bg-evoya-orange/10",
+      badge: comingSoonBadge,
     },
   ];
   
@@ -364,6 +377,7 @@ const DetailedFeatures: React.FC = () => {
               isReversed={feature.isReversed}
               accentColor={feature.accentColor}
               customContent={feature.customContent}
+              badge={feature.badge}
             />
           ))}
         </div>
