@@ -4,6 +4,7 @@ import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool
 import AnimatedSection from './AnimatedSection';
 import { cn } from '../lib/utils';
 import { Separator } from './ui/separator';
+import { Badge } from './ui/badge';
 
 interface FeatureDetailProps {
   title: string;
@@ -15,6 +16,7 @@ interface FeatureDetailProps {
   isReversed?: boolean;
   accentColor: string;
   customContent?: React.ReactNode;
+  comingSoon?: boolean;
 }
 
 const FeatureDetail: React.FC<FeatureDetailProps> = ({
@@ -27,6 +29,7 @@ const FeatureDetail: React.FC<FeatureDetailProps> = ({
   isReversed = false,
   accentColor,
   customContent,
+  comingSoon = false,
 }) => {
   return (
     <div className={cn(
@@ -44,13 +47,20 @@ const FeatureDetail: React.FC<FeatureDetailProps> = ({
           <div className={`inline-flex items-center justify-center rounded-full p-2 ${accentColor} mb-4`}>
             {icon}
           </div>
-          <h3 className="text-2xl lg:text-3xl font-semibold mb-4">{title}</h3>
+          <div className="flex items-center gap-3 mb-4">
+            <h3 className="text-2xl lg:text-3xl font-semibold">{title}</h3>
+            {comingSoon && (
+              <Badge variant="outline" className="bg-evoya-orange/10 text-evoya-orange border-evoya-orange/30">
+                Coming Soon
+              </Badge>
+            )}
+          </div>
           <p className="text-lg text-gray-600 mb-6">{description}</p>
           <ul className="space-y-3">
             {details.map((detail, index) => (
               <li key={index} className="flex items-start">
-                <div className="flex-shrink-0 w-5 h-5 rounded-full bg-evoya-blue/10 flex items-center justify-center mt-1 mr-3">
-                  <div className="w-2 h-2 rounded-full bg-evoya-blue"></div>
+                <div className="flex-shrink-0 w-5 h-5 rounded-full bg-evoya-orange/10 flex items-center justify-center mt-1 mr-3">
+                  <div className="w-2 h-2 rounded-full bg-evoya-orange"></div>
                 </div>
                 <span className="text-gray-700">{detail}</span>
               </li>
@@ -218,7 +228,7 @@ const DetailedFeatures: React.FC = () => {
       image: "",
       alt: "Person arbeitet an einem Text-Dokument",
       isReversed: false,
-      accentColor: "text-evoya-blue bg-evoya-blue/10",
+      accentColor: "text-evoya-orange bg-evoya-orange/10",
       customContent: textGenerationContent,
     },
     {
@@ -234,7 +244,7 @@ const DetailedFeatures: React.FC = () => {
       image: "",
       alt: "Generierte Bilder auf einem Display",
       isReversed: true,
-      accentColor: "text-evoya-blue bg-evoya-blue/10",
+      accentColor: "text-evoya-orange bg-evoya-orange/10",
       customContent: businessmanContent,
     },
     {
@@ -250,7 +260,7 @@ const DetailedFeatures: React.FC = () => {
       image: "",
       alt: "Bilderkennung durch künstliche Intelligenz",
       isReversed: false,
-      accentColor: "text-evoya-blue bg-evoya-blue/10",
+      accentColor: "text-evoya-orange bg-evoya-orange/10",
       customContent: imageRecognitionContent,
     },
     {
@@ -266,7 +276,7 @@ const DetailedFeatures: React.FC = () => {
       image: "",
       alt: "Dokumentenanalyse auf einem Laptop",
       isReversed: true,
-      accentColor: "text-evoya-blue bg-evoya-blue/10",
+      accentColor: "text-evoya-orange bg-evoya-orange/10",
       customContent: documentContent,
     },
     {
@@ -282,7 +292,7 @@ const DetailedFeatures: React.FC = () => {
       image: "",
       alt: "Echtzeitdaten auf einem Dashboard",
       isReversed: false,
-      accentColor: "text-evoya-blue bg-evoya-blue/10",
+      accentColor: "text-evoya-orange bg-evoya-orange/10",
       customContent: webContent,
     },
     {
@@ -298,7 +308,7 @@ const DetailedFeatures: React.FC = () => {
       image: "",
       alt: "Visualisierung von Geschäftsprozessen",
       isReversed: true,
-      accentColor: "text-evoya-blue bg-evoya-blue/10",
+      accentColor: "text-evoya-orange bg-evoya-orange/10",
       customContent: diagramContent,
     },
     {
@@ -315,7 +325,8 @@ const DetailedFeatures: React.FC = () => {
       image: "", // Not used when customContent is provided
       alt: "Kreative Bearbeitung von Inhalten",
       isReversed: false,
-      accentColor: "text-evoya-blue bg-evoya-blue/10",
+      accentColor: "text-evoya-orange bg-evoya-orange/10",
+      comingSoon: true,
     },
     {
       title: "Voice",
@@ -331,7 +342,8 @@ const DetailedFeatures: React.FC = () => {
       image: "", // Not used when customContent is provided
       alt: "Spracherkennung und Transkription",
       isReversed: true,
-      accentColor: "text-evoya-blue bg-evoya-blue/10",
+      accentColor: "text-evoya-orange bg-evoya-orange/10",
+      comingSoon: true,
     },
   ];
   
@@ -339,11 +351,11 @@ const DetailedFeatures: React.FC = () => {
     <section id="detailed-features" className="py-16 bg-white">
       <div className="section-container">
         <AnimatedSection className="text-center mb-16">
-          <div className="inline-block mb-4 px-3 py-1 rounded-full bg-evoya-blue/10 text-evoya-blue text-sm font-medium">
+          <div className="inline-block mb-4 px-3 py-1 rounded-full bg-evoya-orange/10 text-evoya-orange text-sm font-medium">
             Detaillierte Funktionen
           </div>
           <h2 className="mb-6 max-w-3xl mx-auto">
-            Entdecken Sie die umfassenden <span className="text-evoya-blue">Möglichkeiten</span> unserer KI-Workspaces
+            Entdecken Sie die umfassenden <span className="text-evoya-orange">Möglichkeiten</span> unserer KI-Workspaces
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Unsere intelligenten Werkzeuge unterstützen Sie bei der Effizienzsteigerung in allen Geschäftsbereichen.
@@ -364,6 +376,7 @@ const DetailedFeatures: React.FC = () => {
               isReversed={feature.isReversed}
               accentColor={feature.accentColor}
               customContent={feature.customContent}
+              comingSoon={feature.comingSoon}
             />
           ))}
         </div>
