@@ -88,8 +88,8 @@ const DetailedFeatures: React.FC = () => {
     <div className="relative w-full h-[450px] overflow-hidden rounded-xl shadow-xl bg-[#1A1E35]">
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <img 
-          src="/lovable-uploads/4dbd1465-6af1-438c-ac70-394abf43e9ca.png"
-          alt="Evoya Creator Interface showing a text editor with formatting controls"
+          src="/lovable-uploads/629e741e-bc3d-4f90-a758-d88181edd6a7.png"
+          alt="Creator Interface mit Texteditor für generative KI-Artikel"
           className="w-full h-full object-contain"
         />
       </div>
@@ -310,7 +310,7 @@ const DetailedFeatures: React.FC = () => {
         "Flexible Formattierungsoptionen für professionelle Ausgaben",
       ],
       icon: <PenTool className="w-6 h-6 text-white" />,
-      customContent: editorContent,
+      customContent: creatorImageInterface,
       image: "", // Not used when customContent is provided
       alt: "Kreative Bearbeitung von Inhalten",
       isReversed: false,
