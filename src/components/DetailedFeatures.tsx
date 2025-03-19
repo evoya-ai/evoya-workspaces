@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic, Shield, Lock, Database, ArrowRight, User, Globe2, RefreshCcw, Book, Layers, Network, Brain, Search } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -223,12 +222,12 @@ const DetailedFeatures: React.FC = () => {
     },
     {
       title: "Bildgenerierung",
-      description: "Entwickeln Sie visuelle Inhalte für Marketingkampagnen und Präsentationen mit wenigen Klicks.",
+      description: "Erstellen Sie Bilder mit DALL·E und Flux für vielfältige geschäftliche und kreative Zwecke.",
       details: [
-        "Erstellung von massgeschneiderten Produktvisualisierungen für Marketingmaterialien",
-        "Generierung von Konzeptillustrationen für Werbekampagnen und Markenidentität",
-        "Automatische Anpassung von Bildformaten für verschiedene Marketingkanäle",
-        "KI-basierte Bildoptimierung für zielgruppenspezifische Marketingmaterialien",
+        "Generierung von Bildern für Newsletter, Social Media und Marketingmaterialien",
+        "Visuelle Unterstützung für Präsentationen, Berichte und Dokumentationen",
+        "Erstellung von Illustrationen für interne Schulungsmaterialien und Anleitungen",
+        "Flexible Anpassung von Bildformaten und Stilen für unterschiedliche Verwendungszwecke",
       ],
       icon: <ImageIcon className="w-6 h-6 text-white" />,
       image: "",
@@ -464,7 +463,7 @@ const DetailedFeatures: React.FC = () => {
                     <h5 className="text-lg font-medium mb-2 text-evoya-navy">Kontextbasierte Verknüpfung</h5>
                     <p className="text-gray-600">
                       Automatische Erkennung von Beziehungen zwischen Konzepten, Personen und 
-                      Ereignissen für ein tiefgreifendes Verständnis Ihrer Geschäftsdaten.
+                      Ereignissen f��r ein tiefgreifendes Verständnis Ihrer Geschäftsdaten.
                     </p>
                   </div>
                 </div>
