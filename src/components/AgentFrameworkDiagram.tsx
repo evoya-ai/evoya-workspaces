@@ -41,7 +41,8 @@ const AgentFrameworkDiagram: React.FC = () => {
         <AgentComponent 
           title="Tools" 
           icon={<Wrench className="w-7 h-7" />} 
-          color="bg-evoya-blue" 
+          color="bg-evoya-lightBlue/30" 
+          textColor="text-evoya-navy"
         />
         
         {/* Center: Sprachmodell */}
@@ -50,6 +51,7 @@ const AgentFrameworkDiagram: React.FC = () => {
             title="Sprachmodell" 
             icon={<Brain className="w-7 h-7" />} 
             color="bg-evoya-orange" 
+            textColor="text-white"
           />
           
           {/* Top connection from Sprachmodell */}
@@ -93,7 +95,8 @@ const AgentFrameworkDiagram: React.FC = () => {
         <AgentComponent 
           title="Interface" 
           icon={<Computer className="w-7 h-7" />} 
-          color="bg-evoya-blue" 
+          color="bg-evoya-teal" 
+          textColor="text-white"
         />
       </div>
       
@@ -103,7 +106,8 @@ const AgentFrameworkDiagram: React.FC = () => {
           <AgentComponent 
             title="Wissen" 
             icon={<Database className="w-7 h-7" />} 
-            color="bg-evoya-blue" 
+            color="bg-evoya-lightBlue" 
+            textColor="text-white"
           />
         </div>
       </div>
