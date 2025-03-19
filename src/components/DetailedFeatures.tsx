@@ -273,17 +273,17 @@ const DetailedFeatures: React.FC = () => {
                 </div>
                 
                 <div className="absolute top-[10%] right-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '1.5s' }}>
-                  <Globe className="w-8 h-8 text-evoya-green mx-auto mb-1" />
+                  <Globe className="w-8 h-8 text-evoya-blue mx-auto mb-1" />
                   <span className="block text-xs font-medium text-center">Webinhalte</span>
                 </div>
                 
                 <div className="absolute bottom-[10%] left-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '6s' }}>
-                  <Search className="w-8 h-8 text-evoya-navy mx-auto mb-1" />
+                  <Search className="w-8 h-8 text-evoya-orange mx-auto mb-1" />
                   <span className="block text-xs font-medium text-center">Präzise Suche</span>
                 </div>
                 
                 <div className="absolute bottom-[10%] right-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '7.5s' }}>
-                  <Network className="w-8 h-8 text-evoya-lightBlue mx-auto mb-1" />
+                  <Network className="w-8 h-8 text-evoya-blue mx-auto mb-1" />
                   <span className="block text-xs font-medium text-center">API</span>
                 </div>
               </div>
@@ -311,7 +311,7 @@ const DetailedFeatures: React.FC = () => {
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-10 h-10 rounded-full bg-evoya-lightBlue/10 flex items-center justify-center mt-1 mr-4">
-                    <Book className="w-5 h-5 text-evoya-lightBlue" />
+                    <Book className="w-5 h-5 text-evoya-blue" />
                   </div>
                   <div>
                     <h5 className="text-lg font-medium mb-2 text-evoya-navy">Multiformat-Verarbeitung</h5>
@@ -323,8 +323,8 @@ const DetailedFeatures: React.FC = () => {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-evoya-green/10 flex items-center justify-center mt-1 mr-4">
-                    <Network className="w-5 h-5 text-evoya-green" />
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-evoya-blue/10 flex items-center justify-center mt-1 mr-4">
+                    <Network className="w-5 h-5 text-evoya-blue" />
                   </div>
                   <div>
                     <h5 className="text-lg font-medium mb-2 text-evoya-navy">Kontextbasierte Verknüpfung</h5>
