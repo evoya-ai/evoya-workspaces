@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/company/evoya-ai" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-evoya-orange transition-colors"
@@ -59,9 +59,30 @@ const Footer: React.FC = () => {
             © 2025 Evoya AI GmbH. Alle Rechte vorbehalten.
           </p>
           <div className="flex flex-wrap gap-6 justify-center">
-            <a href="/datenschutz" className="text-gray-400 hover:text-evoya-orange transition-colors text-sm">Datenschutz</a>
-            <a href="/agb" className="text-gray-400 hover:text-evoya-orange transition-colors text-sm">AGB</a>
-            <a href="/impressum" className="text-gray-400 hover:text-evoya-orange transition-colors text-sm">Impressum</a>
+            <a 
+              href="https://evoya.ai/datenschutz/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-400 hover:text-evoya-orange transition-colors text-sm"
+            >
+              Datenschutz
+            </a>
+            <a 
+              href="https://evoya.ai/agb/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-400 hover:text-evoya-orange transition-colors text-sm"
+            >
+              AGB
+            </a>
+            <a 
+              href="https://evoya.ai/impressum/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-400 hover:text-evoya-orange transition-colors text-sm"
+            >
+              Impressum
+            </a>
           </div>
         </div>
       </div>
