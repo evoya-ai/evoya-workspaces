@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic, Shield, Lock, Database, ArrowRight, User, Globe2, RefreshCcw, Book, Layers, Network, Brain, Search } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -603,3 +604,18 @@ const DetailedFeatures: React.FC = () => {
                     
                     <div className="space-y-4 flex-grow">
                       <div className="bg-evoya-navy text-white p-4 rounded text-center font-medium">
+                        Datenschutzinformationen
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+      </div>
+    </section>
+  );
+};
+
+export default DetailedFeatures;
