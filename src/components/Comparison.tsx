@@ -11,35 +11,35 @@ const Comparison: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const { language } = useLanguage();
   
-  // These features should be translated in future updates if needed
+  // Get translated features
   const features = [
-    'Flexibles Preismodell',
-    'Über 20 KI-Modelle',
-    'Lokale Modell-Hosting-Option',
-    'Nutzungsbasierte Abrechnung',
-    'Massgeschneiderte KI-Lösungen',
-    'Persönliche Betreuung',
-    'Dynamische Dokumentbearbeitung im Chat',
-    'Privacy Shield',
-    'Datenspeicherung in der Schweiz',
-    'Schweizer Sprachmodelle',
+    translate('comparison_flexible_pricing', language),
+    translate('comparison_ai_models', language),
+    translate('comparison_local_hosting', language),
+    translate('comparison_usage_billing', language),
+    translate('comparison_custom_solutions', language),
+    translate('comparison_personal_support', language),
+    translate('comparison_document_editing', language),
+    translate('comparison_privacy_shield', language),
+    translate('comparison_swiss_storage', language),
+    translate('comparison_swiss_models', language),
   ];
 
   const tooltips = {
-    'Privacy Shield': {
-      'Evoya AI': 'Evoya AI bietet ein einzigartiges Datenschutzschild zur Anonymisierung sensibler Daten.',
-      'OpenAI': 'Diese Funktion ist nicht verfügbar.',
-      'Microsoft': 'Diese Funktion ist nicht verfügbar.',
+    [translate('comparison_privacy_shield', language)]: {
+      'Evoya AI': translate('tooltip_privacy_shield_evoya', language),
+      'OpenAI': translate('tooltip_privacy_shield_other', language),
+      'Microsoft': translate('tooltip_privacy_shield_other', language),
     },
-    'Datenspeicherung in der Schweiz': {
-      'Evoya AI': 'Daten können in sicheren Rechenzentren in der Schweiz gespeichert werden.',
-      'OpenAI': 'Keine spezifische Option für die Schweiz.',
-      'Microsoft': 'Keine spezifische Option für die Schweiz.',
+    [translate('comparison_swiss_storage', language)]: {
+      'Evoya AI': translate('tooltip_swiss_storage_evoya', language),
+      'OpenAI': translate('tooltip_swiss_storage_other', language),
+      'Microsoft': translate('tooltip_swiss_storage_other', language),
     },
-    'Schweizer Sprachmodelle': {
-      'Evoya AI': 'Unterstützt auch Schweizer Sprachmodelle.',
-      'OpenAI': 'Keine spezifische Unterstützung für Schweizer Modelle.',
-      'Microsoft': 'Keine spezifische Unterstützung für Schweizer Modelle.',
+    [translate('comparison_swiss_models', language)]: {
+      'Evoya AI': translate('tooltip_swiss_models_evoya', language),
+      'OpenAI': translate('tooltip_swiss_models_other', language),
+      'Microsoft': translate('tooltip_swiss_models_other', language),
     }
   };
 
@@ -93,12 +93,10 @@ const Comparison: React.FC = () => {
             {translate('nav_comparison', language)}
           </div>
           <h2 className="mb-6 max-w-3xl mx-auto">
-            Evoya AI {language === 'de' ? 'im Vergleich zu anderen' : 'compared to other'} <span className="text-evoya-blue">{language === 'de' ? 'KI-Lösungen' : 'AI solutions'}</span>
+            {translate('comparison_title', language)} <span className="text-evoya-blue">{translate('comparison_title_colored', language)}</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            {language === 'de' 
-              ? 'Entdecken Sie, wie sich unsere KI-Workspaces von anderen Lösungen auf dem Markt unterscheiden.'
-              : 'Discover how our AI Workspaces differ from other solutions on the market.'}
+            {translate('comparison_description', language)}
           </p>
         </AnimatedSection>
 
@@ -130,7 +128,7 @@ const Comparison: React.FC = () => {
               <thead>
                 <tr className="bg-gray-50 border-b border-gray-200">
                   <th className="px-6 py-4 font-medium text-gray-600">
-                    {language === 'de' ? 'Funktionen' : 'Features'}
+                    {translate('comparison_features', language)}
                   </th>
                   {products.map((product, index) => (
                     <th 

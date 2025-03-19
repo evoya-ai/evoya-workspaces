@@ -2,21 +2,25 @@
 import React from 'react';
 import { ShieldCheck, BadgeDollarSign, Key, MapPin } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translate } from '../utils/translations';
 
 const Benefits: React.FC = () => {
+  const { language } = useLanguage();
+  
   return (
     <section id="benefits" className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-gray-100 via-white to-gray-50 -z-10"></div>
       <div className="section-container">
         <AnimatedSection className="text-center mb-16">
           <div className="inline-block mb-4 px-3 py-1 rounded-full bg-evoya-blue/10 text-evoya-blue text-sm font-medium">
-            Vorteile
+            {translate('benefits_badge', language)}
           </div>
           <h2 className="mb-6 max-w-3xl mx-auto">
-            Warum Unternehmen auf <span className="text-evoya-blue">Evoya AI</span> setzen
+            {translate('benefits_title', language)} <span className="text-evoya-blue">{translate('benefits_title_colored', language)}</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Unsere KI-Workspaces bieten entscheidende Vorteile für KMUs, die Innovation und Sicherheit gleichermassen schätzen.
+            {translate('benefits_description', language)}
           </p>
         </AnimatedSection>
 
@@ -26,28 +30,28 @@ const Benefits: React.FC = () => {
               <div className="w-16 h-16 rounded-full bg-evoya-blue/10 flex items-center justify-center mb-6">
                 <ShieldCheck className="w-8 h-8 text-evoya-blue" />
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-custom-darkGray">Datenschutz & Sicherheit</h3>
+              <h3 className="text-xl font-semibold mb-4 text-custom-darkGray">{translate('benefits_security_title', language)}</h3>
               <p className="text-gray-600 mb-6">
-                Alle Daten werden in der Schweiz mit höchsten Sicherheitsstandards gespeichert und verarbeitet, wodurch die Vertraulichkeit Ihrer Unternehmensdaten garantiert wird.
+                {translate('benefits_security_desc', language)}
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center">
                   <div className="w-5 h-5 rounded-full bg-evoya-blue/10 flex items-center justify-center mr-3">
                     <div className="w-2 h-2 rounded-full bg-evoya-blue"></div>
                   </div>
-                  <span className="text-gray-700">Schweizer Hosting</span>
+                  <span className="text-gray-700">{translate('benefits_swiss_hosting', language)}</span>
                 </li>
                 <li className="flex items-center">
                   <div className="w-5 h-5 rounded-full bg-evoya-blue/10 flex items-center justify-center mr-3">
                     <div className="w-2 h-2 rounded-full bg-evoya-blue"></div>
                   </div>
-                  <span className="text-gray-700">Ende-zu-Ende-Verschlüsselung</span>
+                  <span className="text-gray-700">{translate('benefits_encryption', language)}</span>
                 </li>
                 <li className="flex items-center">
                   <div className="w-5 h-5 rounded-full bg-evoya-blue/10 flex items-center justify-center mr-3">
                     <div className="w-2 h-2 rounded-full bg-evoya-blue"></div>
                   </div>
-                  <span className="text-gray-700">DSGVO-konform</span>
+                  <span className="text-gray-700">{translate('benefits_gdpr', language)}</span>
                 </li>
               </ul>
             </div>
@@ -58,28 +62,28 @@ const Benefits: React.FC = () => {
               <div className="w-16 h-16 rounded-full bg-evoya-orange/10 flex items-center justify-center mb-6">
                 <BadgeDollarSign className="w-8 h-8 text-evoya-orange" />
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-custom-darkGray">Flexibles Preismodell</h3>
+              <h3 className="text-xl font-semibold mb-4 text-custom-darkGray">{translate('benefits_pricing_title', language)}</h3>
               <p className="text-gray-600 mb-6">
-                Keine festen Lizenzgebühren pro Benutzer, sondern ein nutzungsbasiertes Modell, das sich den Bedürfnissen Ihres Unternehmens anpasst und wächst.
+                {translate('benefits_pricing_desc', language)}
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center">
                   <div className="w-5 h-5 rounded-full bg-evoya-orange/10 flex items-center justify-center mr-3">
                     <div className="w-2 h-2 rounded-full bg-evoya-orange"></div>
                   </div>
-                  <span className="text-gray-700">Nutzungsbasierte Abrechnung</span>
+                  <span className="text-gray-700">{translate('benefits_usage_based', language)}</span>
                 </li>
                 <li className="flex items-center">
                   <div className="w-5 h-5 rounded-full bg-evoya-orange/10 flex items-center justify-center mr-3">
                     <div className="w-2 h-2 rounded-full bg-evoya-orange"></div>
                   </div>
-                  <span className="text-gray-700">Keine Mindestlaufzeit</span>
+                  <span className="text-gray-700">{translate('benefits_no_commitment', language)}</span>
                 </li>
                 <li className="flex items-center">
                   <div className="w-5 h-5 rounded-full bg-evoya-orange/10 flex items-center justify-center mr-3">
                     <div className="w-2 h-2 rounded-full bg-evoya-orange"></div>
                   </div>
-                  <span className="text-gray-700">Skalierbare Ressourcen</span>
+                  <span className="text-gray-700">{translate('benefits_scalable', language)}</span>
                 </li>
               </ul>
             </div>
@@ -90,28 +94,28 @@ const Benefits: React.FC = () => {
               <div className="w-16 h-16 rounded-full bg-evoya-blue/10 flex items-center justify-center mb-6">
                 <Key className="w-8 h-8 text-evoya-blue" />
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-custom-darkGray">Führende KI-Modelle</h3>
+              <h3 className="text-xl font-semibold mb-4 text-custom-darkGray">{translate('benefits_models_title', language)}</h3>
               <p className="text-gray-600 mb-6">
-                Zugriff auf über 20 führende Sprach- und Bildmodelle, darunter auch lokal gehostete Optionen wie SwissLama 3.3 für optimale Performance.
+                {translate('benefits_models_desc', language)}
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center">
                   <div className="w-5 h-5 rounded-full bg-evoya-blue/10 flex items-center justify-center mr-3">
                     <div className="w-2 h-2 rounded-full bg-evoya-blue"></div>
                   </div>
-                  <span className="text-gray-700">Über 20 KI-Modelle</span>
+                  <span className="text-gray-700">{translate('benefits_models_count', language)}</span>
                 </li>
                 <li className="flex items-center">
                   <div className="w-5 h-5 rounded-full bg-evoya-blue/10 flex items-center justify-center mr-3">
                     <div className="w-2 h-2 rounded-full bg-evoya-blue"></div>
                   </div>
-                  <span className="text-gray-700">Lokal gehostete Optionen</span>
+                  <span className="text-gray-700">{translate('benefits_local_hosting', language)}</span>
                 </li>
                 <li className="flex items-center">
                   <div className="w-5 h-5 rounded-full bg-evoya-blue/10 flex items-center justify-center mr-3">
                     <div className="w-2 h-2 rounded-full bg-evoya-blue"></div>
                   </div>
-                  <span className="text-gray-700">Regelmässige Updates</span>
+                  <span className="text-gray-700">{translate('benefits_regular_updates', language)}</span>
                 </li>
               </ul>
             </div>
@@ -125,11 +129,11 @@ const Benefits: React.FC = () => {
               <div className="w-16 h-16 rounded-full bg-evoya-blue/10 flex items-center justify-center mb-4">
                 <MapPin className="w-8 h-8 text-evoya-blue" />
               </div>
-              <h3 className="text-xl font-semibold text-custom-darkGray">Lokaler Partner mit Schweizer Expertise</h3>
+              <h3 className="text-xl font-semibold text-custom-darkGray">{translate('benefits_partner_title', language)}</h3>
             </div>
             
             <p className="text-gray-600 mb-6 text-left">
-              Als Schweizer Unternehmen kennen wir die lokalen Marktanforderungen und regulatorischen Besonderheiten. Wir verstehen die spezifischen Bedürfnisse von Schweizer KMUs und bieten massgeschneiderte KI-Lösungen, die regionalen Gegebenheiten optimal Rechnung tragen.
+              {translate('benefits_partner_desc', language)}
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -138,13 +142,13 @@ const Benefits: React.FC = () => {
                   <div className="w-5 h-5 rounded-full bg-evoya-blue/10 flex items-center justify-center mr-3">
                     <div className="w-2 h-2 rounded-full bg-evoya-blue"></div>
                   </div>
-                  <span className="text-gray-700">Umfassende Marktkenntnis</span>
+                  <span className="text-gray-700">{translate('benefits_market_knowledge', language)}</span>
                 </li>
                 <li className="flex items-center">
                   <div className="w-5 h-5 rounded-full bg-evoya-blue/10 flex items-center justify-center mr-3">
                     <div className="w-2 h-2 rounded-full bg-evoya-blue"></div>
                   </div>
-                  <span className="text-gray-700">KI-Expertise und fundiertes Branchenwissen</span>
+                  <span className="text-gray-700">{translate('benefits_ai_expertise', language)}</span>
                 </li>
               </ul>
               <ul className="space-y-3">
@@ -152,13 +156,13 @@ const Benefits: React.FC = () => {
                   <div className="w-5 h-5 rounded-full bg-evoya-blue/10 flex items-center justify-center mr-3">
                     <div className="w-2 h-2 rounded-full bg-evoya-blue"></div>
                   </div>
-                  <span className="text-gray-700">Verständnis lokaler Anforderungen</span>
+                  <span className="text-gray-700">{translate('benefits_local_requirements', language)}</span>
                 </li>
                 <li className="flex items-center">
                   <div className="w-5 h-5 rounded-full bg-evoya-blue/10 flex items-center justify-center mr-3">
                     <div className="w-2 h-2 rounded-full bg-evoya-blue"></div>
                   </div>
-                  <span className="text-gray-700">Persönliche Betreuung</span>
+                  <span className="text-gray-700">{translate('benefits_personal_support', language)}</span>
                 </li>
               </ul>
             </div>

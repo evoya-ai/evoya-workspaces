@@ -1103,6 +1103,199 @@ export const translations: TranslationDictionary = {
     de: 'Beratung anfragen',
     en: 'Request Consultation',
   },
+  
+  // Benefits Section
+  benefits_badge: {
+    de: 'Vorteile',
+    en: 'Benefits',
+  },
+  benefits_title: {
+    de: 'Warum Unternehmen auf',
+    en: 'Why Companies Choose',
+  },
+  benefits_title_colored: {
+    de: 'Evoya AI',
+    en: 'Evoya AI',
+  },
+  benefits_description: {
+    de: 'Unsere KI-Workspaces bieten entscheidende Vorteile für KMUs, die Innovation und Sicherheit gleichermassen schätzen.',
+    en: 'Our AI Workspaces offer critical advantages for SMEs that equally value innovation and security.',
+  },
+  
+  // Benefits Cards
+  benefits_security_title: {
+    de: 'Datenschutz & Sicherheit',
+    en: 'Data Protection & Security',
+  },
+  benefits_security_desc: {
+    de: 'Alle Daten werden in der Schweiz mit höchsten Sicherheitsstandards gespeichert und verarbeitet, wodurch die Vertraulichkeit Ihrer Unternehmensdaten garantiert wird.',
+    en: 'All data is stored and processed in Switzerland with the highest security standards, guaranteeing the confidentiality of your company data.',
+  },
+  benefits_swiss_hosting: {
+    de: 'Schweizer Hosting',
+    en: 'Swiss Hosting',
+  },
+  benefits_encryption: {
+    de: 'Ende-zu-Ende-Verschlüsselung',
+    en: 'End-to-End Encryption',
+  },
+  benefits_gdpr: {
+    de: 'DSGVO-konform',
+    en: 'GDPR Compliant',
+  },
+  
+  benefits_pricing_title: {
+    de: 'Flexibles Preismodell',
+    en: 'Flexible Pricing Model',
+  },
+  benefits_pricing_desc: {
+    de: 'Keine festen Lizenzgebühren pro Benutzer, sondern ein nutzungsbasiertes Modell, das sich den Bedürfnissen Ihres Unternehmens anpasst und wächst.',
+    en: 'No fixed license fees per user, but a usage-based model that adapts and grows with the needs of your company.',
+  },
+  benefits_usage_based: {
+    de: 'Nutzungsbasierte Abrechnung',
+    en: 'Usage-based Billing',
+  },
+  benefits_no_commitment: {
+    de: 'Keine Mindestlaufzeit',
+    en: 'No Minimum Contract Period',
+  },
+  benefits_scalable: {
+    de: 'Skalierbare Ressourcen',
+    en: 'Scalable Resources',
+  },
+  
+  benefits_models_title: {
+    de: 'Führende KI-Modelle',
+    en: 'Leading AI Models',
+  },
+  benefits_models_desc: {
+    de: 'Zugriff auf über 20 führende Sprach- und Bildmodelle, darunter auch lokal gehostete Optionen wie SwissLama 3.3 für optimale Performance.',
+    en: 'Access to over 20 leading language and image models, including locally hosted options like SwissLama 3.3 for optimal performance.',
+  },
+  benefits_models_count: {
+    de: 'Über 20 KI-Modelle',
+    en: 'Over 20 AI Models',
+  },
+  benefits_local_hosting: {
+    de: 'Lokal gehostete Optionen',
+    en: 'Locally Hosted Options',
+  },
+  benefits_regular_updates: {
+    de: 'Regelmässige Updates',
+    en: 'Regular Updates',
+  },
+  
+  benefits_partner_title: {
+    de: 'Lokaler Partner mit Schweizer Expertise',
+    en: 'Local Partner with Swiss Expertise',
+  },
+  benefits_partner_desc: {
+    de: 'Als Schweizer Unternehmen kennen wir die lokalen Marktanforderungen und regulatorischen Besonderheiten. Wir verstehen die spezifischen Bedürfnisse von Schweizer KMUs und bieten massgeschneiderte KI-Lösungen, die regionalen Gegebenheiten optimal Rechnung tragen.',
+    en: 'As a Swiss company, we understand the local market requirements and regulatory specifics. We understand the specific needs of Swiss SMEs and offer customized AI solutions that optimally account for regional conditions.',
+  },
+  benefits_market_knowledge: {
+    de: 'Umfassende Marktkenntnis',
+    en: 'Comprehensive Market Knowledge',
+  },
+  benefits_ai_expertise: {
+    de: 'KI-Expertise und fundiertes Branchenwissen',
+    en: 'AI Expertise and In-depth Industry Knowledge',
+  },
+  benefits_local_requirements: {
+    de: 'Verständnis lokaler Anforderungen',
+    en: 'Understanding of Local Requirements',
+  },
+  benefits_personal_support: {
+    de: 'Persönliche Betreuung',
+    en: 'Personal Support',
+  },
+  
+  // Comparison Section Additional Translations
+  comparison_title: {
+    de: 'Evoya AI im Vergleich zu anderen',
+    en: 'Evoya AI compared to other',
+  },
+  comparison_title_colored: {
+    de: 'KI-Lösungen',
+    en: 'AI solutions',
+  },
+  comparison_description: {
+    de: 'Entdecken Sie, wie sich unsere KI-Workspaces von anderen Lösungen auf dem Markt unterscheiden.',
+    en: 'Discover how our AI Workspaces differ from other solutions on the market.',
+  },
+  comparison_features: {
+    de: 'Funktionen',
+    en: 'Features',
+  },
+  
+  // Comparison table features
+  comparison_flexible_pricing: {
+    de: 'Flexibles Preismodell',
+    en: 'Flexible Pricing Model',
+  },
+  comparison_ai_models: {
+    de: 'Über 20 KI-Modelle',
+    en: 'Over 20 AI Models',
+  },
+  comparison_local_hosting: {
+    de: 'Lokale Modell-Hosting-Option',
+    en: 'Local Model Hosting Option',
+  },
+  comparison_usage_billing: {
+    de: 'Nutzungsbasierte Abrechnung',
+    en: 'Usage-based Billing',
+  },
+  comparison_custom_solutions: {
+    de: 'Massgeschneiderte KI-Lösungen',
+    en: 'Customized AI Solutions',
+  },
+  comparison_personal_support: {
+    de: 'Persönliche Betreuung',
+    en: 'Personal Support',
+  },
+  comparison_document_editing: {
+    de: 'Dynamische Dokumentbearbeitung im Chat',
+    en: 'Dynamic Document Editing in Chat',
+  },
+  comparison_privacy_shield: {
+    de: 'Privacy Shield',
+    en: 'Privacy Shield',
+  },
+  comparison_swiss_storage: {
+    de: 'Datenspeicherung in der Schweiz',
+    en: 'Data Storage in Switzerland',
+  },
+  comparison_swiss_models: {
+    de: 'Schweizer Sprachmodelle',
+    en: 'Swiss Language Models',
+  },
+  
+  // Tooltip explanations
+  tooltip_privacy_shield_evoya: {
+    de: 'Evoya AI bietet ein einzigartiges Datenschutzschild zur Anonymisierung sensibler Daten.',
+    en: 'Evoya AI offers a unique data protection shield for anonymizing sensitive data.',
+  },
+  tooltip_privacy_shield_other: {
+    de: 'Diese Funktion ist nicht verfügbar.',
+    en: 'This feature is not available.',
+  },
+  tooltip_swiss_storage_evoya: {
+    de: 'Daten können in sicheren Rechenzentren in der Schweiz gespeichert werden.',
+    en: 'Data can be stored in secure data centers in Switzerland.',
+  },
+  tooltip_swiss_storage_other: {
+    de: 'Keine spezifische Option für die Schweiz.',
+    en: 'No specific option for Switzerland.',
+  },
+  tooltip_swiss_models_evoya: {
+    de: 'Unterstützt auch Schweizer Sprachmodelle.',
+    en: 'Also supports Swiss language models.',
+  },
+  tooltip_swiss_models_other: {
+    de: 'Keine spezifische Unterstützung für Schweizer Modelle.',
+    en: 'No specific support for Swiss models.',
+  },
 };
 
 // The translate function to be used in components
@@ -1115,4 +1308,3 @@ export const translate = (key: string, language: Language): string => {
   console.warn(`Translation missing for key: ${key} in language: ${language}`);
   return key;
 };
-
