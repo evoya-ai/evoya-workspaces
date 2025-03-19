@@ -570,8 +570,12 @@ export const translations: TranslationDictionary = {
     en: 'Discover the comprehensive',
   },
   detailed_features_title_colored: {
-    de: 'Möglichkeiten der Evoya AI Workspaces',
-    en: 'capabilities of Evoya AI Workspaces',
+    de: 'Möglichkeiten',
+    en: 'capabilities',
+  },
+  detailed_features_title_colored_suffix: {
+    de: 'der Evoya AI Workspaces',
+    en: 'of Evoya AI Workspaces',
   },
   detailed_features_description: {
     de: 'Unsere intelligenten Werkzeuge unterstützen Sie bei der Effizienzsteigerung in allen Geschäftsbereichen. Erfahren Sie mehr über jede einzelne Funktion.',

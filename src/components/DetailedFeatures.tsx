@@ -370,7 +370,7 @@ const DetailedFeatures: React.FC = () => {
             {translate('detailed_features_badge', language)}
           </div>
           <h2 className="mb-6 max-w-3xl mx-auto">
-            {translate('detailed_features_title', language)} <span className="text-evoya-orange">{translate('detailed_features_title_colored', language)}</span>
+            {translate('detailed_features_title', language)} <span className="text-evoya-orange">{translate('detailed_features_title_colored', language)}</span> {translate('detailed_features_title_colored_suffix', language)}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             {translate('detailed_features_description', language)}
@@ -409,7 +409,7 @@ const DetailedFeatures: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div className="flex flex-col">
-              <div className="relative h-[450px] overflow-hidden rounded-xl shadow-lg mb-8">
+              <div className="relative h-[450px] overflow-hidden rounded-xl shadow-xl mb-8">
                 <div className="absolute inset-0 bg-gradient-to-r from-evoya-lightBlue/5 to-evoya-navy/10 z-0"></div>
                 
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-white rounded-full shadow-xl border-4 border-evoya-lightBlue/30 flex items-center justify-center z-20">

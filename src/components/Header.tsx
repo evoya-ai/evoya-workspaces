@@ -39,7 +39,7 @@ const Header: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center">
-          <div className="bg-white rounded-lg px-3 py-1 shadow-sm">
+          <div className="bg-white rounded-lg px-3 py-3 shadow-sm">
             <img 
               src="/lovable-uploads/4024a740-8b36-4293-82d7-02b4a0f8ef8c.png" 
               alt="Evoya AI Logo" 
