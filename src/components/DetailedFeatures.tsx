@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic, Shield, Lock, Database, ArrowRight, User, Globe2, RefreshCcw, Book, Layers, Network, Brain, Search } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -313,7 +314,7 @@ const DetailedFeatures: React.FC = () => {
                     <h5 className="text-lg font-medium mb-2 text-evoya-navy">Multiformat-Verarbeitung</h5>
                     <p className="text-gray-600">
                       Automatische Extraktion von Wissen aus PDFs, Word-Dokumenten, 
-                      Präsentationen, E-Mails und Webseiten in eine einheitliche Wissensbasis.
+                      Präsentationen, APIs und Webseiten in eine einheitliche Wissensbasis.
                     </p>
                   </div>
                 </div>
