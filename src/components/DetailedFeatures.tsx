@@ -200,7 +200,7 @@ const DetailedFeatures: React.FC = () => {
       accentColor: "text-evoya-red bg-evoya-red/10",
     },
   ];
-
+  
   return (
     <section id="detailed-features" className="py-16 bg-white">
       <div className="section-container">
@@ -510,7 +510,7 @@ const DetailedFeatures: React.FC = () => {
                         <div className="bg-white text-evoya-lightBlue rounded-full w-6 h-6 flex items-center justify-center mr-2 font-bold">3</div>
                         SCHRITT 3
                       </div>
-                      <h5 className="text-lg font-semibold mt-3 mb-4">Anonymisierte Daten werden entanonymisiert (Schweiz)</h5>
+                      <h5 className="text-lg font-semibold mt-3 mb-4">Anonymisierte Daten werden deanonymisiert (Schweiz)</h5>
                     </div>
                     
                     <div className="space-y-4 flex-grow">
@@ -542,9 +542,9 @@ const DetailedFeatures: React.FC = () => {
             <div className="bg-gray-50 p-6 rounded-xl mt-6 shadow-sm">
               <h4 className="text-xl font-semibold mb-4">Ihre Daten in sicheren Händen</h4>
               <p className="text-gray-600 mb-4">
-                Das Privacy Shield von Evoya stellt sicher, dass sensitive Informationen niemals ungeschützt an externe Systeme übermittelt werden. 
+                Das Evoya Privacy Shield stellt sicher, dass sensitive Informationen niemals ungeschützt an externe Systeme übermittelt werden. 
                 Stattdessen werden sie vor der Verarbeitung durch Sprachmodelle anonymisiert und erst nach der Verarbeitung wieder deanonymisiert. 
-                Dieser gesamte Prozess findet ausschliesslich in der Schweiz statt, unter Einhaltung strengster Datenschutzrichtlinien.
+                Dieser gesamte Prozess findet ausschliesslich in der Schweiz statt.
               </p>
               <div className="flex items-center mt-4">
                 <div className="rounded-full bg-green-100 p-2 mr-3">
