@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { MessageSquare, Mail, Phone, ArrowRight } from 'lucide-react';
+import { Mail, Phone, ArrowRight } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 
 const CallToAction: React.FC = () => {
@@ -21,22 +22,12 @@ const CallToAction: React.FC = () => {
             
             <div className="space-y-6 mb-10">
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-evoya-blue/10 flex items-center justify-center mr-5 flex-shrink-0">
-                  <MessageSquare className="w-5 h-5 text-evoya-blue" />
-                </div>
-                <div>
-                  <h3 className="font-medium text-gray-900 mb-1">Chat Support</h3>
-                  <p className="text-gray-600">Sofortige Hilfe über unseren Live-Chat</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center">
                 <div className="w-12 h-12 rounded-full bg-evoya-orange/10 flex items-center justify-center mr-5 flex-shrink-0">
                   <Mail className="w-5 h-5 text-evoya-orange" />
                 </div>
                 <div>
                   <h3 className="font-medium text-gray-900 mb-1">Email</h3>
-                  <p className="text-gray-600">info@evoya.ch</p>
+                  <p className="text-gray-600">hello@evoya.ai</p>
                 </div>
               </div>
               
@@ -46,7 +37,7 @@ const CallToAction: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-medium text-gray-900 mb-1">Telefon</h3>
-                  <p className="text-gray-600">+41 123 456 789</p>
+                  <p className="text-gray-600">+41 44 520 16 48</p>
                 </div>
               </div>
             </div>
