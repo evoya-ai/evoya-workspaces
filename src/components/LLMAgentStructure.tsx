@@ -10,7 +10,7 @@ const FrameworkExplanation: React.FC = () => {
   return (
     <AnimatedSection animation="fade-up" delay={100} className="mb-10">
       <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100">
-        <h3 className="text-xl font-bold text-evoya-blue mb-4">Das Agentic Framework</h3>
+        <h3 className="text-2xl font-bold text-evoya-blue mb-4">Das Agentic Framework</h3>
         <p className="text-gray-700 mb-4">
           Unser Agentic Framework bildet die Grundlage aller Evoya-Agenten. Es kombiniert sechs Kernkomponenten, 
           die zusammen einen leistungsfähigen KI-Agenten bilden, der komplexe Aufgaben intelligent bearbeiten kann.
@@ -140,8 +140,8 @@ const LLMAgentStructure: React.FC = () => {
                   <Info className="h-5 w-5 text-evoya-blue" />
                 </div>
                 <div className="ml-3">
-                  <AlertTitle className="text-evoya-navy font-semibold text-base">Was sind KI-Agenten?</AlertTitle>
-                  <AlertDescription className="text-gray-600 mt-1">
+                  <AlertTitle className="text-evoya-navy font-semibold text-lg">Was sind KI-Agenten?</AlertTitle>
+                  <AlertDescription className="text-gray-600 mt-1 text-base">
                     KI-Agenten sind intelligente Softwareeinheiten, die eigenständig Aufgaben ausführen und komplexe Probleme lösen können.
                   </AlertDescription>
                 </div>
