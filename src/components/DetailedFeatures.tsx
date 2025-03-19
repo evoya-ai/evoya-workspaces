@@ -1,8 +1,8 @@
-
 import React from 'react';
 import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic, Shield, Lock, Database, ArrowRight, User, Globe2, RefreshCcw, Book, Layers, Network, Brain, Search } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { cn } from '../lib/utils';
+import { Separator } from './ui/separator';
 
 interface FeatureDetailProps {
   title: string;
@@ -247,11 +247,9 @@ const DetailedFeatures: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div className="flex flex-col">
-              {/* Visualization part */}
               <div className="relative h-[450px] overflow-hidden rounded-xl shadow-lg mb-8">
                 <div className="absolute inset-0 bg-gradient-to-r from-evoya-lightBlue/5 to-evoya-navy/10 z-0"></div>
                 
-                {/* Central Brain Component */}
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-white rounded-full shadow-xl border-4 border-evoya-lightBlue/30 flex items-center justify-center z-20">
                   <div className="text-center p-2">
                     <Brain className="w-12 h-12 text-evoya-navy mx-auto mb-2" />
@@ -259,47 +257,36 @@ const DetailedFeatures: React.FC = () => {
                   </div>
                 </div>
                 
-                {/* Connecting lines - Modified to remove middle connections */}
                 <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 450" xmlns="http://www.w3.org/2000/svg">
                   <g stroke="#5B6CAD" strokeWidth="1.5" strokeDasharray="5,3" opacity="0.6">
                     <line x1="200" y1="225" x2="70" y2="80" />
                     <line x1="200" y1="225" x2="330" y2="80" />
                     <line x1="200" y1="225" x2="70" y2="370" />
                     <line x1="200" y1="225" x2="330" y2="370" />
-                    {/* Removed the middle left and right connecting lines */}
                   </g>
                 </svg>
                 
-                {/* Top left: Dokumente */}
                 <div className="absolute top-[10%] left-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '0s' }}>
                   <Book className="w-8 h-8 text-evoya-orange mx-auto mb-1" />
                   <span className="block text-xs font-medium text-center">Dokumente</span>
                 </div>
                 
-                {/* Top right: Webinhalte */}
                 <div className="absolute top-[10%] right-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '1.5s' }}>
                   <Globe className="w-8 h-8 text-evoya-green mx-auto mb-1" />
                   <span className="block text-xs font-medium text-center">Webinhalte</span>
                 </div>
                 
-                {/* Removed Middle left: Strukturierte Daten */}
-                
-                {/* Removed Middle right: Analyse */}
-                
-                {/* Bottom left: Präzise Suche */}
                 <div className="absolute bottom-[10%] left-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '6s' }}>
                   <Search className="w-8 h-8 text-evoya-navy mx-auto mb-1" />
                   <span className="block text-xs font-medium text-center">Präzise Suche</span>
                 </div>
                 
-                {/* Bottom right: API (renamed from Knowledge Graph) */}
                 <div className="absolute bottom-[10%] right-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '7.5s' }}>
                   <Network className="w-8 h-8 text-evoya-lightBlue mx-auto mb-1" />
                   <span className="block text-xs font-medium text-center">API</span>
                 </div>
               </div>
               
-              {/* Callout box moved below the visualization */}
               <div className="p-5 bg-gradient-to-r from-evoya-lightBlue/5 to-transparent rounded-lg border border-evoya-lightBlue/20 shadow-sm">
                 <div className="flex items-center">
                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-evoya-lightBlue/20 flex items-center justify-center mr-4">
@@ -364,9 +351,11 @@ const DetailedFeatures: React.FC = () => {
           </div>
         </AnimatedSection>
 
-        <AnimatedSection className="mt-24 text-center" animation="fade-up">
+        <Separator className="max-w-5xl mx-auto my-12 bg-gray-200" />
+
+        <AnimatedSection className="mt-32 text-center" animation="fade-up">
           <div className="inline-block mb-4 px-3 py-1 rounded-full bg-evoya-navy/10 text-evoya-navy text-sm font-medium">
-            Privacy Shield
+            Datenschutz
           </div>
           
           <div className="max-w-3xl mx-auto relative">
@@ -375,9 +364,9 @@ const DetailedFeatures: React.FC = () => {
                 <div className="w-12 h-12 rounded-full bg-evoya-navy/10 flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-6 h-6 text-evoya-navy" />
                 </div>
-                <h4 className="text-lg font-semibold mb-2 text-center">Schweizer Datenspeicherung</h4>
+                <h4 className="text-lg font-semibold mb-2 text-center">Datenspeicherung</h4>
                 <p className="text-gray-600 text-center">
-                  Alle Daten werden ausschliesslich in sicheren Rechenzentren in der Schweiz gespeichert und verarbeitet.
+                  Ihre Daten werden in sicheren Rechenzentren in der Schweiz gespeichert. Die Verarbeitung kann durch Sprachmodelle ausserhalb der Schweiz erfolgen.
                 </p>
               </div>
               
@@ -397,7 +386,7 @@ const DetailedFeatures: React.FC = () => {
                 </div>
                 <h4 className="text-lg font-semibold mb-2 text-center">Verschlüsselung</h4>
                 <p className="text-gray-600 text-center">
-                  Modernste End-to-End-Verschlüsselung für alle Daten während der Übertragung und Speicherung.
+                  Modernste End-to-End-Verschlüsselung für alle Daten während der Übertragung. Sichere Speicherung nach Industriestandards.
                 </p>
               </div>
             </div>
@@ -406,17 +395,21 @@ const DetailedFeatures: React.FC = () => {
           </div>
         </AnimatedSection>
 
-        <AnimatedSection className="mt-24" animation="fade-up">
+        <AnimatedSection className="mt-28" animation="fade-up">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12 text-center">
-              <h3 className="text-2xl lg:text-3xl font-semibold mb-6">Wie das Privacy Shield funktioniert</h3>
+              <h3 className="text-2xl lg:text-3xl font-semibold mb-6">Privacy Shield</h3>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Das Evoya Privacy Shield schützt Ihre sensiblen Daten durch einen mehrstufigen Anonymisierungsprozess, 
                 der ausschliesslich in sicheren Schweizer Rechenzentren stattfindet.
               </p>
             </div>
 
-            <div className="w-full mx-auto mt-12 pb-16">
+            <div className="text-center mb-10">
+              <h4 className="text-xl font-medium text-evoya-navy mb-4">So funktioniert es</h4>
+            </div>
+
+            <div className="w-full mx-auto mt-6 pb-16">
               <div className="flex flex-col lg:flex-row items-stretch justify-between gap-8 relative">
                 <div className="hidden lg:block absolute top-1/2 left-0 w-full h-2 z-0">
                   <div className="w-full h-full flex items-center">
