@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
               <span className="block">Optimieren Sie</span>
               <span className="block">Arbeitsabläufe</span>
               <span className="block">mit KI-gestützten</span>
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-evoya-teal">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-evoya-orange to-evoya-yellow">
                 Workspaces
               </span>
             </h1>
