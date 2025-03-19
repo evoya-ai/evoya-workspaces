@@ -273,7 +273,7 @@ const DetailedFeatures: React.FC = () => {
                 </div>
                 
                 <div className="absolute top-[10%] right-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '1.5s' }}>
-                  <Globe className="w-8 h-8 text-evoya-blue mx-auto mb-1" />
+                  <Globe className="w-8 h-8 text-evoya-orange mx-auto mb-1" />
                   <span className="block text-xs font-medium text-center">Webinhalte</span>
                 </div>
                 
@@ -283,7 +283,7 @@ const DetailedFeatures: React.FC = () => {
                 </div>
                 
                 <div className="absolute bottom-[10%] right-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '7.5s' }}>
-                  <Network className="w-8 h-8 text-evoya-blue mx-auto mb-1" />
+                  <Network className="w-8 h-8 text-evoya-orange mx-auto mb-1" />
                   <span className="block text-xs font-medium text-center">API</span>
                 </div>
               </div>
@@ -291,7 +291,7 @@ const DetailedFeatures: React.FC = () => {
               <div className="p-5 bg-gradient-to-r from-evoya-lightBlue/5 to-transparent rounded-lg border border-evoya-lightBlue/20 shadow-sm">
                 <div className="flex items-center">
                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-evoya-lightBlue/20 flex items-center justify-center mr-4">
-                    <Brain className="w-6 h-6 text-evoya-navy" />
+                    <Brain className="w-6 h-6 text-evoya-orange" />
                   </div>
                   <p className="text-evoya-navy font-medium">
                     Steigern Sie die Effizienz Ihrer Teams um bis zu 30% durch präzise Informationsextraktion.
@@ -310,8 +310,8 @@ const DetailedFeatures: React.FC = () => {
               
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-evoya-lightBlue/10 flex items-center justify-center mt-1 mr-4">
-                    <Book className="w-5 h-5 text-evoya-blue" />
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-evoya-orange/10 flex items-center justify-center mt-1 mr-4">
+                    <Book className="w-5 h-5 text-evoya-orange" />
                   </div>
                   <div>
                     <h5 className="text-lg font-medium mb-2 text-evoya-navy">Multiformat-Verarbeitung</h5>
@@ -323,8 +323,8 @@ const DetailedFeatures: React.FC = () => {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-evoya-blue/10 flex items-center justify-center mt-1 mr-4">
-                    <Network className="w-5 h-5 text-evoya-blue" />
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-evoya-orange/10 flex items-center justify-center mt-1 mr-4">
+                    <Network className="w-5 h-5 text-evoya-orange" />
                   </div>
                   <div>
                     <h5 className="text-lg font-medium mb-2 text-evoya-navy">Kontextbasierte Verknüpfung</h5>
