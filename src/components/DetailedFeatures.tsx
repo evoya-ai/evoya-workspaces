@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic, Shield, Lock, Database, ArrowRight, User, Globe2, RefreshCcw, Book, Layers, Network, Brain, Search } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -109,6 +108,101 @@ const DetailedFeatures: React.FC = () => {
     </div>
   );
 
+  const textGenerationContent = (
+    <div className="relative w-full h-[450px] overflow-hidden rounded-xl shadow-xl bg-[#1A1E35]">
+      <div className="absolute inset-0 w-full h-full overflow-hidden flex items-center justify-center">
+        <img 
+          src="/lovable-uploads/bd748aab-cd87-4ee0-9e93-b78f5f2f25b8.png"
+          alt="Handwritten text being converted to typed text"
+          className="w-full h-auto object-contain"
+        />
+      </div>
+    </div>
+  );
+  
+  const businessmanContent = (
+    <div className="relative w-full h-[450px] overflow-hidden rounded-xl shadow-lg">
+      <img 
+        src="/lovable-uploads/2cf47cc3-74a6-4c55-9268-fa7e3dc7399a.png" 
+        alt="Businessman sitting at desk with laptop and coffee" 
+        className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-evoya-blue to-transparent opacity-20"></div>
+    </div>
+  );
+  
+  const editorContent = (
+    <div className="relative w-full h-[450px] overflow-hidden rounded-xl shadow-xl bg-[#1A1E35]">
+      <div className="absolute inset-0 w-full h-full overflow-hidden flex items-center justify-center">
+        <img 
+          src="/lovable-uploads/3b4099ed-2b01-42eb-9923-3b3eee681c7a.png"
+          alt="Text editor interface showing article creation"
+          className="w-full h-auto object-contain"
+        />
+      </div>
+    </div>
+  );
+  
+  const diagramContent = (
+    <div className="relative w-full h-[450px] overflow-hidden rounded-xl shadow-xl bg-[#1A1E35]">
+      <div className="absolute inset-0 w-full h-full overflow-hidden flex items-center justify-center">
+        <img 
+          src="/lovable-uploads/44fd2f97-fa37-4db8-b7bb-1e9b2d9f7abe.png"
+          alt="Flowchart diagram showing generative AI data processing"
+          className="w-full h-auto object-contain"
+        />
+      </div>
+    </div>
+  );
+  
+  const documentContent = (
+    <div className="relative w-full h-[450px] overflow-hidden rounded-xl shadow-xl bg-[#1A1E35]">
+      <div className="absolute inset-0 w-full h-full overflow-hidden flex items-center justify-center">
+        <img 
+          src="/lovable-uploads/ddfef4d0-c4bd-42ff-b565-ef4f3634c135.png"
+          alt="Document icons for Excel, PDF and Word files"
+          className="w-full h-auto object-contain"
+        />
+      </div>
+    </div>
+  );
+  
+  const webContent = (
+    <div className="relative w-full h-[450px] overflow-hidden rounded-xl shadow-xl bg-[#1A1E35]">
+      <div className="absolute inset-0 w-full h-full overflow-hidden flex items-center justify-center">
+        <img 
+          src="/lovable-uploads/7683941c-ee25-428b-8b85-59daf4342e91.png"
+          alt="Globe icon representing web content and live information"
+          className="w-1/2 h-auto object-contain"
+        />
+      </div>
+    </div>
+  );
+  
+  const chatInterface = (
+    <div className="relative w-full h-[450px] overflow-hidden rounded-xl shadow-xl bg-[#1A1E35]">
+      <div className="absolute inset-0 w-full h-full overflow-hidden flex items-center justify-center">
+        <img 
+          src="/lovable-uploads/bfb282ce-7f88-43fe-b6cf-734c9e70dd1e.png"
+          alt="Chat interface showing AI conversation"
+          className="w-full h-auto object-contain"
+        />
+      </div>
+    </div>
+  );
+  
+  const audioWaveform = (
+    <div className="relative w-full h-[450px] overflow-hidden rounded-xl shadow-xl bg-[#1A1E35]">
+      <div className="absolute inset-0 w-full h-full overflow-hidden flex items-center justify-center">
+        <img 
+          src="/lovable-uploads/4a4c9724-fefd-4658-85eb-cd483b2c78a5.png"
+          alt="Audio waveform visualization"
+          className="w-2/3 h-auto object-contain"
+        />
+      </div>
+    </div>
+  );
+
   const features = [
     {
       title: "Textgenerierung",
@@ -120,10 +214,11 @@ const DetailedFeatures: React.FC = () => {
         "Automatische Zusammenfassung langer Dokumente",
       ],
       icon: <FileText className="w-6 h-6 text-white" />,
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+      image: "",
       alt: "Person arbeitet an einem Text-Dokument",
       isReversed: false,
       accentColor: "text-evoya-blue bg-evoya-blue/10",
+      customContent: textGenerationContent,
     },
     {
       title: "Bildgenerierung",
@@ -135,10 +230,11 @@ const DetailedFeatures: React.FC = () => {
         "Automatische Grössenanpassung für verschiedene Medienkanäle",
       ],
       icon: <ImageIcon className="w-6 h-6 text-white" />,
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
+      image: "",
       alt: "Generierte Bilder auf einem Display",
       isReversed: true,
       accentColor: "text-evoya-blue bg-evoya-blue/10",
+      customContent: businessmanContent,
     },
     {
       title: "Bilderkennung und Analyse",
@@ -165,10 +261,11 @@ const DetailedFeatures: React.FC = () => {
         "Vergleichsanalyse zwischen verschiedenen Dokumentversionen",
       ],
       icon: <FileSearch className="w-6 h-6 text-white" />,
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      image: "",
       alt: "Dokumentenanalyse auf einem Laptop",
       isReversed: true,
       accentColor: "text-evoya-blue bg-evoya-blue/10",
+      customContent: documentContent,
     },
     {
       title: "Live-Informationsabruf",
@@ -180,10 +277,11 @@ const DetailedFeatures: React.FC = () => {
         "KI-gestützte Vorhersagen basierend auf aktuellen Daten",
       ],
       icon: <Globe className="w-6 h-6 text-white" />,
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+      image: "",
       alt: "Echtzeitdaten auf einem Dashboard",
       isReversed: false,
       accentColor: "text-evoya-blue bg-evoya-blue/10",
+      customContent: webContent,
     },
     {
       title: "Diagramme & Visuelle Darstellungen",
@@ -195,10 +293,11 @@ const DetailedFeatures: React.FC = () => {
         "KI-gestützte Dateninterpretation und Empfehlungen",
       ],
       icon: <BarChart className="w-6 h-6 text-white" />,
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      image: "",
       alt: "Datenvusualisierung auf einem Laptop",
       isReversed: true,
       accentColor: "text-evoya-blue bg-evoya-blue/10",
+      customContent: diagramContent,
     },
     {
       title: "Creator",
@@ -210,7 +309,7 @@ const DetailedFeatures: React.FC = () => {
         "Flexible Formattierungsoptionen für professionelle Ausgaben",
       ],
       icon: <PenTool className="w-6 h-6 text-white" />,
-      customContent: creatorImageInterface,
+      customContent: editorContent,
       image: "", // Not used when customContent is provided
       alt: "Kreative Bearbeitung von Inhalten",
       isReversed: false,
@@ -226,10 +325,26 @@ const DetailedFeatures: React.FC = () => {
         "Nahtlose Integration mit anderen Evoya-Funktionen für Weiterverarbeitung",
       ],
       icon: <Mic className="w-6 h-6 text-white" />,
-      customContent: voiceImageInterface,
+      customContent: audioWaveform,
       image: "", // Not used when customContent is provided
       alt: "Spracherkennung und Transkription",
       isReversed: true,
+      accentColor: "text-evoya-blue bg-evoya-blue/10",
+    },
+    {
+      title: "Chat",
+      description: "Nutzen Sie eine intuitive Chat-Schnittstelle für natürlichsprachliche Interaktionen mit der KI.",
+      details: [
+        "Kontextbewusste Kommunikation für effiziente Problemlösung",
+        "Mehrsprachige Unterstützung für internationale Teams",
+        "Integration von Webseitenabfragen und Datenrecherche",
+        "Anpassbare Vorlagen für häufig gestellte Anfragen",
+      ],
+      icon: <User className="w-6 h-6 text-white" />,
+      customContent: chatInterface,
+      image: "", // Not used when customContent is provided
+      alt: "Chat-Interface mit KI-Assistent",
+      isReversed: false,
       accentColor: "text-evoya-blue bg-evoya-blue/10",
     },
   ];
