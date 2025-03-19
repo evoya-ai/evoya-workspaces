@@ -136,8 +136,8 @@ const LLMAgentStructure: React.FC = () => {
           <AnimatedSection animation="fade-up" delay={50}>
             <Alert className="border border-evoya-lightBlue/30 bg-evoya-blue/5 shadow-sm rounded-lg p-4">
               <div className="flex items-start">
-                <div className="bg-white rounded-full p-1.5 shadow-sm">
-                  <Info className="h-5 w-5 text-evoya-blue" />
+                <div className="bg-evoya-orange rounded-full p-1.5 shadow-sm">
+                  <Info className="h-5 w-5 text-white" />
                 </div>
                 <div className="ml-3">
                   <AlertTitle className="text-evoya-navy font-semibold text-lg">Was sind KI-Agenten?</AlertTitle>
