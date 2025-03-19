@@ -160,8 +160,12 @@ const LanguageModels: React.FC = () => {
               <div className="md:w-1/3 flex justify-center">
                 <div className="w-24 h-24 md:w-32 md:h-32 relative flex items-center justify-center rounded-full bg-white shadow-lg p-4 border-2 border-evoya-blue/20">
                   <Shield className="w-12 h-12 md:w-16 md:h-16 text-evoya-blue" />
-                  <div className="absolute -top-2 -right-2 bg-evoya-orange text-white text-xs font-bold px-2 py-1 rounded-full">
-                    Schweiz
+                  <div className="absolute -top-2 -right-2">
+                    <img 
+                      src="/lovable-uploads/85fc521f-a8da-44f0-b7a1-15d36773ef55.png" 
+                      alt="Swiss flag" 
+                      className="w-10 h-10 rounded-full"
+                    />
                   </div>
                 </div>
               </div>
