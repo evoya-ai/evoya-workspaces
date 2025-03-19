@@ -43,11 +43,21 @@ const CallToAction: React.FC = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
-              <a href="#demo" className="btn-primary">
+              <a 
+                href="https://tidycal.com/evoya/erstgespraech" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn-primary"
+              >
                 Demo vereinbaren
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
-              <a href="#test" className="btn-secondary">
+              <a 
+                href="https://avaia.io/accounts/signup/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn-secondary"
+              >
                 Workspace testen
               </a>
             </div>
