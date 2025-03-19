@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic, Shield, Lock, Database, ArrowRight, User, Globe2, RefreshCcw, Book, Layers, Network, Brain, Search } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -91,6 +92,18 @@ const DetailedFeatures: React.FC = () => {
           src="/lovable-uploads/4dbd1465-6af1-438c-ac70-394abf43e9ca.png"
           alt="Evoya Creator Interface showing a text editor with formatting controls"
           className="w-full h-full object-contain"
+        />
+      </div>
+    </div>
+  );
+  
+  const voiceImageInterface = (
+    <div className="relative w-full h-[450px] overflow-hidden rounded-xl shadow-xl bg-[#1A1E35]">
+      <div className="absolute inset-0 w-full h-full overflow-hidden flex items-center justify-center">
+        <img 
+          src="/lovable-uploads/982a7c62-2073-4662-85e1-41555374b8f0.png"
+          alt="Evoya Voice Interface showing audio waveform"
+          className="w-4/5 h-auto object-contain"
         />
       </div>
     </div>
@@ -213,7 +226,8 @@ const DetailedFeatures: React.FC = () => {
         "Nahtlose Integration mit anderen Evoya-Funktionen für Weiterverarbeitung",
       ],
       icon: <Mic className="w-6 h-6 text-white" />,
-      image: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc",
+      customContent: voiceImageInterface,
+      image: "", // Not used when customContent is provided
       alt: "Spracherkennung und Transkription",
       isReversed: true,
       accentColor: "text-evoya-blue bg-evoya-blue/10",
