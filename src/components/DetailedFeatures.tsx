@@ -147,8 +147,8 @@ const DetailedFeatures: React.FC = () => {
     <div className="relative w-full h-[450px] overflow-hidden rounded-xl shadow-xl bg-[#1A1E35]">
       <div className="absolute inset-0 w-full h-full overflow-hidden flex items-center justify-center">
         <img 
-          src="/lovable-uploads/3b4099ed-2b01-42eb-9923-3b3eee681c7a.png"
-          alt="Text editor interface showing article creation"
+          src="/lovable-uploads/fb80b8c1-ed8f-49e9-923f-f4514cc5869c.png"
+          alt="Text editor interface showing article creation about generative AI"
           className="w-full h-auto object-contain"
         />
       </div>
@@ -618,4 +618,3 @@ const DetailedFeatures: React.FC = () => {
 };
 
 export default DetailedFeatures;
-
