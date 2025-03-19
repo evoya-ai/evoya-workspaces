@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic, Shield, Lock, Database, ArrowRight, User, Globe2, RefreshCcw, Book, Layers, Network, Brain, Search } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -280,14 +281,14 @@ const DetailedFeatures: React.FC = () => {
                 <span className="block text-xs font-medium text-center">Webinhalte</span>
               </div>
               
-              {/* Middle left: Strukturierte Daten - aligned directly in line with the horizontal connecting line */}
-              <div className="absolute top-[225px] left-[50px] transform -translate-y-1/2 w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '3s' }}>
+              {/* Middle left: Strukturierte Daten - CORRECTED ALIGNMENT to center with the line */}
+              <div className="absolute top-[225px] left-[50px] transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '3s' }}>
                 <Layers className="w-8 h-8 text-evoya-purple mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Strukturierte Daten</span>
               </div>
               
-              {/* Middle right: Analyse - aligned directly in line with the horizontal connecting line */}
-              <div className="absolute top-[225px] right-[50px] transform -translate-y-1/2 w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '4.5s' }}>
+              {/* Middle right: Analyse - CORRECTED ALIGNMENT to center with the line */}
+              <div className="absolute top-[225px] right-[50px] transform translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '4.5s' }}>
                 <FileSearch className="w-8 h-8 text-evoya-yellow mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Analyse</span>
               </div>
@@ -574,4 +575,3 @@ const DetailedFeatures: React.FC = () => {
 };
 
 export default DetailedFeatures;
-
