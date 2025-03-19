@@ -1,9 +1,10 @@
 
 import React from 'react';
-import { BookText, User, Wrench, Brain, Computer, Database, Plus, Package, LayoutPanelTop } from 'lucide-react';
+import { BookText, User, Wrench, Brain, Computer, Database, Plus, Package, LayoutPanelTop, Info } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import AgentComponent from './AgentComponent';
 import AgentFrameworkDiagram from './AgentFrameworkDiagram';
+import { Alert, AlertTitle, AlertDescription } from './ui/alert';
 
 const FrameworkExplanation: React.FC = () => {
   return (
@@ -125,13 +126,20 @@ const LLMAgentStructure: React.FC = () => {
           <h2 className="text-3xl lg:text-4xl font-bold mb-3 max-w-3xl mx-auto">
             KI-Agenten für intelligente <span className="text-evoya-blue">Prozessoptimierung</span>
           </h2>
-          <p className="text-base text-gray-600 max-w-3xl mx-auto mb-2">
-            KI-Agenten sind intelligente Softwareeinheiten, die eigenständig Aufgaben ausführen und komplexe Probleme lösen können.
-          </p>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Evoya-Agenten basieren auf einem durchdachten Framework, das es ihnen ermöglicht, 
             komplexe Aufgaben effizient zu lösen und nahtlos mit Menschen und anderen Systemen zu interagieren.
           </p>
+        </AnimatedSection>
+
+        <AnimatedSection animation="fade-up" delay={50} className="mb-10">
+          <Alert className="border border-evoya-lightBlue/30 bg-evoya-blue/5 text-evoya-navy">
+            <Info className="h-5 w-5 text-evoya-blue" />
+            <AlertTitle className="text-evoya-blue font-semibold ml-2">Was sind KI-Agenten?</AlertTitle>
+            <AlertDescription className="text-gray-700 ml-7">
+              KI-Agenten sind intelligente Softwareeinheiten, die eigenständig Aufgaben ausführen und komplexe Probleme lösen können.
+            </AlertDescription>
+          </Alert>
         </AnimatedSection>
 
         <FrameworkExplanation />
