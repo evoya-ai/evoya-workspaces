@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Check, Plus, Rocket } from 'lucide-react';
+import { Check, Plus, Rocket, Settings } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
@@ -58,20 +58,34 @@ const Pricing: React.FC = () => {
                 <PricingFeature text="2 Mailboxen" />
               </div>
 
-              <div className="mt-8 p-4 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg border border-gray-200">
-                <div className="flex items-start space-x-3">
-                  <Plus className="h-5 w-5 text-evoya-orange mt-0.5 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-medium text-gray-900">Zusätzliche Credits</h4>
-                    <p className="text-sm text-gray-600 mt-1">
-                      Benötigen Sie mehr? Erhalten Sie 1'000 zusätzliche Credits für nur CHF 35 pro Monat.
-                    </p>
+              <div className="mt-8 space-y-4">
+                <div className="p-4 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg border border-gray-200">
+                  <div className="flex items-start space-x-3">
+                    <Plus className="h-5 w-5 text-evoya-orange mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-medium text-gray-900">Zusätzliche Credits</h4>
+                      <p className="text-sm text-gray-600 mt-1">
+                        Benötigen Sie mehr? Erhalten Sie 1'000 zusätzliche Credits für nur CHF 35 pro Monat.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="p-4 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg border border-gray-200">
+                  <div className="flex items-start space-x-3">
+                    <Settings className="h-5 w-5 text-evoya-orange mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-medium text-gray-900">Zusätzliche Administratoren</h4>
+                      <p className="text-sm text-gray-600 mt-1">
+                        Administratoren verwalten die Organisation, organisieren Rollen, laden Benutzer ein und konfigurieren Einstellungen. Eine zusätzliche Administratoren-Rolle kostet CHF 29 pro Monat.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </CardContent>
             <CardFooter className="flex flex-col pt-2 pb-8">
-              <Button className="w-full py-6 text-base" size="lg">
+              <Button className="w-full py-6 text-base bg-evoya-orange hover:bg-evoya-orange/90 text-white" size="lg">
                 <Rocket className="mr-2 h-5 w-5" />
                 Jetzt kostenlos starten
               </Button>
