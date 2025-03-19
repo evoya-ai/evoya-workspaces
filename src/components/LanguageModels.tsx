@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Shield, Bot, Server, Lock } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -162,7 +161,7 @@ const LanguageModels: React.FC = () => {
                   <Shield className="w-12 h-12 md:w-16 md:h-16 text-evoya-blue" />
                   <div className="absolute -top-2 -right-2">
                     <img 
-                      src="/lovable-uploads/85fc521f-a8da-44f0-b7a1-15d36773ef55.png" 
+                      src="/lovable-uploads/1004ce48-af0e-4e52-b961-949e01b89203.png" 
                       alt="Swiss flag" 
                       className="w-10 h-10 rounded-full"
                     />
