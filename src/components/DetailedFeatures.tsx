@@ -13,6 +13,7 @@ interface FeatureDetailProps {
   alt: string;
   isReversed?: boolean;
   accentColor: string;
+  customContent?: React.ReactNode;
 }
 
 const FeatureDetail: React.FC<FeatureDetailProps> = ({
@@ -24,6 +25,7 @@ const FeatureDetail: React.FC<FeatureDetailProps> = ({
   alt,
   isReversed = false,
   accentColor,
+  customContent,
 }) => {
   return (
     <div className={cn(
@@ -64,20 +66,36 @@ const FeatureDetail: React.FC<FeatureDetailProps> = ({
         animation={isReversed ? "fade-up" : "fade-up"}
         delay={150}
       >
-        <div className="relative w-full h-80 sm:h-96 lg:h-[450px] overflow-hidden rounded-xl shadow-lg">
-          <img 
-            src={image} 
-            alt={alt} 
-            className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-          />
-          <div className={`absolute inset-0 bg-gradient-to-r ${accentColor.replace("text-", "from-")} to-transparent opacity-20`}></div>
-        </div>
+        {customContent ? (
+          customContent
+        ) : (
+          <div className="relative w-full h-80 sm:h-96 lg:h-[450px] overflow-hidden rounded-xl shadow-lg">
+            <img 
+              src={image} 
+              alt={alt} 
+              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+            />
+            <div className={`absolute inset-0 bg-gradient-to-r ${accentColor.replace("text-", "from-")} to-transparent opacity-20`}></div>
+          </div>
+        )}
       </AnimatedSection>
     </div>
   );
 };
 
 const DetailedFeatures: React.FC = () => {
+  const creatorImageInterface = (
+    <div className="relative w-full h-[450px] overflow-hidden rounded-xl shadow-xl bg-[#1A1E35]">
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
+        <img 
+          src="/lovable-uploads/4dbd1465-6af1-438c-ac70-394abf43e9ca.png"
+          alt="Evoya Creator Interface showing a text editor with formatting controls"
+          className="w-full h-full object-contain"
+        />
+      </div>
+    </div>
+  );
+
   const features = [
     {
       title: "Textgenerierung",
@@ -179,7 +197,8 @@ const DetailedFeatures: React.FC = () => {
         "Flexible Formattierungsoptionen für professionelle Ausgaben",
       ],
       icon: <PenTool className="w-6 h-6 text-white" />,
-      image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f",
+      customContent: creatorImageInterface,
+      image: "", // Not used when customContent is provided
       alt: "Kreative Bearbeitung von Inhalten",
       isReversed: false,
       accentColor: "text-evoya-blue bg-evoya-blue/10",
@@ -229,6 +248,7 @@ const DetailedFeatures: React.FC = () => {
               alt={feature.alt}
               isReversed={feature.isReversed}
               accentColor={feature.accentColor}
+              customContent={feature.customContent}
             />
           ))}
         </div>
