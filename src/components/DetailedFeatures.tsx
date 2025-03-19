@@ -288,10 +288,10 @@ const DetailedFeatures: React.FC = () => {
       title: "Diagramme & Visuelle Darstellungen",
       description: "Erstellen Sie automatisiert Diagramme zur Visualisierung von Geschäftsprozessen und Konzepten.",
       details: [
-        "Automatische Generierung von Flussdiagrammen und Organigrammen mit Mermaid",
-        "Intuitive Erstellung komplexer Geschäftsprozess-Visualisierungen",
-        "Visuelle Darstellung von Konzepten und strategischen Roadmaps",
-        "Unterstützung von Vega für anspruchsvolle grafische Darstellungen",
+        "Automatische Generierung von Ablaufdiagrammen, Entscheidungsbäumen sowie weiteren Diagrammtypen für verschiedene Anwendungsfälle",
+        "Intuitive Visualisierung komplexer Prozesse für besseres Verständnis und einfachere Kommunikation",
+        "Grafische Aufbereitung von Konzepten, Abläufen und Strukturen für unterschiedliche Zielgruppen",
+        "Umwandlung von textbasierten Beschreibungen in aussagekräftige visuelle Darstellungen",
       ],
       icon: <BarChart className="w-6 h-6 text-white" />,
       image: "",
@@ -697,4 +697,3 @@ const DetailedFeatures: React.FC = () => {
 };
 
 export default DetailedFeatures;
-
