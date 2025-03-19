@@ -206,12 +206,12 @@ const DetailedFeatures: React.FC = () => {
   const features = [
     {
       title: "Textgenerierung",
-      description: "Erstellen und bearbeiten Sie geschäftliche Dokumente, Berichte und Korrespondenz mit KI-Unterstützung.",
+      description: "Nutzen Sie KI-Assistenz für alle textbasierten Anwendungsfälle - vom ersten Entwurf bis zur finalen Überarbeitung.",
       details: [
-        "Automatische Erstellung von professionellen Geschäftsbriefen und Berichten",
-        "KI-gestützte Optimierung von Geschäftsdokumenten für verschiedene Zielgruppen",
-        "Mehrsprachige Übersetzung und Lokalisierung geschäftlicher Inhalte",
-        "Intelligente Zusammenfassung umfangreicher Geschäftsdokumente",
+        "Erstellen vollständiger Texte wie Artikel, Berichte und Geschäftsbriefe auf Basis einfacher Vorgaben",
+        "Intelligente Korrektur und Optimierung bestehender Texte mit konkreten Verbesserungsvorschlägen",
+        "Unterstützung bei Brainstorming und Ideenfindung für Konzepte und kreative Inhalte",
+        "Erstellen von präzisen Zusammenfassungen und kontextgerechten Umformulierungen",
       ],
       icon: <FileText className="w-6 h-6 text-white" />,
       image: "",
