@@ -106,8 +106,8 @@ const AgentFrameworkDiagram: React.FC = () => {
           <AgentComponent 
             title="Wissen" 
             icon={<Database className="w-7 h-7" />} 
-            color="bg-evoya-lightBlue" 
-            textColor="text-white"
+            color="bg-evoya-lightBlue/30" 
+            textColor="text-evoya-navy"
           />
         </div>
       </div>
