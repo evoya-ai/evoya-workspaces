@@ -303,12 +303,12 @@ const DetailedFeatures: React.FC = () => {
     },
     {
       title: "Creator",
-      description: "Bearbeiten Sie KI-generierte Inhalte direkt in einem dynamischen Dokumenteneditor.",
+      description: "Bearbeiten Sie KI-generierte Inhalte direkt in einem interaktiven Dokumenteneditor – im Gegensatz zu einem herkömmlichen Chat.",
       details: [
-        "Dynamischer Dokumenteneditor für die direkte Bearbeitung KI-generierter Inhalte",
-        "Echtzeit-Zusammenarbeit zwischen Mensch und KI für optimale Ergebnisse",
-        "Nahtlose Integration des Editors in bestehende Dokumentenworkflows",
-        "Vielfältige Formatierungsoptionen für professionelle Geschäftsdokumente",
+        "Vollwertiger Dokumenteneditor statt sequentieller Chat-Ansicht, der komplette Texte als bearbeitbares Dokument darstellt",
+        "Selektive Bearbeitung: Markieren und editieren Sie gezielt einzelne Passagen oder ganze Abschnitte mit Vorher/Nachher-Ansicht",
+        "Formatierungskontrolle mit Überschriften, Absätzen und Textauszeichnungen direkt im Editor",
+        "Interaktive Zusammenarbeit mit der KI innerhalb des Dokuments – nicht nur sequentielle Antworten wie in einem Chat",
       ],
       icon: <PenTool className="w-6 h-6 text-white" />,
       customContent: creatorImageInterface,
