@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Check, Plus, CreditCard } from 'lucide-react';
+import { Check, Plus, Rocket } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
@@ -72,7 +72,7 @@ const Pricing: React.FC = () => {
             </CardContent>
             <CardFooter className="flex flex-col pt-2 pb-8">
               <Button className="w-full py-6 text-base" size="lg">
-                <CreditCard className="mr-2 h-5 w-5" />
+                <Rocket className="mr-2 h-5 w-5" />
                 Jetzt kostenlos starten
               </Button>
               <p className="text-xs text-gray-500 mt-3">Keine Kreditkarte notwendig</p>
