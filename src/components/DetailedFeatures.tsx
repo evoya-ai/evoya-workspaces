@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic, Shield, Lock, Database, ArrowRight, User, Globe2, RefreshCcw, Book, Layers, Network, Brain, Search } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -112,8 +113,8 @@ const DetailedFeatures: React.FC = () => {
     <div className="relative w-full h-[450px] overflow-hidden rounded-xl shadow-xl bg-[#1A1E35]">
       <div className="absolute inset-0 w-full h-full overflow-hidden flex items-center justify-center">
         <img 
-          src="/lovable-uploads/bd748aab-cd87-4ee0-9e93-b78f5f2f25b8.png"
-          alt="Handwritten text being converted to typed text"
+          src="/lovable-uploads/114f908c-d003-4183-b0b6-74e7fa56eee5.png"
+          alt="KI-Chat Interface zur Texterstellung"
           className="w-full h-auto object-contain"
         />
       </div>
