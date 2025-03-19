@@ -291,7 +291,7 @@ const DetailedFeatures: React.FC = () => {
         "Automatische Generierung von Ablaufdiagrammen, Entscheidungsbäumen sowie weiteren Diagrammtypen für verschiedene Anwendungsfälle",
         "Intuitive Visualisierung komplexer Prozesse für besseres Verständnis und einfachere Kommunikation",
         "Grafische Aufbereitung von Konzepten, Abläufen und Strukturen für unterschiedliche Zielgruppen",
-        "Umwandlung von textbasierten Beschreibungen in aussagekräftige visuelle Darstellungen",
+        "Datenvisualisierung in verschiedenen Diagrammtypen",
       ],
       icon: <BarChart className="w-6 h-6 text-white" />,
       image: "",
