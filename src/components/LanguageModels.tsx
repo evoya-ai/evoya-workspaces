@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Shield, Bot, Server, Lock } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -24,11 +23,16 @@ const ModelCard: React.FC<ModelCardProps> = ({
       <div className="h-2 w-full bg-evoya-orange" />
       <CardContent className="p-5">
         <div className="flex items-start gap-4">
-          <div className="p-3 rounded-full bg-evoya-orange/5 border border-evoya-orange/10 transition-all duration-300 shadow-sm flex items-center justify-center">
+          <div className="p-3 rounded-full bg-evoya-orange/5 border border-evoya-orange/10 transition-all duration-300 shadow-sm flex items-center justify-center" style={{ width: '48px', height: '48px' }}>
             {logoSrc ? (
-              <img src={logoSrc} alt={`${provider} logo`} className="w-5 h-5 object-contain min-w-5 min-h-5" style={{ width: '100%', height: '100%', maxWidth: '24px', maxHeight: '24px' }} />
+              <img 
+                src={logoSrc} 
+                alt={`${provider} logo`} 
+                className="object-contain" 
+                style={{ width: '36px', height: '36px', maxWidth: '100%', maxHeight: '100%' }} 
+              />
             ) : (
-              <Bot className="w-5 h-5 text-evoya-orange" />
+              <Bot className="w-8 h-8 text-evoya-orange" />
             )}
           </div>
           <div className="flex-1">
