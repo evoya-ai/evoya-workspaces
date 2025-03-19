@@ -144,7 +144,7 @@ const Benefits: React.FC = () => {
                   <div className="w-5 h-5 rounded-full bg-evoya-blue/10 flex items-center justify-center mr-3">
                     <div className="w-2 h-2 rounded-full bg-evoya-blue"></div>
                   </div>
-                  <span className="text-gray-700">KI-Expertise und Domain-Wissen</span>
+                  <span className="text-gray-700">KI-Expertise und fundiertes Branchenwissen</span>
                 </li>
               </ul>
               <ul className="space-y-3">
