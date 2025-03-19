@@ -179,18 +179,6 @@ const DetailedFeatures: React.FC = () => {
     </div>
   );
   
-  const chatInterface = (
-    <div className="relative w-full h-[450px] overflow-hidden rounded-xl shadow-xl bg-[#1A1E35]">
-      <div className="absolute inset-0 w-full h-full overflow-hidden flex items-center justify-center">
-        <img 
-          src="/lovable-uploads/bfb282ce-7f88-43fe-b6cf-734c9e70dd1e.png"
-          alt="Chat interface showing AI conversation"
-          className="w-full h-auto object-contain"
-        />
-      </div>
-    </div>
-  );
-  
   const audioWaveform = (
     <div className="relative w-full h-[450px] overflow-hidden rounded-xl shadow-xl bg-[#1A1E35]">
       <div className="absolute inset-0 w-full h-full overflow-hidden flex items-center justify-center">
@@ -329,22 +317,6 @@ const DetailedFeatures: React.FC = () => {
       image: "", // Not used when customContent is provided
       alt: "Spracherkennung und Transkription",
       isReversed: true,
-      accentColor: "text-evoya-blue bg-evoya-blue/10",
-    },
-    {
-      title: "Chat",
-      description: "Nutzen Sie eine intuitive Chat-Schnittstelle für natürlichsprachliche Interaktionen mit der KI.",
-      details: [
-        "Kontextbewusste Kommunikation für effiziente Problemlösung",
-        "Mehrsprachige Unterstützung für internationale Teams",
-        "Integration von Webseitenabfragen und Datenrecherche",
-        "Anpassbare Vorlagen für häufig gestellte Anfragen",
-      ],
-      icon: <User className="w-6 h-6 text-white" />,
-      customContent: chatInterface,
-      image: "", // Not used when customContent is provided
-      alt: "Chat-Interface mit KI-Assistent",
-      isReversed: false,
       accentColor: "text-evoya-blue bg-evoya-blue/10",
     },
   ];
