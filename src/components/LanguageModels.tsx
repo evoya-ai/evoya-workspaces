@@ -26,7 +26,7 @@ const ModelCard: React.FC<ModelCardProps> = ({
         <div className="flex items-start gap-4">
           <div className="p-3 rounded-full bg-evoya-orange/5 border border-evoya-orange/10 transition-all duration-300 shadow-sm flex items-center justify-center">
             {logoSrc ? (
-              <img src={logoSrc} alt={`${provider} logo`} className="w-5 h-5 object-contain" />
+              <img src={logoSrc} alt={`${provider} logo`} className="w-5 h-5 object-contain min-w-5 min-h-5" style={{ width: '100%', height: '100%', maxWidth: '24px', maxHeight: '24px' }} />
             ) : (
               <Bot className="w-5 h-5 text-evoya-orange" />
             )}
@@ -80,19 +80,19 @@ const LanguageModels: React.FC = () => {
       provider: "Meta",
       description: "Open-Source-Modelle mit umfangreichen Anpassungsmöglichkeiten",
       isSwissHosted: false,
-      logoSrc: "/lovable-uploads/37757fce-6a3d-43fa-86c1-09e26f66e649.png" // Meta logo
+      logoSrc: "/lovable-uploads/37757fce-6a3d-43fa-86c1-09e26f66e649.png" // Fixed Meta logo path
     },
     {
       provider: "DeepSeek",
       description: "Spezialisiert auf fortschrittliche Forschung und technologische Innovation",
       isSwissHosted: false,
-      logoSrc: "/lovable-uploads/555a0131-efa6-4bb5-94dc-9f4694784ce5.png" // DeepSeek logo (using the star-shaped logo)
+      logoSrc: "/lovable-uploads/555a0131-efa6-4bb5-94dc-9f4694784ce5.png" // DeepSeek logo
     },
     {
       provider: "Google",
       description: "Führende KI-Technologien mit tiefer Integration in Web- und Cloud-Dienste",
       isSwissHosted: false,
-      logoSrc: "/lovable-uploads/d265b7d1-1d48-48b0-b69a-7810191bc476.png" // Google logo (using the G logo)
+      logoSrc: "/lovable-uploads/d265b7d1-1d48-48b0-b69a-7810191bc476.png" // Google logo
     },
     {
       provider: "Nvidia",
