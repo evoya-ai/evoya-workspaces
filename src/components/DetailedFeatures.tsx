@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic, Shield, Lock, Database, ArrowRight, User, Globe2, RefreshCcw, Book, Layers, Network, Brain, Search } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -259,7 +260,7 @@ const DetailedFeatures: React.FC = () => {
         "Automatische Extraktion von Daten aus Rechnungen, Verträgen, Berichten und Anträgen",
         "Strukturierung ungeordneter Textinhalte in durchsuchbare, analysierbare Formate",
         "Intelligente Erkennung von Schlüsselinformationen in komplexen Dokumenten",
-        "Schnelle Verarbeitung großer Dokumentenmengen mit automatischer Extraktion und Zusammenfassung relevanter Inhalte",
+        "Schnelle Verarbeitung grosser Dokumentenmengen mit automatischer Extraktion und Zusammenfassung relevanter Inhalte",
       ],
       icon: <FileSearch className="w-6 h-6 text-white" />,
       image: "",
@@ -302,12 +303,12 @@ const DetailedFeatures: React.FC = () => {
     },
     {
       title: "Creator",
-      description: "Bearbeiten Sie KI-generierte Inhalte direkt in einem dynamischen Dokumenteneditor.",
+      description: "Bearbeiten Sie KI-generierte Inhalte direkt in einem interaktiven Dokumenteneditor – im Gegensatz zu einem herkömmlichen Chat.",
       details: [
-        "Dynamischer Dokumenteneditor für die direkte Bearbeitung KI-generierter Inhalte",
-        "Echtzeit-Zusammenarbeit zwischen Mensch und KI für optimale Ergebnisse",
-        "Nahtlose Integration des Editors in bestehende Dokumentenworkflows",
-        "Vielfältige Formatierungsoptionen für professionelle Geschäftsdokumente",
+        "Vollwertiger Dokumenteneditor statt sequentieller Chat-Ansicht, der komplette Texte als bearbeitbares Dokument darstellt",
+        "Selektive Bearbeitung: Markieren und editieren Sie gezielt einzelne Passagen oder ganze Abschnitte mit Vorher/Nachher-Ansicht",
+        "Formatierungskontrolle mit Überschriften, Absätzen und Textauszeichnungen direkt im Editor",
+        "Interaktive Zusammenarbeit mit der KI innerhalb des Dokuments – nicht nur sequentielle Antworten wie in einem Chat",
       ],
       icon: <PenTool className="w-6 h-6 text-white" />,
       customContent: creatorImageInterface,
@@ -318,12 +319,12 @@ const DetailedFeatures: React.FC = () => {
     },
     {
       title: "Voice",
-      description: "Verwandeln Sie gesprochene Inhalte direkt in Text für barrierefreie und schnelle Kommunikation.",
+      description: "Kommunizieren Sie per Sprache mit dem KI-Agenten und transkribieren Sie gesprochene Inhalte für barrierefreie und schnelle Interaktion.",
       details: [
-        "Präzise Echtzeit-Transkription von Sprache zu Text für Meetings und Präsentationen",
-        "Unterstützung mehrerer Sprachen für internationale Teams und Kommunikation",
-        "Automatische Protokollerstellung aus Besprechungsaufnahmen",
-        "Spracherkennung für die Erstellung von Notizen und Aufgabenlisten unterwegs",
+        "Direkte Sprach-Interaktion mit dem KI-Agenten ohne Tippen – ideal für unterwegs oder bei eingeschränkter Mobilität",
+        "Präzise Echtzeit-Transkription von Meetings und Gesprächen mit automatischer Protokollerstellung",
+        "Mehrsprachige Unterstützung für internationale Teams und Kommunikation in verschiedenen Sprachen",
+        "Barrierefreie Nutzung für Menschen mit Sehbehinderungen oder eingeschränkter Tastaturnutzung",
       ],
       icon: <Mic className="w-6 h-6 text-white" />,
       customContent: audioWaveform,
