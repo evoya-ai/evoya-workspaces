@@ -73,15 +73,21 @@ const Pricing: React.FC = () => {
               </div>
             </CardContent>
             <CardFooter className="flex flex-col pt-2 pb-8">
-              <a 
-                href="https://avaia.io/accounts/signup/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-6 text-base bg-evoya-orange hover:bg-evoya-orange/90 text-white flex items-center justify-center rounded-md"
+              <Button 
+                asChild
+                variant="default"
+                className="w-full py-3 px-6 bg-evoya-orange hover:bg-evoya-orange/90 text-white text-base font-medium"
               >
-                <Rocket className="mr-2 h-5 w-5" />
-                Jetzt kostenlos starten
-              </a>
+                <a 
+                  href="https://avaia.io/accounts/signup/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center"
+                >
+                  <Rocket className="mr-2 h-5 w-5" />
+                  Jetzt kostenlos starten
+                </a>
+              </Button>
               <p className="text-xs text-gray-500 mt-3">Keine Kreditkarte notwendig</p>
             </CardFooter>
           </Card>
