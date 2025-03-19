@@ -417,13 +417,13 @@ const DetailedFeatures: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="hidden lg:flex absolute left-[calc(33%-30px)] top-1/2 transform -translate-y-1/2 z-10">
+                <div className="hidden lg:flex absolute left-[calc(33%-30px)] top-1/2 transform -translate-y-1/2 z-30">
                   <div className="bg-gray-300 w-14 h-14 rounded-full flex items-center justify-center">
                     <ArrowRight className="w-6 h-6 text-gray-600" />
                   </div>
                 </div>
                 
-                <div className="hidden lg:flex absolute right-[calc(33%-30px)] top-1/2 transform -translate-y-1/2 z-10">
+                <div className="hidden lg:flex absolute right-[calc(33%-30px)] top-1/2 transform -translate-y-1/2 z-30">
                   <div className="bg-gray-300 w-14 h-14 rounded-full flex items-center justify-center">
                     <ArrowRight className="w-6 h-6 text-gray-600" />
                   </div>
