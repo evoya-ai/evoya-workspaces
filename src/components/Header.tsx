@@ -12,6 +12,9 @@ const Header: React.FC = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
+    // Check initial scroll position
+    handleScroll();
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -24,7 +27,7 @@ const Header: React.FC = () => {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-8 lg:px-12 ${
-        isScrolled ? 'py-3 bg-white/95 backdrop-blur-md shadow-sm' : 'py-5 bg-transparent'
+        isScrolled ? 'py-3 bg-white/95 backdrop-blur-md shadow-sm scrolled' : 'py-5 bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -39,16 +42,16 @@ const Header: React.FC = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#features" className={`${isScrolled ? 'text-evoya-darkGray font-semibold' : 'text-white'} hover:text-evoya-orange transition-colors font-medium ${isScrolled ? 'text-shadow-none' : 'text-shadow-sm'}`}>Funktionen</a>
-          <a href="#benefits" className={`${isScrolled ? 'text-evoya-darkGray font-semibold' : 'text-white'} hover:text-evoya-orange transition-colors font-medium ${isScrolled ? 'text-shadow-none' : 'text-shadow-sm'}`}>Vorteile</a>
-          <a href="#services" className={`${isScrolled ? 'text-evoya-darkGray font-semibold' : 'text-white'} hover:text-evoya-orange transition-colors font-medium ${isScrolled ? 'text-shadow-none' : 'text-shadow-sm'}`}>Dienstleistungen</a>
-          <a href="#comparison" className={`${isScrolled ? 'text-evoya-darkGray font-semibold' : 'text-white'} hover:text-evoya-orange transition-colors font-medium ${isScrolled ? 'text-shadow-none' : 'text-shadow-sm'}`}>Vergleich</a>
+          <a href="#features" className={`${isScrolled ? 'text-evoya-navy font-semibold' : 'text-white'} hover:text-evoya-orange transition-colors`}>Funktionen</a>
+          <a href="#benefits" className={`${isScrolled ? 'text-evoya-navy font-semibold' : 'text-white'} hover:text-evoya-orange transition-colors`}>Vorteile</a>
+          <a href="#services" className={`${isScrolled ? 'text-evoya-navy font-semibold' : 'text-white'} hover:text-evoya-orange transition-colors`}>Dienstleistungen</a>
+          <a href="#comparison" className={`${isScrolled ? 'text-evoya-navy font-semibold' : 'text-white'} hover:text-evoya-orange transition-colors`}>Vergleich</a>
           <a href="#contact" className="bg-white text-evoya-navy hover:bg-evoya-orange hover:text-white transition-colors duration-300 font-medium py-2 px-4 rounded-md">Kontakt</a>
         </nav>
 
         {/* Mobile Menu Button */}
         <button className="md:hidden" onClick={toggleMobileMenu}>
-          <Menu className={`h-6 w-6 ${isScrolled ? 'text-evoya-darkGray' : 'text-white'}`} />
+          <Menu className={`h-6 w-6 ${isScrolled ? 'text-evoya-navy' : 'text-white'}`} />
         </button>
       </div>
 
