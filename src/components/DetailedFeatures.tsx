@@ -121,7 +121,7 @@ const DetailedFeatures: React.FC = () => {
   );
   
   const businessmanContent = (
-    <div className="relative w-full h-[450px] overflow-hidden rounded-xl shadow-lg">
+    <div className="relative w-full h-[450px] overflow-hidden rounded-xl shadow-xl bg-[#1A1E35]">
       <img 
         src="/lovable-uploads/2cf47cc3-74a6-4c55-9268-fa7e3dc7399a.png" 
         alt="Businessman sitting at desk with laptop and coffee" 
@@ -206,12 +206,12 @@ const DetailedFeatures: React.FC = () => {
   const features = [
     {
       title: "Textgenerierung",
-      description: "Erstellen und bearbeiten Sie Geschäftsdokumente, Berichte und Marketingmaterialien mit KI-Unterstützung.",
+      description: "Erstellen und bearbeiten Sie geschäftliche Dokumente, Berichte und Korrespondenz mit KI-Unterstützung.",
       details: [
-        "Automatische Erstellung von E-Mails, Briefen und Berichten",
-        "KI-gestützte Textoptimierung für verschiedene Zielgruppen",
-        "Mehrsprachige Übersetzung und Lokalisierung von Inhalten",
-        "Automatische Zusammenfassung langer Dokumente",
+        "Automatische Erstellung von professionellen Geschäftsbriefen und Berichten",
+        "KI-gestützte Optimierung von Geschäftsdokumenten für verschiedene Zielgruppen",
+        "Mehrsprachige Übersetzung und Lokalisierung geschäftlicher Inhalte",
+        "Intelligente Zusammenfassung umfangreicher Geschäftsdokumente",
       ],
       icon: <FileText className="w-6 h-6 text-white" />,
       image: "",
@@ -224,10 +224,10 @@ const DetailedFeatures: React.FC = () => {
       title: "Bildgenerierung",
       description: "Entwickeln Sie visuelle Inhalte für Marketingkampagnen und Präsentationen mit wenigen Klicks.",
       details: [
-        "Erstellung von massgeschneiderten Produktvisualisierungen mit DALL-E",
-        "Generierung von Konzeptillustrationen mit FLUX für Marketingmaterialien",
-        "Anpassung bestehender Bilder an Ihre Markenidentität",
-        "Automatische Grössenanpassung für verschiedene Medienkanäle",
+        "Erstellung von massgeschneiderten Produktvisualisierungen für Marketingmaterialien",
+        "Generierung von Konzeptillustrationen für Werbekampagnen und Markenidentität",
+        "Automatische Anpassung von Bildformaten für verschiedene Marketingkanäle",
+        "KI-basierte Bildoptimierung für zielgruppenspezifische Marketingmaterialien",
       ],
       icon: <ImageIcon className="w-6 h-6 text-white" />,
       image: "",
@@ -238,12 +238,12 @@ const DetailedFeatures: React.FC = () => {
     },
     {
       title: "Bilderkennung und Analyse",
-      description: "Automatisieren Sie die Verarbeitung und Analyse visueller Daten für mehr Effizienz.",
+      description: "Automatisieren Sie die Texterkennung und Analyse visueller Daten für effizientere Geschäftsprozesse.",
       details: [
-        "Automatische Kategorisierung von Produktbildern",
-        "Erkennung von Objekten und Personen in visuellen Medien",
-        "Qualitätskontrolle durch KI-gestützte Bildanalyse",
-        "Extraktion von Textinformationen aus Bildern und Dokumenten",
+        "Optische Zeichenerkennung (OCR) zur Texterkennung aus Bildern und Dokumenten",
+        "Umwandlung von handgeschriebenen Notizen in bearbeitbaren Text",
+        "Erkennung und Klassifizierung wichtiger Dokumentelemente und Strukturen",
+        "Automatische Extraktion relevanter Textinformationen aus visuellen Medien",
       ],
       icon: <Eye className="w-6 h-6 text-white" />,
       image: "",
@@ -254,12 +254,12 @@ const DetailedFeatures: React.FC = () => {
     },
     {
       title: "Dokumentenanalyse",
-      description: "Extrahieren und fassen Sie relevante Informationen aus Geschäftsdokumenten schnell zusammen.",
+      description: "Extrahieren und strukturieren Sie relevante Informationen aus verschiedenen Geschäftsdokumenten.",
       details: [
-        "Automatische Extraktion von Daten aus Rechnungen und Verträgen",
-        "Strukturierung ungeordneter Textinhalte in durchsuchbare Formate",
+        "Automatische Extraktion von Daten aus Rechnungen, Verträgen, Berichten und Anträgen",
+        "Strukturierung ungeordneter Textinhalte in durchsuchbare, analysierbare Formate",
         "Intelligente Erkennung von Schlüsselinformationen in komplexen Dokumenten",
-        "Vergleichsanalyse zwischen verschiedenen Dokumentversionen",
+        "Vergleichsanalyse zwischen verschiedenen Dokumentversionen für effizientes Review",
       ],
       icon: <FileSearch className="w-6 h-6 text-white" />,
       image: "",
@@ -270,12 +270,12 @@ const DetailedFeatures: React.FC = () => {
     },
     {
       title: "Live-Informationsabruf",
-      description: "Greifen Sie in Echtzeit auf aktuelle Marktdaten und Trends zu für fundierte Entscheidungen.",
+      description: "Greifen Sie in Echtzeit auf aktuelle Informationen aus dem Internet zu für fundierte Entscheidungen.",
       details: [
-        "Integration von Echtzeit-Marktdaten in Ihre Analysen",
-        "Automatisierte Wettbewerbsbeobachtung und Branchentrends",
-        "Personalisierte Nachrichtenfeeds zu relevanten Geschäftsthemen",
-        "KI-gestützte Vorhersagen basierend auf aktuellen Daten",
+        "KI-Agenten recherchieren selbstständig aktuelle Informationen für Ihre Anfragen",
+        "Automatisierte Wettbewerbsbeobachtung und Erfassung von Branchentrends",
+        "Personalisierte Informationsfeeds zu relevanten Geschäftsthemen",
+        "Echtzeit-Faktenprüfung und Quellenanalyse für verlässliche Recherchen",
       ],
       icon: <Globe className="w-6 h-6 text-white" />,
       image: "",
@@ -286,28 +286,28 @@ const DetailedFeatures: React.FC = () => {
     },
     {
       title: "Diagramme & Visuelle Darstellungen",
-      description: "Erstellen Sie automatisiert Diagramme zur Visualisierung von Geschäftsprozessen und Datenanalysen.",
+      description: "Erstellen Sie automatisiert Diagramme zur Visualisierung von Geschäftsprozessen und Konzepten.",
       details: [
-        "Automatische Generierung von Diagrammen aus Datenquellen",
-        "Interaktive Dashboards für Geschäftsanalysen",
-        "Anpassbare Visualisierungen für Präsentationen und Berichte",
-        "KI-gestützte Dateninterpretation und Empfehlungen",
+        "Automatische Generierung von Flussdiagrammen und Organigrammen mit Mermaid",
+        "Intuitive Erstellung komplexer Geschäftsprozess-Visualisierungen",
+        "Visuelle Darstellung von Konzepten und strategischen Roadmaps",
+        "Unterstützung von Vega für anspruchsvolle grafische Darstellungen",
       ],
       icon: <BarChart className="w-6 h-6 text-white" />,
       image: "",
-      alt: "Datenvusualisierung auf einem Laptop",
+      alt: "Visualisierung von Geschäftsprozessen",
       isReversed: true,
       accentColor: "text-evoya-blue bg-evoya-blue/10",
       customContent: diagramContent,
     },
     {
       title: "Creator",
-      description: "Erweitern Sie die klassische Chat-Interaktion um eine dynamische Bearbeitungsansicht für strukturierte Inhalte.",
+      description: "Bearbeiten Sie KI-generierte Inhalte direkt in einem dynamischen Dokumenteneditor.",
       details: [
-        "Direkte Bearbeitung und Strukturierung von KI-generierten Inhalten",
-        "Interaktive Echtzeit-Zusammenarbeit mit der KI für optimale Ergebnisse",
-        "Nahtlose Integration in bestehende Workflows und Dokumentenformate",
-        "Flexible Formattierungsoptionen für professionelle Ausgaben",
+        "Dynamischer Dokumenteneditor für die direkte Bearbeitung KI-generierter Inhalte",
+        "Echtzeit-Zusammenarbeit zwischen Mensch und KI für optimale Ergebnisse",
+        "Nahtlose Integration des Editors in bestehende Dokumentenworkflows",
+        "Vielfältige Formatierungsoptionen für professionelle Geschäftsdokumente",
       ],
       icon: <PenTool className="w-6 h-6 text-white" />,
       customContent: creatorImageInterface,
@@ -320,10 +320,10 @@ const DetailedFeatures: React.FC = () => {
       title: "Voice",
       description: "Verwandeln Sie gesprochene Inhalte direkt in Text für barrierefreie und schnelle Kommunikation.",
       details: [
-        "Präzise Echtzeit-Transkription von Sprache zu Text",
-        "Unterstützung mehrerer Sprachen für internationale Teams",
-        "Automatische Formatierung und Strukturierung von transkribierten Inhalten",
-        "Nahtlose Integration mit anderen Evoya-Funktionen für Weiterverarbeitung",
+        "Präzise Echtzeit-Transkription von Sprache zu Text für Meetings und Präsentationen",
+        "Unterstützung mehrerer Sprachen für internationale Teams und Kommunikation",
+        "Automatische Protokollerstellung aus Besprechungsaufnahmen",
+        "Spracherkennung für die Erstellung von Notizen und Aufgabenlisten unterwegs",
       ],
       icon: <Mic className="w-6 h-6 text-white" />,
       customContent: audioWaveform,
