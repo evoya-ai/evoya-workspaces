@@ -211,7 +211,7 @@ const DetailedFeatures: React.FC = () => {
         "Erstellen vollständiger Texte wie Artikel, Berichte und Geschäftsbriefe auf Basis einfacher Vorgaben",
         "Intelligente Korrektur und Optimierung bestehender Texte mit konkreten Verbesserungsvorschlägen",
         "Unterstützung bei Brainstorming und Ideenfindung für Konzepte und kreative Inhalte",
-        "Erstellen von präzisen Zusammenfassungen und kontextgerechten Umformulierungen",
+        "Mehrsprachige Übersetzung und kontextgerechte Umformulierung von Texten für internationale Kommunikation",
       ],
       icon: <FileText className="w-6 h-6 text-white" />,
       image: "",
