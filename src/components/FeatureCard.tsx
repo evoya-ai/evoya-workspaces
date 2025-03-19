@@ -21,13 +21,13 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 }) => {
   return (
     <div 
-      className={`p-6 rounded-xl transition-all duration-300 hover:shadow-lg ${className} animate-on-scroll`}
+      className={`p-6 rounded-xl transition-all duration-300 ${className}`}
       style={{ animationDelay: `${delay}ms` }}
     >
-      <div className="feature-icon-container bg-gradient-to-br from-gray-50 to-white border border-gray-100">
+      <div className="mb-6 inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 shadow-sm">
         <Icon className={`w-7 h-7 ${iconColor}`} />
       </div>
-      <h3 className="text-xl font-medium mb-2 text-custom-darkGray">{title}</h3>
+      <h3 className="text-xl font-semibold mb-2 text-gray-800">{title}</h3>
       <p className="text-gray-600">{description}</p>
     </div>
   );

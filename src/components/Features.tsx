@@ -56,12 +56,12 @@ const Features: React.FC = () => {
 
   return (
     <section id="features" className="py-24 bg-gradient-to-b from-white via-gray-50 to-gray-100">
-      <div className="section-container">
+      <div className="container mx-auto px-4">
         <AnimatedSection className="text-center mb-16">
           <div className="inline-block mb-4 px-3 py-1 rounded-full bg-evoya-blue/10 text-evoya-blue text-sm font-medium">
             {translate('features_badge', language)}
           </div>
-          <h2 className="mb-6 max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold mb-6 max-w-3xl mx-auto">
             {translate('features_title', language)} <span className="text-evoya-blue">{translate('features_title_colored', language)}</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -69,7 +69,7 @@ const Features: React.FC = () => {
           </p>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-4 md:mx-8">
           {features.map((feature, index) => (
             <AnimatedSection key={index} delay={feature.delay} className="h-full">
               <FeatureCard
@@ -77,7 +77,7 @@ const Features: React.FC = () => {
                 description={translate(feature.descriptionKey, language)}
                 icon={feature.icon}
                 iconColor={feature.iconColor}
-                className="h-full bg-white border border-gray-100 shadow-sm"
+                className="h-full bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
               />
             </AnimatedSection>
           ))}
