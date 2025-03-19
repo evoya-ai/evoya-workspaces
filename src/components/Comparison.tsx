@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Check, X, AlertTriangle } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -49,13 +50,13 @@ const Comparison: React.FC = () => {
     {
       name: 'OpenAI',
       description: 'ChatGPT',
-      results: [false, false, false, false, false, false, true, false, false, false] as FeatureResult[],
+      results: [false, false, false, false, true, false, true, false, false, false] as FeatureResult[],
       highlighted: false
     },
     {
       name: 'Microsoft',
       description: 'Copilot',
-      results: [false, true, false, false, false, false, false, false, false, false] as FeatureResult[],
+      results: [false, true, false, false, true, false, false, false, false, false] as FeatureResult[],
       highlighted: false
     }
   ];
