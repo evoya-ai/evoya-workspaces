@@ -1,34 +1,9 @@
+
 import React from 'react';
 import { BookText, User, Wrench, Brain, Computer, Database, Plus, Package, LayoutPanelTop } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
-
-interface AgentComponentProps {
-  title: string;
-  icon: React.ReactNode;
-  color: string;
-  textColor: string;
-  className?: string;
-}
-
-const AgentComponent: React.FC<AgentComponentProps> = ({ 
-  title, 
-  icon, 
-  color, 
-  textColor,
-  className = '' 
-}) => {
-  return (
-    <div className={`relative group ${className}`}>
-      <div className={`absolute -inset-1 rounded-xl bg-gradient-to-r from-evoya-blue/50 to-evoya-lightBlue/50 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
-      <div className={`flex items-center justify-center rounded-xl ${color} ${textColor} p-4 shadow-md transition-all duration-300 relative h-full min-h-24`}>
-        <div className="flex flex-col items-center text-center">
-          {icon}
-          <span className="mt-2 font-medium">{title}</span>
-        </div>
-      </div>
-    </div>
-  );
-};
+import AgentComponent from './AgentComponent';
+import AgentFrameworkDiagram from './AgentFrameworkDiagram';
 
 const FrameworkExplanation: React.FC = () => {
   return (
@@ -165,93 +140,7 @@ const LLMAgentStructure: React.FC = () => {
           <div className="p-6 rounded-xl bg-white shadow-lg border border-gray-100">
             <div className="text-2xl font-bold text-evoya-blue mb-8 text-center">Aufbau des Agentic Frameworks</div>
             
-            <div className="relative w-full max-w-4xl mx-auto p-4">
-              <div className="flex justify-center gap-2 mb-10 relative">
-                <div className="w-full max-w-[450px]">
-                  <div className="bg-evoya-blue text-white p-5 rounded-xl flex flex-col items-center">
-                    <BookText className="w-7 h-7 mb-2" />
-                    <div className="font-medium">Instruktionen</div>
-                  </div>
-                </div>
-                
-                <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-1 shadow-md border border-gray-200">
-                  <Plus className="w-6 h-6 text-evoya-blue" />
-                </div>
-                
-                <div className="w-full max-w-[450px]">
-                  <div className="bg-evoya-blue text-white p-5 rounded-xl flex flex-col items-center">
-                    <User className="w-7 h-7 mb-2" />
-                    <div className="font-medium">Persona</div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center" style={{top: '150px', height: '65px'}}>
-                <div className="w-0.5 h-full bg-evoya-blue/70"></div>
-                <div className="absolute top-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
-                <div className="absolute bottom-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
-              </div>
-              
-              <div className="flex justify-between mb-16 relative" style={{marginTop: "50px"}}>
-                <div className="w-64">
-                  <div className="bg-evoya-blue text-white p-5 rounded-xl flex flex-col items-center">
-                    <Wrench className="w-7 h-7 mb-2" />
-                    <div className="font-medium">Tools</div>
-                  </div>
-                </div>
-                
-                <div className="absolute left-1/2 top-16 transform -translate-x-1/2 -translate-y-1/2 w-64 flex items-center">
-                  <div className="w-full h-0.5 bg-evoya-blue/70 relative">
-                    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
-                    <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
-                  </div>
-                </div>
-                
-                <div className="w-64">
-                  <div className="bg-evoya-orange text-white p-5 rounded-xl flex flex-col items-center">
-                    <Brain className="w-7 h-7 mb-2" />
-                    <div className="font-medium">Sprachmodell</div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="flex justify-end mb-16 relative">
-                <div className="w-64">
-                  <div className="bg-evoya-blue text-white p-5 rounded-xl flex flex-col items-center">
-                    <Computer className="w-7 h-7 mb-2" />
-                    <div className="font-medium">Interface</div>
-                  </div>
-                </div>
-                
-                <div className="absolute right-[340px] top-8 w-[calc(100%-340px)] flex items-center">
-                  <div className="w-full h-0.5 bg-evoya-blue/70 relative">
-                    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
-                    <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
-                  </div>
-                </div>
-                
-                <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center" style={{top: '32px', height: '30px'}}>
-                  <div className="w-0.5 h-full bg-evoya-blue/70"></div>
-                  <div className="absolute top-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
-                  <div className="absolute bottom-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
-                </div>
-              </div>
-              
-              <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center" style={{top: '330px', height: '50px'}}>
-                <div className="w-0.5 h-full bg-evoya-blue/70"></div>
-                <div className="absolute top-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
-                <div className="absolute bottom-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
-              </div>
-              
-              <div className="flex justify-center">
-                <div className="w-64">
-                  <div className="bg-evoya-blue text-white p-5 rounded-xl flex flex-col items-center">
-                    <Database className="w-7 h-7 mb-2" />
-                    <div className="font-medium">Wissen</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <AgentFrameworkDiagram />
           </div>
         </AnimatedSection>
 
