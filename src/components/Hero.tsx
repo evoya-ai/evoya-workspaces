@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
               <a href="https://avaia.io/accounts/signup/" target="_blank" rel="noopener noreferrer" className="border-2 border-white text-white bg-transparent hover:bg-white/10 hover:border-evoya-orange transition-colors duration-300 font-medium py-3 px-6 rounded-md inline-flex items-center">
-                Kostenlos starten
+                <span className="text-white">Kostenlos starten</span>
               </a>
             </div>
           </AnimatedSection>
