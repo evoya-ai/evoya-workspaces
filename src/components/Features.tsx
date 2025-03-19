@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { FileText, Image, Eye, FileSearch, Globe, BarChart } from 'lucide-react';
 import FeatureCard from './FeatureCard';
@@ -7,42 +8,42 @@ const Features: React.FC = () => {
   const features = [
     {
       title: 'Textgenerierung',
-      description: 'Erstellen und bearbeiten Sie Geschäftsdokumente, Berichte und Marketingmaterialien mit KI-Unterstützung.',
+      description: 'Erstellen, optimieren und übersetzen Sie Texte mit KI – von Geschäftsberichten bis hin zu kreativen Inhalten.',
       icon: FileText,
       iconColor: 'text-evoya-blue',
       delay: 0
     },
     {
       title: 'Bildgenerierung',
-      description: 'Entwickeln Sie visuelle Inhalte für Marketingkampagnen und Präsentationen mit wenigen Klicks.',
+      description: 'Erzeugen Sie hochwertige Bilder für Marketing, Präsentationen und Dokumente mit DALL·E und Flux.',
       icon: Image,
       iconColor: 'text-evoya-blue',
       delay: 100
     },
     {
-      title: 'Bilderkennung und Analyse',
-      description: 'Automatisieren Sie die Verarbeitung und Analyse visueller Daten für mehr Effizienz.',
+      title: 'Bilderkennung & Analyse',
+      description: 'Extrahieren und analysieren Sie Informationen aus Bildern – von OCR für Dokumente bis zur Erkennung von Objekten.',
       icon: Eye,
       iconColor: 'text-evoya-blue',
       delay: 200
     },
     {
       title: 'Dokumentenanalyse',
-      description: 'Extrahieren und fassen Sie relevante Informationen aus Geschäftsdokumenten schnell zusammen.',
+      description: 'Durchsuchen und strukturieren Sie grosse Dokumentenmengen in Sekunden – inklusive Datenextraktion und Zusammenfassung.',
       icon: FileSearch,
       iconColor: 'text-evoya-blue',
       delay: 300
     },
     {
       title: 'Live-Informationsabruf',
-      description: 'Greifen Sie in Echtzeit auf aktuelle Marktdaten und Trends zu für fundierte Entscheidungen.',
+      description: 'Recherchieren Sie in Echtzeit im Internet und erhalten Sie direkt aufbereitete, mit Quellenangaben versehene Ergebnisse.',
       icon: Globe,
       iconColor: 'text-evoya-blue',
       delay: 400
     },
     {
       title: 'Diagramme & Visuelle Darstellungen',
-      description: 'Erstellen Sie automatisiert Diagramme zur Visualisierung von Geschäftsprozessen und Datenanalysen.',
+      description: 'Erstellen Sie interaktive Diagramme zur Visualisierung von Prozessen, Abläufen und Konzepten.',
       icon: BarChart,
       iconColor: 'text-evoya-blue',
       delay: 500
