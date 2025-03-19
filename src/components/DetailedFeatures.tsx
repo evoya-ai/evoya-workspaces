@@ -269,37 +269,37 @@ const DetailedFeatures: React.FC = () => {
               </svg>
               
               {/* Top left: Dokumente */}
-              <div className="absolute top-[80px] left-[70px] transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '0s' }}>
+              <div className="absolute top-[10%] left-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '0s' }}>
                 <Book className="w-8 h-8 text-evoya-orange mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Dokumente</span>
               </div>
               
               {/* Top right: Webinhalte */}
-              <div className="absolute top-[80px] right-[70px] transform translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '1.5s' }}>
+              <div className="absolute top-[10%] right-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '1.5s' }}>
                 <Globe className="w-8 h-8 text-evoya-green mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Webinhalte</span>
               </div>
               
-              {/* Middle left: Strukturierte Daten - aligned precisely with connecting line */}
-              <div className="absolute top-[225px] left-[50px] transform -translate-y-1/2 -translate-x-1/2 w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '3s' }}>
+              {/* Middle left: Strukturierte Daten - aligned directly in line with the horizontal connecting line */}
+              <div className="absolute top-[225px] left-[50px] transform -translate-y-1/2 w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '3s' }}>
                 <Layers className="w-8 h-8 text-evoya-purple mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Strukturierte Daten</span>
               </div>
               
-              {/* Middle right: Analyse - aligned precisely with connecting line */}
-              <div className="absolute top-[225px] right-[50px] transform -translate-y-1/2 translate-x-1/2 w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '4.5s' }}>
+              {/* Middle right: Analyse - aligned directly in line with the horizontal connecting line */}
+              <div className="absolute top-[225px] right-[50px] transform -translate-y-1/2 w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '4.5s' }}>
                 <FileSearch className="w-8 h-8 text-evoya-yellow mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Analyse</span>
               </div>
               
               {/* Bottom left: Präzise Suche */}
-              <div className="absolute bottom-[80px] left-[70px] transform -translate-x-1/2 translate-y-1/2 w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '6s' }}>
+              <div className="absolute bottom-[10%] left-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '6s' }}>
                 <Search className="w-8 h-8 text-evoya-navy mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Präzise Suche</span>
               </div>
               
               {/* Bottom right: Knowledge Graph */}
-              <div className="absolute bottom-[80px] right-[70px] transform translate-x-1/2 translate-y-1/2 w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '7.5s' }}>
+              <div className="absolute bottom-[10%] right-[17.5%] w-24 h-24 bg-white rounded-lg shadow-lg p-3 z-10 animate-float" style={{ animationDelay: '7.5s' }}>
                 <Network className="w-8 h-8 text-evoya-lightBlue mx-auto mb-1" />
                 <span className="block text-xs font-medium text-center">Knowledge Graph</span>
               </div>
@@ -574,3 +574,4 @@ const DetailedFeatures: React.FC = () => {
 };
 
 export default DetailedFeatures;
+
