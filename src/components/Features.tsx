@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { FileText, Image, Eye, FileSearch, Globe, BarChart } from 'lucide-react';
 import FeatureCard from './FeatureCard';
@@ -31,21 +30,21 @@ const Features: React.FC = () => {
       title: 'Dokumentenanalyse',
       description: 'Extrahieren und fassen Sie relevante Informationen aus Geschäftsdokumenten schnell zusammen.',
       icon: FileSearch,
-      iconColor: 'text-evoya-orange',
+      iconColor: 'text-evoya-blue',
       delay: 300
     },
     {
       title: 'Live-Informationsabruf',
       description: 'Greifen Sie in Echtzeit auf aktuelle Marktdaten und Trends zu für fundierte Entscheidungen.',
       icon: Globe,
-      iconColor: 'text-evoya-orange',
+      iconColor: 'text-evoya-blue',
       delay: 400
     },
     {
       title: 'Diagramme & Visuelle Darstellungen',
       description: 'Erstellen Sie automatisiert Diagramme zur Visualisierung von Geschäftsprozessen und Datenanalysen.',
       icon: BarChart,
-      iconColor: 'text-evoya-orange',
+      iconColor: 'text-evoya-blue',
       delay: 500
     }
   ];
