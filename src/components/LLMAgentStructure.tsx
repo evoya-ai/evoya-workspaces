@@ -167,107 +167,102 @@ const LLMAgentStructure: React.FC = () => {
           <div className="p-6 rounded-xl bg-white shadow-lg border border-gray-100">
             <div className="text-2xl font-bold text-evoya-blue mb-8 text-center">Aufbau des Agentic Frameworks</div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              {/* Top row - Prompt Recipe */}
-              <div className="md:col-span-3">
-                <Card className="border border-evoya-blue/10 bg-evoya-blue/5 p-4 rounded-xl">
-                  <CardContent className="p-2">
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="relative">
-                        <AgentComponent
-                          title="Instruktionen"
-                          icon={<BookText className="w-6 h-6" />}
-                          color="bg-evoya-blue"
-                          textColor="text-white"
-                        />
-                        <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-1.5 shadow-sm">
-                          <Plus className="w-5 h-5 text-evoya-blue" />
-                        </div>
-                      </div>
-                      <AgentComponent
-                        title="Persona"
-                        icon={<User className="w-6 h-6" />}
-                        color="bg-evoya-blue"
-                        textColor="text-white"
-                      />
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-3 md:gap-6 mb-8 relative">
-              {/* Connectors from Prompt Recipe to LLM */}
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-10 w-0.5 h-10 bg-evoya-blue/70"></div>
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1 w-2 h-2 rounded-full bg-evoya-blue"></div>
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-10 w-2 h-2 rounded-full bg-evoya-blue"></div>
-            
-              {/* Left component - Tools */}
-              <div className="md:col-span-1 flex justify-center">
+            {/* Gesamtes Framework-Diagramm */}
+            <div className="relative w-full max-w-4xl mx-auto">
+              {/* Top Row - Instruktionen und Persona */}
+              <div className="grid grid-cols-2 gap-4 mb-12 relative">
+                <div className="relative">
+                  <AgentComponent
+                    title="Instruktionen"
+                    icon={<BookText className="w-6 h-6" />}
+                    color="bg-evoya-blue"
+                    textColor="text-white"
+                  />
+                  
+                  {/* Pluszeichen zwischen Instruktionen und Persona */}
+                  <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-1.5 shadow-md border border-gray-200">
+                    <Plus className="w-5 h-5 text-evoya-blue" />
+                  </div>
+                </div>
+                
                 <AgentComponent
-                  title="Tools"
-                  icon={<Wrench className="w-6 h-6" />}
+                  title="Persona"
+                  icon={<User className="w-6 h-6" />}
                   color="bg-evoya-blue"
                   textColor="text-white"
-                  className="w-full md:w-auto"
                 />
               </div>
-
-              {/* Connector from Tools to LLM - horizontal line with dots */}
-              <div className="hidden md:flex items-center justify-center">
-                <div className="w-full h-0.5 bg-evoya-blue/70 relative">
-                  <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
-                  <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
+              
+              {/* Connector von oben nach Mitte */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-12 bg-evoya-blue/70 top-[6.5rem]">
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
+              </div>
+              
+              {/* Middle Row - Tools, LLM, Interface */}
+              <div className="grid grid-cols-3 gap-4 mb-12 items-center">
+                {/* Tools */}
+                <div className="flex justify-center">
+                  <AgentComponent
+                    title="Tools"
+                    icon={<Wrench className="w-6 h-6" />}
+                    color="bg-evoya-blue"
+                    textColor="text-white"
+                    className="w-full max-w-[180px]"
+                  />
+                </div>
+                
+                {/* Connector von Tools zum LLM */}
+                <div className="flex items-center justify-center">
+                  <div className="w-full h-0.5 bg-evoya-blue/70 relative">
+                    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
+                    <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
+                  </div>
+                </div>
+                
+                {/* LLM/Sprachmodell */}
+                <div className="flex justify-center">
+                  <AgentComponent
+                    title="Sprachmodell"
+                    icon={<Brain className="w-6 h-6" />}
+                    color="bg-evoya-orange"
+                    textColor="text-white"
+                    className="w-full max-w-[180px]"
+                  />
+                </div>
+                
+                {/* Connector von LLM zum Interface */}
+                <div className="col-span-3 flex items-center justify-center mt-4">
+                  <div className="w-full max-w-[180px]"></div>
+                  <div className="w-full h-0.5 bg-evoya-blue/70 relative">
+                    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
+                    <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
+                  </div>
+                  <div className="w-full max-w-[180px]">
+                    <AgentComponent
+                      title="Interface"
+                      icon={<Computer className="w-6 h-6" />}
+                      color="bg-evoya-blue"
+                      textColor="text-white"
+                    />
+                  </div>
                 </div>
               </div>
-
-              {/* Center component - LLM */}
-              <div className="md:col-span-1 flex justify-center">
-                <AgentComponent
-                  title="Sprachmodell"
-                  icon={<Brain className="w-8 h-8" />}
-                  color="bg-evoya-orange"
-                  textColor="text-white"
-                  className="w-full md:w-auto"
-                />
+              
+              {/* Connector von Mitte nach unten */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-12 bg-evoya-blue/70" style={{ top: 'calc(50% + 2rem)' }}>
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
               </div>
-
-              {/* Connector from LLM to Interface - horizontal line with dots */}
-              <div className="hidden md:flex items-center justify-center">
-                <div className="w-full h-0.5 bg-evoya-blue/70 relative">
-                  <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
-                  <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-evoya-blue"></div>
-                </div>
-              </div>
-
-              {/* Right component - Interface */}
-              <div className="md:col-span-1 flex justify-center">
-                <AgentComponent
-                  title="Interface"
-                  icon={<Computer className="w-6 h-6" />}
-                  color="bg-evoya-blue"
-                  textColor="text-white"
-                  className="w-full md:w-auto"
-                />
-              </div>
-            </div>
-
-            {/* Connector from LLM to Knowledge - vertical line with dots */}
-            <div className="relative h-10 mb-4">
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-evoya-blue/70"></div>
-              <div className="absolute left-1/2 transform -translate-x-1/2 bottom-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
-              <div className="absolute left-1/2 transform -translate-x-1/2 top-0 w-2 h-2 rounded-full bg-evoya-blue"></div>
-            </div>
-
-            {/* Bottom component - Knowledge */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="md:col-start-2 md:col-span-1 flex justify-center">
+              
+              {/* Bottom Row - Wissen */}
+              <div className="flex justify-center">
                 <AgentComponent
                   title="Wissen"
                   icon={<Database className="w-6 h-6" />}
                   color="bg-evoya-blue"
                   textColor="text-white"
-                  className="w-full md:w-auto"
+                  className="max-w-[180px]"
                 />
               </div>
             </div>
