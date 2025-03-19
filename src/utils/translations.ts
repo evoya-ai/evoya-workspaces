@@ -993,6 +993,116 @@ export const translations: TranslationDictionary = {
     de: 'Datenschutz auf höchstem Niveau, ohne Kompromisse bei der Leistungsfähigkeit',
     en: 'Data protection at the highest level, without compromising performance',
   },
+  
+  // Language Models Section
+  models_badge: {
+    de: 'KI-Sprachmodelle',
+    en: 'AI Language Models',
+  },
+  models_title: {
+    de: 'Zugriff auf',
+    en: 'Access to',
+  },
+  models_title_colored: {
+    de: 'führende KI-Modelle',
+    en: 'leading AI models',
+  },
+  models_title_suffix: {
+    de: 'für jeden Anwendungsfall',
+    en: 'for every use case',
+  },
+  models_description: {
+    de: 'Unsere Plattform bietet Zugriff auf über 20 führende Modelle für Sprache und Bilder – ohne zusätzliche Abos oder hohe Kosten. Als Schweizer Unternehmen stellen wir auch KI-Modelle bereit, die in der Schweiz gehostet werden.',
+    en: 'Our platform provides access to over 20 leading models for language and images – without additional subscriptions or high costs. As a Swiss company, we also provide AI models that are hosted in Switzerland.',
+  },
+  models_swiss_hosted: {
+    de: 'Swiss Hosted',
+    en: 'Swiss Hosted',
+  },
+  models_openai_desc: {
+    de: 'Anbieter leistungsstarker KI-Sprachmodelle mit breitem Anwendungsspektrum',
+    en: 'Provider of powerful AI language models with a wide range of applications',
+  },
+  models_anthropic_desc: {
+    de: 'Fokus auf sichere, zuverlässige und kontrollierbare KI-Systeme',
+    en: 'Focus on safe, reliable, and controllable AI systems',
+  },
+  models_mistral_desc: {
+    de: 'Europäischer Anbieter effizienter KI-Modelle mit ausgezeichnetem Preis-Leistungs-Verhältnis',
+    en: 'European provider of efficient AI models with excellent price-performance ratio',
+  },
+  models_meta_desc: {
+    de: 'Open-Source-Modelle mit umfangreichen Anpassungsmöglichkeiten',
+    en: 'Open source models with extensive customization options',
+  },
+  models_deepseek_desc: {
+    de: 'Spezialisiert auf fortschrittliche Forschung und technologische Innovation',
+    en: 'Specialized in advanced research and technological innovation',
+  },
+  models_google_desc: {
+    de: 'Führende KI-Technologien mit tiefer Integration in Web- und Cloud-Dienste',
+    en: 'Leading AI technologies with deep integration into web and cloud services',
+  },
+  models_nvidia_desc: {
+    de: 'Hardware-optimierte KI-Lösungen mit Fokus auf Leistung und Skalierbarkeit',
+    en: 'Hardware-optimized AI solutions with a focus on performance and scalability',
+  },
+  models_microsoft_desc: {
+    de: 'Enterprise-orientierte KI-Dienste mit nahtloser Integration in Geschäftsanwendungen',
+    en: 'Enterprise-oriented AI services with seamless integration into business applications',
+  },
+  models_swiss_llama_title: {
+    de: 'Swiss Llama 3.3',
+    en: 'Swiss Llama 3.3',
+  },
+  models_swiss_llama_desc: {
+    de: 'Unser Schweizer Premium-Modell bietet höchste Qualität bei vollständiger Datensouveränität. Swiss Llama 3.3 wird ausschliesslich in der Schweiz gehostet.',
+    en: 'Our Swiss premium model offers the highest quality with complete data sovereignty. Swiss Llama 3.3 is hosted exclusively in Switzerland.',
+  },
+  models_swiss_hosting: {
+    de: 'Schweizer Hosting',
+    en: 'Swiss Hosting',
+  },
+  models_gdpr_compliant: {
+    de: 'DSGVO-konform',
+    en: 'GDPR compliant',
+  },
+  models_onpremise_title: {
+    de: 'On-Premise Lösungen',
+    en: 'On-Premise Solutions',
+  },
+  models_onpremise_desc: {
+    de: 'Maximale Kontrolle über Ihre KI-Infrastruktur: Wir bieten massgeschneiderte On-Premise-Lösungen, bei denen die KI-Modelle direkt auf Ihren Servern laufen. So bleiben Ihre Daten immer in Ihrer Infrastruktur und Sie profitieren von höchster Sicherheit und Datenschutz.',
+    en: 'Maximum control over your AI infrastructure: We offer customized on-premise solutions where the AI models run directly on your servers. This way, your data always stays in your infrastructure and you benefit from maximum security and data protection.',
+  },
+  models_onpremise_control_title: {
+    de: 'Volle Kontrolle',
+    en: 'Full Control',
+  },
+  models_onpremise_control_desc: {
+    de: 'Modelle laufen in Ihrer eigenen Infrastruktur und unter Ihrer Kontrolle.',
+    en: 'Models run in your own infrastructure and under your control.',
+  },
+  models_onpremise_custom_title: {
+    de: 'Massgeschneidert',
+    en: 'Customized',
+  },
+  models_onpremise_custom_desc: {
+    de: 'Anpassbar an Ihre spezifischen Anforderungen und Sicherheitsrichtlinien.',
+    en: 'Adaptable to your specific requirements and security policies.',
+  },
+  models_onpremise_data_title: {
+    de: 'Keine Datenexporte',
+    en: 'No Data Exports',
+  },
+  models_onpremise_data_desc: {
+    de: 'Sensible Daten verlassen niemals Ihr Unternehmensnetzwerk.',
+    en: 'Sensitive data never leaves your corporate network.',
+  },
+  models_contact_cta: {
+    de: 'Beratung anfragen',
+    en: 'Request Consultation',
+  },
 };
 
 // The translate function to be used in components
@@ -1005,3 +1115,4 @@ export const translate = (key: string, language: Language): string => {
   console.warn(`Translation missing for key: ${key} in language: ${language}`);
   return key;
 };
+

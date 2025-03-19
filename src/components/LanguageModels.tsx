@@ -1,9 +1,12 @@
+
 import React from 'react';
 import { Shield, Bot, Server, Lock } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { Card, CardContent } from './ui/card';
 import { cn } from '../lib/utils';
 import { Button } from './ui/button';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translate } from '../utils/translations';
 
 interface ModelCardProps {
   provider: string;
@@ -18,6 +21,8 @@ const ModelCard: React.FC<ModelCardProps> = ({
   isSwissHosted = false,
   logoSrc,
 }) => {
+  const { language } = useLanguage();
+  
   return (
     <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg group border border-gray-100 h-full">
       <div className="h-2 w-full bg-evoya-orange" />
@@ -46,7 +51,7 @@ const ModelCard: React.FC<ModelCardProps> = ({
               {isSwissHosted && (
                 <span className="inline-flex items-center rounded-full bg-evoya-blue/10 px-2.5 py-1 text-xs font-medium text-evoya-blue">
                   <Shield className="w-3 h-3 mr-1" />
-                  Swiss Hosted
+                  {translate('models_swiss_hosted', language)}
                 </span>
               )}
             </div>
@@ -59,6 +64,8 @@ const ModelCard: React.FC<ModelCardProps> = ({
 };
 
 const LanguageModels: React.FC = () => {
+  const { language } = useLanguage();
+  
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
@@ -69,49 +76,49 @@ const LanguageModels: React.FC = () => {
   const providers = [
     {
       provider: "OpenAI",
-      description: "Anbieter leistungsstarker KI-Sprachmodelle mit breitem Anwendungsspektrum",
+      description: translate('models_openai_desc', language),
       isSwissHosted: false,
       logoSrc: "/lovable-uploads/ccb72968-6ff5-4bb9-b351-6ae607663d94.png" // OpenAI logo
     },
     {
       provider: "Anthropic",
-      description: "Fokus auf sichere, zuverlässige und kontrollierbare KI-Systeme",
+      description: translate('models_anthropic_desc', language),
       isSwissHosted: false,
       logoSrc: "/lovable-uploads/d7119a96-5af2-41e4-b89f-6b10ccff8ac7.png" // Anthropic logo
     },
     {
       provider: "Mistral AI",
-      description: "Europäischer Anbieter effizienter KI-Modelle mit ausgezeichnetem Preis-Leistungs-Verhältnis",
+      description: translate('models_mistral_desc', language),
       isSwissHosted: false,
       logoSrc: "/lovable-uploads/a999219d-b2cd-4459-95e5-85e6ec0ac2ba.png" // Mistral AI logo
     },
     {
       provider: "Meta",
-      description: "Open-Source-Modelle mit umfangreichen Anpassungsmöglichkeiten",
+      description: translate('models_meta_desc', language),
       isSwissHosted: false,
       logoSrc: "/lovable-uploads/37757fce-6a3d-43fa-86c1-09e26f66e649.png" // Fixed Meta logo path
     },
     {
       provider: "DeepSeek",
-      description: "Spezialisiert auf fortschrittliche Forschung und technologische Innovation",
+      description: translate('models_deepseek_desc', language),
       isSwissHosted: false,
       logoSrc: "/lovable-uploads/555a0131-efa6-4bb5-94dc-9f4694784ce5.png" // DeepSeek logo
     },
     {
       provider: "Google",
-      description: "Führende KI-Technologien mit tiefer Integration in Web- und Cloud-Dienste",
+      description: translate('models_google_desc', language),
       isSwissHosted: false,
       logoSrc: "/lovable-uploads/d265b7d1-1d48-48b0-b69a-7810191bc476.png" // Google logo
     },
     {
       provider: "Nvidia",
-      description: "Hardware-optimierte KI-Lösungen mit Fokus auf Leistung und Skalierbarkeit",
+      description: translate('models_nvidia_desc', language),
       isSwissHosted: false,
       logoSrc: "/lovable-uploads/0e6c0d2e-5828-4c27-b935-109b5208071b.png" // Nvidia logo
     },
     {
       provider: "Microsoft",
-      description: "Enterprise-orientierte KI-Dienste mit nahtloser Integration in Geschäftsanwendungen",
+      description: translate('models_microsoft_desc', language),
       isSwissHosted: false,
       logoSrc: "/lovable-uploads/04028227-221a-43f3-80fc-ed495331a8a5.png" // Microsoft logo
     },
@@ -123,15 +130,13 @@ const LanguageModels: React.FC = () => {
       <div className="section-container">
         <AnimatedSection className="text-center mb-12" animation="fade-up">
           <div className="inline-block mb-4 px-3 py-1 rounded-full bg-evoya-blue/10 text-evoya-blue text-sm font-medium">
-            KI-Sprachmodelle
+            {translate('models_badge', language)}
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold mb-6 max-w-3xl mx-auto">
-            Zugriff auf <span className="text-evoya-blue">führende KI-Modelle</span> für jeden Anwendungsfall
+            {translate('models_title', language)} <span className="text-evoya-blue">{translate('models_title_colored', language)}</span> {translate('models_title_suffix', language)}
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Unsere Plattform bietet Zugriff auf über 20 führende Modelle für Sprache und Bilder – 
-            ohne zusätzliche Abos oder hohe Kosten. Als Schweizer Unternehmen stellen wir auch 
-            KI-Modelle bereit, die in der Schweiz gehostet werden.
+            {translate('models_description', language)}
           </p>
         </AnimatedSection>
 
@@ -169,19 +174,18 @@ const LanguageModels: React.FC = () => {
                 </div>
               </div>
               <div className="md:w-2/3 text-center md:text-left">
-                <h3 className="text-2xl font-bold mb-3 text-evoya-blue">Swiss Llama 3.3</h3>
+                <h3 className="text-2xl font-bold mb-3 text-evoya-blue">{translate('models_swiss_llama_title', language)}</h3>
                 <p className="text-gray-700 mb-4">
-                  Unser Schweizer Premium-Modell bietet höchste Qualität bei vollständiger Datensouveränität. 
-                  Swiss Llama 3.3 wird ausschliesslich in der Schweiz gehostet.
+                  {translate('models_swiss_llama_desc', language)}
                 </p>
                 <div className="flex flex-wrap gap-3 mt-2 justify-center md:justify-start">
                   <span className="px-3 py-1 rounded-full bg-white text-sm font-medium border border-evoya-blue/20 text-evoya-blue flex items-center">
                     <Shield className="w-3 h-3 mr-1" />
-                    Schweizer Hosting
+                    {translate('models_swiss_hosting', language)}
                   </span>
                   <span className="px-3 py-1 rounded-full bg-white text-sm font-medium border border-evoya-blue/20 text-evoya-blue flex items-center">
                     <Lock className="w-3 h-3 mr-1" />
-                    DSGVO-konform
+                    {translate('models_gdpr_compliant', language)}
                   </span>
                 </div>
               </div>
@@ -196,31 +200,29 @@ const LanguageModels: React.FC = () => {
               <div className="p-4 bg-white rounded-full shadow-md mb-6">
                 <Server className="w-10 h-10 text-evoya-orange" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">On-Premise Lösungen</h3>
+              <h3 className="text-2xl font-bold mb-4">{translate('models_onpremise_title', language)}</h3>
               <p className="text-gray-700 max-w-3xl mb-6">
-                Maximale Kontrolle über Ihre KI-Infrastruktur: Wir bieten massgeschneiderte On-Premise-Lösungen, 
-                bei denen die KI-Modelle direkt auf Ihren Servern laufen. So bleiben Ihre Daten immer in Ihrer 
-                Infrastruktur und Sie profitieren von höchster Sicherheit und Datenschutz.
+                {translate('models_onpremise_desc', language)}
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-3xl">
                 <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-                  <h4 className="font-semibold mb-2">Volle Kontrolle</h4>
-                  <p className="text-sm text-gray-600">Modelle laufen in Ihrer eigenen Infrastruktur und unter Ihrer Kontrolle.</p>
+                  <h4 className="font-semibold mb-2">{translate('models_onpremise_control_title', language)}</h4>
+                  <p className="text-sm text-gray-600">{translate('models_onpremise_control_desc', language)}</p>
                 </div>
                 <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-                  <h4 className="font-semibold mb-2">Massgeschneidert</h4>
-                  <p className="text-sm text-gray-600">Anpassbar an Ihre spezifischen Anforderungen und Sicherheitsrichtlinien.</p>
+                  <h4 className="font-semibold mb-2">{translate('models_onpremise_custom_title', language)}</h4>
+                  <p className="text-sm text-gray-600">{translate('models_onpremise_custom_desc', language)}</p>
                 </div>
                 <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-                  <h4 className="font-semibold mb-2">Keine Datenexporte</h4>
-                  <p className="text-sm text-gray-600">Sensible Daten verlassen niemals Ihr Unternehmensnetzwerk.</p>
+                  <h4 className="font-semibold mb-2">{translate('models_onpremise_data_title', language)}</h4>
+                  <p className="text-sm text-gray-600">{translate('models_onpremise_data_desc', language)}</p>
                 </div>
               </div>
               <Button 
                 className="mt-8 bg-evoya-orange text-white hover:bg-evoya-orange/90"
                 onClick={scrollToContact}
               >
-                Beratung anfragen
+                {translate('models_contact_cta', language)}
               </Button>
             </div>
           </div>

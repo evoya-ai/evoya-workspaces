@@ -5,36 +5,36 @@ import AnimatedSection from './AnimatedSection';
 import AgentComponent from './AgentComponent';
 import AgentFrameworkDiagram from './AgentFrameworkDiagram';
 import { Alert, AlertTitle, AlertDescription } from './ui/alert';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translate } from '../utils/translations';
 
 const FrameworkExplanation: React.FC = () => {
+  const { language } = useLanguage();
+  
   return (
     <AnimatedSection animation="fade-up" delay={100} className="mb-10">
       <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100">
-        <h3 className="text-2xl font-bold text-evoya-blue mb-4">Das Agentic Framework</h3>
+        <h3 className="text-2xl font-bold text-evoya-blue mb-4">{translate('agent_framework_title', language)}</h3>
         <p className="text-gray-700 mb-4">
-          Unser Agentic Framework bildet die Grundlage aller Evoya-Agenten. Es kombiniert sechs Kernkomponenten, 
-          die zusammen einen leistungsfähigen KI-Agenten bilden, der komplexe Aufgaben intelligent bearbeiten kann.
+          {translate('agent_framework_desc', language)}
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
           <div className="bg-evoya-blue/5 p-4 rounded-lg">
-            <h4 className="font-semibold text-evoya-blue mb-2">Instruktionen & Persona</h4>
+            <h4 className="font-semibold text-evoya-blue mb-2">{translate('agent_instructions', language)}</h4>
             <p className="text-sm text-gray-600">
-              Diese Komponenten bilden den "Charakter" des Agenten. Die Instruktionen definieren die Aufgabe und das Ziel,
-              während die Persona bestimmt, wie der Agent kommuniziert und interagiert.
+              {translate('agent_instructions_desc', language)}
             </p>
           </div>
           <div className="bg-evoya-blue/5 p-4 rounded-lg">
-            <h4 className="font-semibold text-evoya-blue mb-2">Sprachmodell & Wissen</h4>
+            <h4 className="font-semibold text-evoya-blue mb-2">{translate('agent_model', language)}</h4>
             <p className="text-sm text-gray-600">
-              Das Sprachmodell (LLM) ist das "Gehirn" des Agenten und nutzt spezialisiertes Wissen, um präzise 
-              und kontextbezogene Lösungen für komplexe Aufgaben zu generieren.
+              {translate('agent_model_desc', language)}
             </p>
           </div>
           <div className="bg-evoya-blue/5 p-4 rounded-lg">
-            <h4 className="font-semibold text-evoya-blue mb-2">Tools & Interface</h4>
+            <h4 className="font-semibold text-evoya-blue mb-2">{translate('agent_tools', language)}</h4>
             <p className="text-sm text-gray-600">
-              Tools erweitern die Handlungsfähigkeit des Agenten, während das Interface die Kommunikation mit Menschen, 
-              anderen Systemen oder APIs ermöglicht und so die praktische Anwendung sicherstellt.
+              {translate('agent_tools_desc', language)}
             </p>
           </div>
         </div>
@@ -44,39 +44,41 @@ const FrameworkExplanation: React.FC = () => {
 };
 
 const UseCasesExplanation: React.FC = () => {
+  const { language } = useLanguage();
+  
   return (
     <AnimatedSection animation="fade-up" delay={400} className="mt-10">
       <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100">
-        <h3 className="text-xl font-bold text-evoya-blue mb-4">Einsatzmöglichkeiten des Frameworks</h3>
+        <h3 className="text-xl font-bold text-evoya-blue mb-4">{translate('agent_usecases', language)}</h3>
         <p className="text-gray-700 mb-6">
-          Unser Agentic Framework kann je nach Anforderung unterschiedlich eingesetzt werden. Hier sind die zwei Hauptanwendungsfälle:
+          {translate('agent_usecases_desc', language)}
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="border border-evoya-blue/20 rounded-xl p-5 bg-gradient-to-br from-white to-evoya-blue/5">
             <div className="flex items-center mb-4">
               <Package className="w-8 h-8 text-evoya-blue mr-3" />
-              <h4 className="text-lg font-bold text-evoya-blue">Workspace-Agenten</h4>
+              <h4 className="text-lg font-bold text-evoya-blue">{translate('agent_workspace', language)}</h4>
             </div>
             <p className="text-gray-700 mb-3">
-              Diese Agenten sind direkt einsatzbereit und für spezifische Aufgaben optimiert:
+              {translate('agent_workspace_desc', language)}
             </p>
             <ul className="space-y-2 ml-2">
               <li className="flex">
                 <span className="text-evoya-blue mr-2">•</span>
-                <span className="text-gray-600">Sofort nutzbar ohne komplexe Konfiguration</span>
+                <span className="text-gray-600">{translate('agent_workspace_bullet1', language)}</span>
               </li>
               <li className="flex">
                 <span className="text-evoya-blue mr-2">•</span>
-                <span className="text-gray-600">Ideal für Texterstellung, Übersetzungen oder Analysen</span>
+                <span className="text-gray-600">{translate('agent_workspace_bullet2', language)}</span>
               </li>
               <li className="flex">
                 <span className="text-evoya-blue mr-2">•</span>
-                <span className="text-gray-600">Standardisierte Funktionen mit intuitiver Bedienung</span>
+                <span className="text-gray-600">{translate('agent_workspace_bullet3', language)}</span>
               </li>
               <li className="flex">
                 <span className="text-evoya-blue mr-2">•</span>
-                <span className="text-gray-600">Perfekt für tägliche Arbeitsabläufe und wiederkehrende Aufgaben</span>
+                <span className="text-gray-600">{translate('agent_workspace_bullet4', language)}</span>
               </li>
             </ul>
           </div>
@@ -84,27 +86,27 @@ const UseCasesExplanation: React.FC = () => {
           <div className="border border-evoya-orange/20 rounded-xl p-5 bg-gradient-to-br from-white to-evoya-orange/5">
             <div className="flex items-center mb-4">
               <LayoutPanelTop className="w-8 h-8 text-evoya-orange mr-3" />
-              <h4 className="text-lg font-bold text-evoya-orange">Autonome Agenten & Prozesse</h4>
+              <h4 className="text-lg font-bold text-evoya-orange">{translate('agent_autonomous', language)}</h4>
             </div>
             <p className="text-gray-700 mb-3">
-              Diese fortschrittlichen Lösungen automatisieren komplexe Workflows:
+              {translate('agent_autonomous_desc', language)}
             </p>
             <ul className="space-y-2 ml-2">
               <li className="flex">
                 <span className="text-evoya-orange mr-2">•</span>
-                <span className="text-gray-600">Individuell anpassbar an spezifische Geschäftsprozesse</span>
+                <span className="text-gray-600">{translate('agent_autonomous_bullet1', language)}</span>
               </li>
               <li className="flex">
                 <span className="text-evoya-orange mr-2">•</span>
-                <span className="text-gray-600">Automatisieren mehrstufige Arbeitsabläufe end-to-end</span>
+                <span className="text-gray-600">{translate('agent_autonomous_bullet2', language)}</span>
               </li>
               <li className="flex">
                 <span className="text-evoya-orange mr-2">•</span>
-                <span className="text-gray-600">Skalierbar je nach Anforderung und Komplexität</span>
+                <span className="text-gray-600">{translate('agent_autonomous_bullet3', language)}</span>
               </li>
               <li className="flex">
                 <span className="text-evoya-orange mr-2">•</span>
-                <span className="text-gray-600">Integrierbar in bestehende Systeme und Infrastrukturen</span>
+                <span className="text-gray-600">{translate('agent_autonomous_bullet4', language)}</span>
               </li>
             </ul>
           </div>
@@ -115,20 +117,21 @@ const UseCasesExplanation: React.FC = () => {
 };
 
 const LLMAgentStructure: React.FC = () => {
+  const { language } = useLanguage();
+  
   return (
     <section id="agentic-framework" className="py-16 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-white -z-10"></div>
       <div className="section-container">
         <AnimatedSection className="text-center mb-12" animation="fade-up">
           <div className="inline-block mb-4 px-3 py-1 rounded-full bg-evoya-blue/10 text-evoya-blue text-sm font-medium">
-            Agentic Framework
+            {translate('agent_badge', language)}
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold mb-3 max-w-3xl mx-auto">
-            KI-Agenten für intelligente <span className="text-evoya-blue">Prozessoptimierung</span>
+            {translate('agent_title', language)} <span className="text-evoya-blue">{translate('agent_title_colored', language)}</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Evoya-Agenten basieren auf einem durchdachten Framework, das es ihnen ermöglicht, 
-            komplexe Aufgaben effizient zu lösen und nahtlos mit Menschen und anderen Systemen zu interagieren.
+            {translate('agent_description', language)}
           </p>
         </AnimatedSection>
 
@@ -140,9 +143,9 @@ const LLMAgentStructure: React.FC = () => {
                   <Info className="h-5 w-5 text-white" />
                 </div>
                 <div className="ml-3">
-                  <AlertTitle className="text-evoya-navy font-semibold text-lg">Was sind KI-Agenten?</AlertTitle>
+                  <AlertTitle className="text-evoya-navy font-semibold text-lg">{translate('agent_what_are', language)}</AlertTitle>
                   <AlertDescription className="text-gray-600 mt-1 text-base">
-                    KI-Agenten sind intelligente Softwareeinheiten, die eigenständig Aufgaben ausführen und komplexe Probleme lösen können.
+                    {translate('agent_what_are_desc', language)}
                   </AlertDescription>
                 </div>
               </div>
@@ -154,7 +157,7 @@ const LLMAgentStructure: React.FC = () => {
 
         <AnimatedSection animation="fade-up" delay={300}>
           <div className="p-6 rounded-xl bg-white shadow-lg border border-gray-100">
-            <div className="text-2xl font-bold text-evoya-blue mb-8 text-center">Aufbau des Agentic Frameworks</div>
+            <div className="text-2xl font-bold text-evoya-blue mb-8 text-center">{translate('agent_structure', language)}</div>
             
             <AgentFrameworkDiagram />
           </div>
