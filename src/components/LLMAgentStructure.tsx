@@ -149,9 +149,12 @@ const LLMAgentStructure: React.FC = () => {
           <div className="inline-block mb-4 px-3 py-1 rounded-full bg-evoya-blue/10 text-evoya-blue text-sm font-medium">
             Agentic Framework
           </div>
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6 max-w-3xl mx-auto">
-            Was sind <span className="text-evoya-blue">KI-Agenten</span> und wie funktionieren sie?
+          <h2 className="text-3xl lg:text-4xl font-bold mb-3 max-w-3xl mx-auto">
+            KI-Agenten für intelligente <span className="text-evoya-blue">Prozessoptimierung</span>
           </h2>
+          <p className="text-base text-gray-600 max-w-3xl mx-auto mb-2">
+            KI-Agenten sind intelligente Softwareeinheiten, die eigenständig Aufgaben ausführen und komplexe Probleme lösen können.
+          </p>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Evoya-Agenten basieren auf einem durchdachten Framework, das es ihnen ermöglicht, 
             komplexe Aufgaben effizient zu lösen und nahtlos mit Menschen und anderen Systemen zu interagieren.
@@ -169,7 +172,6 @@ const LLMAgentStructure: React.FC = () => {
               <div className="md:col-span-3">
                 <Card className="border border-evoya-blue/10 bg-evoya-blue/5 p-4 rounded-xl">
                   <CardContent className="p-2">
-                    <div className="text-center mb-4 font-medium text-evoya-blue text-lg">Prompt-Rezept</div>
                     <div className="grid grid-cols-2 gap-4">
                       <div className="relative">
                         <AgentComponent
@@ -178,8 +180,8 @@ const LLMAgentStructure: React.FC = () => {
                           color="bg-evoya-blue"
                           textColor="text-white"
                         />
-                        <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-1 shadow-sm">
-                          <Plus className="w-4 h-4 text-evoya-blue" />
+                        <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-1.5 shadow-sm">
+                          <Plus className="w-5 h-5 text-evoya-blue" />
                         </div>
                       </div>
                       <AgentComponent
@@ -198,6 +200,7 @@ const LLMAgentStructure: React.FC = () => {
               {/* Connectors from Prompt Recipe to LLM */}
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-10 w-0.5 h-10 bg-evoya-blue/70"></div>
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1 w-2 h-2 rounded-full bg-evoya-blue"></div>
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-10 w-2 h-2 rounded-full bg-evoya-blue"></div>
             
               {/* Left component - Tools */}
               <div className="md:col-span-1 flex justify-center">
