@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { FileText, Image as ImageIcon, Eye, FileSearch, Globe, BarChart, PenTool, Mic, Shield, Lock, Database, ArrowRight, User, Globe2, RefreshCcw, Book, Layers, Network, Brain, Search } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -107,7 +108,7 @@ const DetailedFeatures: React.FC = () => {
       image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
       alt: "Generierte Bilder auf einem Display",
       isReversed: true,
-      accentColor: "text-evoya-green bg-evoya-green/10",
+      accentColor: "text-evoya-blue bg-evoya-blue/10",
     },
     {
       title: "Bilderkennung und Analyse",
@@ -122,7 +123,7 @@ const DetailedFeatures: React.FC = () => {
       image: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c",
       alt: "Bilderkennung durch künstliche Intelligenz",
       isReversed: false,
-      accentColor: "text-evoya-darkBlue bg-evoya-blue/10",
+      accentColor: "text-evoya-blue bg-evoya-blue/10",
     },
     {
       title: "Dokumentenanalyse",
@@ -137,7 +138,7 @@ const DetailedFeatures: React.FC = () => {
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
       alt: "Dokumentenanalyse auf einem Laptop",
       isReversed: true,
-      accentColor: "text-evoya-orange bg-evoya-orange/10",
+      accentColor: "text-evoya-blue bg-evoya-blue/10",
     },
     {
       title: "Live-Informationsabruf",
@@ -152,7 +153,7 @@ const DetailedFeatures: React.FC = () => {
       image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
       alt: "Echtzeitdaten auf einem Dashboard",
       isReversed: false,
-      accentColor: "text-evoya-lightBlue bg-evoya-lightBlue/10",
+      accentColor: "text-evoya-blue bg-evoya-blue/10",
     },
     {
       title: "Diagramme & Visuelle Darstellungen",
@@ -167,7 +168,7 @@ const DetailedFeatures: React.FC = () => {
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
       alt: "Datenvusualisierung auf einem Laptop",
       isReversed: true,
-      accentColor: "text-evoya-yellow bg-evoya-yellow/10",
+      accentColor: "text-evoya-blue bg-evoya-blue/10",
     },
     {
       title: "Creator",
@@ -182,7 +183,7 @@ const DetailedFeatures: React.FC = () => {
       image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f",
       alt: "Kreative Bearbeitung von Inhalten",
       isReversed: false,
-      accentColor: "text-evoya-purple bg-evoya-purple/10",
+      accentColor: "text-evoya-blue bg-evoya-blue/10",
     },
     {
       title: "Voice",
@@ -197,7 +198,7 @@ const DetailedFeatures: React.FC = () => {
       image: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc",
       alt: "Spracherkennung und Transkription",
       isReversed: true,
-      accentColor: "text-evoya-red bg-evoya-red/10",
+      accentColor: "text-evoya-blue bg-evoya-blue/10",
     },
   ];
   
