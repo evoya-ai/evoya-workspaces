@@ -1,9 +1,15 @@
 
 import React, { useState } from 'react';
-import { Check, X, AlertTriangle } from 'lucide-react';
+import { Check, X, AlertTriangle, Info } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translate } from '../utils/translations';
+import { 
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger 
+} from '@/components/ui/tooltip';
 
 type FeatureResult = boolean | 'limited';
 
@@ -67,6 +73,8 @@ const Comparison: React.FC = () => {
   const renderFeatureStatus = (productIndex: number, featureIndex: number) => {
     const result = products[productIndex].results[featureIndex];
     const isHighlighted = products[productIndex].highlighted;
+    const featureName = features[featureIndex];
+    const productName = products[productIndex].name;
     
     let icon;
     if (result === true) {
@@ -75,6 +83,34 @@ const Comparison: React.FC = () => {
       icon = <AlertTriangle className="w-5 h-5 text-amber-500" />;
     } else {
       icon = <X className="w-5 h-5 text-gray-400" />;
+    }
+
+    // Check if this feature has a tooltip
+    const hasTooltip = tooltips[featureName] && tooltips[featureName][productName];
+
+    if (hasTooltip) {
+      return (
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <div className="flex justify-center items-center cursor-help">
+                {icon}
+                <Info className="w-4 h-4 ml-1 text-evoya-blue opacity-75" />
+              </div>
+            </TooltipTrigger>
+            <TooltipContent className="p-2 max-w-xs bg-white/95 backdrop-blur-sm border border-gray-200 shadow-lg rounded-lg">
+              <div className="flex items-center space-x-2">
+                <img 
+                  src="/lovable-uploads/7c0b8f21-bebf-4992-bcb1-26e8ebc676b2.png" 
+                  alt="Evoya AI" 
+                  className="w-5 h-5 text-blue-600" 
+                />
+                <p className="text-sm">{tooltips[featureName][productName]}</p>
+              </div>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      );
     }
 
     return (
@@ -156,7 +192,32 @@ const Comparison: React.FC = () => {
               <tbody>
                 {features.map((feature, featureIndex) => (
                   <tr key={featureIndex} className="border-b border-gray-200 hover:bg-gray-50 transition-colors">
-                    <td className="px-6 py-4 text-gray-700">{feature}</td>
+                    <td className="px-6 py-4 text-gray-700 flex items-center">
+                      {feature}
+                      {Object.keys(tooltips).includes(feature) && (
+                        <TooltipProvider>
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <div className="cursor-help ml-1.5">
+                                <Info className="w-4 h-4 text-evoya-blue opacity-75" />
+                              </div>
+                            </TooltipTrigger>
+                            <TooltipContent className="p-2 max-w-xs bg-white/95 backdrop-blur-sm border border-gray-200 shadow-lg rounded-lg">
+                              <div className="flex items-center space-x-2">
+                                <img 
+                                  src="/lovable-uploads/7c0b8f21-bebf-4992-bcb1-26e8ebc676b2.png" 
+                                  alt="Evoya AI" 
+                                  className="w-5 h-5 text-blue-600" 
+                                />
+                                <p className="text-sm">
+                                  {tooltips[feature]['Evoya AI']}
+                                </p>
+                              </div>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      )}
+                    </td>
                     {products.map((product, productIndex) => (
                       <td
                         key={productIndex}
