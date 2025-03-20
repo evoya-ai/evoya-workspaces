@@ -23,30 +23,33 @@ const CallToAction: React.FC = () => {
       const form = e.currentTarget;
       const formData = new FormData(form);
       
-      formData.append("form-name", "contact");
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
       
-      await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as any).toString()
-      });
-
-      setIsSuccess(true);
-      form.reset();
-      toast({
-        title: language === 'de' ? "Nachricht gesendet" : "Message Sent",
-        description: language === 'de' 
-          ? "Vielen Dank für Ihre Nachricht. Wir werden uns schnellstmöglich bei Ihnen melden."
-          : "Thank you for your message. We will get back to you as soon as possible.",
-      });
+      const data = await response.json();
+      
+      if (data.success) {
+        setIsSuccess(true);
+        form.reset();
+        toast({
+          title: language === 'de' ? "Nachricht gesendet" : "Message Sent",
+          description: language === 'de' 
+            ? "Vielen Dank für Ihre Nachricht. Wir werden uns schnellstmöglich bei Ihnen melden."
+            : "Thank you for your message. We will get back to you as soon as possible.",
+        });
+      } else {
+        throw new Error(data.message || "Form submission failed");
+      }
     } catch (error) {
       console.error('Form submission error:', error);
       toast({
-        title: language === 'de' ? "Hinweis" : "Notice",
+        title: language === 'de' ? "Fehler" : "Error",
         description: language === 'de'
-          ? "Es gab ein Problem mit der Übermittlung. Sollten Sie keine Bestätigung erhalten, kontaktieren Sie uns bitte direkt."
-          : "There was an issue with the submission. If you don't receive a confirmation, please contact us directly.",
-        variant: "default",
+          ? "Es gab ein Problem mit der Übermittlung. Bitte versuchen Sie es später erneut."
+          : "There was an issue with the submission. Please try again later.",
+        variant: "destructive",
       });
     } finally {
       setIsSubmitting(false);
@@ -131,20 +134,16 @@ const CallToAction: React.FC = () => {
                 </div>
               ) : (
                 <form 
-                  name="contact" 
-                  method="POST" 
-                  data-netlify="true"
-                  action="/"
                   onSubmit={handleSubmit} 
                   className="space-y-6"
-                  data-netlify-honeypot="bot-field"
                 >
-                  <input type="hidden" name="form-name" value="contact" />
-                  <p className="hidden">
-                    <label>
-                      Nicht ausfüllen, wenn Sie ein Mensch sind: <input name="bot-field" />
-                    </label>
-                  </p>
+                  {/* Web3Forms api key - required */}
+                  <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+                  
+                  {/* Optional settings - subject, from_name, replyto */}
+                  <input type="hidden" name="subject" value="New Contact Form Submission from Evoya Website" />
+                  <input type="hidden" name="from_name" value="Evoya Contact Form" />
+                  <input type="checkbox" name="botcheck" className="hidden" />
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
