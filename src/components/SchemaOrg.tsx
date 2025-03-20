@@ -18,7 +18,7 @@ const SchemaOrg: React.FC<SchemaOrgProps> = ({ type }) => {
     '@type': 'Organization',
     name: 'Evoya AI',
     url: 'https://evoya.ai',
-    logo: 'https://workspace.evoya.ai/lovable-uploads/4be82874-50e0-456f-b637-4b1183e49847.png',
+    logo: 'https://workspace.evoya.ai/lovable-uploads/0bef5f0c-1f4c-47ab-bf07-c72f63ec0581.png',
     sameAs: [
       'https://twitter.com/evoyaai',
       'https://linkedin.com/company/evoya-ai'
@@ -58,7 +58,7 @@ const SchemaOrg: React.FC<SchemaOrgProps> = ({ type }) => {
       name: 'Evoya AI'
     },
     serviceType: 'Artificial Intelligence Services',
-    image: 'https://workspace.evoya.ai/lovable-uploads/4be82874-50e0-456f-b637-4b1183e49847.png'
+    image: 'https://workspace.evoya.ai/lovable-uploads/0bef5f0c-1f4c-47ab-bf07-c72f63ec0581.png'
   };
   
   // Select the appropriate schema based on the type prop
