@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Mail, Phone, ArrowRight, Check } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -147,7 +146,7 @@ const CallToAction: React.FC = () => {
                   name="contact" 
                   method="POST" 
                   data-netlify="true"
-                  netlify-honeypot="bot-field"
+                  data-netlify-honeypot="bot-field"
                   onSubmit={handleSubmit} 
                   className="space-y-6"
                 >

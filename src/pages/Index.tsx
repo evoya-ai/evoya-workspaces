@@ -81,10 +81,9 @@ const Index = () => {
         <form 
           name="contact" 
           method="POST"
-          netlify="true"
-          netlify-honeypot="bot-field" 
-          className="hidden"
           data-netlify="true"
+          data-netlify-honeypot="bot-field" 
+          className="hidden"
         >
           <input type="hidden" name="form-name" value="contact" />
           <input type="text" name="firstName" />
