@@ -5,6 +5,7 @@ import Hero from '../components/Hero';
 import BlurBackground from '../components/BlurBackground';
 import { LanguageProvider } from '../contexts/LanguageContext';
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink } from '@/components/ui/breadcrumb';
+import SchemaOrg from '../components/SchemaOrg';
 
 // Lazy load components for better performance
 const Features = lazy(() => import('../components/Features'));
@@ -57,6 +58,11 @@ const Index = () => {
   return (
     <LanguageProvider>
       <div className="relative min-h-screen overflow-hidden">
+        {/* Add SchemaOrg for better SEO */}
+        <SchemaOrg type="Organization" />
+        <SchemaOrg type="WebSite" />
+        <SchemaOrg type="Service" />
+        
         <BlurBackground />
         <Header />
         
