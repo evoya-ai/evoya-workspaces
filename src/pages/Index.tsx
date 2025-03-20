@@ -71,6 +71,15 @@ const Index = () => {
           </Breadcrumb>
         </div>
         
+        {/* Netlify Forms pre-render - versteckt, aber wichtig für Netlify */}
+        <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+          <input type="text" name="firstName" />
+          <input type="text" name="lastName" />
+          <input type="email" name="email" />
+          <input type="text" name="company" />
+          <textarea name="message"></textarea>
+        </form>
+        
         <main>
           <Hero />
           <Suspense fallback={<LoadingFallback />}>
