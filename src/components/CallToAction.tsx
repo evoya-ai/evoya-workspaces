@@ -29,27 +29,40 @@ const CallToAction: React.FC = () => {
       // Debug what's being sent
       console.log('Submitting form data:', Object.fromEntries(formData));
       
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: formData
-      });
-      
-      const data = await response.json();
-      console.log('Form submission response:', data);
-      
-      if (data.success) {
-        setIsSuccess(true);
-        form.reset();
-        toast({
-          title: language === 'de' ? "Nachricht gesendet" : "Message Sent",
-          description: language === 'de' 
-            ? "Vielen Dank für Ihre Nachricht. Wir werden uns schnellstmöglich bei Ihnen melden."
-            : "Thank you for your message. We will get back to you as soon as possible.",
+      // Add error handling for network issues
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
         });
-      } else {
-        throw new Error(data.message || "Form submission failed");
+        
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        console.log('Form submission response:', data);
+        
+        if (data.success) {
+          setIsSuccess(true);
+          form.reset();
+          toast({
+            title: language === 'de' ? "Nachricht gesendet" : "Message Sent",
+            description: language === 'de' 
+              ? "Vielen Dank für Ihre Nachricht. Wir werden uns schnellstmöglich bei Ihnen melden."
+              : "Thank you for your message. We will get back to you as soon as possible.",
+          });
+        } else {
+          throw new Error(data.message || "Form submission failed");
+        }
+      } catch (fetchError: any) {
+        console.error('Fetch error:', fetchError);
+        throw new Error(`Network error: ${fetchError.message || 'Failed to reach the server'}`);
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error('Form submission error:', error);
       toast({
         title: language === 'de' ? "Fehler" : "Error",
