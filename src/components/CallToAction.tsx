@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Mail, Phone, ArrowRight, Check } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -31,12 +30,16 @@ const CallToAction: React.FC = () => {
       
       // Add error handling for network issues
       try {
+        // Use https://api.web3forms.com/submit with proper CORS headers
         const response = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           body: formData,
           headers: {
-            'Accept': 'application/json'
-          }
+            'Accept': 'application/json',
+            'Content-Type': 'multipart/form-data; boundary=' + Math.random().toString().substr(2)
+          },
+          mode: 'cors', // Explicitly set CORS mode
+          redirect: 'follow' // Follow redirects automatically
         });
         
         if (!response.ok) {
@@ -60,6 +63,41 @@ const CallToAction: React.FC = () => {
         }
       } catch (fetchError: any) {
         console.error('Fetch error:', fetchError);
+        
+        // Try an alternative approach if the first attempt fails
+        try {
+          // Since we're having CORS issues, let's try a workaround with FormData
+          // and without the Content-Type header which browsers set automatically for FormData
+          const altResponse = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData,
+            mode: 'cors',
+            redirect: 'follow'
+          });
+          
+          if (!altResponse.ok) {
+            throw new Error(`HTTP error on second attempt! status: ${altResponse.status}`);
+          }
+          
+          const altData = await altResponse.json();
+          console.log('Form submission alternate response:', altData);
+          
+          if (altData.success) {
+            setIsSuccess(true);
+            form.reset();
+            toast({
+              title: language === 'de' ? "Nachricht gesendet" : "Message Sent",
+              description: language === 'de' 
+                ? "Vielen Dank für Ihre Nachricht. Wir werden uns schnellstmöglich bei Ihnen melden."
+                : "Thank you for your message. We will get back to you as soon as possible.",
+            });
+            return; // Exit if successful
+          }
+        } catch (altError) {
+          console.error('Alternative fetch attempt also failed:', altError);
+        }
+        
+        // If we get here, both attempts failed
         throw new Error(`Network error: ${fetchError.message || 'Failed to reach the server'}`);
       }
     } catch (error: any) {
