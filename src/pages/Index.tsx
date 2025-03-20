@@ -71,8 +71,13 @@ const Index = () => {
           </Breadcrumb>
         </div>
         
-        {/* Netlify Forms pre-render - versteckt, aber wichtig für Netlify */}
-        <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+        {/* Netlify Forms pre-render - hidden but important for Netlify */}
+        <form 
+          name="contact" 
+          data-netlify="true" 
+          data-netlify-honeypot="bot-field" 
+          hidden
+        >
           <input type="text" name="firstName" />
           <input type="text" name="lastName" />
           <input type="email" name="email" />

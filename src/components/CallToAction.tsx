@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Mail, Phone, ArrowRight, Check } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -153,9 +152,8 @@ const CallToAction: React.FC = () => {
                   data-netlify="true"
                   onSubmit={handleSubmit} 
                   className="space-y-6"
-                  netlify-honeypot="bot-field"
+                  data-netlify-honeypot="bot-field"
                 >
-                  {/* Netlify Forms spezifische versteckte Felder */}
                   <input type="hidden" name="form-name" value="contact" />
                   <p className="hidden">
                     <label>
