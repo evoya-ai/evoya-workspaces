@@ -1,3 +1,4 @@
+
 import { Language } from '../contexts/LanguageContext';
 
 // Translation dictionary type
@@ -1114,7 +1115,7 @@ export const translations: TranslationDictionary = {
     en: 'Why Companies Choose',
   },
   benefits_title_colored: {
-    de: 'Evoya AI',
+    de: 'Evoya AI setzen',
     en: 'Evoya AI',
   },
   benefits_description: {
