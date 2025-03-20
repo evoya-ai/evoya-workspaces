@@ -1,4 +1,3 @@
-
 import React, { useEffect, Suspense, lazy } from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
@@ -76,6 +75,7 @@ const Index = () => {
           name="contact" 
           method="POST"
           action="/"
+          netlify="true"
           data-netlify="true" 
           data-netlify-honeypot="bot-field" 
           hidden
@@ -86,6 +86,7 @@ const Index = () => {
           <input type="email" name="email" />
           <input type="text" name="company" />
           <textarea name="message"></textarea>
+          <input type="hidden" name="bot-field" />
         </form>
         
         <main>

@@ -22,10 +22,12 @@ const CallToAction: React.FC = () => {
       const form = e.currentTarget;
       const formData = new FormData(form);
       
-      await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString(),
+      formData.append("form-name", "contact");
+      
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString()
       });
 
       setIsSuccess(true);
@@ -130,6 +132,7 @@ const CallToAction: React.FC = () => {
                 <form 
                   name="contact" 
                   method="POST" 
+                  netlify="true"
                   data-netlify="true"
                   action="/"
                   onSubmit={handleSubmit} 
