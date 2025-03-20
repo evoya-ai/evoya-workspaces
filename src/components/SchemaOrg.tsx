@@ -23,6 +23,7 @@ const SchemaOrg: React.FC<SchemaOrgProps> = ({ type }) => {
     url: 'https://evoya.ai',
     logo: imageUrl,
     image: imageUrl,
+    description: 'Empowering Businesses with Practical AI Solutions',
     sameAs: [
       'https://twitter.com/evoyaai',
       'https://linkedin.com/company/evoya-ai'
@@ -41,6 +42,7 @@ const SchemaOrg: React.FC<SchemaOrgProps> = ({ type }) => {
     '@type': 'WebSite',
     name: 'Evoya AI',
     url: 'https://evoya.ai',
+    description: 'Empowering Businesses with Practical AI Solutions',
     inLanguage: language === 'de' ? 'de-DE' : 'en-US',
     potentialAction: {
       '@type': 'SearchAction',
@@ -56,8 +58,8 @@ const SchemaOrg: React.FC<SchemaOrgProps> = ({ type }) => {
     '@type': 'Service',
     name: 'Evoya AI Platform',
     description: language === 'de' 
-      ? 'Enterprise Language Models und Agent-Lösungen für Unternehmen' 
-      : 'Enterprise Language Models and Agent Solutions for businesses',
+      ? 'Unternehmen mit praktischen KI-Lösungen stärken' 
+      : 'Empowering Businesses with Practical AI Solutions',
     provider: {
       '@type': 'Organization',
       name: 'Evoya AI',
