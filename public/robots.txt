@@ -1,5 +1,6 @@
 
 User-agent: *
 Allow: /
+Allow: /lovable-uploads/0bef5f0c-1f4c-47ab-bf07-c72f63ec0581.png
 
 Sitemap: https://evoya.ai/sitemap.xml
