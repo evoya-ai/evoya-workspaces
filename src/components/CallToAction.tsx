@@ -23,14 +23,27 @@ const CallToAction: React.FC = () => {
       const form = e.currentTarget;
       const formData = new FormData(form);
       
+      // Ensure form name is correctly added to FormData
       formData.append("form-name", "contact");
       
-      await fetch("/", {
+      // Convert FormData to URLSearchParams for Netlify
+      const searchParams = new URLSearchParams();
+      for (const pair of formData.entries()) {
+        searchParams.append(pair[0], pair[1] as string);
+      }
+      
+      // Make the fetch request
+      const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as any).toString()
+        body: searchParams.toString()
       });
+      
+      if (!response.ok) {
+        throw new Error(`Form submission failed with status: ${response.status}`);
+      }
 
+      // Reset form and show success state
       setIsSuccess(true);
       form.reset();
       toast({
@@ -42,11 +55,11 @@ const CallToAction: React.FC = () => {
     } catch (error) {
       console.error('Form submission error:', error);
       toast({
-        title: language === 'de' ? "Hinweis" : "Notice",
+        title: language === 'de' ? "Fehler" : "Error",
         description: language === 'de'
-          ? "Es gab ein Problem mit der Übermittlung. Sollten Sie keine Bestätigung erhalten, kontaktieren Sie uns bitte direkt."
-          : "There was an issue with the submission. If you don't receive a confirmation, please contact us directly.",
-        variant: "default",
+          ? "Es gab ein Problem mit der Übermittlung. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt per E-Mail."
+          : "There was an issue with the submission. Please try again later or contact us directly via email.",
+        variant: "destructive",
       });
     } finally {
       setIsSubmitting(false);
@@ -134,17 +147,16 @@ const CallToAction: React.FC = () => {
                   name="contact" 
                   method="POST" 
                   data-netlify="true"
-                  action="/"
+                  netlify-honeypot="bot-field"
                   onSubmit={handleSubmit} 
                   className="space-y-6"
-                  data-netlify-honeypot="bot-field"
                 >
                   <input type="hidden" name="form-name" value="contact" />
-                  <p className="hidden">
+                  <div className="hidden">
                     <label>
-                      Nicht ausfüllen, wenn Sie ein Mensch sind: <input name="bot-field" />
+                      Don't fill this out if you're human: <input name="bot-field" />
                     </label>
-                  </p>
+                  </div>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
