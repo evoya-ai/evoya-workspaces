@@ -23,12 +23,19 @@ const CallToAction: React.FC = () => {
       const form = e.currentTarget;
       const formData = new FormData(form);
       
+      // Add the honeypot check field - important for web3forms
+      formData.append('botcheck', '');
+      
+      // Debug what's being sent
+      console.log('Submitting form data:', Object.fromEntries(formData));
+      
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         body: formData
       });
       
       const data = await response.json();
+      console.log('Form submission response:', data);
       
       if (data.success) {
         setIsSuccess(true);
@@ -140,10 +147,13 @@ const CallToAction: React.FC = () => {
                   {/* Web3Forms api key - required */}
                   <input type="hidden" name="access_key" value="d7ae28aa-ebcf-402e-bb29-325d7b73a344" />
                   
-                  {/* Optional settings - subject, from_name, replyto */}
+                  {/* Required fields for web3forms */}
                   <input type="hidden" name="subject" value="New Contact Form Submission from Evoya Website" />
                   <input type="hidden" name="from_name" value="Evoya Contact Form" />
                   <input type="checkbox" name="botcheck" className="hidden" />
+                  
+                  {/* Redirect after submission */}
+                  <input type="hidden" name="redirect" value={window.location.href} />
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
