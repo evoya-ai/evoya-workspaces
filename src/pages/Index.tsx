@@ -77,13 +77,14 @@ const Index = () => {
           </Breadcrumb>
         </div>
         
-        {/* Netlify Forms pre-render - hidden but required for Netlify Forms to work */}
+        {/* Netlify Forms pre-render - hidden but important for Netlify */}
         <form 
           name="contact" 
           method="POST"
-          data-netlify="true"
+          action="/"
+          data-netlify="true" 
           data-netlify-honeypot="bot-field" 
-          className="hidden"
+          hidden
         >
           <input type="hidden" name="form-name" value="contact" />
           <input type="text" name="firstName" />
