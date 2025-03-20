@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Mail, Phone, ArrowRight, Check } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -132,7 +133,6 @@ const CallToAction: React.FC = () => {
                 <form 
                   name="contact" 
                   method="POST" 
-                  netlify="true"
                   data-netlify="true"
                   action="/"
                   onSubmit={handleSubmit} 
