@@ -19,44 +19,25 @@ const CallToAction: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      // Bei Netlify Forms wird das Formular automatisch verarbeitet
-      // Diese fetch-Anfrage ist für den Fall, dass JavaScript aktiviert ist
       const form = e.currentTarget;
       const formData = new FormData(form);
       
-      // Netlify erwartet eine POST-Anfrage an die aktuelle Seite
-      const response = await fetch('/', {
+      await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formData as any).toString(),
       });
 
-      if (response.ok) {
-        setIsSuccess(true);
-        form.reset();
-        toast({
-          title: language === 'de' ? "Nachricht gesendet" : "Message Sent",
-          description: language === 'de' 
-            ? "Vielen Dank für Ihre Nachricht. Wir werden uns schnellstmöglich bei Ihnen melden."
-            : "Thank you for your message. We will get back to you as soon as possible.",
-        });
-      } else {
-        // Netlify Forms funktioniert auch ohne JavaScript, also sollten wir 
-        // keine Fehler werfen, wenn die Anfrage fehlschlägt
-        console.log('Form submission failed, but form will still be processed by Netlify');
-        setIsSuccess(true);
-        form.reset();
-        toast({
-          title: language === 'de' ? "Nachricht gesendet" : "Message Sent",
-          description: language === 'de' 
-            ? "Vielen Dank für Ihre Nachricht. Wir werden uns schnellstmöglich bei Ihnen melden."
-            : "Thank you for your message. We will get back to you as soon as possible.",
-        });
-      }
+      setIsSuccess(true);
+      form.reset();
+      toast({
+        title: language === 'de' ? "Nachricht gesendet" : "Message Sent",
+        description: language === 'de' 
+          ? "Vielen Dank für Ihre Nachricht. Wir werden uns schnellstmöglich bei Ihnen melden."
+          : "Thank you for your message. We will get back to you as soon as possible.",
+      });
     } catch (error) {
       console.error('Form submission error:', error);
-      // Da Netlify das Formular auch ohne JavaScript verarbeitet, zeigen wir
-      // eine freundlichere Nachricht an
       toast({
         title: language === 'de' ? "Hinweis" : "Notice",
         description: language === 'de'
@@ -150,6 +131,7 @@ const CallToAction: React.FC = () => {
                   name="contact" 
                   method="POST" 
                   data-netlify="true"
+                  action="/"
                   onSubmit={handleSubmit} 
                   className="space-y-6"
                   data-netlify-honeypot="bot-field"
