@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Shield, Bot, Server, Lock, Database, Globe, Building, CheckCircle2 } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -298,7 +299,7 @@ const LanguageModels: React.FC = () => {
                       {language === 'de' ? 'Für Unternehmen' : 'Enterprise Ready'}
                     </h5>
                     <p className="text-xs text-gray-600">
-                      {language === 'de' ? 'Maßgeschneiderte Lösungen' : 'Tailored solutions'}
+                      {language === 'de' ? 'Massgeschneiderte Lösungen' : 'Tailored solutions'}
                     </p>
                   </div>
                 </div>
