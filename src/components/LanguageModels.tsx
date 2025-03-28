@@ -324,15 +324,6 @@ const LanguageModels: React.FC = () => {
             </div>
           </div>
         </AnimatedSection>
-
-        <AnimatedSection className="mb-8" animation="fade-up">
-          <Button 
-            className="mt-8 bg-evoya-orange text-white hover:bg-evoya-orange/90"
-            onClick={scrollToContact}
-          >
-            {translate('models_contact_cta', language)}
-          </Button>
-        </AnimatedSection>
       </div>
     </section>
   );
