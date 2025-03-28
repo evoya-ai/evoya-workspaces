@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Shield, Bot, Server, Lock } from 'lucide-react';
+import { Shield, Bot, Server, Lock, Database, Globe, Building, CheckCircle2 } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { Card, CardContent } from './ui/card';
 import { cn } from '../lib/utils';
@@ -194,7 +193,7 @@ const LanguageModels: React.FC = () => {
         </AnimatedSection>
 
         {/* On-Premise Solutions Section */}
-        <AnimatedSection className="mt-12 mb-8" animation="fade-up">
+        <AnimatedSection className="mt-12" animation="fade-up">
           <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-8 border border-gray-200">
             <div className="flex flex-col items-center text-center">
               <div className="p-4 bg-white rounded-full shadow-md mb-6">
@@ -218,14 +217,121 @@ const LanguageModels: React.FC = () => {
                   <p className="text-sm text-gray-600">{translate('models_onpremise_data_desc', language)}</p>
                 </div>
               </div>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* Local ChatGPT Section - NEW */}
+        <AnimatedSection className="mt-12" animation="fade-up">
+          <div className="bg-gradient-to-r from-evoya-orange/5 to-evoya-orange/10 rounded-2xl p-8 border border-evoya-orange/20">
+            <div className="flex flex-col items-center text-center">
+              <div className="p-4 bg-white rounded-full shadow-md mb-6">
+                <Database className="w-10 h-10 text-evoya-orange" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4">
+                {language === 'de' ? 'Local ChatGPT – volle Kontrolle über Ihre Daten' : 'Local ChatGPT – Full Control Over Your Data'}
+              </h3>
+              <p className="text-gray-700 max-w-3xl mb-6">
+                {language === 'de' 
+                  ? 'Nutzen Sie echte ChatGPT-Modelle von OpenAI, lokal gehostet in Ihrem Land (Schweiz, Deutschland, etc.). Im Gegensatz zu Open-Source-Alternativen erhalten Sie die volle Leistung von ChatGPT, während Ihre Daten niemals das Land verlassen und vollständig unter Ihrer Kontrolle bleiben.'
+                  : 'Utilize genuine ChatGPT models from OpenAI, locally hosted in your country (Switzerland, Germany, etc.). Unlike open-source alternatives, you get the full performance of ChatGPT while ensuring your data never leaves the country and remains completely under your control.'}
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-3xl mb-8">
+                <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                  <div className="flex items-start mb-2">
+                    <CheckCircle2 className="w-5 h-5 text-evoya-orange mr-2 mt-0.5 flex-shrink-0" />
+                    <h4 className="font-semibold">
+                      {language === 'de' ? 'Datenhoheit' : 'Data Sovereignty'}
+                    </h4>
+                  </div>
+                  <p className="text-sm text-gray-600">
+                    {language === 'de' 
+                      ? 'Ihre Daten bleiben in Ihrem Land – keine Übertragung in die USA oder andere Länder.' 
+                      : 'Your data stays in your country – no transfer to the US or other countries.'}
+                  </p>
+                </div>
+                <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                  <div className="flex items-start mb-2">
+                    <CheckCircle2 className="w-5 h-5 text-evoya-orange mr-2 mt-0.5 flex-shrink-0" />
+                    <h4 className="font-semibold">
+                      {language === 'de' ? 'Gesetzeskonformität' : 'Legal Compliance'}
+                    </h4>
+                  </div>
+                  <p className="text-sm text-gray-600">
+                    {language === 'de' 
+                      ? 'Volle Konformität mit DSG, DSGVO und anderen lokalen Datenschutzgesetzen.' 
+                      : 'Full compliance with GDPR, Swiss DPA, and other local data protection regulations.'}
+                  </p>
+                </div>
+                <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                  <div className="flex items-start mb-2">
+                    <CheckCircle2 className="w-5 h-5 text-evoya-orange mr-2 mt-0.5 flex-shrink-0" />
+                    <h4 className="font-semibold">
+                      {language === 'de' ? 'Optimale Leistung' : 'Premium Performance'}
+                    </h4>
+                  </div>
+                  <p className="text-sm text-gray-600">
+                    {language === 'de' 
+                      ? 'Originale ChatGPT-Modelle mit voller Leistungsfähigkeit und regelmäßigen Updates.' 
+                      : 'Original ChatGPT models with full capabilities and regular updates.'}
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-center justify-center gap-8 p-6 bg-white rounded-xl shadow-sm border border-gray-100 max-w-3xl w-full">
+                <div className="flex items-center">
+                  <Globe className="w-6 h-6 text-evoya-blue mr-3 flex-shrink-0" />
+                  <div className="text-left">
+                    <h5 className="font-medium text-sm">
+                      {language === 'de' ? 'Lokale Infrastruktur' : 'Local Infrastructure'}
+                    </h5>
+                    <p className="text-xs text-gray-600">
+                      {language === 'de' ? 'Gehostet in Ihrem Land' : 'Hosted in your country'}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <Building className="w-6 h-6 text-evoya-blue mr-3 flex-shrink-0" />
+                  <div className="text-left">
+                    <h5 className="font-medium text-sm">
+                      {language === 'de' ? 'Für Unternehmen' : 'Enterprise Ready'}
+                    </h5>
+                    <p className="text-xs text-gray-600">
+                      {language === 'de' ? 'Maßgeschneiderte Lösungen' : 'Tailored solutions'}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <Lock className="w-6 h-6 text-evoya-blue mr-3 flex-shrink-0" />
+                  <div className="text-left">
+                    <h5 className="font-medium text-sm">
+                      {language === 'de' ? 'Höchste Sicherheit' : 'Maximum Security'}
+                    </h5>
+                    <p className="text-xs text-gray-600">
+                      {language === 'de' ? 'Verschlüsselte Daten' : 'Encrypted data'}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
               <Button 
                 className="mt-8 bg-evoya-orange text-white hover:bg-evoya-orange/90"
                 onClick={scrollToContact}
               >
-                {translate('models_contact_cta', language)}
+                {language === 'de' ? 'Beraten lassen' : 'Get Consultation'}
               </Button>
             </div>
           </div>
+        </AnimatedSection>
+
+        <AnimatedSection className="mb-8" animation="fade-up">
+          <Button 
+            className="mt-8 bg-evoya-orange text-white hover:bg-evoya-orange/90"
+            onClick={scrollToContact}
+          >
+            {translate('models_contact_cta', language)}
+          </Button>
         </AnimatedSection>
       </div>
     </section>
