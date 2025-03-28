@@ -221,7 +221,7 @@ const LanguageModels: React.FC = () => {
           </div>
         </AnimatedSection>
 
-        {/* Local ChatGPT Section - NEW */}
+        {/* Local ChatGPT Section */}
         <AnimatedSection className="mt-12" animation="fade-up">
           <div className="bg-gradient-to-r from-evoya-orange/5 to-evoya-orange/10 rounded-2xl p-8 border border-evoya-orange/20">
             <div className="flex flex-col items-center text-center">
