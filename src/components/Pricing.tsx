@@ -1,11 +1,12 @@
 
-import React from 'react';
-import { Check, Plus, Rocket } from 'lucide-react';
+import React, { useState } from 'react';
+import { Check, Plus, Rocket, EuroIcon, DollarSign } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translate } from '../utils/translations';
+import { ToggleGroup, ToggleGroupItem } from './ui/toggle-group';
 
 const PricingFeature: React.FC<{ text: string }> = ({ text }) => (
   <div className="flex items-center space-x-2 text-sm text-gray-600">
@@ -14,8 +15,17 @@ const PricingFeature: React.FC<{ text: string }> = ({ text }) => (
   </div>
 );
 
+type Currency = 'CHF' | 'EUR';
+
 const Pricing: React.FC = () => {
   const { language } = useLanguage();
+  const [currency, setCurrency] = useState<Currency>('CHF');
+
+  const handleCurrencyChange = (value: string) => {
+    if (value) {
+      setCurrency(value as Currency);
+    }
+  };
 
   return (
     <section id="pricing" className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
@@ -30,6 +40,25 @@ const Pricing: React.FC = () => {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             {translate('pricing_description', language)}
           </p>
+          
+          {/* Currency Toggle */}
+          <div className="flex justify-center mt-6">
+            <ToggleGroup
+              type="single"
+              value={currency}
+              onValueChange={handleCurrencyChange}
+              className="border rounded-lg overflow-hidden"
+            >
+              <ToggleGroupItem value="CHF" className="px-4 py-2 data-[state=on]:bg-evoya-blue data-[state=on]:text-white flex items-center">
+                <DollarSign className="h-4 w-4 mr-1" />
+                <span>CHF</span>
+              </ToggleGroupItem>
+              <ToggleGroupItem value="EUR" className="px-4 py-2 data-[state=on]:bg-evoya-blue data-[state=on]:text-white flex items-center">
+                <EuroIcon className="h-4 w-4 mr-1" />
+                <span>EUR</span>
+              </ToggleGroupItem>
+            </ToggleGroup>
+          </div>
         </AnimatedSection>
 
         <AnimatedSection delay={100} className="max-w-3xl mx-auto">
@@ -44,7 +73,7 @@ const Pricing: React.FC = () => {
               </div>
               <div className="mt-6">
                 <div className="flex items-baseline">
-                  <span className="text-4xl font-bold text-gray-900">CHF 99</span>
+                  <span className="text-4xl font-bold text-gray-900">{currency} 99</span>
                   <span className="text-gray-600 ml-1">{translate('pricing_per_month', language)}</span>
                 </div>
               </div>
