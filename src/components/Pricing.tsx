@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Check, Plus, Rocket, EuroIcon, DollarSign } from 'lucide-react';
+import { Check, Plus, Rocket } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
@@ -41,7 +41,7 @@ const Pricing: React.FC = () => {
             {translate('pricing_description', language)}
           </p>
           
-          {/* Currency Toggle */}
+          {/* Currency Toggle - Icons removed */}
           <div className="flex justify-center mt-6">
             <ToggleGroup
               type="single"
@@ -49,13 +49,11 @@ const Pricing: React.FC = () => {
               onValueChange={handleCurrencyChange}
               className="border rounded-lg overflow-hidden"
             >
-              <ToggleGroupItem value="CHF" className="px-4 py-2 data-[state=on]:bg-evoya-blue data-[state=on]:text-white flex items-center">
-                <DollarSign className="h-4 w-4 mr-1" />
-                <span>CHF</span>
+              <ToggleGroupItem value="CHF" className="px-4 py-2 data-[state=on]:bg-evoya-blue data-[state=on]:text-white">
+                CHF
               </ToggleGroupItem>
-              <ToggleGroupItem value="EUR" className="px-4 py-2 data-[state=on]:bg-evoya-blue data-[state=on]:text-white flex items-center">
-                <EuroIcon className="h-4 w-4 mr-1" />
-                <span>EUR</span>
+              <ToggleGroupItem value="EUR" className="px-4 py-2 data-[state=on]:bg-evoya-blue data-[state=on]:text-white">
+                EUR
               </ToggleGroupItem>
             </ToggleGroup>
           </div>
@@ -98,7 +96,7 @@ const Pricing: React.FC = () => {
                     <div>
                       <h4 className="font-medium text-gray-900">{translate('pricing_additional', language)}</h4>
                       <p className="text-sm text-gray-600 mt-1">
-                        {translate('pricing_additional_desc', language)}
+                        {translate('pricing_additional_desc', language).replace('CHF', currency)}
                       </p>
                     </div>
                   </div>
