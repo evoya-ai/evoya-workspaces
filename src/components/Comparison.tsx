@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Check, X, AlertTriangle } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
@@ -59,10 +58,12 @@ const Comparison: React.FC = () => {
     {
       name: 'Microsoft',
       description: 'Copilot',
-      results: [false, true, false, false, true, false, false, false, false, false] as FeatureResult[],
+      results: [false, false, false, false, true, false, false, false, false, false] as FeatureResult[],
       highlighted: false
     }
   ];
+
+  products[2].results[1] = false;
 
   const renderFeatureStatus = (productIndex: number, featureIndex: number) => {
     const result = products[productIndex].results[featureIndex];
